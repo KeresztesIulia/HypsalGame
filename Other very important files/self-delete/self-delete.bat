@@ -64,16 +64,16 @@ pause | echo Just... just come back when you're ready to make the choice.
 exit
 
 :Yes
-echo Thank you
-echo .
-echo .
-echo .
-::create file or registry to check if user redownloads game
 ::delete unity folder first
+rmdir /s /q ..\..\HypsalGame
+
+::create file or registry to check if user redownloads game
+
+pause | echo Thank you.
+
 del %0
-exit
 
 :No
-echo Why
+pause | echo Why
 
 
