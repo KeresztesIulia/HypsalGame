@@ -198,6 +198,7 @@ MonoBehaviour:
   _instanciatiables:
   - {fileID: 2392518441365614523, guid: e8db9869c6f61cc41b3c7f11b08e9685, type: 3}
   - {fileID: 7136965411807995065, guid: 08963585bd69ea84a8fa12f88b567c99, type: 3}
+  - {fileID: 8503129376575218091, guid: e98c3c5b7e4395a438061c25afc95e90, type: 3}
 --- !u!1 &2137400114
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,6 +211,7 @@ GameObject:
   - component: {fileID: 2137400118}
   - component: {fileID: 2137400117}
   - component: {fileID: 2137400116}
+  - component: {fileID: 2137400119}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -227,7 +229,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 335310881}
@@ -310,6 +312,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2137400114}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2137400119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137400114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1e9b9dd14da9f408541d2668b2e817, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::literallyDeleteThis_butwhatsgoingon
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
