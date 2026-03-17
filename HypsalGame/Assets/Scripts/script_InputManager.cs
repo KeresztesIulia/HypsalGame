@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class script_InputManager : MonoBehaviour
+public class script_InputManager : MonoBehaviour, interface_PersistentData
 {
     public static PlayerInput playerInput;
     public static InputActionAsset inputActions;
