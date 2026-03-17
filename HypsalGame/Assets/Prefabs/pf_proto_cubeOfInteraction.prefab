@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c43f0f42d909e8e4eaa1171fe2e96fba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_PushCube
-  uiInfo:
-    name: Oh wow such a cute cube
-    interactionString: Poke?
+  _uiInfo:
+    name: such a cute cube
+    interactionWord: Poke?
   _pushForce: 600

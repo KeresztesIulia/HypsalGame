@@ -19,11 +19,11 @@ public class script_PlayerInteraction : MonoBehaviour
             {
                 if (value == null)
                 {
-                    Debug.Log("Disabled interaction UI");
+                    script_ui_InteractionUI.DisableUI();
                 }
                 else
                 {
-                    Debug.Log("Updating interaction UI with new target");
+                    script_ui_InteractionUI.ActivateUI(value._uiInfo);
                 }
             }
             currentTarget = value;

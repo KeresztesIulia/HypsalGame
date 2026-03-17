@@ -18,6 +18,8 @@ public class script_ui_InteractionUI : MonoBehaviour, interface_PersistentData
     public static void DisableUI()
     {
         instance?._interactionInfoHolder.SetActive(false);
+
+        Debug.Log("Disabled interaction UI");
     }
 
     public static void ActivateUI(UIInfo uiInfo)
@@ -27,6 +29,8 @@ public class script_ui_InteractionUI : MonoBehaviour, interface_PersistentData
             Debug.LogError("No InteractionUI present");
             return;
         }
+
+        Debug.Log("Updating interaction UI with new target");
 
         instance._objectNameText.text = uiInfo.name;
         instance._interactionWordText.text = uiInfo.interactionWord;
