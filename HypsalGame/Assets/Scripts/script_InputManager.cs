@@ -21,4 +21,5 @@ public class script_InputManager : MonoBehaviour, interface_PersistentData
 
         map_uiMap = inputActions?.FindActionMap("UI");
     }
+
 }
