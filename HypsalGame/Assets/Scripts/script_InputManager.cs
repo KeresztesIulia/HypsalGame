@@ -11,6 +11,8 @@ public class script_InputManager : MonoBehaviour, interface_PersistentData
 
     public static InputActionMap map_uiMap;
 
+    bool initialized = false;
+
     public void Initialize()
     {
         playerInput = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerInput>();
@@ -20,6 +22,14 @@ public class script_InputManager : MonoBehaviour, interface_PersistentData
         action_Interact = map_PlayerMap?.FindAction("Interact");
 
         map_uiMap = inputActions?.FindActionMap("UI");
+
+        initialized = true;
+    }
+
+    private void Start()
+    {
+        if (!initialized)
+            Initialize();
     }
 
 }

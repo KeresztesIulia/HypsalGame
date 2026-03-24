@@ -51,7 +51,6 @@ public class script_PlayerInteraction : MonoBehaviour
 
     void OnInteraction()
     {
-        Debug.Log("I have interacted, yee; target: " + (currentTarget == null ? "null" : currentTarget.transform.name));
         if (currentTarget == null) return;
             currentTarget.Interact(transform.position);
     }

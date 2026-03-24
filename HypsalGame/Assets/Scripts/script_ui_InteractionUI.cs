@@ -9,10 +9,19 @@ public class script_ui_InteractionUI : MonoBehaviour, interface_PersistentData
 
     static script_ui_InteractionUI instance;
 
+    bool initialized = false;
+
     public void Initialize()
     {
         instance = this;
         DisableUI();
+        initialized = true;
+    }
+
+    private void Start()
+    {
+        if (!initialized)
+            Initialize();
     }
 
     public static void DisableUI()
