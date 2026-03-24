@@ -32,4 +32,8 @@ public class script_InputManager : MonoBehaviour, interface_PersistentData
             Initialize();
     }
 
+    public static void SwitchInputMap(InputActionMap to)
+    {
+        playerInput.currentActionMap = to;
+    }
 }

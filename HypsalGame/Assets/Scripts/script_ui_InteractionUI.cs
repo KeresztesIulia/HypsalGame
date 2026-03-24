@@ -6,6 +6,7 @@ public class script_ui_InteractionUI : MonoBehaviour, interface_PersistentData
     [SerializeField] GameObject _interactionInfoHolder;
     [SerializeField] TMP_Text _objectNameText;
     [SerializeField] TMP_Text _interactionWordText;
+    [SerializeField] GameObject _dot;
 
     static script_ui_InteractionUI instance;
 
@@ -24,9 +25,11 @@ public class script_ui_InteractionUI : MonoBehaviour, interface_PersistentData
             Initialize();
     }
 
-    public static void DisableUI()
+
+    public static void DisableUI(bool disableDot = false)
     {
         instance?._interactionInfoHolder.SetActive(false);
+        instance?._dot.SetActive(!disableDot);
 
         Debug.Log("Disabled interaction UI");
     }
@@ -40,6 +43,8 @@ public class script_ui_InteractionUI : MonoBehaviour, interface_PersistentData
         }
 
         Debug.Log("Updating interaction UI with new target");
+
+        instance._dot.SetActive(true);
 
         instance._objectNameText.text = uiInfo.name;
         instance._interactionWordText.text = uiInfo.interactionWord;
