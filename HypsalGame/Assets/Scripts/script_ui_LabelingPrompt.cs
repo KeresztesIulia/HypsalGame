@@ -24,15 +24,23 @@ public class script_ui_LabelingPrompt : MonoBehaviour
         representedWord = wordToRepresent;
         _inputField.onSubmit.AddListener((eventData) =>
         {
-            if (ValidLabel())
-            {
-                representedWord.LabelWord(_inputField.text);
-                script_InputManager.playerInput.enabled = true;
-                //script_InputManager.SwitchInputMap(script_InputManager.map_PlayerMap);
-                Destroy(gameObject);
-            }
+            OnSubmit();
         });
 
+    }
+
+    void OnSubmit()
+    {
+        if (ValidLabel())
+        {
+            representedWord.LabelWord(_inputField.text);
+            script_InputManager.playerInput.enabled = true;
+
+            script_LabelLog.LogLabelingExchange(_prompt.text, _inputField.text);
+
+            //script_InputManager.SwitchInputMap(script_InputManager.map_PlayerMap);
+            Destroy(gameObject);
+        }
     }
 
     private void Update()
