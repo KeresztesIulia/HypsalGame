@@ -50,7 +50,7 @@ public class script_LabelLog : MonoBehaviour, interface_PersistentData
     public static void LogText(TMP_Text textBox, string logText)
     {
         textBox.text = logText;
-        textBox.transform.parent = Instance?._contentTransform;
+        textBox.transform.SetParent(Instance?._contentTransform, false);
     }
 
     public static void LogAIText(string logText)

@@ -14,6 +14,7 @@ public class script_ui_InteractionUI : MonoBehaviour, interface_PersistentData
 
     public void Initialize()
     {
+        Debug.Log("Initialized interaction UI");
         instance = this;
         DisableUI();
         initialized = true;

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2563067357619543200}
   - component: {fileID: 1802867448306665741}
   - component: {fileID: 4941289531624952392}
+  - component: {fileID: 3740295739588591613}
   m_Layer: 5
   m_Name: pf_LabelCanvas
   m_TagString: Untagged
@@ -115,3 +116,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_ui_LabelingHandler
   _promptPrefab: {fileID: 6687794759920904440, guid: a1abd2bf2848e9d41867b3a4891975ba, type: 3}
+--- !u!114 &3740295739588591613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4898043657836564950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10590a14983b47445b00aab28d2c74e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_ui_LabelingChoiceHandler
+  _promptPrefab: {fileID: 726496972364245218, guid: 6144e5496ad962345ac52c924bfb371b, type: 3}

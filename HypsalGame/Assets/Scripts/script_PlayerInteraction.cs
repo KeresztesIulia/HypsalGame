@@ -2,7 +2,11 @@ using UnityEngine;
 
 public class script_PlayerInteraction : MonoBehaviour
 {
-    //Camera playerCamera;
+    // redo should focus on more generalized "interactables", as in looking at something is also interaction
+    // we have, looking at something, generic interaction (what is implemented here atm), and labeling (which should not go through the interaction keypress)
+    // so for these 3 categories, have different (maybe not even MonoBehaviour) classes, and the main interaction script delegates the specifics to each class
+    // the point is to identify in one place what we're dealing with
+
     [SerializeField] float _interactionDistance = 5f;
     [SerializeField] LayerMask _raycastIgnoreLayer;
 
