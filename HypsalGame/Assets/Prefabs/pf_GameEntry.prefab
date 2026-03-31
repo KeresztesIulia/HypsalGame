@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7517173004811388785}
-  - component: {fileID: 1779627343812268187}
+  - component: {fileID: 6285983444674712052}
   m_Layer: 0
   m_Name: pf_GameEntry
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1779627343812268187
+--- !u!114 &6285983444674712052
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,12 +41,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8658534496794117370}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 386128087b36366448b10de39a0b3f2a, type: 3}
+  m_Script: {fileID: 11500000, guid: 608fa2f243c84de499931c54d0d52b8f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::script_GameEntry
-  _instanciatiables:
+  m_EditorClassIdentifier: Assembly-CSharp::script_PersistentInitializer
+  _subModules:
+  - {fileID: 2894064923042514574, guid: 30c33f2e5bceeab43b554ce300a57fc4, type: 3}
   - {fileID: 2392518441365614523, guid: e8db9869c6f61cc41b3c7f11b08e9685, type: 3}
   - {fileID: 7136965411807995065, guid: 08963585bd69ea84a8fa12f88b567c99, type: 3}
-  - {fileID: 8503129376575218091, guid: e98c3c5b7e4395a438061c25afc95e90, type: 3}
   - {fileID: 4611920969339645953, guid: 49664c4df79a454429e0ffaf02137db8, type: 3}
   - {fileID: 5523739615821761998, guid: d346dc832197e31429461f00ea366532, type: 3}
+  _instantiateSubmodules: 1

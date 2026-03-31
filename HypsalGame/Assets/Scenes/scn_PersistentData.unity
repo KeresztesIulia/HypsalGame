@@ -317,6 +317,26 @@ PrefabInstance:
       propertyPath: '_instanciatiables.Array.data[6]'
       value: 
       objectReference: {fileID: 4946989802294137989, guid: dd7cc4ebc188ecd41bb9193eed7ed00f, type: 3}
+    - target: {fileID: 6285983444674712052, guid: 6b383537600e7c148a50bb5f548e6305, type: 3}
+      propertyPath: _subModules.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6285983444674712052, guid: 6b383537600e7c148a50bb5f548e6305, type: 3}
+      propertyPath: '_subModules.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8503129376575218091, guid: e98c3c5b7e4395a438061c25afc95e90, type: 3}
+    - target: {fileID: 6285983444674712052, guid: 6b383537600e7c148a50bb5f548e6305, type: 3}
+      propertyPath: '_subModules.Array.data[4]'
+      value: 
+      objectReference: {fileID: 4611920969339645953, guid: 49664c4df79a454429e0ffaf02137db8, type: 3}
+    - target: {fileID: 6285983444674712052, guid: 6b383537600e7c148a50bb5f548e6305, type: 3}
+      propertyPath: '_subModules.Array.data[5]'
+      value: 
+      objectReference: {fileID: 5523739615821761998, guid: d346dc832197e31429461f00ea366532, type: 3}
+    - target: {fileID: 6285983444674712052, guid: 6b383537600e7c148a50bb5f548e6305, type: 3}
+      propertyPath: '_subModules.Array.data[6]'
+      value: 
+      objectReference: {fileID: 4946989802294137989, guid: dd7cc4ebc188ecd41bb9193eed7ed00f, type: 3}
     - target: {fileID: 7517173004811388785, guid: 6b383537600e7c148a50bb5f548e6305, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
