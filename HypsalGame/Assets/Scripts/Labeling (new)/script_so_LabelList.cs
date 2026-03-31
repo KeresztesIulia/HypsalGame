@@ -60,19 +60,39 @@ public class Label : IEquatable<Label>, IEquatable<string>
     string givenName = "";
     [SerializeField] bool _relabelable = false;
 
-    bool isLabeled = false; // uh... shouldn't this just be a getter based on givenName? anyway, revise when we have AssociationList
-
     public string Name => _originalName;
-    public string DisplayName => isLabeled ? givenName : "???";
-    public string ForcedDisplayName => isLabeled ? givenName : _originalName;
+    public string DisplayName
+    {
+        get
+        {
+            if (IsLabeled)
+            {
+                if (script_LabelAssociationHandler.InstanceExists)
+                {
+                    var association = script_LabelAssociationHandler.Instance?.FindAssociatedLabel(this);
+                    return association.Name;
+                }
+                else
+                {
+                    return givenName;
+                }
+            }
+            else
+            {
+                return "???";
+            }
+        }
+    }
+    public string ForcedDisplayName => IsLabeled ? DisplayName : _originalName;
 
-    public bool IsLabeled => isLabeled;
+    public bool IsLabeled => script_LabelAssociationHandler.InstanceExists
+        ? script_LabelAssociationHandler.Instance.HasAssociation(this) 
+        : !string.IsNullOrEmpty(givenName);
 
     public bool Labelable => _relabelable || !IsLabeled;
 
     public void Reset()
     {
-        isLabeled = false;
         givenName = "";
     }
 
@@ -88,6 +108,9 @@ public class Label : IEquatable<Label>, IEquatable<string>
 
     public static bool operator ==(Label first, Label second)
     {
+        if (first is null && second is null) return true;
+        if (first is null && second is not null) return false;
+        if (first is not null && second is null) return false;
         return first.Name == second.Name;
     }
 
@@ -108,23 +131,28 @@ public class Label : IEquatable<Label>, IEquatable<string>
 
     public void SetLabel(string givenLabel)
     {
-        // replace this with simply checking associations actually. Not gonna store these here
         givenName = givenLabel;
-        isLabeled = true;
     }
 
     public void SetLabel(Label label)
     {
-        SetLabel(label.Name);
-        label.SetLabel(Name);
+        
+        if (script_LabelAssociationHandler.InstanceExists)
+        {
+            script_LabelAssociationHandler.Instance?.AddAssociation(this, label);
+            Debug.Log($"associating {this} with {label}");
+        }
+        else
+        {
+            SetLabel(label.Name);
+            label.SetLabel(Name);
+        }
 
-        // disassociate previous association, if it exists
-        // associate labels
     }
 
     public override string ToString()
     {
-        return ForcedDisplayName;
+        return Name; // because this should be for quick usage and so should actually describe the object. Anything else should be deliberate.
     }
 
     public static implicit operator string(Label label)

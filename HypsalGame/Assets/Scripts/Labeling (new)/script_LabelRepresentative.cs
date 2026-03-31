@@ -31,7 +31,7 @@ public class script_LabelRepresentative : script_Interactable
         if (_partOfList == null) return;
         representedLabel = _partOfList.GetLabel(_representedLabelName);
         possibleAssociationLabels = new List<Label>();
-        foreach (var name in  _possibleAssociations)
+        foreach (var name in _possibleAssociations)
         {
             if (string.IsNullOrEmpty(name)) continue;
             possibleAssociationLabels.Add(_partOfList.GetLabel(name));
@@ -65,6 +65,7 @@ public class script_LabelRepresentative : script_Interactable
 
     void FilterAssociations()
     {
+        // prolly shouldn't delete in case we want to be able to just change out labels
         for (int i = 0; i < possibleAssociationLabels.Count; i++)
         {
             var association = possibleAssociationLabels[i];
