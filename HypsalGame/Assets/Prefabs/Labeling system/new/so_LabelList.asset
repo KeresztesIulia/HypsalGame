@@ -16,7 +16,7 @@ MonoBehaviour:
   - _originalName: tree
     _relabelable: 0
   - _originalName: chicken
-    _relabelable: 1
+    _relabelable: 0
   - _originalName: i can't remember what else there was
     _relabelable: 0
   - _originalName: sandwitch
@@ -30,4 +30,4 @@ MonoBehaviour:
   - _originalName: death
     _relabelable: 0
   - _originalName: robots
-    _relabelable: 1
+    _relabelable: 0

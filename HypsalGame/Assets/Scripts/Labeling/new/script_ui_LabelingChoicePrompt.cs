@@ -16,24 +16,24 @@ public class script_ui_LabelingChoicePrompt : MonoBehaviour
     Label representedLabel;
     int choiceCount;
 
+    bool disposed = false;
+
     public void Initialize(string prompt, Label representedLabel, List<Label> choiceLabels)
     {
         promptText.text = prompt;
-        this.representedLabel = representedLabel;
+        this.representedLabel = representedLabel; // ?MOVE
 
         labels = choiceLabels;
 
         SetupChoices();
 
         gameObject.SetActive(true);
-        script_InputManager.SwitchInputMap(script_InputManager.map_uiMap);
-        script_ui_InteractionUI.DisableUI(true);
-
+        //script_InputManager.SwitchInputMap(script_InputManager.map_uiMap); // !MOVE
     }   
     
     void SetupChoices()
     {
-        // shuffle later
+        // shuffle later -- how to make that consistent between UI and 
         choiceCount = labels.Count;
         actions = new System.Action<InputAction.CallbackContext>[choiceCount];
         for (int i = 0; i < choiceCount; i++)
@@ -46,26 +46,42 @@ public class script_ui_LabelingChoicePrompt : MonoBehaviour
         }
     }
 
-    void Choose(Label label)
+    void Choose(Label label) //!Move
     {
         representedLabel.SetLabel(label);
 
-        script_InputManager.SwitchInputMap(script_InputManager.map_PlayerMap);
+        //script_InputManager.SwitchInputMap(script_InputManager.map_PlayerMap); //!MOVE
 
         script_LabelLog.LogLabelingExchange(promptText.text, label);
 
         Dispose();
     }
 
-    void Dispose()
+    void UnassignActions()
     {
         for (int i = 0; i < choiceCount; i++)
         {
             var label = labels[i];
             script_InputManager.UnassignNumberAction(i + 1, actions[i]);
-            
+
         }
+    }
+
+    void Dispose()
+    {
+        UnassignActions(); 
         Destroy(gameObject);
+
+        disposed = true;
+    }
+
+    private void OnDestroy()
+    {
+        if (!disposed)
+        {
+            UnassignActions();
+            disposed = true;
+        }
 
     }
 

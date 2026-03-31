@@ -53,7 +53,6 @@ public class CI_LabelRepresentative : Editor
         {
             EditorGUILayout.PropertyField(serializedObject.FindProperty("_prompt"));
             EditorGUILayout.PropertyField(serializedObject.FindProperty("_relabelable"));
-            EditorGUILayout.PropertyField(serializedObject.FindProperty("_uiInfo"));
         }
 
         serializedObject.ApplyModifiedProperties();

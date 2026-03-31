@@ -10,8 +10,9 @@ public class script_PlayerInteraction : MonoBehaviour
     [SerializeField] float _interactionDistance = 5f;
     [SerializeField] LayerMask _raycastIgnoreLayer;
 
-    script_Interactable currentTarget = null;
-    public script_Interactable CurrentTarget
+    interface_Interactable currentTarget = null;
+    interface_Interactable.InteractionType previousInteractionType = interface_Interactable.InteractionType.None;
+    public interface_Interactable CurrentTarget
     {
         get
         {
@@ -21,22 +22,91 @@ public class script_PlayerInteraction : MonoBehaviour
         {
             if (value != currentTarget)
             {
+                currentTarget = value;
                 if (value == null)
                 {
                     script_ui_InteractionUI.DisableUI();
+                    script_ui_LabelingChoiceHandler.DestroyCurrentPrompt();
+                    previousInteractionType = interface_Interactable.InteractionType.None;
                 }
                 else
                 {
-                    script_ui_InteractionUI.ActivateUI(value._uiInfo);
+                    DisablePreviousInteractionFunctionality();
+                    DisablePreviousInteractionUI();
+                    ActivateCurrentInteractionUI();
+                    ActivateCurrentInteractionFunctionality();
+                    previousInteractionType = currentTarget.interactionType;
                 }
             }
-            currentTarget = value;
         }
     }
 
-    private void Start()
+    void DisablePreviousInteractionFunctionality()
     {
-        script_InputManager.action_Interact.performed += (ctx) => OnInteraction();
+        var currentInteractionType = currentTarget?.interactionType;
+        switch (previousInteractionType)
+        {
+            case interface_Interactable.InteractionType.Generic:
+                script_ui_InteractionUI.DisableUI(true);
+                break;
+            case interface_Interactable.InteractionType.Labelable:
+                script_ui_LabelingChoiceHandler.DestroyCurrentPrompt();
+                break;
+            default:
+                break;
+        }
+    }
+
+    void DisablePreviousInteractionUI()
+    {
+        var currentInteractionType = currentTarget?.interactionType;
+        if (currentInteractionType != previousInteractionType)
+        {
+            switch (previousInteractionType)
+            {
+                case interface_Interactable.InteractionType.Generic:
+                    script_ui_InteractionUI.DisableUI(true);
+                    break;
+                case interface_Interactable.InteractionType.Labelable:
+                    script_ui_LabelingChoiceHandler.DisableUI(currentTarget);
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
+    void ActivateCurrentInteractionUI()
+    {
+        // for now, we give UI and functionality all in one, because I see no better way at the moment
+        switch (currentTarget.interactionType)
+        {
+            case interface_Interactable.InteractionType.Generic:
+                script_ui_InteractionUI.ActivateUI(currentTarget);
+                break;
+            case interface_Interactable.InteractionType.Labelable:
+                script_ui_LabelingChoiceHandler.ActivateUI(currentTarget);
+                break;
+            default:
+                break;
+        }
+    }
+
+    void ActivateCurrentInteractionFunctionality()
+    {
+        switch (currentTarget.interactionType)
+        {
+            case interface_Interactable.InteractionType.Generic:
+                // give target to script_Interactable
+                script_ui_InteractionUI.Instance?.ActivateFunctionality(currentTarget, transform.position);
+                break;
+            case interface_Interactable.InteractionType.Labelable:
+                // give target to script_LabelingHandle
+                // for now, functionality stays with the UI, separate later!
+                break;
+            default:
+                break;
+        }
     }
 
     private void Update()
@@ -44,7 +114,7 @@ public class script_PlayerInteraction : MonoBehaviour
         Debug.DrawLine(transform.position, transform.position + transform.forward * 3, Color.red);
         if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hitInfo, _interactionDistance, ~_raycastIgnoreLayer))
         {
-            CurrentTarget = hitInfo.transform.GetComponent<script_Interactable>();
+            CurrentTarget = hitInfo.transform.GetComponent<interface_Interactable>();
         }
         else
         {
@@ -52,15 +122,4 @@ public class script_PlayerInteraction : MonoBehaviour
         }
 
     }
-
-    void OnInteraction()
-    {
-        if (currentTarget == null) return;
-            currentTarget.Interact(transform.position);
-    }
-
-    //private void OnDestroy()
-    //{
-    //    script_InputManager.action_Interact.performed -= (ctx) => OnInteraction();
-    //}
 }

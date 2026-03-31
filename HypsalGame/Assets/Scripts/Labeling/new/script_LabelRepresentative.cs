@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class script_LabelRepresentative : script_Interactable
+public class script_LabelRepresentative : MonoBehaviour, interface_Interactable
 {
     [SerializeField] script_so_LabelList _partOfList;
 
@@ -23,7 +23,10 @@ public class script_LabelRepresentative : script_Interactable
 
     bool hasAssociations => possibleAssociationLabels != null && possibleAssociationLabels.Count > 0;
 
-    bool labelable => hasAssociations && (_relabelable || representedLabel.Labelable); // should we allow override on the object itself? -> this actually does that and probably shouldn't
+    public bool labelable => hasAssociations && (_relabelable || representedLabel.Labelable); // should we allow override on the object itself? -> this actually does that and probably shouldn't
+
+    public interface_Interactable.InteractionType interactionType => interface_Interactable.InteractionType.Labelable;
+
     // should it be able to show the "true" label, if we ever do it like that, in the possible list on relabeling? it should, right?
 
     private void Start()
@@ -38,16 +41,7 @@ public class script_LabelRepresentative : script_Interactable
         }
     }
 
-    private void Update() // optimize
-    {
-        _uiInfo.name = representedLabel.DisplayName;
-        if (!labelable)
-        {
-            _uiInfo.interactionWord = "";
-        }
-    }
-
-    public override void Interact(Vector3 playerPosition)
+    public void ShowChoices(Vector3 playerPosition)
     {
         FilterAssociations(); 
         if (!hasAssociations) Debug.Log("Cannot be labeled, can only be looked at"); // maybe separate logic, but then need stg instead of playerInteraction; further comments in that file

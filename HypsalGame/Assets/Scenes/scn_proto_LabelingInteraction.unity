@@ -640,9 +640,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1586d1852ae31047a2983072095e8e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
-  _uiInfo:
-    name: 
-    interactionWord: Label
   _partOfList: {fileID: 11400000, guid: 45f6b312fc19ec54fae31a11b651de54, type: 2}
   _representedLabelName: tree
   _prompt: This. is. a. chicken.
@@ -652,7 +649,7 @@ MonoBehaviour:
   - robots
   - tree
   - chicken
-  _relabelable: 1
+  _relabelable: 0
 --- !u!65 &1781117917
 BoxCollider:
   m_ObjectHideFlags: 0
