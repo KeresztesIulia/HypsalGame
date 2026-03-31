@@ -13,7 +13,7 @@ public class script_InputManager : MonoBehaviour, interface_PersistentData
 
     public static InputActionMap map_uiMap;
 
-    public static Dictionary<int, InputAction> action_Number;
+    public static InputAction[] action_Number;
 
 
     bool initialized = false;
@@ -29,10 +29,12 @@ public class script_InputManager : MonoBehaviour, interface_PersistentData
 
         map_uiMap = inputActions?.FindActionMap("UI");
 
-        action_Number = new Dictionary<int, InputAction>();
+        action_Number = new InputAction[10];
         for (int i = 0; i < 10; i++)
         {
+            int idx = i;
             action_Number[i] = map_uiMap?.FindAction($"Number {i}");
+            action_Number[i].performed += (ctx) => Debug.Log($"perfomed {idx}");
         }
 
 
@@ -49,4 +51,18 @@ public class script_InputManager : MonoBehaviour, interface_PersistentData
     {
         playerInput.currentActionMap = to;
     }
+
+    public static void AssignNumberAction(int number, System.Action<InputAction.CallbackContext> actionToPerform)
+    {
+        number = number % 10;
+        action_Number[number].performed += actionToPerform;
+    }
+
+    public static void UnassignNumberAction(int number, System.Action<InputAction.CallbackContext> actionToPerform)
+    {
+        number = number % 10;
+        action_Number[number].performed -= actionToPerform;
+    }
+
+
 }

@@ -6,6 +6,8 @@ public class script_ui_LabelingChoiceHandler : MonoBehaviour, interface_Persiste
 
     public static script_ui_LabelingChoiceHandler Instance;
 
+    script_ui_LabelingChoicePrompt currentPrompt;
+
     public void Initialize()
     {
         Instance = this;
@@ -13,7 +15,8 @@ public class script_ui_LabelingChoiceHandler : MonoBehaviour, interface_Persiste
 
     public static void InstantiatePrompt(script_LabelRepresentative representative)
     {
-        script_ui_LabelingChoicePrompt currentPrompt = Instantiate(Instance?._promptPrefab, Instance?.transform);
-        currentPrompt.Initialize(representative.Prompt, representative.RepresentedLabel, representative.PossibleLabels);
+        if (Instance?.currentPrompt != null) Destroy(Instance.currentPrompt.gameObject);
+        Instance.currentPrompt = Instantiate(Instance?._promptPrefab, Instance?.transform);
+        Instance.currentPrompt.Initialize(representative.Prompt, representative.RepresentedLabel, representative.PossibleLabels);
     }
 }

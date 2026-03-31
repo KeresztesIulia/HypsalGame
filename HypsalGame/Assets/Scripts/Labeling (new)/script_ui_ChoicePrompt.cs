@@ -8,13 +8,13 @@ public class script_ui_ChoicePrompt : MonoBehaviour
     [SerializeField] TMP_Text labelText;
     [SerializeField] Button buttonComponent;
 
-    public delegate void OnClickFunction(int choiceIndex, Label label);
+    public delegate void OnClickFunction(Label label);
 
     public void Initialize(int number, Label label, OnClickFunction onClick)
     {
         numberText.text = number.ToString();
         labelText.text = label.Name;
-        buttonComponent.onClick.AddListener(() => onClick(number, label));
+        buttonComponent.onClick.AddListener(() => onClick(label));
 
     }
 
