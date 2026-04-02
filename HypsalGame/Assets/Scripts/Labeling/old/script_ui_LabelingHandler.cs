@@ -6,9 +6,17 @@ public class script_ui_LabelingHandler : MonoBehaviour, interface_PersistentData
 
     public static script_ui_LabelingHandler Instance;
 
+    bool initialized = false;
+
+    private void Start()
+    {
+        if (!initialized) Initialize();
+    }
+
     public void Initialize()
     {
         Instance = this;
+        initialized = true;
     }
 
     public static void InstantiatePrompt(string prompt, LabelableWord wordToLabel)

@@ -8,9 +8,20 @@ public class script_ui_LabelingChoiceHandler : MonoBehaviour, interface_Persiste
 
     script_ui_LabelingChoicePrompt currentPrompt;
 
+    bool initialized = false;
+
+    public void Start()
+    {
+        if (!initialized)
+        {
+            Initialize();
+        }
+    }
+
     public void Initialize()
     {
         Instance = this;
+        initialized = true;
     }
 
     public static void InstantiatePrompt(interface_Interactable representative)
@@ -40,7 +51,7 @@ public class script_ui_LabelingChoiceHandler : MonoBehaviour, interface_Persiste
         DestroyCurrentPrompt();
 
         Instance.currentPrompt = Instantiate(Instance?._promptPrefab, Instance?.transform);
-        Instance.currentPrompt.Initialize(representative.Prompt, representative.RepresentedLabel, representative.PossibleLabels);
+        Instance.currentPrompt.Initialize(representative.Prompt, representative.RepresentedLabel, representative.FilteredAssociations());
     }
 
     public static void DisableUI(interface_Interactable target)

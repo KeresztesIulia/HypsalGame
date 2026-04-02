@@ -6,7 +6,7 @@ public static class CI_CustomInspectorUtilities
     public static Label LabelField(script_so_LabelList labelList, Label currentValue, string CILabel = "")
     {
         var names = labelList.LabelStrings;
-        names.Insert(0, "INVALID");
+        names.Insert(0, "NONE");
 
         var currentNameIndex = labelList.GetLabelIndex(currentValue);
 
@@ -30,7 +30,7 @@ public static class CI_CustomInspectorUtilities
     public static string LabelNameField(script_so_LabelList labelList, string currentValue, string CILabel = "")
     {
         var names = labelList.LabelStrings;
-        names.Insert(0, "INVALID");
+        names.Insert(0, "NONE");
 
         var currentNameIndex = labelList.GetLabelIndex(currentValue);
 

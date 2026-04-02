@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2133184812841270437}
   - component: {fileID: 7985383098404671198}
   m_Layer: 0
-  m_Name: pf_log_LabelingLog
+  m_Name: pf_ui_log_LabelingLog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

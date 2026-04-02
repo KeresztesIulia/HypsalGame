@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 1241494777442883455}
   - component: {fileID: 4557403393550972931}
   m_Layer: 0
-  m_Name: pf_InteractionCanvas
+  m_Name: pf_ui_InteractionCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

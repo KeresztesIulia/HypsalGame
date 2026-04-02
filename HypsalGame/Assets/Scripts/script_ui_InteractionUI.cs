@@ -31,7 +31,6 @@ public class script_ui_InteractionUI : MonoBehaviour, interface_PersistentData
             Initialize();
     }
 
-
     public static void DisableUI(bool disableDot = false)
     {
         Instance?._interactionInfoHolder.SetActive(false);
@@ -86,6 +85,7 @@ public class script_ui_InteractionUI : MonoBehaviour, interface_PersistentData
         currentTarget.Interact(playerPosition);
     }
 
+    // funcHardCode
     public void DisableFunctionality()
     {
         currentTarget = null;

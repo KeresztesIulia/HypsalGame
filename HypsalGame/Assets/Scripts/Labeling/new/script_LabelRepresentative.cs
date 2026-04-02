@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class script_LabelRepresentative : MonoBehaviour, interface_Interactable
@@ -43,7 +44,7 @@ public class script_LabelRepresentative : MonoBehaviour, interface_Interactable
 
     public void ShowChoices(Vector3 playerPosition)
     {
-        FilterAssociations(); 
+        FilterAssociations();
         if (!hasAssociations) Debug.Log("Cannot be labeled, can only be looked at"); // maybe separate logic, but then need stg instead of playerInteraction; further comments in that file
         else if (!labelable)
         {
@@ -54,20 +55,27 @@ public class script_LabelRepresentative : MonoBehaviour, interface_Interactable
             script_ui_LabelingChoiceHandler.InstantiatePrompt(this);
         }
 
-        // new prompt system is pop-up for now
     }
 
-    void FilterAssociations()
+    public void FilterAssociations()
     {
+        Debug.Log("-------------------");
         // prolly shouldn't delete in case we want to be able to just change out labels
         for (int i = 0; i < possibleAssociationLabels.Count; i++)
         {
             var association = possibleAssociationLabels[i];
+            Debug.Log(association.GetHashCode());
             if (!association.Labelable)
             {
+                Debug.Log("Not labelable anymore: " + association.Name);
                 possibleAssociationLabels.RemoveAt(i);
                 i--;
             }
         }
+    }
+
+    public List<Label> FilteredAssociations()
+    {
+        return possibleAssociationLabels.Where(label =>  label.Labelable).ToList();
     }
 }

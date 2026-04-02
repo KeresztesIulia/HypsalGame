@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4941289531624952392}
   - component: {fileID: 3740295739588591613}
   m_Layer: 5
-  m_Name: pf_LabelCanvas
+  m_Name: pf_ui_LabelCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
