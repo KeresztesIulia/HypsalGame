@@ -29,20 +29,12 @@ public class script_ui_LabelingChoiceHandler : MonoBehaviour, interface_Persiste
         InstantiatePrompt(representative as script_LabelRepresentative);
     }
 
-    // funcHardcode !!!
     public static void ActivateUI(interface_Interactable target)
     {
         var representative = target as script_LabelRepresentative;
         if (representative.labelable)
         {
             InstantiatePrompt(representative);
-        }
-        else
-        {
-            script_ui_InteractionUI.UIInfo info = new();
-            info.interactionWord = "";
-            info.name = representative.RepresentedLabel.DisplayName;
-            script_ui_InteractionUI.ActivateUI(info);
         }
     }
 
@@ -57,12 +49,11 @@ public class script_ui_LabelingChoiceHandler : MonoBehaviour, interface_Persiste
     public static void DisableUI(interface_Interactable target)
     {
         DestroyCurrentPrompt();
-        if (!(target as script_LabelRepresentative).labelable) script_ui_InteractionUI.DisableUI();
     }
 
     public static void DestroyCurrentPrompt()
     {
-        if (Instance?.currentPrompt != null) Destroy(Instance.currentPrompt.gameObject);
+        if (Instance?.currentPrompt != null) Instance?.currentPrompt.Dispose();
 
     }
 }

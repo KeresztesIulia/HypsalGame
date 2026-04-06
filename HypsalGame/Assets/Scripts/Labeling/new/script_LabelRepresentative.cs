@@ -7,7 +7,6 @@ public class script_LabelRepresentative : MonoBehaviour, interface_Interactable
 {
     [SerializeField] script_so_LabelList _partOfList;
 
-
     [SerializeField] string _representedLabelName;
     Label representedLabel;
 
@@ -22,7 +21,7 @@ public class script_LabelRepresentative : MonoBehaviour, interface_Interactable
     public Label RepresentedLabel => representedLabel;
     public List<Label> PossibleLabels => possibleAssociationLabels;
 
-    bool hasAssociations => possibleAssociationLabels != null && possibleAssociationLabels.Count > 0;
+    bool hasAssociations => possibleAssociationLabels != null && FilteredAssociations().Length > 0;
 
     public bool labelable => hasAssociations && (_relabelable || representedLabel.Labelable); // should we allow override on the object itself? -> this actually does that and probably shouldn't
 
@@ -40,42 +39,17 @@ public class script_LabelRepresentative : MonoBehaviour, interface_Interactable
             if (string.IsNullOrEmpty(name)) continue;
             possibleAssociationLabels.Add(_partOfList.GetLabel(name));
         }
-    }
+        
 
-    public void ShowChoices(Vector3 playerPosition)
-    {
-        FilterAssociations();
-        if (!hasAssociations) Debug.Log("Cannot be labeled, can only be looked at"); // maybe separate logic, but then need stg instead of playerInteraction; further comments in that file
-        else if (!labelable)
         {
-            Debug.Log("Already labeled");
-        }
-        else
-        {
-            script_ui_LabelingChoiceHandler.InstantiatePrompt(this);
         }
 
-    }
-
-    public void FilterAssociations()
-    {
-        Debug.Log("-------------------");
-        // prolly shouldn't delete in case we want to be able to just change out labels
-        for (int i = 0; i < possibleAssociationLabels.Count; i++)
         {
-            var association = possibleAssociationLabels[i];
-            Debug.Log(association.GetHashCode());
-            if (!association.Labelable)
-            {
-                Debug.Log("Not labelable anymore: " + association.Name);
-                possibleAssociationLabels.RemoveAt(i);
-                i--;
-            }
         }
     }
 
-    public List<Label> FilteredAssociations()
+    public Label[] FilteredAssociations()
     {
-        return possibleAssociationLabels.Where(label =>  label.Labelable).ToList();
+        return possibleAssociationLabels.Where(label =>  label.Labelable).ToArray();
     }
 }

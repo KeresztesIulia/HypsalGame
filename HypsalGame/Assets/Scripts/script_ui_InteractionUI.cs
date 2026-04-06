@@ -14,9 +14,6 @@ public class script_ui_InteractionUI : MonoBehaviour, interface_PersistentData
 
     bool initialized = false;
 
-    // funcHardcode! move later!!!
-    bool functionalityInitialized = false;
-
     public void Initialize()
     {
         Debug.Log("Initialized interaction UI");
@@ -68,26 +65,5 @@ public class script_ui_InteractionUI : MonoBehaviour, interface_PersistentData
         public string name;
         public string interactionWord;
     }
-
-
-    // funcHardcode! move later!!!
-    public void ActivateFunctionality(interface_Interactable target, Vector3 playerPosition)
-    {
-        currentTarget = target as script_Interactable;
-        if (functionalityInitialized) return;
-        script_InputManager.action_Interact.performed += (ctx) => OnInteraction(playerPosition);
-        functionalityInitialized = true;
-    }
-
-    void OnInteraction(Vector3 playerPosition)
-    {
-        if (currentTarget == null) return;
-        currentTarget.Interact(playerPosition);
-    }
-
-    // funcHardCode
-    public void DisableFunctionality()
-    {
-        currentTarget = null;
-    }
+    
 }

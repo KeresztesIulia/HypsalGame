@@ -2,16 +2,12 @@ using UnityEngine;
 
 public class script_PlayerInteraction : MonoBehaviour
 {
-    // redo should focus on more generalized "interactables", as in looking at something is also interaction
-    // we have, looking at something, generic interaction (what is implemented here atm), and labeling (which should not go through the interaction keypress)
-    // so for these 3 categories, have different (maybe not even MonoBehaviour) classes, and the main interaction script delegates the specifics to each class
-    // the point is to identify in one place what we're dealing with
-
     [SerializeField] float _interactionDistance = 5f;
     [SerializeField] LayerMask _raycastIgnoreLayer;
 
     interface_Interactable currentTarget = null;
     interface_Interactable.InteractionType previousInteractionType = interface_Interactable.InteractionType.None;
+
     public interface_Interactable CurrentTarget
     {
         get
@@ -25,8 +21,8 @@ public class script_PlayerInteraction : MonoBehaviour
                 currentTarget = value;
                 if (value == null)
                 {
-                    script_ui_InteractionUI.DisableUI();
-                    script_ui_LabelingChoiceHandler.DestroyCurrentPrompt();
+                    DisablePreviousInteractionFunctionality();
+                    DisablePreviousInteractionUI();
                     previousInteractionType = interface_Interactable.InteractionType.None;
                 }
                 else
@@ -47,12 +43,13 @@ public class script_PlayerInteraction : MonoBehaviour
         switch (previousInteractionType)
         {
             case interface_Interactable.InteractionType.Generic:
-                script_ui_InteractionUI.DisableUI(true);
+                static_InteractionHandler.DisableFunctionality();
                 break;
             case interface_Interactable.InteractionType.Labelable:
-                script_ui_LabelingChoiceHandler.DestroyCurrentPrompt();
+                static_LabelingHandler.DisableFunctionality(); 
                 break;
             default:
+                // Visual has no functionality, that's the point
                 break;
         }
     }
@@ -65,7 +62,7 @@ public class script_PlayerInteraction : MonoBehaviour
             switch (previousInteractionType)
             {
                 case interface_Interactable.InteractionType.Generic:
-                    script_ui_InteractionUI.DisableUI(true);
+                    script_ui_InteractionUI.DisableUI();
                     break;
                 case interface_Interactable.InteractionType.Labelable:
                     script_ui_LabelingChoiceHandler.DisableUI(currentTarget);
@@ -78,7 +75,6 @@ public class script_PlayerInteraction : MonoBehaviour
 
     void ActivateCurrentInteractionUI()
     {
-        // for now, we give UI and functionality all in one, because I see no better way at the moment
         switch (currentTarget.interactionType)
         {
             case interface_Interactable.InteractionType.Generic:
@@ -97,12 +93,10 @@ public class script_PlayerInteraction : MonoBehaviour
         switch (currentTarget.interactionType)
         {
             case interface_Interactable.InteractionType.Generic:
-                // give target to script_Interactable
-                script_ui_InteractionUI.Instance?.ActivateFunctionality(currentTarget, transform.position);
+                static_InteractionHandler.ActivateFunctionality(currentTarget, transform.position);
                 break;
             case interface_Interactable.InteractionType.Labelable:
-                // give target to script_LabelingHandle
-                // for now, functionality stays with the UI, separate later!
+                static_LabelingHandler.ActivateFunctionality(currentTarget);
                 break;
             default:
                 break;
@@ -114,7 +108,20 @@ public class script_PlayerInteraction : MonoBehaviour
         Debug.DrawLine(transform.position, transform.position + transform.forward * 3, Color.red);
         if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hitInfo, _interactionDistance, ~_raycastIgnoreLayer))
         {
-            CurrentTarget = hitInfo.transform.GetComponent<interface_Interactable>();
+            bool found = false;
+            foreach (var potentialTarget in hitInfo.transform.GetComponents<interface_Interactable>())
+            {
+                if ((potentialTarget as MonoBehaviour).isActiveAndEnabled)
+                {
+                    CurrentTarget = potentialTarget;
+                    found = true;
+                    break;
+                }
+            }
+            if (!found)
+            {
+                CurrentTarget = null;
+            }
         }
         else
         {
@@ -122,4 +129,11 @@ public class script_PlayerInteraction : MonoBehaviour
         }
 
     }
+
+    public void ResetTarget()
+    {
+        CurrentTarget = null;
+
+    }
+    
 }

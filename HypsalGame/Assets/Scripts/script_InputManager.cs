@@ -34,7 +34,7 @@ public class script_InputManager : MonoBehaviour, interface_PersistentData
         {
             int idx = i;
             action_Number[i] = map_PlayerMap?.FindAction($"Number {i}");
-            action_Number[i].performed += (ctx) => Debug.Log($"perfomed {idx}");
+            //action_Number[i].performed += (ctx) => Debug.Log($"perfomed {idx}");
         }
 
 

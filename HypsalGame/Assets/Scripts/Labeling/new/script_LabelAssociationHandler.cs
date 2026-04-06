@@ -6,11 +6,11 @@ public class script_LabelAssociationHandler : MonoBehaviour, interface_Persisten
 {
     public static script_LabelAssociationHandler Instance;
     public static bool InstanceExists => Instance != null;
-    
-    List<LabelAssociation> associations;
+
+    Dictionary<string, Label> associations;
     bool initialized = false;
 
-    public List<LabelAssociation> Associations => associations;
+    public Dictionary<string, Label> Associations => associations;
 
     private void Start()
     {
@@ -19,7 +19,7 @@ public class script_LabelAssociationHandler : MonoBehaviour, interface_Persisten
     public void Initialize()
     {
         Instance = this;
-        associations = new List<LabelAssociation>();
+        associations = new Dictionary<string, Label>();
         initialized = true;
     }
 
@@ -28,113 +28,48 @@ public class script_LabelAssociationHandler : MonoBehaviour, interface_Persisten
         
         if (!AreAssociated(label1, label2))
         {
-            DeleteAssociation(label1, label2, true);
+            DeleteAssociation(label1);
+            DeleteAssociation(label2);
 
-            associations.Add(new(label1, label2));
+            associations.Add(label1, label2);
+
+            if (label1 == label2) return;
+
+            associations.Add(label2, label1);
         }
     }
 
     public void DeleteAssociation(Label label)
     {
-        for (int i = 0; i < associations.Count; i++)
+        if (associations.ContainsKey(label))
         {
-            var association = associations[i];
-            if (association.HasLabel(label))
-            {
-                associations.RemoveAt(i);
-                i--;
-            }
+            var association = associations[label];
+
+            associations.Remove(label);
+
+            associations.Remove(association);
         }
+
     }
 
-    public void DeleteAssociation(Label label1, Label label2, bool separate = false)
+    public void DeleteAssociation(Label label1, Label label2)
     {
-        if (!separate) associations.Remove(new(label1, label2));
-        else
-        {
-            for (int i = 0; i < associations.Count; i++)
-            {
-                var association = associations[i];
-                if (association.HasLabel(label1))
-                {
-                    associations.RemoveAt(i);
-                    i--;
-                }
-                else if (association.HasLabel(label2))
-                {
-                    associations.RemoveAt(i);
-                    i--;
-                }
-
-            }
-        }
+        DeleteAssociation(label1);
+        DeleteAssociation(label2);
     }
 
     public bool AreAssociated(Label label1, Label label2)
     {
-        return associations.Contains(new(label1, label2));
+        return associations.ContainsKey(label1) && associations[label1] == label2;
     }
 
     public bool HasAssociation(Label label)
     {
-        return FindAssociation(label) != null;
-    }
-
-    public LabelAssociation FindAssociation(Label label)
-    {
-        foreach (var association in associations)
-        {
-            if (association.HasLabel(label)) return association;
-        }
-        return null;
+        return associations.ContainsKey(label) && associations[label] is not null;
     }
 
     public Label FindAssociatedLabel(Label label)
     {
-        return FindAssociation(label)?.AssociatedLabel(label);
-    }
-}
-
-[System.Serializable]
-public class LabelAssociation : IEquatable<LabelAssociation>
-{
-    public Label label1;
-    public Label label2;
-
-    public LabelAssociation(Label label1, Label label2)
-    {
-        this.label1 = label1;
-        this.label2 = label2;
-    }
-
-    public bool HasLabel(Label label)
-    {
-        return label1 == label || label2 == label;
-    }
-
-    public Label AssociatedLabel(Label label)
-    {
-        if (!HasLabel(label)) return null;
-        return label == label1 ? label2 : label1;
-    }
-
-    public static bool operator ==(LabelAssociation left, LabelAssociation right)
-    {
-        if (left is null && right is null) return true;
-        if (left is null && right is not null) return false;
-        if (left is not null && right is null) return false;
-
-        return (left.label1 == right.label1 && left.label2 == right.label2)
-            || (left.label1 == right.label2 && left.label2 == right.label1); 
-    }
-
-    public static bool operator !=(LabelAssociation left, LabelAssociation right)
-    {
-        return !(left == right);
-    }
-
-    public bool Equals(LabelAssociation other)
-    {
-        return this == other;
+        return associations.ContainsKey(label) ? associations[label] : null;
     }
 }

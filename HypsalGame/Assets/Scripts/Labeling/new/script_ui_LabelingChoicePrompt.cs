@@ -5,84 +5,50 @@ using UnityEngine.InputSystem;
 
 public class script_ui_LabelingChoicePrompt : MonoBehaviour
 {
-    [SerializeField] TMP_Text promptText;
-    [SerializeField] Transform choiceContainer;
+    [SerializeField] TMP_Text _promptText;
+    [SerializeField] TMP_Text _currentChoiceText;
+    [SerializeField] Transform _choiceContainer;
 
-    [SerializeField] script_ui_ChoicePrompt choicePrefab;
+    [SerializeField] script_ui_ChoicePrompt _choicePrefab;
 
-    List<Label> labels;
-    System.Action<InputAction.CallbackContext>[] actions; // apparently I need to store them...
+    Label[] labels;
 
-    Label representedLabel;
     int choiceCount;
 
-    bool disposed = false;
 
-    public void Initialize(string prompt, Label representedLabel, List<Label> choiceLabels)
+    public void Initialize(string prompt, Label representedLabel, Label[] choiceLabels)
     {
-        promptText.text = prompt;
-        this.representedLabel = representedLabel; // ?MOVE
+        _promptText.text = prompt;
 
-        labels = choiceLabels;
+        _currentChoiceText.gameObject.SetActive(representedLabel.IsLabeled);
+        if (representedLabel.IsLabeled)
+        {
+            _currentChoiceText.text = $"(Currently: {representedLabel.DisplayName})";
+        }
+
+            labels = choiceLabels;
 
         SetupChoices();
 
         gameObject.SetActive(true);
-        //script_InputManager.SwitchInputMap(script_InputManager.map_uiMap); // !MOVE
     }   
     
     void SetupChoices()
     {
         // shuffle later -- how to make that consistent between UI and 
-        choiceCount = labels.Count;
-        actions = new System.Action<InputAction.CallbackContext>[choiceCount];
+        choiceCount = labels.Length;
         for (int i = 0; i < choiceCount; i++)
         {
-            var choicePrompt = Instantiate(choicePrefab, choiceContainer);
+            var choicePrompt = Instantiate(_choicePrefab, _choiceContainer);
             var label = labels[i];
-            actions[i] = (ctx) => Choose(label);
-            script_InputManager.AssignNumberAction(i + 1, actions[i]);
-            choicePrompt.Initialize(i + 1, label, Choose);
+            choicePrompt.Initialize(i + 1, label);
         }
     }
 
-    void Choose(Label label) //!Move
+
+    public void Dispose()
     {
-        representedLabel.SetLabel(label);
-
-        //script_InputManager.SwitchInputMap(script_InputManager.map_PlayerMap); //!MOVE
-
-        script_LabelLog.LogLabelingExchange(promptText.text, label);
-
-        Dispose();
-    }
-
-    void UnassignActions()
-    {
-        for (int i = 0; i < choiceCount; i++)
-        {
-            var label = labels[i];
-            script_InputManager.UnassignNumberAction(i + 1, actions[i]);
-
-        }
-    }
-
-    void Dispose()
-    {
-        UnassignActions(); 
         Destroy(gameObject);
-
-        disposed = true;
-    }
-
-    private void OnDestroy()
-    {
-        if (!disposed)
-        {
-            UnassignActions();
-            disposed = true;
-        }
-
     }
 
 }

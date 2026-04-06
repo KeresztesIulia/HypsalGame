@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9012271435955407509}
   - component: {fileID: 831683297783245701}
   - component: {fileID: 7253396127308042874}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Name of interaction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 8239785152281601219}
   - component: {fileID: 7538554541241934335}
   - component: {fileID: 3495539618856346220}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: centerDot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -221,7 +221,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9018545045983634089}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Interaction details
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 8604955212039557185}
   - component: {fileID: 1241494777442883455}
   - component: {fileID: 4557403393550972931}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: pf_ui_InteractionCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -380,7 +380,7 @@ GameObject:
   - component: {fileID: 8450515107249657180}
   - component: {fileID: 4724388750843231219}
   - component: {fileID: 9027471935737619941}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Name of Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
