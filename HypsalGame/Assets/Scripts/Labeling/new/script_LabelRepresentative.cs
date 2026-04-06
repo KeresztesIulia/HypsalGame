@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+[RequireComponent(typeof(script_VisualObject))]
 public class script_LabelRepresentative : MonoBehaviour, interface_Interactable
 {
     [SerializeField] script_so_LabelList _partOfList;
@@ -27,7 +28,7 @@ public class script_LabelRepresentative : MonoBehaviour, interface_Interactable
 
     public interface_Interactable.InteractionType interactionType => interface_Interactable.InteractionType.Labelable;
 
-    // should it be able to show the "true" label, if we ever do it like that, in the possible list on relabeling? it should, right?
+    script_VisualObject visual;
 
     private void Start()
     {
@@ -40,12 +41,22 @@ public class script_LabelRepresentative : MonoBehaviour, interface_Interactable
             possibleAssociationLabels.Add(_partOfList.GetLabel(name));
         }
         
+        visual = GetComponent<script_VisualObject>();
+        visual.SetActiveState(false);
 
+        representedLabel.Labeled.AddListener(() =>
         {
-        }
+            if (labelable) return;
+            visual.SetActiveState(true);
+            visual._uiInfo._objectName = representedLabel.DisplayName;
+            enabled = false;
+        });
 
+        representedLabel.Unlabeled.AddListener(() =>
         {
-        }
+            visual.SetActiveState(false);
+            enabled = true;
+        });
     }
 
     public Label[] FilteredAssociations()

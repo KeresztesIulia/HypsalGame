@@ -67,6 +67,9 @@ public class script_PlayerInteraction : MonoBehaviour
                 case interface_Interactable.InteractionType.Labelable:
                     script_ui_LabelingChoiceHandler.DisableUI(currentTarget);
                     break;
+                case interface_Interactable.InteractionType.Visual:
+                    script_ui_VisualHandler.DisableUI();
+                    break;
                 default:
                     break;
             }
@@ -82,6 +85,9 @@ public class script_PlayerInteraction : MonoBehaviour
                 break;
             case interface_Interactable.InteractionType.Labelable:
                 script_ui_LabelingChoiceHandler.ActivateUI(currentTarget);
+                break;
+            case interface_Interactable.InteractionType.Visual:
+                script_ui_VisualHandler.ActivateUI(currentTarget);
                 break;
             default:
                 break;
