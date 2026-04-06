@@ -39,6 +39,13 @@ public class script_ConditionalRunner : MonoBehaviour
     [SerializeField, Tooltip("Are there functions that should run if the condition is false when the object first appears?")] bool _checkAtStart_negative;
     [SerializeField] UnityEvent _AtStartNegativeEvents;
 
+    // OnLabeling
+    [SerializeField, Tooltip("Are there functions that should run every time the two condition labels are associated to each other?")] bool _checkAssociation;
+    [SerializeField] UnityEvent _OnAssociationEvents;
+
+    [SerializeField, Tooltip("Are there functions that should run every time one of the condition labels gets associated without fulfilling the condition?")] bool _checkAssociation_negative;
+    [SerializeField] UnityEvent _OnAssociationNegativeEvents;
+
 
     bool conditionMet;
 
@@ -91,13 +98,17 @@ public class script_ConditionalRunner : MonoBehaviour
 
         if (_checkAtStart && conditionMet) _AtStartEvents?.Invoke();
         if (_checkAtStart_negative && !conditionMet) _AtStartNegativeEvents?.Invoke();
+
+        conditionLabel1.Associated += Label1AssociationCheck;
+        conditionLabel2.Associated += Label2AssociationCheck;
+
     }
 
     private void Update()
     {
         if (script_LabelAssociationHandler.Instance == null) return;
         
-        if (!hasContinuous && !hasOnChange && (!_fireOnce || fired) && (!_fireOnce_negative || firedNegative)) return;
+        if (!hasContinuous/* && !hasOnChange && (!_fireOnce || fired) && (!_fireOnce_negative || firedNegative)*/) return;
 
 
         ConditionMet = script_LabelAssociationHandler.Instance.AreAssociated(conditionLabel1, conditionLabel2);
@@ -106,6 +117,28 @@ public class script_ConditionalRunner : MonoBehaviour
 
         if (_checkContinuously && ConditionMet) _ContinuousEvents.Invoke();
         if (_checkContinuously_negative && ConditionMet) _ContinuousNegativeEvents.Invoke();
+    }
+
+    void Label1AssociationCheck(Label label)
+    {
+        if (label == conditionLabel2)
+        {
+            _OnAssociationEvents?.Invoke();
+            ConditionMet = true;
+        }
+        else
+        {
+            _OnAssociationNegativeEvents?.Invoke();
+            ConditionMet = false;
+        }
+    }
+
+    void Label2AssociationCheck(Label label)
+    {
+        if (label == conditionLabel1) return;
+        
+        _OnAssociationNegativeEvents.Invoke();
+        ConditionMet = false;
     }
 
     public void DebugMessage(string message)

@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
 using System;
+using UnityEngine.Events;
 
 [CreateAssetMenu(fileName = "so_LabelList", menuName = "Scriptable Objects/Label List")]
 public class script_so_LabelList : ScriptableObject
@@ -20,7 +21,6 @@ public class script_so_LabelList : ScriptableObject
         }
 
     }
-
 
     public int GetLabelIndex(Label label)
     {
@@ -59,6 +59,11 @@ public class Label : IEquatable<Label>, IEquatable<string>
     [SerializeField] string _originalName;
     string givenName = "";
     [SerializeField] bool _relabelable = false;
+
+    [HideInInspector] public UnityEvent Labeled = new();
+    [HideInInspector] public UnityEvent Unlabeled = new();
+
+    [HideInInspector] public Action<Label> Associated = delegate { };
 
     public string Name => _originalName;
     public string DisplayName
@@ -147,7 +152,7 @@ public class Label : IEquatable<Label>, IEquatable<string>
             SetLabel(label.Name);
             label.SetLabel(Name);
         }
-
+        Labeled?.Invoke();
     }
 
     public override string ToString()

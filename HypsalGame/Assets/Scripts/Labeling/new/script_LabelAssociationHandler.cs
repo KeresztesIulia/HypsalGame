@@ -32,10 +32,12 @@ public class script_LabelAssociationHandler : MonoBehaviour, interface_Persisten
             DeleteAssociation(label2);
 
             associations.Add(label1, label2);
+            label1.Associated(label2);
 
             if (label1 == label2) return;
 
             associations.Add(label2, label1);
+            label2.Associated(label1);
         }
     }
 
@@ -46,8 +48,10 @@ public class script_LabelAssociationHandler : MonoBehaviour, interface_Persisten
             var association = associations[label];
 
             associations.Remove(label);
+            label.Unlabeled?.Invoke();
 
             associations.Remove(association);
+            association.Unlabeled?.Invoke();
         }
 
     }

@@ -51,6 +51,8 @@ public class CI_ConditionalRunner : Editor
         var fireOnceNegativeProp = serializedObject.FindProperty("_fireOnce_negative");
         var atStartProp = serializedObject.FindProperty("_checkAtStart");
         var atStartNegativeProp = serializedObject.FindProperty("_checkAtStart_negative");
+        var onAssociationProp = serializedObject.FindProperty("_checkAssociation");
+        var onAssociationNegativeProp = serializedObject.FindProperty("_checkAssociation_negative");
 
         atStartProp.boolValue = EditorGUILayout.BeginToggleGroup("Check at start", atStartProp.boolValue);
             EditorGUILayout.PropertyField(serializedObject.FindProperty("_AtStartEvents"));
@@ -82,6 +84,15 @@ public class CI_ConditionalRunner : Editor
 
         fireOnceNegativeProp.boolValue = EditorGUILayout.BeginToggleGroup("Check first change (negative)", fireOnceNegativeProp.boolValue);
             EditorGUILayout.PropertyField(serializedObject.FindProperty("_FireOnceNegativeEvents"));
+        EditorGUILayout.EndToggleGroup();
+
+        ////
+        onAssociationProp.boolValue = EditorGUILayout.BeginToggleGroup("Check labeling result", onAssociationProp.boolValue);
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("_OnAssociationEvents"));
+        EditorGUILayout.EndToggleGroup();
+
+        onAssociationNegativeProp.boolValue = EditorGUILayout.BeginToggleGroup("Check labeling result (negative)", onAssociationNegativeProp.boolValue);
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("_OnAssociationNegativeEvents"));
         EditorGUILayout.EndToggleGroup();
     }
 }
