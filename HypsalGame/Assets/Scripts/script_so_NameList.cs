@@ -70,6 +70,7 @@ public class LabelableWord : IEquatable<LabelableWord>
 
     public string originalName => _mainName;
     public PartOfSpeech type => _type;
+    public bool renameable => _renameable;
     public bool named => !string.IsNullOrEmpty(givenLabel);
     public string displayName => named ? givenLabel : "(unnamed)";
     public string forcedDisplayName => named ? givenLabel : originalName; // for when we must display something, ex. in dialogue before naming stuff.

@@ -5,6 +5,8 @@ public class script_Nameable : MonoBehaviour
     [SerializeField] script_so_NameList _nameList;
     [SerializeField] LabelableWord _representedWord;
 
+    public LabelableWord RepresentedWord => _representedWord;
+
     public void GiveName(string name)
     {
         if (_representedWord == null) return;
