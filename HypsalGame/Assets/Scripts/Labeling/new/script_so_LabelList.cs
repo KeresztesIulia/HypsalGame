@@ -19,6 +19,8 @@ public class script_so_LabelList : ScriptableObject
         {
             label.Reset();
         }
+        foreach (var obj in objects)
+            { obj.Reset(); }    
 
     }
 
