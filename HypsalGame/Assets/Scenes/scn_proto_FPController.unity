@@ -428,30 +428,8 @@ PrefabInstance:
     - {fileID: 5173615924893165243, guid: e8db9869c6f61cc41b3c7f11b08e9685, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5173615924893165240, guid: e8db9869c6f61cc41b3c7f11b08e9685, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1705508972}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8db9869c6f61cc41b3c7f11b08e9685, type: 3}
---- !u!1 &1705508971 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5173615924893165240, guid: e8db9869c6f61cc41b3c7f11b08e9685, type: 3}
-  m_PrefabInstance: {fileID: 1705508970}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1705508972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1705508971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioListener
-  nonRigidbodyVelocity: 0
-  attenuationObject: {fileID: 0}
 --- !u!1 &1809992987
 GameObject:
   m_ObjectHideFlags: 0
