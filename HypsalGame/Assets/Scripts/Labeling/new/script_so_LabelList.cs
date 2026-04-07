@@ -7,10 +7,11 @@ using UnityEngine.Events;
 [CreateAssetMenu(fileName = "so_LabelList", menuName = "Scriptable Objects/Label List")]
 public class script_so_LabelList : ScriptableObject
 {
+    [SerializeField] List<Label> objects;
     [SerializeField] List<Label> labels;
 
     public List<Label> Labels => labels;
-    public List<string> LabelStrings => labels.Select(label => label.Name).ToList();
+    public List<string> LabelStrings => objects.Concat(labels).Select(label => label.InternalName).ToList();/* labels.Select(label => label.InternalName).ToList();*/
 
     public void Reset()
     {
@@ -26,26 +27,40 @@ public class script_so_LabelList : ScriptableObject
 
     public int GetLabelIndex(Label label)
     {
-        for (int i = 0; i < labels.Count; i++)
+        int i = 0;
+        int j = 0;
+        for (i = 0; i < objects.Count; i++)
         {
-            if (label == labels[i]) return i;
+            if (label == objects[i]) return i;
+        }
+        for (j = 0; j < labels.Count; j++)
+        {
+            if (label == labels[j]) return i + j;
         }
         return -1;
     }
 
     public int GetLabelIndex(string labelName)
     {
-        for (int i = 0; i < labels.Count; i++)
+        int i = 0;
+        int j = 0;
+        for (i = 0; i < objects.Count; i++)
         {
-            if (labels[i] == labelName) return i;
+            if (labelName == objects[i]) return i;
+        }
+        for (j = 0; j < labels.Count; j++)
+        {
+            if (labelName == labels[j]) return i + j;
         }
         return -1;
     }
 
     public Label GetLabel(int index)
     {
-        if (index < 0 || index >= labels.Count) return null;
-        return labels[index];
+        if (index < 0) return null;
+        if (index < objects.Count) return objects[index];
+        if (index >= objects.Count + labels.Count) return null;
+        return labels[index - objects.Count];
     }
 
     public Label GetLabel(string labelName)
@@ -58,7 +73,8 @@ public class script_so_LabelList : ScriptableObject
 [Serializable]
 public class Label : IEquatable<Label>, IEquatable<string>
 {
-    [SerializeField] string _originalName;
+    [SerializeField] string _internalName;
+    [SerializeField] string _displayName;
     string givenName = "";
     [SerializeField] bool _relabelable = false;
 
@@ -67,7 +83,9 @@ public class Label : IEquatable<Label>, IEquatable<string>
 
     [HideInInspector] public Action<Label> Associated = delegate { };
 
-    public string Name => _originalName;
+    public string InternalName => _internalName;
+    public string OriginalDisplayName => string.IsNullOrEmpty(_displayName) ? _internalName : _displayName;
+
     public string DisplayName
     {
         get
@@ -77,7 +95,7 @@ public class Label : IEquatable<Label>, IEquatable<string>
                 if (script_LabelAssociationHandler.InstanceExists)
                 {
                     var association = script_LabelAssociationHandler.Instance?.FindAssociatedLabel(this);
-                    return association.Name;
+                    return association.OriginalDisplayName;
                 }
                 else
                 {
@@ -90,7 +108,7 @@ public class Label : IEquatable<Label>, IEquatable<string>
             }
         }
     }
-    public string ForcedDisplayName => IsLabeled ? DisplayName : _originalName;
+    public string ForcedDisplayName => IsLabeled ? DisplayName : OriginalDisplayName;
 
     public bool IsLabeled => script_LabelAssociationHandler.InstanceExists
         ? script_LabelAssociationHandler.Instance.HasAssociation(this) 
@@ -110,7 +128,7 @@ public class Label : IEquatable<Label>, IEquatable<string>
 
     public bool Equals(string other)
     {
-        return _originalName.Equals(other);
+        return _internalName.Equals(other);
     }
 
     public static bool operator ==(Label first, Label second)
@@ -118,7 +136,7 @@ public class Label : IEquatable<Label>, IEquatable<string>
         if (first is null && second is null) return true;
         if (first is null && second is not null) return false;
         if (first is not null && second is null) return false;
-        return first.Name == second.Name;
+        return first.InternalName == second.InternalName;
     }
 
     public static bool operator !=(Label first, Label second)
@@ -128,7 +146,7 @@ public class Label : IEquatable<Label>, IEquatable<string>
 
     public static bool operator ==(Label label, string name)
     {
-        return label.Name == name;
+        return label.InternalName == name;
     }
 
     public static bool operator !=(Label label, string name)
@@ -151,15 +169,15 @@ public class Label : IEquatable<Label>, IEquatable<string>
         }
         else
         {
-            SetLabel(label.Name);
-            label.SetLabel(Name);
+            SetLabel(label.InternalName);
+            label.SetLabel(InternalName);
         }
         Labeled?.Invoke();
     }
 
     public override string ToString()
     {
-        return Name; // because this should be for quick usage and so should actually describe the object. Anything else should be deliberate.
+        return InternalName; // because this should be for quick usage and so should actually describe the object. Anything else should be deliberate.
     }
 
     public static implicit operator string(Label label)

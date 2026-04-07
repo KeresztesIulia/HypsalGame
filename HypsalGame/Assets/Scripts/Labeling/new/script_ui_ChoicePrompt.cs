@@ -12,7 +12,7 @@ public class script_ui_ChoicePrompt : MonoBehaviour
     public void Initialize(int number, Label label)
     {
         numberText.text = number.ToString();
-        labelText.text = label.Name;
+        labelText.text = label.OriginalDisplayName;
 
     }
 

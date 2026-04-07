@@ -12,22 +12,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d81efba56215eca48a930710fcbaf5ba, type: 3}
   m_Name: so_LabelList
   m_EditorClassIdentifier: Assembly-CSharp::script_so_LabelList
+  objects:
+  - _internalName: tombstone
+    _displayName: Tombstone
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: r_chicken
+    _displayName: Chicken
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
   labels:
-  - _originalName: tree
+  - _internalName: Hi
+    _displayName: 
     _relabelable: 0
-  - _originalName: chicken
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: Hello
+    _displayName: 
     _relabelable: 0
-  - _originalName: i can't remember what else there was
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: Hoi
+    _displayName: Hoi
     _relabelable: 0
-  - _originalName: sandwitch
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: Henlo
+    _displayName: Henlo
     _relabelable: 0
-  - _originalName: wind
-    _relabelable: 0
-  - _originalName: some other label
-    _relabelable: 0
-  - _originalName: love
-    _relabelable: 0
-  - _originalName: death
-    _relabelable: 0
-  - _originalName: robots
-    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
