@@ -208,11 +208,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlaySound
   sound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1245072854
+      Data2: 1156027433
+      Data3: -1968373870
+      Data4: -30826709
+    Path: event:/MUSIC/Placeholder Voice
   playOnAwake: 0
   playOnce: 0
   playOnTrigger: 1
@@ -264,14 +264,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1091057841962886286, guid: 49664c4df79a454429e0ffaf02137db8, type: 3}
-      propertyPath: _subModules.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1091057841962886286, guid: 49664c4df79a454429e0ffaf02137db8, type: 3}
-      propertyPath: '_subModules.Array.data[5]'
-      value: 
-      objectReference: {fileID: 2703506027484952252, guid: cbfbdb9341b6d9f4da7fe9c784cfae76, type: 3}
     - target: {fileID: 2499061348442259048, guid: 49664c4df79a454429e0ffaf02137db8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
