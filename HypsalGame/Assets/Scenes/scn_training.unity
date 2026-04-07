@@ -226,7 +226,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ee0d9612068fc4542ba72dd23ad5f104, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -273,11 +273,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 261697095}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &346475961 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3491834203653676557, guid: 4d22c39ff9be1144b91328eac47a657e, type: 3}
-  m_PrefabInstance: {fileID: 1227586860}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &362760351
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -396,9 +391,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1222836278}
-  - {fileID: 346475961}
-  - {fileID: 1749166944}
+  - {fileID: 904954034}
+  - {fileID: 1842862337}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &538632977
@@ -605,7 +599,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1891728178}
-  - {fileID: 1767487574}
+  - {fileID: 1767487578}
   m_Father: {fileID: 1678135690}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &598430833
@@ -673,7 +667,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ee0d9612068fc4542ba72dd23ad5f104, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -891,7 +885,7 @@ MonoBehaviour:
       Data2: 1156027433
       Data3: -1968373870
       Data4: -30826709
-    Path: event:/MUSIC/Placeholder Voice
+    Path: event:/VOICE/Placeholder Voice
   playOnAwake: 0
   playOnce: 0
   playOnTrigger: 1
@@ -914,6 +908,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 442420783}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &878604343 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6272032392725054560, guid: e8db9869c6f61cc41b3c7f11b08e9685, type: 3}
+  m_PrefabInstance: {fileID: 705211385}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &898195202
 GameObject:
   m_ObjectHideFlags: 0
@@ -979,7 +978,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ee0d9612068fc4542ba72dd23ad5f104, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1026,6 +1025,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 261697095}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &904954034 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3491834203653676557, guid: 4d22c39ff9be1144b91328eac47a657e, type: 3}
+  m_PrefabInstance: {fileID: 1227586860}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1003737271
 GameObject:
   m_ObjectHideFlags: 0
@@ -1055,7 +1059,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1758361886}
+  - {fileID: 878604343}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1082785096
@@ -1337,7 +1341,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c20e73ddca35a8b4e9bbd5a8ef57437c, type: 2}
+  - {fileID: 2100000, guid: ee0d9612068fc4542ba72dd23ad5f104, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1517,7 +1521,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ee0d9612068fc4542ba72dd23ad5f104, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1668,11 +1672,11 @@ Transform:
   m_GameObject: {fileID: 1222836275}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -984, y: -540, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 446112534}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1227586860
 PrefabInstance:
@@ -2050,16 +2054,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1767487575}
   m_SourcePrefab: {fileID: 100100000, guid: c1088612ebac05d4a958da56ca606447, type: 3}
---- !u!4 &1749166944 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2042621574863903900, guid: 08963585bd69ea84a8fa12f88b567c99, type: 3}
-  m_PrefabInstance: {fileID: 762756527}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1758361886 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6272032392725054560, guid: e8db9869c6f61cc41b3c7f11b08e9685, type: 3}
-  m_PrefabInstance: {fileID: 705211385}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1767487569 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1327932505511970, guid: c1088612ebac05d4a958da56ca606447, type: 3}
@@ -2101,11 +2095,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::script_VisualObject
   _uiInfo:
     _objectName: 
---- !u!4 &1767487574 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4554739439305560, guid: c1088612ebac05d4a958da56ca606447, type: 3}
-  m_PrefabInstance: {fileID: 1679403125}
-  m_PrefabAsset: {fileID: 0}
 --- !u!65 &1767487575
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2127,6 +2116,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.71975005, y: 0.17700252, z: 0.74610454}
   m_Center: {x: 0, y: 0.000601843, z: 0}
+--- !u!4 &1767487578 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4554739439305560, guid: c1088612ebac05d4a958da56ca606447, type: 3}
+  m_PrefabInstance: {fileID: 1679403125}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1842862337 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2042621574863903900, guid: 08963585bd69ea84a8fa12f88b567c99, type: 3}
+  m_PrefabInstance: {fileID: 762756527}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1891728172 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 168578, guid: edd46fc5182e0d44c98fa6c5305dabb0, type: 3}
@@ -2145,8 +2144,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
   _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
-  _representedLabelName: Sandwich
-  _prompt: What does this mean to you?
+  _representedLabelName: Grave
+  _prompt: How does this make you feel?
   _possibleAssociations:
   - Happy
   - Angry
@@ -2299,7 +2298,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ee0d9612068fc4542ba72dd23ad5f104, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2416,5 +2415,6 @@ SceneRoots:
   - {fileID: 446112534}
   - {fileID: 553974792}
   - {fileID: 442420783}
+  - {fileID: 1222836278}
   - {fileID: 1003737272}
   - {fileID: 1678135690}

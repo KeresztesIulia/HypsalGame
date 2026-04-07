@@ -212,7 +212,7 @@ MonoBehaviour:
       Data2: 1156027433
       Data3: -1968373870
       Data4: -30826709
-    Path: event:/MUSIC/Placeholder Voice
+    Path: event:/VOICE/Placeholder Voice
   playOnAwake: 0
   playOnce: 0
   playOnTrigger: 1
@@ -533,7 +533,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c20e73ddca35a8b4e9bbd5a8ef57437c, type: 2}
+  - {fileID: 2100000, guid: ee0d9612068fc4542ba72dd23ad5f104, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
