@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5140396039601912388}
   - component: {fileID: 3019267999867567727}
   - component: {fileID: 3475386700399925331}
+  - component: {fileID: 5931898592388604345}
   m_Layer: 0
   m_Name: pf_proto_cubeOfLabeling
   m_TagString: Untagged
@@ -125,18 +126,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1586d1852ae31047a2983072095e8e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
-  _uiInfo:
-    name: 
-    interactionWord: 
   _partOfList: {fileID: 11400000, guid: 45f6b312fc19ec54fae31a11b651de54, type: 2}
-  _representedLabelName: some other label
+  _representedLabelName: r_chicken
   _prompt: What does this look like to you?
   _possibleAssociations:
-  - tree
-  - chicken
-  - sandwitch
-  - wind
-  - love
-  - death
-  - robots
+  - Hello
+  - Hi
+  - Henlo
+  - Hoi
   _relabelable: 0
+--- !u!114 &5931898592388604345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4946989802294137989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7350bcf7331a3c4e83d51b825af8c24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_VisualObject
+  _uiInfo:
+    _objectName: 
