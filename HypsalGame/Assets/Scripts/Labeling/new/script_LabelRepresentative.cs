@@ -43,13 +43,15 @@ public class script_LabelRepresentative : MonoBehaviour, interface_Interactable
         
         visual = GetComponent<script_VisualObject>();
         visual.SetActiveState(false);
+        
+        if (representedLabel.IsLabeled)
+        {
+            Labeled();
+        }
 
         representedLabel.Labeled.AddListener(() =>
         {
-            if (labelable) return;
-            visual.SetActiveState(true);
-            visual._uiInfo._objectName = representedLabel.DisplayName;
-            enabled = false;
+            Labeled();
         });
 
         representedLabel.Unlabeled.AddListener(() =>
@@ -57,6 +59,15 @@ public class script_LabelRepresentative : MonoBehaviour, interface_Interactable
             visual.SetActiveState(false);
             enabled = true;
         });
+    }
+
+
+    void Labeled()
+    {
+        if (labelable) return;
+        visual.SetActiveState(true);
+        visual._uiInfo._objectName = representedLabel.DisplayName;
+        enabled = false;
     }
 
     public Label[] FilteredAssociations()
