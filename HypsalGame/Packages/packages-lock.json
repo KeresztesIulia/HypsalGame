@@ -240,6 +240,13 @@
       },
       "url": "https://packages.unity.com"
     },
+    "net.codestage.package2folder": {
+      "version": "https://github.com/Code-Stage/Package2Folder.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "b216a87dc6de0e3b5687537855ca9355ed601fdd"
+    },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
       "depth": 0,
