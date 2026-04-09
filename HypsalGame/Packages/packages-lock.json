@@ -90,7 +90,7 @@
       "source": "registry",
       "dependencies": {
         "com.unity.test-framework": "1.1.33"
-        },
+      },
       "url": "https://packages.unity.com"
     },
     "com.unity.inputsystem": {
@@ -145,27 +145,9 @@
         "com.unity.modules.jsonserialize": "1.0.0"
       }
     },
-    "com.unity.render-pipelines.universal": {
-      "version": "17.3.0",
-      "depth": 0,
-      "source": "builtin",
-      "dependencies": {
-        "com.unity.render-pipelines.core": "17.3.0",
-        "com.unity.shadergraph": "17.3.0",
-        "com.unity.render-pipelines.universal-config": "17.0.3"
-      }
-    },
-    "com.unity.render-pipelines.universal-config": {
-      "version": "17.0.3",
-      "depth": 1,
-      "source": "builtin",
-      "dependencies": {
-        "com.unity.render-pipelines.core": "17.0.3"
-      }
-    },
     "com.unity.searcher": {
       "version": "4.9.4",
-      "depth": 2,
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
@@ -179,7 +161,7 @@
     },
     "com.unity.shadergraph": {
       "version": "17.3.0",
-      "depth": 1,
+      "depth": 0,
       "source": "builtin",
       "dependencies": {
         "com.unity.render-pipelines.core": "17.3.0",
@@ -257,6 +239,13 @@
         "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
+    },
+    "net.codestage.package2folder": {
+      "version": "https://github.com/Code-Stage/Package2Folder.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "b216a87dc6de0e3b5687537855ca9355ed601fdd"
     },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",

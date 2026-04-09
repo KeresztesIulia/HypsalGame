@@ -12,12 +12,13 @@ public class script_LabelAssociationHandler : MonoBehaviour, interface_Persisten
 
     public Dictionary<string, Label> Associations => associations;
 
-    private void Start()
+    private void Awake()
     {
         if (!initialized) Initialize();
     }
     public void Initialize()
     {
+        if (initialized) return;
         Instance = this;
         associations = new Dictionary<string, Label>();
         initialized = true;
