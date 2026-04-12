@@ -53,9 +53,10 @@ public class script_LabelLog : MonoBehaviour, interface_PersistentData
         textBox.transform.SetParent(Instance?._contentTransform, false);
     }
 
-    public static void LogAIText(string logText)
+    public static void LogAIText(string logText, bool addAISign = true)
     {
         TMP_Text aiText = Instantiate(Instance?._aiTextPrefab);
+        if (addAISign) logText = "> " + logText;
         LogText(aiText, logText);
     }
 
