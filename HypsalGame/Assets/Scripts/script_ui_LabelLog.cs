@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData
 {
@@ -15,6 +16,7 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData
 
     [Header("Log elements")]
     [SerializeField] CanvasGroup _container;
+    [SerializeField] ScrollRect _scrollRect;
     [SerializeField] Transform _contentTransform;
 
     [Header("Log fade settings")]
@@ -37,6 +39,11 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData
     void Start()
     {
         if (!initialized) Initialize();
+    }
+
+    private void LateUpdate()
+    {
+        Debug.Log(_scrollRect.verticalScrollbar.value);
     }
 
     void ToggleLog(bool stopCoroutines = true)
@@ -90,6 +97,7 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData
         if (closeExchange) CloseExchange();
 
         // scroll to bottom
+        Instance?.StartCoroutine(Instance?.ForceToBottom());
     }
     public static void LogExchangeElement(LogType logType, string logText = "", bool closeExchange = false)
     {
@@ -99,6 +107,7 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData
     public static void CloseExchange()
     {
         Instantiate(Instance?._separator, Instance?._contentTransform);
+        Instance?.StartCoroutine(Instance?.ForceToBottom());
 
         // send signal to open log briefly
         // which signal interrupts any previous ones - does it...? I don't want to restart fading just because I'm already fading.
@@ -163,6 +172,13 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData
         }
         _container.alpha = 0;
         ToggleLog(false);
+    }
+
+    IEnumerator ForceToBottom()
+    {
+        yield return new WaitForNextFrameUnit();
+        yield return new WaitForEndOfFrame();
+        _scrollRect.verticalNormalizedPosition = 0;
     }
 
     struct ExchangeElement

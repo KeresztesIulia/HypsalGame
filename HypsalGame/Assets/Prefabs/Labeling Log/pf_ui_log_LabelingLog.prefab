@@ -334,6 +334,7 @@ MonoBehaviour:
   _separator: {fileID: 667254219915429272, guid: aeda1693959993b4093e1a4fb7b5c359, type: 3}
   _labelingStandardResponse: Thank you for your choice.
   _container: {fileID: 2337653378950774416}
+  _scrollRect: {fileID: 7533681053600395051}
   _contentTransform: {fileID: 6684140347068336434}
   _logFadeInTime: 0.3
   _logOpenTime: 4
@@ -583,29 +584,13 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1944593036495523081, guid: 81e0a479a597d2745b6f8d6e93f0eda5, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1944593036495523081, guid: 81e0a479a597d2745b6f8d6e93f0eda5, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3838848837776121178, guid: 81e0a479a597d2745b6f8d6e93f0eda5, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3838848837776121178, guid: 81e0a479a597d2745b6f8d6e93f0eda5, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4091458685967239423, guid: 81e0a479a597d2745b6f8d6e93f0eda5, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 11.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4091458685967239423, guid: 81e0a479a597d2745b6f8d6e93f0eda5, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -760
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5426522105289674319, guid: 81e0a479a597d2745b6f8d6e93f0eda5, type: 3}
       propertyPath: m_AnchorMax.y
@@ -723,10 +708,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8529201331258346649, guid: 81e0a479a597d2745b6f8d6e93f0eda5, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -747,3 +728,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4091458685967239423, guid: 81e0a479a597d2745b6f8d6e93f0eda5, type: 3}
   m_PrefabInstance: {fileID: 7207186312483226061}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7533681053600395051 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 902992361992220390, guid: 81e0a479a597d2745b6f8d6e93f0eda5, type: 3}
+  m_PrefabInstance: {fileID: 7207186312483226061}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ScrollRect
