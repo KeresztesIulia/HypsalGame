@@ -326,12 +326,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 5523739615821761998}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dfbb8bbe1ed0ed40a5c274a75f4a74a, type: 3}
+  m_Script: {fileID: 11500000, guid: d9d16d971655a314ca8f94c8e4c578af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_LabelLog
   _aiTextPrefab: {fileID: 5016402652799791833, guid: d6ae7647c3feca340953eee2541ac6bb, type: 3}
-  _aiThankYouPrefab: {fileID: 667254219915429272, guid: aeda1693959993b4093e1a4fb7b5c359, type: 3}
   _playerTextPrefab: {fileID: 1460439334931555253, guid: aa1f62ad7d1ef7b43b3e058a410b716e, type: 3}
+  _separator: {fileID: 667254219915429272, guid: aeda1693959993b4093e1a4fb7b5c359, type: 3}
+  _labelingStandardResponse: Thank you for your choice.
   _container: {fileID: 8620948399252854570}
   _contentTransform: {fileID: 6684140347068336434}
 --- !u!1 &7980317905310416067

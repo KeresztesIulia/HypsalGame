@@ -38,7 +38,7 @@ public class script_ui_LabelingPrompt : MonoBehaviour
             representedWord.LabelWord(_inputField.text);
             script_InputManager.playerInput.enabled = true;
 
-            script_LabelLog.LogLabelingExchange(_prompt.text, _inputField.text);
+            script_ui_LabelLog.LogLabelingExchange(_prompt.text, _inputField.text);
 
             //script_InputManager.SwitchInputMap(script_InputManager.map_PlayerMap);
             Destroy(gameObject);
