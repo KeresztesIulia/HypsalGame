@@ -14,7 +14,9 @@ public class script_ui_LabelingPrompt : MonoBehaviour
         InitializeInput(wordToRepresent);
         gameObject.SetActive(true);
         script_InputManager.playerInput.enabled = false;
-        script_ui_InteractionUI.DisableUI(true);
+        script_ui_InteractionUI.DisableUI();
+        script_ui_DotController.DisableDot();
+
 
         //script_InputManager.SwitchInputMap(script_InputManager.map_uiMap);
     }

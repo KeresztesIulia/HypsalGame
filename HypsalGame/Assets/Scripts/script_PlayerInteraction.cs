@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class script_PlayerInteraction : MonoBehaviour
 {
+    [SerializeField] float _interactableNoticeDistance = 10f;
     [SerializeField] float _interactionDistance = 5f;
     [SerializeField] LayerMask _raycastIgnoreLayer;
 
@@ -112,19 +113,30 @@ public class script_PlayerInteraction : MonoBehaviour
     private void Update()
     {
         Debug.DrawLine(transform.position, transform.position + transform.forward * 3, Color.red);
-        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hitInfo, _interactionDistance, ~_raycastIgnoreLayer))
+        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hitInfo, _interactableNoticeDistance, ~_raycastIgnoreLayer))
         {
+            Debug.Log(hitInfo.transform);
+            bool inRange = hitInfo.distance < _interactionDistance;
             bool found = false;
+            bool foundInRange = false;
+
             foreach (var potentialTarget in hitInfo.transform.GetComponents<interface_Interactable>())
             {
                 if ((potentialTarget as MonoBehaviour).isActiveAndEnabled)
                 {
-                    CurrentTarget = potentialTarget;
                     found = true;
+                    if (!inRange) break;
+
+                    CurrentTarget = potentialTarget;
+                    foundInRange = true;
                     break;
+                    
                 }
             }
-            if (!found)
+
+            script_ui_DotController.SetInteractableDotState(found);
+
+            if (!foundInRange)
             {
                 CurrentTarget = null;
             }
@@ -132,6 +144,8 @@ public class script_PlayerInteraction : MonoBehaviour
         else
         {
             CurrentTarget = null;
+            // Activate normal dot / deactivate extra circle
+            script_ui_DotController.SetInteractableDotState(false);
         }
 
     }
