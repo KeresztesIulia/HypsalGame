@@ -1,4 +1,6 @@
+using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData
@@ -12,8 +14,13 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData
     [SerializeField] string _labelingStandardResponse = "Thank you for your choice";
 
     [Header("Log elements")]
-    [SerializeField] GameObject _container;
+    [SerializeField] CanvasGroup _container;
     [SerializeField] Transform _contentTransform;
+
+    [Header("Log fade settings")]
+    [SerializeField] float _logFadeInTime = 0.3f;
+    [SerializeField] float _logOpenTime = 4f;
+    [SerializeField] float _logFadeOutTime = 0.15f;
 
     public enum LogType { AI, Player };
     public static script_ui_LabelLog Instance;
@@ -32,9 +39,10 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData
         if (!initialized) Initialize();
     }
 
-    void ToggleLog()
+    void ToggleLog(bool stopCoroutines = true)
     {
-        _container.SetActive(!_container.activeSelf);
+        if (stopCoroutines) StopAllCoroutines();
+        _container.gameObject.SetActive(!_container.gameObject.activeSelf);
     }
 
     public static void LogAIText(string logText, bool closeExchange = false)
@@ -80,6 +88,8 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData
         textInstance.text = element.text;
 
         if (closeExchange) CloseExchange();
+
+        // scroll to bottom
     }
     public static void LogExchangeElement(LogType logType, string logText = "", bool closeExchange = false)
     {
@@ -89,8 +99,10 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData
     public static void CloseExchange()
     {
         Instantiate(Instance?._separator, Instance?._contentTransform);
+
         // send signal to open log briefly
-        // which signal interrupts any previous ones
+        // which signal interrupts any previous ones - does it...? I don't want to restart fading just because I'm already fading.
+        if (Instance != null) Instance.StartCoroutine(Instance.ShowNewLog());
     }
 
     TMP_Text DetermineTextPrefab(LogType type)
@@ -117,6 +129,40 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData
 
                 break;
         }
+    }
+
+
+    IEnumerator ShowNewLog()
+    {
+        if (_container.gameObject.activeSelf) yield break;
+
+        // fade in for x seconds
+        _container.alpha = 0;
+        ToggleLog(false);
+
+        float currentTime = 0;
+        while (currentTime <= _logFadeInTime)
+        {
+            _container.alpha = currentTime / _logFadeInTime;
+            currentTime += Time.unscaledDeltaTime;
+            yield return null;
+        }
+        _container.alpha = 1;
+
+        // stay open for y seconds
+        yield return new WaitForSecondsRealtime(_logOpenTime);
+
+        // fade out for z seconds
+
+        currentTime = _logFadeOutTime;
+        while (currentTime >= 0)
+        {
+            _container.alpha = currentTime / _logFadeOutTime;
+            currentTime -= Time.unscaledDeltaTime;
+            yield return null;
+        }
+        _container.alpha = 0;
+        ToggleLog(false);
     }
 
     struct ExchangeElement

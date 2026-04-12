@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 6869064604037365118}
   - component: {fileID: 9114477162447306626}
   - component: {fileID: 902992361992220390}
+  - component: {fileID: 4932587939374104413}
   m_Layer: 0
   m_Name: pf_log_LogScrollbox
   m_TagString: Untagged
@@ -184,6 +185,18 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!225 &4932587939374104413
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416051270030890727}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &3091016586323333521
 GameObject:
   m_ObjectHideFlags: 0
