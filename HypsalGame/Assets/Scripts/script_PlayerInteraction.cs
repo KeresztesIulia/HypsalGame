@@ -115,7 +115,6 @@ public class script_PlayerInteraction : MonoBehaviour
         Debug.DrawLine(transform.position, transform.position + transform.forward * 3, Color.red);
         if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hitInfo, _interactableNoticeDistance, ~_raycastIgnoreLayer))
         {
-            Debug.Log(hitInfo.transform);
             bool inRange = hitInfo.distance < _interactionDistance;
             bool found = false;
             bool foundInRange = false;
