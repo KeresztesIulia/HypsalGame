@@ -3,8 +3,10 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 
-public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData
+public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScrollHandler
 {
     [Header("Text prefabs")] // for formatting only
     [SerializeField] TMP_Text _aiTextPrefab;
@@ -33,6 +35,7 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData
     {
         Instance = this;
         script_InputManager.action_ShowLog.performed += (ctx) => ToggleLog();
+        script_InputManager.action_PlayerScroll.performed += ScrollLog;
         initialized = true;
     }
 
@@ -41,16 +44,24 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData
         if (!initialized) Initialize();
     }
 
-    private void LateUpdate()
-    {
-        Debug.Log(_scrollRect.verticalScrollbar.value);
-    }
-
     void ToggleLog(bool stopCoroutines = true)
     {
+
         if (stopCoroutines) StopAllCoroutines();
         _container.gameObject.SetActive(!_container.gameObject.activeSelf);
     }
+
+    void ScrollLog(InputAction.CallbackContext context)
+    {
+        if (!_scrollRect.gameObject.activeInHierarchy) return;
+        float scrollAmount = context.ReadValue<Vector2>().y;
+        var eventData = new PointerEventData(null);
+        var scrollDelta = eventData.scrollDelta;
+        scrollDelta.y = scrollAmount;
+        eventData.scrollDelta = scrollDelta;
+
+        _scrollRect.OnScroll(eventData);
+    }    
 
     public static void LogAIText(string logText, bool closeExchange = false)
     {
@@ -179,6 +190,11 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData
         yield return new WaitForNextFrameUnit();
         yield return new WaitForEndOfFrame();
         _scrollRect.verticalNormalizedPosition = 0;
+    }
+
+    public void OnScroll(PointerEventData eventData)
+    {
+        ((IScrollHandler)_scrollRect).OnScroll(eventData);
     }
 
     struct ExchangeElement
