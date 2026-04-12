@@ -48,6 +48,7 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScro
     {
 
         if (stopCoroutines) StopAllCoroutines();
+        _container.alpha = 1f;
         _container.gameObject.SetActive(!_container.gameObject.activeSelf);
     }
 
@@ -173,7 +174,6 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScro
         yield return new WaitForSecondsRealtime(_logOpenTime);
 
         // fade out for z seconds
-
         currentTime = _logFadeOutTime;
         while (currentTime >= 0)
         {
@@ -181,7 +181,6 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScro
             currentTime -= Time.unscaledDeltaTime;
             yield return null;
         }
-        _container.alpha = 0;
         ToggleLog(false);
     }
 
