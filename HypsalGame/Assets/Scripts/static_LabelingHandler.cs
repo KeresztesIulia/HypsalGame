@@ -35,7 +35,9 @@ public static class static_LabelingHandler
     {
         representedLabel.SetLabel(assignedLabel);
 
-        script_ui_LabelLog.LogLabelingExchange(promptText, assignedLabel);
+        string specialResponse = script_LabelingResponseHandler.GetResponse(representedLabel, assignedLabel);
+
+        script_ui_LabelLog.LogLabelingExchange(promptText, assignedLabel, specialResponse);
 
         playerInteraction.ResetTarget();
     }

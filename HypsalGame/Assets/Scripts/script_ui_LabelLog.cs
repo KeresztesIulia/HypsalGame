@@ -74,13 +74,13 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScro
         LogExchangeElement(LogType.Player, logText, closeExchange);
     }
 
-    public static void LogLabelingExchange(string labelingPrompt, string playerChoice)
+    public static void LogLabelingExchange(string labelingPrompt, string playerChoice, string specialResponse = "")
     {
         ExchangeElement promptElement = new(LogType.AI, labelingPrompt);
         ExchangeElement choiceElement = new(LogType.Player, playerChoice);
-        ExchangeElement standardResponseElement = new(LogType.AI, Instance?._labelingStandardResponse);
+        ExchangeElement responseElement = new(LogType.AI, string.IsNullOrEmpty(specialResponse) ? Instance?._labelingStandardResponse : specialResponse);
 
-        LogExchange(new[]{ promptElement, choiceElement, standardResponseElement});
+        LogExchange(new[]{ promptElement, choiceElement, responseElement });
     }
 
     static void LogExchange(ExchangeElement[] exchange)
