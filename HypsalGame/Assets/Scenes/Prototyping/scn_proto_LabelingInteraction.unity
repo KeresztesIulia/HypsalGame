@@ -869,64 +869,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 787156718}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &971070173
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 971070175}
-  - component: {fileID: 971070174}
-  m_Layer: 0
-  m_Name: LabelingResponseHandler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &971070174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 971070173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6323b91334697c94bbc37a48e61befbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::script_LabelingResponseHandler
-  _labelList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
-  _firstLabels:
-  - Sandwich
-  - Sandwich
-  - Sandwich
-  _secondLabels:
-  - Dread
-  - Love
-  - Mystery
-  _responses:
-  - Thank you for your choice. I shall fear sandwiches from now on.
-  - Thank you for your choice. Sandwiches must be delightful. I'd like to try one
-    once.
-  - Thank you for your choice. Are sandwiches really that unknowable?
---- !u!4 &971070175
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 971070173}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.90928, y: -0, z: -5.88951}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1010155946
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1585,6 +1527,111 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 130718327453388165, guid: 4897b10667cc6324587c31dbb479bed3, type: 3}
   m_PrefabInstance: {fileID: 433852399927086219}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4018809619280063008
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 319984221489389741, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: _responses.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 319984221489389741, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: _firstLabels.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 319984221489389741, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: '_responses.Array.data[0]'
+      value: Thank you for your choice. You really like sand witches, huh?
+      objectReference: {fileID: 0}
+    - target: {fileID: 319984221489389741, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: '_responses.Array.data[1]'
+      value: Thank you for your choice. Sand witches are unknowable.
+      objectReference: {fileID: 0}
+    - target: {fileID: 319984221489389741, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: '_responses.Array.data[2]'
+      value: Thank you for your choice. I shall now dread the sand witch.
+      objectReference: {fileID: 0}
+    - target: {fileID: 319984221489389741, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: _secondLabels.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 319984221489389741, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: '_firstLabels.Array.data[0]'
+      value: Sandwich
+      objectReference: {fileID: 0}
+    - target: {fileID: 319984221489389741, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: '_firstLabels.Array.data[1]'
+      value: Sandwich
+      objectReference: {fileID: 0}
+    - target: {fileID: 319984221489389741, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: '_firstLabels.Array.data[2]'
+      value: Sandwich
+      objectReference: {fileID: 0}
+    - target: {fileID: 319984221489389741, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: '_secondLabels.Array.data[0]'
+      value: Love
+      objectReference: {fileID: 0}
+    - target: {fileID: 319984221489389741, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: '_secondLabels.Array.data[1]'
+      value: Mystery
+      objectReference: {fileID: 0}
+    - target: {fileID: 319984221489389741, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: '_secondLabels.Array.data[2]'
+      value: Dread
+      objectReference: {fileID: 0}
+    - target: {fileID: 345614596775930230, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.90928
+      objectReference: {fileID: 0}
+    - target: {fileID: 345614596775930230, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 345614596775930230, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.88951
+      objectReference: {fileID: 0}
+    - target: {fileID: 345614596775930230, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 345614596775930230, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 345614596775930230, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 345614596775930230, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 345614596775930230, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 345614596775930230, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 345614596775930230, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221109447437625017, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: m_Name
+      value: LabelingResponseHandler
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
 --- !u!1001 &7460364674461116608
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1655,4 +1702,4 @@ SceneRoots:
   - {fileID: 2014722240}
   - {fileID: 1304223596}
   - {fileID: 787156718}
-  - {fileID: 971070175}
+  - {fileID: 4018809619280063008}
