@@ -54,45 +54,52 @@ public class CI_ConditionalRunner : Editor
         var onAssociationProp = serializedObject.FindProperty("_checkAssociation");
         var onAssociationNegativeProp = serializedObject.FindProperty("_checkAssociation_negative");
 
-        atStartProp.boolValue = EditorGUILayout.BeginToggleGroup("Check at start", atStartProp.boolValue);
-            EditorGUILayout.PropertyField(serializedObject.FindProperty("_AtStartEvents"));
-        EditorGUILayout.EndToggleGroup();
+        atStartProp.boolValue = EditorGUILayout.Toggle("Check at start", atStartProp.boolValue);
+        if (atStartProp.boolValue) EditorGUILayout.PropertyField(serializedObject.FindProperty("_AtStartEvents"));
 
-        atStartNegativeProp.boolValue = EditorGUILayout.BeginToggleGroup("Check at start (negative)", atStartNegativeProp.boolValue);
-            EditorGUILayout.PropertyField(serializedObject.FindProperty("_AtStartNegativeEvents"));
-        EditorGUILayout.EndToggleGroup();
+        EditorGUILayout.Space(2);
 
-        changeProp.boolValue = EditorGUILayout.BeginToggleGroup("Check change", changeProp.boolValue);
-            EditorGUILayout.PropertyField(serializedObject.FindProperty("_OnChangeEvents"));
-        EditorGUILayout.EndToggleGroup();
+        atStartNegativeProp.boolValue = EditorGUILayout.Toggle("Check at start (negative)", atStartNegativeProp.boolValue);
+        if (atStartNegativeProp.boolValue) EditorGUILayout.PropertyField(serializedObject.FindProperty("_AtStartNegativeEvents"));
 
-        changeNegativeProp.boolValue = EditorGUILayout.BeginToggleGroup("Check change (negative)", changeNegativeProp.boolValue);
-            EditorGUILayout.PropertyField(serializedObject.FindProperty("_OnChangeNegativeEvents"));
-        EditorGUILayout.EndToggleGroup();
+        EditorGUILayout.Space(2);
 
-        continuousProp.boolValue = EditorGUILayout.BeginToggleGroup("Check continuously", continuousProp.boolValue);
-            EditorGUILayout.PropertyField(serializedObject.FindProperty("_ContinuousEvents"));
-        EditorGUILayout.EndToggleGroup();
+        changeProp.boolValue = EditorGUILayout.Toggle("Check change", changeProp.boolValue);
+        if (changeProp.boolValue) EditorGUILayout.PropertyField(serializedObject.FindProperty("_OnChangeEvents"));
 
-        continuouNegativesProp.boolValue = EditorGUILayout.BeginToggleGroup("Check continuously (negative)", continuouNegativesProp.boolValue);
-            EditorGUILayout.PropertyField(serializedObject.FindProperty("_ContinuousNegativeEvents"));
-        EditorGUILayout.EndToggleGroup();
+        EditorGUILayout.Space(2);
 
-        fireOnceProp.boolValue = EditorGUILayout.BeginToggleGroup("Check first change", fireOnceProp.boolValue);
-            EditorGUILayout.PropertyField(serializedObject.FindProperty("_FireOnceEvents"));
-        EditorGUILayout.EndToggleGroup();
+        changeNegativeProp.boolValue = EditorGUILayout.Toggle("Check change (negative)", changeNegativeProp.boolValue);
+        if (changeNegativeProp.boolValue) EditorGUILayout.PropertyField(serializedObject.FindProperty("_OnChangeNegativeEvents"));
 
-        fireOnceNegativeProp.boolValue = EditorGUILayout.BeginToggleGroup("Check first change (negative)", fireOnceNegativeProp.boolValue);
-            EditorGUILayout.PropertyField(serializedObject.FindProperty("_FireOnceNegativeEvents"));
-        EditorGUILayout.EndToggleGroup();
+        EditorGUILayout.Space(2);
 
-        ////
-        onAssociationProp.boolValue = EditorGUILayout.BeginToggleGroup("Check labeling result", onAssociationProp.boolValue);
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("_OnAssociationEvents"));
-        EditorGUILayout.EndToggleGroup();
+        continuousProp.boolValue = EditorGUILayout.Toggle("Check continuously", continuousProp.boolValue);
+        if (continuousProp.boolValue) EditorGUILayout.PropertyField(serializedObject.FindProperty("_ContinuousEvents"));
 
-        onAssociationNegativeProp.boolValue = EditorGUILayout.BeginToggleGroup("Check labeling result (negative)", onAssociationNegativeProp.boolValue);
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("_OnAssociationNegativeEvents"));
-        EditorGUILayout.EndToggleGroup();
+        EditorGUILayout.Space(2);
+
+        continuouNegativesProp.boolValue = EditorGUILayout.Toggle("Check continuously (negative)", continuouNegativesProp.boolValue);
+        if (continuouNegativesProp.boolValue) EditorGUILayout.PropertyField(serializedObject.FindProperty("_ContinuousNegativeEvents"));
+
+        EditorGUILayout.Space(2);
+
+        fireOnceProp.boolValue = EditorGUILayout.Toggle("Check first change", fireOnceProp.boolValue);
+        if (fireOnceProp.boolValue) EditorGUILayout.PropertyField(serializedObject.FindProperty("_FireOnceEvents"));
+
+        EditorGUILayout.Space(2);
+
+        fireOnceNegativeProp.boolValue = EditorGUILayout.Toggle("Check first change (negative)", fireOnceNegativeProp.boolValue);
+        if (fireOnceNegativeProp.boolValue) EditorGUILayout.PropertyField(serializedObject.FindProperty("_FireOnceNegativeEvents"));
+
+        EditorGUILayout.Space(2);
+
+        onAssociationProp.boolValue = EditorGUILayout.Toggle("Check labeling result", onAssociationProp.boolValue);
+        if (onAssociationProp.boolValue) EditorGUILayout.PropertyField(serializedObject.FindProperty("_OnAssociationEvents"));
+
+        EditorGUILayout.Space(2);
+
+        onAssociationNegativeProp.boolValue = EditorGUILayout.Toggle("Check labeling result (negative)", onAssociationNegativeProp.boolValue);
+        if (onAssociationNegativeProp.boolValue) EditorGUILayout.PropertyField(serializedObject.FindProperty("_OnAssociationNegativeEvents"));
     }
 }
