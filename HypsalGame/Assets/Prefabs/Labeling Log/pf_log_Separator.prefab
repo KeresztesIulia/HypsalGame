@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 667254219915429272}
   - component: {fileID: 6312159125450090758}
   m_Layer: 0
-  m_Name: pf_log_ThankYou
+  m_Name: pf_log_Separator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66,9 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '> Thank you for your choice.
-
-    > ---'
+  m_text: '> ---'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

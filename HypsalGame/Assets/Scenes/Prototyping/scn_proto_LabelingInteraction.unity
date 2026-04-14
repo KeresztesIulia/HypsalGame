@@ -338,12 +338,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
   _partOfList: {fileID: 11400000, guid: 45f6b312fc19ec54fae31a11b651de54, type: 2}
-  _representedLabelName: 
-  _prompt: clearly this is a chicken
+  _representedLabelName: tombstone
+  _prompt: this one is... not a chicken.
   _possibleAssociations:
-  - 
-  - 
-  - 
+  - Hi
+  - Hello
+  - Hoi
   _relabelable: 0
 --- !u!65 &387960236
 BoxCollider:
@@ -486,12 +486,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
   _partOfList: {fileID: 11400000, guid: 45f6b312fc19ec54fae31a11b651de54, type: 2}
-  _representedLabelName: 
+  _representedLabelName: r_chicken
   _prompt: clearly this is a chicken
   _possibleAssociations:
-  - 
-  - 
-  - 
+  - Hi
+  - Hoi
+  - Henlo
   _relabelable: 0
 --- !u!65 &632308119
 BoxCollider:
@@ -615,8 +615,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_ConditionalRunner
   _labelList: {fileID: 11400000, guid: 45f6b312fc19ec54fae31a11b651de54, type: 2}
-  _conditionLabelName1: tree
-  _conditionLabelName2: chicken
+  _conditionLabelName1: tombstone
+  _conditionLabelName2: Hi
   _checkContinuously: 0
   _ContinuousEvents:
     m_PersistentCalls:
@@ -1211,13 +1211,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
   _partOfList: {fileID: 11400000, guid: 45f6b312fc19ec54fae31a11b651de54, type: 2}
-  _representedLabelName: 
+  _representedLabelName: r_chicken
   _prompt: clearly this is a chicken
   _possibleAssociations:
-  - 
-  - 
-  - 
-  _relabelable: 0
+  - Hello
+  - Hi
+  - Hoi
+  _relabelable: 1
 --- !u!65 &1781117917
 BoxCollider:
   m_ObjectHideFlags: 0
