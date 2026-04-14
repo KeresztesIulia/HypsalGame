@@ -33,15 +33,15 @@ public class script_ui_FakeLoadingScreen : MonoBehaviour
     [SerializeField] Timings _defaultTiming;
 
     [Header("First time")]
-    [SerializeField, Tooltip("-1 to use default")] Timings _firstTimeTiming;
+    [SerializeField, Tooltip("-1 to use default; 0 for default percentage")] Timings _firstTimeTiming;
     [SerializeField] LoadingTexts _firstTimeTexts;
 
     [Header("Second time")]
-    [SerializeField, Tooltip("-1 to use default")] Timings _secondTimeTiming;
+    [SerializeField, Tooltip("-1 to use default; 0 for default percentage")] Timings _secondTimeTiming;
     [SerializeField] LoadingTexts _secondTimeTexts;
 
     [Header("Third time?")] //do we have third time? I think not...?
-    [SerializeField, Tooltip("-1 to use default")] Timings _thirdTimeTiming;
+    [SerializeField, Tooltip("-1 to use default; 0 for default percentage")] Timings _thirdTimeTiming;
     [SerializeField] LoadingTexts _thirdTimeTexts;
 
     [Header("Components")]
@@ -75,7 +75,7 @@ public class script_ui_FakeLoadingScreen : MonoBehaviour
         }
 
         _fakeLoadingContainer.SetActive(true);
-        // stop player from moving? from interacting? -- interacting: disable player interaction script, which, on disable, should also disable UI
+        // stop player interacting: disable player interaction script, which, on disable, should also disable UI
         StartCoroutine(FakeLoad(timings, loadingTexts));
     }
 
@@ -85,7 +85,7 @@ public class script_ui_FakeLoadingScreen : MonoBehaviour
         yield return FakeLoadSection(true, fullLoadTime, fullLoadTime, true, loadingTexts.savingText, loadingTexts.savingDetailTexts);
 
         fullLoadTime = timings.exitTime != -1 ? timings.exitTime : _defaultTiming.exitTime;
-        float cancelPercentage = timings.cancelPercentage != -1 ? timings.cancelPercentage : _defaultTiming.cancelPercentage;
+        float cancelPercentage = timings.cancelPercentage != 0 ? timings.cancelPercentage : _defaultTiming.cancelPercentage;
         float interruptionTime = fullLoadTime * cancelPercentage;
         yield return FakeLoadSection(true, interruptionTime, fullLoadTime, true, loadingTexts.exitText, loadingTexts.exitDetailTexts);
 

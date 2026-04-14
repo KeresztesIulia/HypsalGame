@@ -31,6 +31,42 @@ MonoBehaviour:
     Unlabeled:
       m_PersistentCalls:
         m_Calls: []
+  - _internalName: _yesCube2
+    _displayName: Yes
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: _noCube2
+    _displayName: No
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: _yesCube3
+    _displayName: Yes
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: _noCube3
+    _displayName: No
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
   labels:
   - _internalName: _yesLabel1
     _displayName: Yes
@@ -42,6 +78,42 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - _internalName: _noLabel1
+    _displayName: No
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: _yesLabel2
+    _displayName: Yes
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: _noLabel2
+    _displayName: No
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: _yesLabel3
+    _displayName: Yes
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: _noLabel3
     _displayName: No
     _relabelable: 0
     Labeled:
