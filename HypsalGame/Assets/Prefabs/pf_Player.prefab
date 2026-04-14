@@ -126,6 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa33b65c208c4c8f0dfddf0dc966c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_PlayerInteraction
+  _interactableNoticeDistance: 10
   _interactionDistance: 5
   _raycastIgnoreLayer:
     serializedVersion: 2
