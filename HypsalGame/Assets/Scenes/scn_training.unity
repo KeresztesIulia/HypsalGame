@@ -275,6 +275,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: pf_Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4338509060299700216, guid: e8db9869c6f61cc41b3c7f11b08e9685, type: 3}
+      propertyPath: MoveSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4338509060299700216, guid: e8db9869c6f61cc41b3c7f11b08e9685, type: 3}
+      propertyPath: SprintSpeed
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 6272032392725054560, guid: e8db9869c6f61cc41b3c7f11b08e9685, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -355,7 +363,7 @@ Transform:
   m_GameObject: {fileID: 1003737271}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 322.6, y: 19.7, z: -2.94}
+  m_LocalPosition: {x: -0.06, y: 0.43, z: -148.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
