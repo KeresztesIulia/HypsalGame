@@ -337,13 +337,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1586d1852ae31047a2983072095e8e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
-  _partOfList: {fileID: 11400000, guid: 45f6b312fc19ec54fae31a11b651de54, type: 2}
-  _representedLabelName: 
-  _prompt: clearly this is a chicken
+  _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
+  _representedLabelName: Sandwich
+  _prompt: this one is... not a chicken.
   _possibleAssociations:
-  - 
-  - 
-  - 
+  - Love
+  - Mystery
+  - Dread
   _relabelable: 0
 --- !u!65 &387960236
 BoxCollider:
@@ -485,13 +485,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1586d1852ae31047a2983072095e8e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
-  _partOfList: {fileID: 11400000, guid: 45f6b312fc19ec54fae31a11b651de54, type: 2}
-  _representedLabelName: 
+  _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
+  _representedLabelName: Sandwich
   _prompt: clearly this is a chicken
   _possibleAssociations:
-  - 
-  - 
-  - 
+  - Love
+  - Mystery
+  - Dread
   _relabelable: 0
 --- !u!65 &632308119
 BoxCollider:
@@ -615,8 +615,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_ConditionalRunner
   _labelList: {fileID: 11400000, guid: 45f6b312fc19ec54fae31a11b651de54, type: 2}
-  _conditionLabelName1: tree
-  _conditionLabelName2: chicken
+  _conditionLabelName1: tombstone
+  _conditionLabelName2: Hi
   _checkContinuously: 0
   _ContinuousEvents:
     m_PersistentCalls:
@@ -1210,14 +1210,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1586d1852ae31047a2983072095e8e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
-  _partOfList: {fileID: 11400000, guid: 45f6b312fc19ec54fae31a11b651de54, type: 2}
-  _representedLabelName: 
-  _prompt: clearly this is a chicken
+  _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
+  _representedLabelName: Sandwich
+  _prompt: What does a witch made of sand make you think of?
   _possibleAssociations:
-  - 
-  - 
-  - 
-  _relabelable: 0
+  - Love
+  - Mystery
+  - Dread
+  _relabelable: 1
 --- !u!65 &1781117917
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1527,6 +1527,111 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 130718327453388165, guid: 4897b10667cc6324587c31dbb479bed3, type: 3}
   m_PrefabInstance: {fileID: 433852399927086219}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4018809619280063008
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 319984221489389741, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: _responses.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 319984221489389741, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: _firstLabels.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 319984221489389741, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: '_responses.Array.data[0]'
+      value: Thank you for your choice. You really like sand witches, huh?
+      objectReference: {fileID: 0}
+    - target: {fileID: 319984221489389741, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: '_responses.Array.data[1]'
+      value: Thank you for your choice. Sand witches are unknowable.
+      objectReference: {fileID: 0}
+    - target: {fileID: 319984221489389741, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: '_responses.Array.data[2]'
+      value: Thank you for your choice. I shall now dread the sand witch.
+      objectReference: {fileID: 0}
+    - target: {fileID: 319984221489389741, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: _secondLabels.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 319984221489389741, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: '_firstLabels.Array.data[0]'
+      value: Sandwich
+      objectReference: {fileID: 0}
+    - target: {fileID: 319984221489389741, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: '_firstLabels.Array.data[1]'
+      value: Sandwich
+      objectReference: {fileID: 0}
+    - target: {fileID: 319984221489389741, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: '_firstLabels.Array.data[2]'
+      value: Sandwich
+      objectReference: {fileID: 0}
+    - target: {fileID: 319984221489389741, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: '_secondLabels.Array.data[0]'
+      value: Love
+      objectReference: {fileID: 0}
+    - target: {fileID: 319984221489389741, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: '_secondLabels.Array.data[1]'
+      value: Mystery
+      objectReference: {fileID: 0}
+    - target: {fileID: 319984221489389741, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: '_secondLabels.Array.data[2]'
+      value: Dread
+      objectReference: {fileID: 0}
+    - target: {fileID: 345614596775930230, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.90928
+      objectReference: {fileID: 0}
+    - target: {fileID: 345614596775930230, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 345614596775930230, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.88951
+      objectReference: {fileID: 0}
+    - target: {fileID: 345614596775930230, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 345614596775930230, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 345614596775930230, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 345614596775930230, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 345614596775930230, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 345614596775930230, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 345614596775930230, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221109447437625017, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
+      propertyPath: m_Name
+      value: LabelingResponseHandler
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 28f2c42746019384d8cf3431762fe830, type: 3}
 --- !u!1001 &7460364674461116608
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1597,3 +1702,4 @@ SceneRoots:
   - {fileID: 2014722240}
   - {fileID: 1304223596}
   - {fileID: 787156718}
+  - {fileID: 4018809619280063008}

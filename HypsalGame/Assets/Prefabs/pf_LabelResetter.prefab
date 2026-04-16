@@ -46,3 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::script_LabelListResetter
   _listsToReset:
   - {fileID: 11400000, guid: 45f6b312fc19ec54fae31a11b651de54, type: 2}
+  - {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}

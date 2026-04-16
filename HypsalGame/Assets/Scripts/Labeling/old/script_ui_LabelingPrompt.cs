@@ -14,7 +14,9 @@ public class script_ui_LabelingPrompt : MonoBehaviour
         InitializeInput(wordToRepresent);
         gameObject.SetActive(true);
         script_InputManager.playerInput.enabled = false;
-        script_ui_InteractionUI.DisableUI(true);
+        script_ui_InteractionUI.DisableUI();
+        script_ui_DotController.DisableDot();
+
 
         //script_InputManager.SwitchInputMap(script_InputManager.map_uiMap);
     }
@@ -36,7 +38,7 @@ public class script_ui_LabelingPrompt : MonoBehaviour
             representedWord.LabelWord(_inputField.text);
             script_InputManager.playerInput.enabled = true;
 
-            script_LabelLog.LogLabelingExchange(_prompt.text, _inputField.text);
+            script_ui_LabelLog.LogLabelingExchange(_prompt.text, _inputField.text);
 
             //script_InputManager.SwitchInputMap(script_InputManager.map_PlayerMap);
             Destroy(gameObject);
