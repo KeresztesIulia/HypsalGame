@@ -56,7 +56,6 @@ public abstract class abstract_ConditionalRunner : MonoBehaviour
         }
         protected set
         {
-
             if (value != conditionMet)
             {
                 if (_fireOnce && !fired && value)
@@ -71,7 +70,7 @@ public abstract class abstract_ConditionalRunner : MonoBehaviour
                 }
 
                 if (_checkChange && value) _OnChangeEvents?.Invoke();
-                if (_checkContinuously_negative && !value) _OnChangeNegativeEvents?.Invoke();
+                if (_checkChange_negative && !value) _OnChangeNegativeEvents?.Invoke();
             }
 
             conditionMet = value;

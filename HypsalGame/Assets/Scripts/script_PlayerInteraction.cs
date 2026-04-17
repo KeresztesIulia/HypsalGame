@@ -119,7 +119,7 @@ public class script_PlayerInteraction : MonoBehaviour
             bool found = false;
             bool foundInRange = false;
 
-            foreach (var potentialTarget in hitInfo.transform.GetComponents<interface_Interactable>())
+            foreach (var potentialTarget in hitInfo.transform.GetComponentsInParent<interface_Interactable>(true))
             {
                 if ((potentialTarget as MonoBehaviour).isActiveAndEnabled)
                 {

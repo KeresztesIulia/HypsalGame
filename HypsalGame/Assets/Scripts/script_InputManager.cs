@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 
 public class script_InputManager : MonoBehaviour, interface_PersistentData
 {
+    public static script_InputManager Instance;
+
     public static PlayerInput playerInput;
     public static InputActionAsset inputActions;
 
@@ -21,6 +23,7 @@ public class script_InputManager : MonoBehaviour, interface_PersistentData
 
     public void Initialize()
     {
+        Instance = this;
         playerInput = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerInput>();
         inputActions = playerInput?.actions;
 
