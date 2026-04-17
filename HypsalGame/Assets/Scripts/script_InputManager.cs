@@ -10,6 +10,7 @@ public class script_InputManager : MonoBehaviour, interface_PersistentData
     public static InputActionMap map_PlayerMap;
     public static InputAction action_Interact;
     public static InputAction action_ShowLog;
+    public static InputAction action_PlayerScroll;
 
     public static InputActionMap map_uiMap;
 
@@ -26,6 +27,7 @@ public class script_InputManager : MonoBehaviour, interface_PersistentData
         map_PlayerMap = inputActions?.FindActionMap("Player");
         action_Interact = map_PlayerMap?.FindAction("Interact");
         action_ShowLog = map_PlayerMap?.FindAction("Show log");
+        action_PlayerScroll = map_PlayerMap?.FindAction("ScrollWheel");
 
         map_uiMap = inputActions?.FindActionMap("UI");
 
