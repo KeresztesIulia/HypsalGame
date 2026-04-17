@@ -1,9 +1,8 @@
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Events;
 
-[CustomEditor(typeof(script_OLD_ConditionalRunner))]  
-public class CI_ConditionalRunner : Editor
+[CustomEditor(typeof(abstract_ConditionalRunner))]  
+public class CI_abstract_ConditionalRunner : Editor
 {
     public override void OnInspectorGUI()
     {

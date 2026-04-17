@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class script_ConditionalRunner : MonoBehaviour
+public class script_OLD_ConditionalRunner : MonoBehaviour
 {
     [SerializeField] script_so_LabelList _labelList;
     [SerializeField] string _conditionLabelName1;
@@ -89,6 +89,7 @@ public class script_ConditionalRunner : MonoBehaviour
      
     private void Start()
     {
+        Debug.LogError("ConditionalRunner is now an old version. Use AssociationConditional instead. (Will require setting up events again)", this);
         if (_labelList == null) return;
         conditionLabel1 = _labelList.GetLabel(_conditionLabelName1);
         conditionLabel2 = _labelList.GetLabel(_conditionLabelName2);
@@ -107,11 +108,10 @@ public class script_ConditionalRunner : MonoBehaviour
     {
         if (script_LabelAssociationHandler.Instance == null) return;
         
-        if (!hasContinuous/* && !hasOnChange && (!_fireOnce || fired) && (!_fireOnce_negative || firedNegative)*/) return;
+        if (!hasContinuous) return;
 
 
         ConditionMet = script_LabelAssociationHandler.Instance.AreAssociated(conditionLabel1, conditionLabel2);
-        // have an association trigger instead and subscribe to it? -- later
 
 
         if (_checkContinuously && ConditionMet) _ContinuousEvents.Invoke();
