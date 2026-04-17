@@ -3,12 +3,6 @@ using UnityEngine.Events;
 
 public abstract class abstract_ConditionalRunner : MonoBehaviour
 {
-    [SerializeField] protected script_so_LabelList _labelList;
-    [SerializeField] protected string _conditionLabelName1;
-    [SerializeField] protected string _conditionLabelName2;
-
-    protected Label conditionLabel1;
-    protected Label conditionLabel2;
 
     // Continuous
     [SerializeField, Tooltip("Are there functions that should run every frame the condition is true?")] protected bool _checkContinuously;
@@ -37,13 +31,6 @@ public abstract class abstract_ConditionalRunner : MonoBehaviour
 
     [SerializeField, Tooltip("Are there functions that should run if the condition is false when the object first appears?")] protected bool _checkAtStart_negative;
     [SerializeField] protected UnityEvent _AtStartNegativeEvents;
-
-    // OnLabeling
-    [SerializeField, Tooltip("Are there functions that should run every time the two condition labels are associated to each other?")] protected bool _checkAssociation;
-    [SerializeField] protected UnityEvent _OnAssociationEvents;
-
-    [SerializeField, Tooltip("Are there functions that should run every time one of the condition labels gets associated without fulfilling the condition?")] protected bool _checkAssociation_negative;
-    [SerializeField] protected UnityEvent _OnAssociationNegativeEvents;
 
 
     protected bool conditionMet;
@@ -86,42 +73,27 @@ public abstract class abstract_ConditionalRunner : MonoBehaviour
 
     protected bool firedBoth => fired && firedNegative;
 
-    protected void Start()
+    protected virtual void Start()
     {
-        if (_labelList == null) return;
-        conditionLabel1 = _labelList.GetLabel(_conditionLabelName1);
-        conditionLabel2 = _labelList.GetLabel(_conditionLabelName2);
-
         conditionMet = Condition();
 
         if (_checkAtStart && conditionMet) _AtStartEvents?.Invoke();
         if (_checkAtStart_negative && !conditionMet) _AtStartNegativeEvents?.Invoke();
-
-        conditionLabel1.Associated += Label1AssociationCheck;
-        conditionLabel2.Associated += Label2AssociationCheck;
-
     }
 
-    protected void Update()
+    protected virtual void Update()
     {
         if (script_LabelAssociationHandler.Instance == null) return;
 
         if (!hasContinuous) return;
 
-
-        ConditionMet = script_LabelAssociationHandler.Instance.AreAssociated(conditionLabel1, conditionLabel2);
-
+        ConditionMet = Condition();
 
         if (_checkContinuously && ConditionMet) _ContinuousEvents.Invoke();
         if (_checkContinuously_negative && ConditionMet) _ContinuousNegativeEvents.Invoke();
     }
 
     protected abstract bool Condition();
-
-    protected abstract void Label1AssociationCheck(Label label);
-
-    protected abstract void Label2AssociationCheck(Label label);
-
     public void DebugMessage(string message)
     {
         Debug.Log(message);

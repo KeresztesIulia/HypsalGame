@@ -1,16 +1,19 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class script_LabelAssociationHandler : MonoBehaviour, interface_PersistentData
 {
     public static script_LabelAssociationHandler Instance;
     public static bool InstanceExists => Instance != null;
+    public static UnityEvent OnAnyAssociation = new();
 
     Dictionary<string, Label> associations;
     bool initialized = false;
 
     public Dictionary<string, Label> Associations => associations;
+
+    public int AssociationCount => associations.Count / 2;
 
     private void Awake()
     {
@@ -26,7 +29,6 @@ public class script_LabelAssociationHandler : MonoBehaviour, interface_Persisten
 
     public void AddAssociation(Label label1, Label label2)
     {
-        
         if (!AreAssociated(label1, label2))
         {
             DeleteAssociation(label1);
@@ -40,6 +42,7 @@ public class script_LabelAssociationHandler : MonoBehaviour, interface_Persisten
             associations.Add(label2, label1);
             label2.Associated(label1);
         }
+        OnAnyAssociation?.Invoke();
     }
 
     public void DeleteAssociation(Label label)
