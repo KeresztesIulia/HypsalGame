@@ -28,6 +28,8 @@ public class script_ui_FakeLoadingScreen : MonoBehaviour
         public string cancelText;
         public string[] cancelDetailTexts;
 
+        public string endingLogText;
+
     }
 
     [SerializeField] Timings _defaultTiming;
@@ -96,6 +98,9 @@ public class script_ui_FakeLoadingScreen : MonoBehaviour
         // activate new room layout
         // reenable interaction
         _fakeLoadingContainer.SetActive(false);
+
+        script_ui_LabelLog.LogDesperateAIText(loadingTexts.endingLogText, true);
+
         yield return null;
     }
 

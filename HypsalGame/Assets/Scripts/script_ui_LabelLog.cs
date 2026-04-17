@@ -11,6 +11,7 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScro
     [Header("Text prefabs")] // for formatting only
     [SerializeField] TMP_Text _aiTextPrefab;
     [SerializeField] TMP_Text _playerTextPrefab;
+    [SerializeField] TMP_Text _desperateAITextPrefab;
     [SerializeField] TMP_Text _separator;
 
     [Header("Standard text")]
@@ -26,7 +27,7 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScro
     [SerializeField] float _logOpenTime = 4f;
     [SerializeField] float _logFadeOutTime = 0.15f;
 
-    public enum LogType { AI, Player };
+    public enum LogType { AI, Player, DesperateAI };
     public static script_ui_LabelLog Instance;
 
     bool initialized = false;
@@ -67,6 +68,11 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScro
     public static void LogAIText(string logText, bool closeExchange = false)
     {
         LogExchangeElement(LogType.AI, logText, closeExchange);
+    }
+
+    public static void LogDesperateAIText(string logText, bool closeExchange = false)
+    {
+        LogExchangeElement(LogType.DesperateAI, logText, closeExchange);
     }
 
     public static void LogPlayerText(string logText, bool closeExchange = false)
@@ -134,6 +140,8 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScro
                 return _aiTextPrefab;
             case LogType.Player:
                 return _playerTextPrefab;
+            case LogType.DesperateAI:
+                return _desperateAITextPrefab;
             default:
                 return null;
         }
