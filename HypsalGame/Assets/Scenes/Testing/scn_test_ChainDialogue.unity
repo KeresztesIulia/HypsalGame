@@ -128,6 +128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 266125543}
+  - component: {fileID: 266125544}
   m_Layer: 0
   m_Name: Dialogues
   m_TagString: Untagged
@@ -156,6 +157,26 @@ Transform:
   - {fileID: 1562386926}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &266125544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266125542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff1c0c1a2ad085e498336498422b8ba6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_Conversation
+  _lines:
+  - {fileID: 1562386927}
+  - {fileID: 1153837560}
+  - {fileID: 841639139}
+  - {fileID: 331115357}
+  - {fileID: 1330585482}
+  - {fileID: 1131152480}
+  _playOnce: 0
 --- !u!1 &331115355
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,15 +228,17 @@ MonoBehaviour:
       Data3: -1968373870
       Data4: -30826709
     Path: event:/VOICE/Placeholder Voice
-  playOnAwake: 0
+  playOnAwake: 1
   playOnce: 0
   playOnTrigger: 0
   stopOnDisable: 0
+  uninterruptable: 0
   subtitleText: This is the third subtitle.
-  subtitleDuration: 1
+  subtitleDuration: 3
   subtitleDelay: 0
   subtitleType: 0
-  endOfConversation: 0
+  nextSound: {fileID: 841639139}
+  endConversation: 0
 --- !u!1 &841639137
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,15 +290,17 @@ MonoBehaviour:
       Data3: -1968373870
       Data4: -30826709
     Path: event:/VOICE/Placeholder Voice
-  playOnAwake: 0
+  playOnAwake: 1
   playOnce: 0
   playOnTrigger: 0
   stopOnDisable: 0
+  uninterruptable: 0
   subtitleText: This is the fourth subtitle.
-  subtitleDuration: 1
+  subtitleDuration: 3
   subtitleDelay: 0
   subtitleType: 0
-  endOfConversation: 0
+  nextSound: {fileID: 1153837560}
+  endConversation: 0
 --- !u!1 &1034636924
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,11 +618,13 @@ MonoBehaviour:
   playOnce: 0
   playOnTrigger: 1
   stopOnDisable: 0
+  uninterruptable: 0
   subtitleText: This is the first subtitle.
-  subtitleDuration: 1
+  subtitleDuration: 3
   subtitleDelay: 0
   subtitleType: 0
-  endOfConversation: 0
+  nextSound: {fileID: 1330585482}
+  endConversation: 0
 --- !u!1 &1153837558
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,15 +676,17 @@ MonoBehaviour:
       Data3: -1968373870
       Data4: -30826709
     Path: event:/VOICE/Placeholder Voice
-  playOnAwake: 0
+  playOnAwake: 1
   playOnce: 0
   playOnTrigger: 0
   stopOnDisable: 0
+  uninterruptable: 0
   subtitleText: This is the fifth subtitle.
-  subtitleDuration: 1
+  subtitleDuration: 3
   subtitleDelay: 0
   subtitleType: 0
-  endOfConversation: 0
+  nextSound: {fileID: 1562386927}
+  endConversation: 0
 --- !u!1 &1330585480
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,11 +742,13 @@ MonoBehaviour:
   playOnce: 0
   playOnTrigger: 0
   stopOnDisable: 0
+  uninterruptable: 0
   subtitleText: This is the second subtitle.
-  subtitleDuration: 1
+  subtitleDuration: 3
   subtitleDelay: 0
   subtitleType: 0
-  endOfConversation: 0
+  nextSound: {fileID: 331115357}
+  endConversation: 0
 --- !u!1001 &1459961129
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -817,6 +848,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1562386926}
   - component: {fileID: 1562386927}
+  - component: {fileID: 1562386928}
   m_Layer: 0
   m_Name: line6
   m_TagString: Untagged
@@ -860,13 +892,36 @@ MonoBehaviour:
     Path: event:/VOICE/Placeholder Voice
   playOnAwake: 0
   playOnce: 0
-  playOnTrigger: 0
+  playOnTrigger: 1
   stopOnDisable: 0
+  uninterruptable: 0
   subtitleText: This is the sixth subtitle.
-  subtitleDuration: 1
+  subtitleDuration: 3
   subtitleDelay: 0
   subtitleType: 0
-  endOfConversation: 1
+  nextSound: {fileID: 0}
+  endConversation: 0
+--- !u!65 &1562386928
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562386925}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

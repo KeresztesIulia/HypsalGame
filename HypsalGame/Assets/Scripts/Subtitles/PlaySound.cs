@@ -8,11 +8,12 @@ public class PlaySound : MonoBehaviour
 {
     [SerializeField] private EventReference sound;
 
-    [Header("Playback options (most options overwritten by ConversationObjects)")]
-    [SerializeField] private bool playOnAwake;
-    [SerializeField] private bool playOnce;
-    [SerializeField] private bool playOnTrigger = true;
+    [Header("Playback options")]
+    [SerializeField, Tooltip("Overwritten by ConversationObjects")] private bool playOnAwake;
+    [SerializeField, Tooltip("Overwritten by ConversationObjects")] private bool playOnce;
+    [SerializeField, Tooltip("Overwritten by ConversationObjects")] private bool playOnTrigger = true;
     [SerializeField] private bool stopOnDisable;
+    [SerializeField] bool uninterruptable = false;
 
     private bool soundPlayed = false;
 
@@ -26,10 +27,15 @@ public class PlaySound : MonoBehaviour
 
     [Header("Conversation control")]
     [SerializeField, Tooltip("Which sound and subtitle should be played next? (overwritten by Conversation objects)")] PlaySound nextSound;
-    [SerializeField, Tooltip("Should this close the conversation in the log? (unrelated to whether nextSound is set)")] bool endConversation;
+    [SerializeField, Tooltip("Should this close the conversation in the log? (can be true even if nextSound is set)")] bool endConversation;
+
+
+
+    static Action startPlaying;
 
     private void Awake()
     {
+        startPlaying += InterruptFrom;
         if (playOnAwake)
         {
             PlayThisSound();
@@ -38,7 +44,7 @@ public class PlaySound : MonoBehaviour
 
     public void PlayThisSound()
     {
-        StopSound();
+        startPlaying.Invoke();
 
         try
         {
@@ -56,7 +62,7 @@ public class PlaySound : MonoBehaviour
         {
             if (script_ui_LabelLog.Instance != null) script_ui_LabelLog.LogSubtitle(subtitleText, subtitleType, endConversation);
             StartCoroutine(ShowSubtitleWithDelay());
-            if (nextSound != null) Invoke(nameof(PlayNextSound), subtitleDelay + subtitleDuration);
+            if (nextSound != null) Invoke(nameof(PlayNextSound), subtitleDelay + subtitleDuration - 0.05f);
         }
     }
 
@@ -81,6 +87,18 @@ public class PlaySound : MonoBehaviour
         }
     }
 
+    void InterruptFrom()
+    {
+        if (!uninterruptable) StopAll();
+    }
+
+    void StopAll()
+    {
+        StopSound();
+        StopAllCoroutines();
+        CancelInvoke();
+    }
+
     public void StopSound()
     {
         if (soundInstance.isValid())
@@ -88,6 +106,23 @@ public class PlaySound : MonoBehaviour
             soundInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
             soundInstance.release();
         }
+    }
+
+    public void SetNextSound(PlaySound nextSound, bool endConversation = false)
+    {
+        this.nextSound = nextSound;
+        this.endConversation = endConversation;
+    }
+
+    public void DisablePlayTriggers()
+    {
+        playOnAwake = false;
+        playOnTrigger = false;
+    }
+
+    public void SetPlayOnce(bool playOnce)
+    {
+        this.playOnce = playOnce;
     }
 
     void PlayNextSound()
