@@ -8,10 +8,12 @@ public class PlaySound : MonoBehaviour
 {
     [SerializeField] private EventReference sound;
 
+    [Header("Playback options (most options overwritten by ConversationObjects)")]
     [SerializeField] private bool playOnAwake;
     [SerializeField] private bool playOnce;
     [SerializeField] private bool playOnTrigger = true;
     [SerializeField] private bool stopOnDisable;
+
     private bool soundPlayed = false;
 
     private EventInstance soundInstance;
@@ -20,6 +22,11 @@ public class PlaySound : MonoBehaviour
     [SerializeField] private string subtitleText;
     [SerializeField] private float subtitleDuration = 3f;
     [SerializeField] private float subtitleDelay = 0f; // Delay before the subtitle appears
+    [SerializeField] SubtitleManager.SubtitleType subtitleType;
+
+    [Header("Conversation control")]
+    [SerializeField, Tooltip("Which sound and subtitle should be played next? (overwritten by Conversation objects)")] PlaySound nextSound;
+    [SerializeField, Tooltip("Should this close the conversation in the log? (unrelated to whether nextSound is set)")] bool endConversation;
 
     private void Awake()
     {
@@ -47,7 +54,9 @@ public class PlaySound : MonoBehaviour
 
         if (!string.IsNullOrEmpty(subtitleText) && SubtitleManager.Instance != null)
         {
+            if (script_ui_LabelLog.Instance != null) script_ui_LabelLog.LogSubtitle(subtitleText, subtitleType, endConversation);
             StartCoroutine(ShowSubtitleWithDelay());
+            if (nextSound != null) Invoke(nameof(PlayNextSound), subtitleDelay + subtitleDuration);
         }
     }
 
@@ -81,6 +90,12 @@ public class PlaySound : MonoBehaviour
         }
     }
 
+    void PlayNextSound()
+    {
+        nextSound.PlayThisSound();
+    }
+
+
     private void OnDisable()
     {
         if (stopOnDisable) StopSound();
@@ -90,4 +105,5 @@ public class PlaySound : MonoBehaviour
     {
         StopSound();
     }
+
 }

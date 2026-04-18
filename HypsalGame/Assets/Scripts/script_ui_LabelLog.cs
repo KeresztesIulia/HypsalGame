@@ -9,6 +9,7 @@ using UnityEngine.EventSystems;
 public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScrollHandler
 {
     [Header("Text prefabs")] // for formatting only
+    [SerializeField] TMP_Text _subtitleGenericPrefab;
     [SerializeField] TMP_Text _aiTextPrefab;
     [SerializeField] TMP_Text _playerTextPrefab;
     [SerializeField] TMP_Text _desperateAITextPrefab;
@@ -27,7 +28,7 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScro
     [SerializeField] float _logOpenTime = 4f;
     [SerializeField] float _logFadeOutTime = 0.15f;
 
-    public enum LogType { AI, Player, DesperateAI };
+    public enum LogType { SubtitleGeneric, AI, Player, DesperateAI };
     public static script_ui_LabelLog Instance;
 
     bool initialized = false;
@@ -64,7 +65,14 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScro
         eventData.scrollDelta = scrollDelta;
 
         _scrollRect.OnScroll(eventData);
-    }    
+    }
+
+    public static void LogSubtitle(string logText, SubtitleManager.SubtitleType subtitleType, bool closeExchange = false)
+    {
+        var logType = DetermineSubtitleLogType(subtitleType);
+        LogExchangeElement(logType, logText);
+        if (closeExchange) CloseExchange(false);
+    }
 
     public static void LogAIText(string logText, bool closeExchange = false)
     {
@@ -95,9 +103,7 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScro
         // goes through each element to log it one by one
         foreach (var exchangeElement in exchange)
         {
-            var element = exchangeElement;
-            TransformExchangeElementText(ref element);
-            LogExchangeElement(element);
+            LogExchangeElement(exchangeElement);
         }
         
         // closes off with separatorPrefab - every exchange is closed by the separator!
@@ -108,6 +114,7 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScro
 
     static void LogExchangeElement(ExchangeElement element, bool closeExchange = false)
     {
+        TransformExchangeElementText(ref element);
         TMP_Text prefabToUse = Instance?.DetermineTextPrefab(element.type);
 
         TMP_Text textInstance = Instantiate(prefabToUse, Instance?._contentTransform);
@@ -123,20 +130,23 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScro
         LogExchangeElement(new ExchangeElement(logType, logText), closeExchange);
     }
 
-    public static void CloseExchange()
+    public static void CloseExchange(bool popup = true)
     {
         Instantiate(Instance?._separator, Instance?._contentTransform);
+
         Instance?.StartCoroutine(Instance?.ForceToBottom());
 
         // send signal to open log briefly
         // which signal interrupts any previous ones - does it...? I don't want to restart fading just because I'm already fading.
-        if (Instance != null) Instance.StartCoroutine(Instance.ShowNewLog());
+        if (Instance != null && popup) Instance.StartCoroutine(Instance.ShowNewLog());
     }
 
     TMP_Text DetermineTextPrefab(LogType type)
     {
         switch (type)
         {
+            case LogType.SubtitleGeneric:
+                return _subtitleGenericPrefab;
             case LogType.AI:
                 return _aiTextPrefab;
             case LogType.Player:
@@ -148,10 +158,23 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScro
         }
     }
 
+    static LogType DetermineSubtitleLogType(SubtitleManager.SubtitleType type)
+    {
+        switch (type)
+        {
+            default:
+                return LogType.SubtitleGeneric;
+        }
+
+    }
+
     static void TransformExchangeElementText(ref ExchangeElement element)
     {
         switch (element.type)
         {
+            case LogType.SubtitleGeneric:
+                element.text = "- " + element.text;
+                break;
             case LogType.AI:
                 element.text = "> " + element.text;
                 break;

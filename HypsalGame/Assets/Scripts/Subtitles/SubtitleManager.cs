@@ -11,6 +11,8 @@ public class SubtitleManager : MonoBehaviour
 
     private bool isSubtitleActive = false;
 
+    public enum SubtitleType { Generic };
+
     void Awake()
     {
         if (Instance != null && Instance != this)
