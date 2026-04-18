@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(script_VisualObject))]
 public class script_LabelRepresentative : MonoBehaviour, interface_Interactable
@@ -28,6 +29,8 @@ public class script_LabelRepresentative : MonoBehaviour, interface_Interactable
 
     public interface_Interactable.InteractionType interactionType => interface_Interactable.InteractionType.Labelable;
 
+    public UnityEvent LabeledObject;
+
     script_VisualObject visual;
 
     private void Start()
@@ -46,23 +49,24 @@ public class script_LabelRepresentative : MonoBehaviour, interface_Interactable
         
         if (representedLabel.IsLabeled)
         {
-            Labeled();
+            LabelLabeled();
         }
 
         representedLabel.Labeled.AddListener(() =>
         {
-            Labeled();
+            LabelLabeled();
         });
 
         representedLabel.Unlabeled.AddListener(() =>
         {
             visual.SetActiveState(false);
             enabled = true;
+
         });
     }
 
 
-    void Labeled()
+    void LabelLabeled()
     {
         if (labelable) return;
         visual.SetActiveState(true);

@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81efba56215eca48a930710fcbaf5ba, type: 3}
+  m_Name: so_test_Conditionals
+  m_EditorClassIdentifier: Assembly-CSharp::script_so_LabelList
+  objects:
+  - _internalName: o_specificAssociation
+    _displayName: 
+    _relabelable: 1
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: o_fixedConditional
+    _displayName: 
+    _relabelable: 1
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: o_relativeConditional
+    _displayName: 
+    _relabelable: 1
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: o_specificObject1
+    _displayName: 
+    _relabelable: 1
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: o_specificObject2
+    _displayName: 
+    _relabelable: 1
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: o_specificObject3
+    _displayName: 
+    _relabelable: 1
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+  labels:
+  - _internalName: lab_lab1
+    _displayName: Label1
+    _relabelable: 1
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: lab_lab2
+    _displayName: Label2
+    _relabelable: 1
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: lab_lab3
+    _displayName: Label3
+    _relabelable: 1
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: lab_lab4
+    _displayName: Label4
+    _relabelable: 1
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: lab_lab5
+    _displayName: Label5
+    _relabelable: 1
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: lab_lab6
+    _displayName: Label6
+    _relabelable: 1
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
