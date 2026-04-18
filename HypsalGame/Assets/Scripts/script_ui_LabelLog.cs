@@ -35,6 +35,7 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScro
     public void Initialize()
     {
         Instance = this;
+        if (script_InputManager.Instance == null) return;
         script_InputManager.action_ShowLog.performed += (ctx) => ToggleLog();
         script_InputManager.action_PlayerScroll.performed += ScrollLog;
         initialized = true;

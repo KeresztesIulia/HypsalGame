@@ -11,15 +11,17 @@ public class script_so_LabelList : ScriptableObject
     [SerializeField] List<Label> labels;
 
     public List<Label> Labels => labels;
-    public List<string> LabelStrings => objects.Concat(labels).Select(label => label.InternalName).ToList();/* labels.Select(label => label.InternalName).ToList();*/
+    public List<string> LabelStrings => objects.Concat(labels).Select(label => label.InternalName).ToList();
 
     public void Reset()
     {
-
-        foreach (var label in Labels)
+        if (labels != null)
+        foreach (var label in labels)
         {
             label.Reset();
         }
+
+        if (objects != null)
         foreach (var obj in objects)
             { obj.Reset(); }    
 

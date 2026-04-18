@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d81efba56215eca48a930710fcbaf5ba, type: 3}
-  m_Name: so_LabelList_SaveAndExit
+  m_Name: so_test_TrainingArea_simulated
   m_EditorClassIdentifier: Assembly-CSharp::script_so_LabelList
   objects:
-  - _internalName: _yesCube1
-    _displayName: Yes
+  - _internalName: a1_o1
+    _displayName: 
     _relabelable: 0
     Labeled:
       m_PersistentCalls:
@@ -22,8 +22,8 @@ MonoBehaviour:
     Unlabeled:
       m_PersistentCalls:
         m_Calls: []
-  - _internalName: _noCube1
-    _displayName: No
+  - _internalName: a1_o2
+    _displayName: 
     _relabelable: 0
     Labeled:
       m_PersistentCalls:
@@ -31,8 +31,8 @@ MonoBehaviour:
     Unlabeled:
       m_PersistentCalls:
         m_Calls: []
-  - _internalName: _yesCube2
-    _displayName: Yes
+  - _internalName: a1_o3
+    _displayName: 
     _relabelable: 0
     Labeled:
       m_PersistentCalls:
@@ -40,8 +40,8 @@ MonoBehaviour:
     Unlabeled:
       m_PersistentCalls:
         m_Calls: []
-  - _internalName: _noCube2
-    _displayName: No
+  - _internalName: a1_o4
+    _displayName: 
     _relabelable: 0
     Labeled:
       m_PersistentCalls:
@@ -49,8 +49,8 @@ MonoBehaviour:
     Unlabeled:
       m_PersistentCalls:
         m_Calls: []
-  - _internalName: _yesCube3
-    _displayName: Yes
+  - _internalName: a1_o5
+    _displayName: 
     _relabelable: 0
     Labeled:
       m_PersistentCalls:
@@ -58,8 +58,62 @@ MonoBehaviour:
     Unlabeled:
       m_PersistentCalls:
         m_Calls: []
-  - _internalName: _noCube3
-    _displayName: No
+  - _internalName: a1_o6
+    _displayName: 
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: a2_o1
+    _displayName: 
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: a2_o2
+    _displayName: 
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: a2_o3
+    _displayName: 
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: a2_o4
+    _displayName: 
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: a3_o1
+    _displayName: 
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: a3_o2
+    _displayName: 
     _relabelable: 0
     Labeled:
       m_PersistentCalls:
@@ -68,8 +122,8 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   labels:
-  - _internalName: _yesLabel1
-    _displayName: Yes
+  - _internalName: Mystery
+    _displayName: 
     _relabelable: 0
     Labeled:
       m_PersistentCalls:
@@ -77,8 +131,8 @@ MonoBehaviour:
     Unlabeled:
       m_PersistentCalls:
         m_Calls: []
-  - _internalName: _noLabel1
-    _displayName: No
+  - _internalName: Awe
+    _displayName: 
     _relabelable: 0
     Labeled:
       m_PersistentCalls:
@@ -86,8 +140,8 @@ MonoBehaviour:
     Unlabeled:
       m_PersistentCalls:
         m_Calls: []
-  - _internalName: _yesLabel2
-    _displayName: Yes
+  - _internalName: Dread
+    _displayName: 
     _relabelable: 0
     Labeled:
       m_PersistentCalls:
@@ -95,8 +149,8 @@ MonoBehaviour:
     Unlabeled:
       m_PersistentCalls:
         m_Calls: []
-  - _internalName: _noLabel2
-    _displayName: No
+  - _internalName: Death
+    _displayName: 
     _relabelable: 0
     Labeled:
       m_PersistentCalls:
@@ -104,8 +158,8 @@ MonoBehaviour:
     Unlabeled:
       m_PersistentCalls:
         m_Calls: []
-  - _internalName: _yesLabel3
-    _displayName: Yes
+  - _internalName: Wonder
+    _displayName: 
     _relabelable: 0
     Labeled:
       m_PersistentCalls:
@@ -113,8 +167,8 @@ MonoBehaviour:
     Unlabeled:
       m_PersistentCalls:
         m_Calls: []
-  - _internalName: _noLabel3
-    _displayName: No
+  - _internalName: Love
+    _displayName: 
     _relabelable: 0
     Labeled:
       m_PersistentCalls:

@@ -2,9 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(script_VisualObject))]
-public class script_LabelRepresentative : MonoBehaviour, interface_Interactable
+public class script_LabelRepresentative : MonoBehaviour, interface_Interactable, interface_PersistentData
 {
     [SerializeField] script_so_LabelList _partOfList;
 
@@ -24,14 +25,27 @@ public class script_LabelRepresentative : MonoBehaviour, interface_Interactable
 
     bool hasAssociations => possibleAssociationLabels != null && FilteredAssociations().Length > 0;
 
-    public bool labelable => hasAssociations && (_relabelable || representedLabel.Labelable); // should we allow override on the object itself? -> this actually does that and probably shouldn't
+    public bool labelable => !markedUnlabelable && hasAssociations && (_relabelable || representedLabel.Labelable); // should we allow override on the object itself? -> this actually does that and probably shouldn't
 
     public interface_Interactable.InteractionType interactionType => interface_Interactable.InteractionType.Labelable;
 
+    public UnityEvent LabeledObject = new();
+
     script_VisualObject visual;
+
+    bool markedUnlabelable = false;
+
+    bool initialized = false;
 
     private void Start()
     {
+        if (!initialized) Initialize();
+    }
+
+    public void Initialize()
+    {
+        if (initialized) return;
+
         if (_partOfList == null) return;
         representedLabel = _partOfList.GetLabel(_representedLabelName);
         possibleAssociationLabels = new List<Label>();
@@ -40,29 +54,32 @@ public class script_LabelRepresentative : MonoBehaviour, interface_Interactable
             if (string.IsNullOrEmpty(name)) continue;
             possibleAssociationLabels.Add(_partOfList.GetLabel(name));
         }
-        
+
         visual = GetComponent<script_VisualObject>();
         visual.SetActiveState(false);
-        
+
         if (representedLabel.IsLabeled)
         {
-            Labeled();
+            LabelLabeled();
         }
 
         representedLabel.Labeled.AddListener(() =>
         {
-            Labeled();
+            LabelLabeled();
         });
 
         representedLabel.Unlabeled.AddListener(() =>
         {
+            if (markedUnlabelable) return;
             visual.SetActiveState(false);
             enabled = true;
+
         });
+
+        initialized = true;
     }
 
-
-    void Labeled()
+    void LabelLabeled()
     {
         if (labelable) return;
         visual.SetActiveState(true);
@@ -73,5 +90,16 @@ public class script_LabelRepresentative : MonoBehaviour, interface_Interactable
     public Label[] FilteredAssociations()
     {
         return possibleAssociationLabels.Where(label =>  label.Labelable).ToArray();
+    }
+
+    public void MarkUnlabelable(string textToShow)
+    {
+        markedUnlabelable = true;
+
+        if (!enabled) return;
+
+        visual.SetActiveState(true);
+        visual._uiInfo._objectName = textToShow;
+        enabled = false;
     }
 }
