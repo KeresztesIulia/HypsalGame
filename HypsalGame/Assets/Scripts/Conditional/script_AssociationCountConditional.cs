@@ -10,9 +10,10 @@ public class script_AssociationCountConditional : abstract_ConditionalRunner
 
     int startValue = -1;
 
-    protected override void Start()
+    public override void Initialize()
     {
-        base.Start();
+        if (initialized) return;
+        base.Initialize();
         GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
         script_LabelAssociationHandler.OnAnyAssociation.AddListener(() => ConditionMet = Condition());
     }

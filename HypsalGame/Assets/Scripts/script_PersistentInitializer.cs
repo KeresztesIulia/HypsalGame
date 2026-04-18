@@ -26,7 +26,7 @@ public class script_PersistentInitializer : MonoBehaviour, interface_PersistentD
         initialized = true;
     }
 
-    private void Start()
+    private void Awake()
     {
         if (!initialized)
             Initialize();

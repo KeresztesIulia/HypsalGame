@@ -17,8 +17,9 @@ public class script_AssociationConditional : abstract_ConditionalRunner
     [SerializeField, Tooltip("Are there functions that should run every time one of the condition labels gets associated without fulfilling the condition?")] protected bool _checkAssociation_negative;
     [SerializeField] protected UnityEvent _OnAssociationNegativeEvents;
 
-    protected override void Start()
+    public override void Initialize()
     {
+        if (initialized) return;
         if (_labelList == null) return;
         conditionLabel1 = _labelList.GetLabel(_conditionLabelName1);
         conditionLabel2 = _labelList.GetLabel(_conditionLabelName2);
@@ -26,7 +27,7 @@ public class script_AssociationConditional : abstract_ConditionalRunner
         conditionLabel1.Associated += Label1AssociationCheck;
         conditionLabel2.Associated += Label2AssociationCheck;
 
-        base.Start();
+        base.Initialize();
     }
 
     protected override bool Condition()

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public abstract class abstract_ConditionalRunner : MonoBehaviour
+public abstract class abstract_ConditionalRunner : MonoBehaviour, interface_PersistentData
 {
 
     // Continuous
@@ -34,6 +34,8 @@ public abstract class abstract_ConditionalRunner : MonoBehaviour
 
 
     protected bool conditionMet;
+
+    protected bool initialized = false;
 
     public bool ConditionMet
     {
@@ -73,12 +75,9 @@ public abstract class abstract_ConditionalRunner : MonoBehaviour
 
     protected bool firedBoth => fired && firedNegative;
 
-    protected virtual void Start()
+    protected void Start()
     {
-        conditionMet = Condition();
-
-        if (_checkAtStart && conditionMet) _AtStartEvents?.Invoke();
-        if (_checkAtStart_negative && !conditionMet) _AtStartNegativeEvents?.Invoke();
+        if (!initialized) Initialize();
     }
 
     protected virtual void Update()
@@ -97,5 +96,15 @@ public abstract class abstract_ConditionalRunner : MonoBehaviour
     public void DebugMessage(string message)
     {
         Debug.Log(message);
+    }
+
+    public virtual void Initialize()
+    {
+        if (initialized) return;
+        conditionMet = Condition();
+
+        if (_checkAtStart && conditionMet) _AtStartEvents?.Invoke();
+        if (_checkAtStart_negative && !conditionMet) _AtStartNegativeEvents?.Invoke();
+        initialized = true;
     }
 }

@@ -7,9 +7,9 @@ public class script_SpecificObjectLabelingConditional : abstract_ConditionalRunn
 
     protected bool[] labeled;
 
-    protected override void Start()
+    public override void Initialize()
     {
-
+        if (initialized) return;
         if (_labelableObjects == null) return;
 
         labeled = new bool[_labelableObjects.Length];
@@ -18,11 +18,12 @@ public class script_SpecificObjectLabelingConditional : abstract_ConditionalRunn
         {
             int idx = i;
             var labelableObject = _labelableObjects[i];
-            labelableObject.LabeledObject.AddListener(() => AddLabel(idx));
-            labelableObject.RepresentedLabel.Unlabeled.AddListener(() => RemoveLabel(idx));
+
+            labelableObject?.LabeledObject?.AddListener(() => AddLabel(idx));
+            labelableObject?.RepresentedLabel.Unlabeled?.AddListener(() => RemoveLabel(idx));
         }
 
-        base.Start();
+        base.Initialize();
 
     }
 
