@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 5138360014767319336}
   - component: {fileID: 6010596483817947438}
   m_Layer: 0
-  m_Name: Sky and Fog Global Volume
+  m_Name: Sky and Fog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -673,7 +673,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5138360014767319336}
   - {fileID: 4163989096244590968}
+  - {fileID: 5138360014767319336}
   m_Father: {fileID: 812681045647127782}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
