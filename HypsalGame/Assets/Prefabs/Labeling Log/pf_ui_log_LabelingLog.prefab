@@ -333,6 +333,10 @@ MonoBehaviour:
   _playerTextPrefab: {fileID: 1460439334931555253, guid: aa1f62ad7d1ef7b43b3e058a410b716e, type: 3}
   _desperateAITextPrefab: {fileID: 5016402652799791833, guid: fb346241c73709546a855831ef121b5b, type: 3}
   _separator: {fileID: 667254219915429272, guid: aeda1693959993b4093e1a4fb7b5c359, type: 3}
+  _subtitleGenericPrefab: {fileID: 5016402652799791833, guid: f0c9340ca213cbd45a94110775240461, type: 3}
+  _subtitleStudentCPrefab: {fileID: 5016402652799791833, guid: ffe1efcd52969e64e8eba7545bacb592, type: 3}
+  _subtitleStudentDPrefab: {fileID: 5016402652799791833, guid: d1906272fb0d7f144818bb215450ec76, type: 3}
+  _subtitleStudentIPrefab: {fileID: 5016402652799791833, guid: f17b7008579c6ca4e8c70a553a195bf6, type: 3}
   _labelingStandardResponse: Thank you for your choice.
   _container: {fileID: 2337653378950774416}
   _scrollRect: {fileID: 7533681053600395051}
