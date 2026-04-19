@@ -28,6 +28,7 @@ public class PlaySoundOrLine : MonoBehaviour
     [Header("Conversation control")]
     [SerializeField, Tooltip("Which sound and subtitle should be played next? (overwritten by Conversation objects)")] PlaySoundOrLine nextSound;
     [SerializeField, Tooltip("Should this close the conversation in the log? (can be true even if nextSound is set)")] bool endConversation;
+    [SerializeField] bool dontLog = false;
 
 
 
@@ -68,7 +69,7 @@ public class PlaySoundOrLine : MonoBehaviour
     private IEnumerator ShowSubtitleWithDelay()
     {
         yield return new WaitForSeconds(subtitleDelay); // Wait before showing the subtitle
-        if (script_ui_LabelLog.Instance != null) script_ui_LabelLog.LogSubtitle(subtitleText, subtitleType, endConversation);
+        if (!dontLog && script_ui_LabelLog.Instance != null) script_ui_LabelLog.LogSubtitle(subtitleText, subtitleType, endConversation);
         SubtitleManager.Instance.ShowSubtitle(subtitleType, subtitleText, subtitleDuration);
     }
 
