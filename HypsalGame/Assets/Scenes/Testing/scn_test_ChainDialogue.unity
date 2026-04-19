@@ -170,13 +170,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_Conversation
   _lines:
-  - {fileID: 1562386927}
-  - {fileID: 1153837560}
-  - {fileID: 841639139}
-  - {fileID: 331115357}
-  - {fileID: 1330585482}
   - {fileID: 1131152480}
-  _playOnce: 0
+  - {fileID: 1330585482}
+  - {fileID: 331115357}
+  - {fileID: 841639139}
+  - {fileID: 1153837560}
+  - {fileID: 1562386927}
+  _playOnce: 1
 --- !u!1 &331115355
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 331115355}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e563678c951f611438ffbe242000da68, type: 3}
+  m_Script: {fileID: 11500000, guid: 17d435184228a1841a2edc0d72bac94a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaySound
   sound:
@@ -228,16 +228,16 @@ MonoBehaviour:
       Data3: -1968373870
       Data4: -30826709
     Path: event:/VOICE/Placeholder Voice
-  playOnAwake: 1
+  playOnAwake: 0
   playOnce: 0
-  playOnTrigger: 0
+  playOnTrigger: 1
   stopOnDisable: 0
   uninterruptable: 0
-  subtitleText: This is the third subtitle.
+  subtitleText: Actually, another line from David.
   subtitleDuration: 3
   subtitleDelay: 0
-  subtitleType: 0
-  nextSound: {fileID: 841639139}
+  subtitleType: 2
+  nextSound: {fileID: 0}
   endConversation: 0
 --- !u!1 &841639137
 GameObject:
@@ -280,7 +280,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 841639137}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e563678c951f611438ffbe242000da68, type: 3}
+  m_Script: {fileID: 11500000, guid: 17d435184228a1841a2edc0d72bac94a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaySound
   sound:
@@ -290,16 +290,16 @@ MonoBehaviour:
       Data3: -1968373870
       Data4: -30826709
     Path: event:/VOICE/Placeholder Voice
-  playOnAwake: 1
+  playOnAwake: 0
   playOnce: 0
-  playOnTrigger: 0
+  playOnTrigger: 1
   stopOnDisable: 0
   uninterruptable: 0
-  subtitleText: This is the fourth subtitle.
+  subtitleText: And this is a line from Iulia.
   subtitleDuration: 3
   subtitleDelay: 0
-  subtitleType: 0
-  nextSound: {fileID: 1153837560}
+  subtitleType: 3
+  nextSound: {fileID: 0}
   endConversation: 0
 --- !u!1 &1034636924
 GameObject:
@@ -604,7 +604,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1131152477}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e563678c951f611438ffbe242000da68, type: 3}
+  m_Script: {fileID: 11500000, guid: 17d435184228a1841a2edc0d72bac94a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaySound
   sound:
@@ -619,11 +619,11 @@ MonoBehaviour:
   playOnTrigger: 1
   stopOnDisable: 0
   uninterruptable: 0
-  subtitleText: This is the first subtitle.
+  subtitleText: This is a line from Catharina.
   subtitleDuration: 3
   subtitleDelay: 0
-  subtitleType: 0
-  nextSound: {fileID: 1330585482}
+  subtitleType: 1
+  nextSound: {fileID: 0}
   endConversation: 0
 --- !u!1 &1153837558
 GameObject:
@@ -666,26 +666,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1153837558}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e563678c951f611438ffbe242000da68, type: 3}
+  m_Script: {fileID: 11500000, guid: 17d435184228a1841a2edc0d72bac94a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaySound
   sound:
     Guid:
-      Data1: -1245072854
-      Data2: 1156027433
-      Data3: -1968373870
-      Data4: -30826709
-    Path: event:/VOICE/Placeholder Voice
-  playOnAwake: 1
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  playOnAwake: 0
   playOnce: 0
-  playOnTrigger: 0
+  playOnTrigger: 1
   stopOnDisable: 0
   uninterruptable: 0
-  subtitleText: This is the fifth subtitle.
+  subtitleText: And this is a line from Lai, without sound though.
   subtitleDuration: 3
-  subtitleDelay: 0
+  subtitleDelay: 1.5
   subtitleType: 0
-  nextSound: {fileID: 1562386927}
+  nextSound: {fileID: 0}
   endConversation: 0
 --- !u!1 &1330585480
 GameObject:
@@ -728,7 +728,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1330585480}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e563678c951f611438ffbe242000da68, type: 3}
+  m_Script: {fileID: 11500000, guid: 17d435184228a1841a2edc0d72bac94a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaySound
   sound:
@@ -740,14 +740,14 @@ MonoBehaviour:
     Path: event:/VOICE/Placeholder Voice
   playOnAwake: 0
   playOnce: 0
-  playOnTrigger: 0
+  playOnTrigger: 1
   stopOnDisable: 0
   uninterruptable: 0
-  subtitleText: This is the second subtitle.
+  subtitleText: This is a line from David.
   subtitleDuration: 3
   subtitleDelay: 0
-  subtitleType: 0
-  nextSound: {fileID: 331115357}
+  subtitleType: 2
+  nextSound: {fileID: 0}
   endConversation: 0
 --- !u!1001 &1459961129
 PrefabInstance:
@@ -848,7 +848,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1562386926}
   - component: {fileID: 1562386927}
-  - component: {fileID: 1562386928}
   m_Layer: 0
   m_Name: line6
   m_TagString: Untagged
@@ -880,48 +879,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 1562386925}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e563678c951f611438ffbe242000da68, type: 3}
+  m_Script: {fileID: 11500000, guid: 17d435184228a1841a2edc0d72bac94a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaySound
   sound:
     Guid:
-      Data1: -1245072854
-      Data2: 1156027433
-      Data3: -1968373870
-      Data4: -30826709
-    Path: event:/VOICE/Placeholder Voice
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   playOnAwake: 0
   playOnce: 0
   playOnTrigger: 1
   stopOnDisable: 0
   uninterruptable: 0
-  subtitleText: This is the sixth subtitle.
+  subtitleText: Aand that's it.
   subtitleDuration: 3
   subtitleDelay: 0
   subtitleType: 0
   nextSound: {fileID: 0}
-  endConversation: 0
---- !u!65 &1562386928
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562386925}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  endConversation: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -4,7 +4,7 @@ using FMOD.Studio;
 using FMODUnity;
 using UnityEngine;
 
-public class PlaySound : MonoBehaviour
+public class PlaySoundOrLine : MonoBehaviour
 {
     [SerializeField] private EventReference sound;
 
@@ -19,14 +19,14 @@ public class PlaySound : MonoBehaviour
 
     private EventInstance soundInstance;
 
-    [Header("Subtitle (Optional)")]
+    [Header("Subtitle")]
     [SerializeField] private string subtitleText;
     [SerializeField] private float subtitleDuration = 3f;
     [SerializeField] private float subtitleDelay = 0f; // Delay before the subtitle appears
     [SerializeField] SubtitleManager.SubtitleType subtitleType;
 
     [Header("Conversation control")]
-    [SerializeField, Tooltip("Which sound and subtitle should be played next? (overwritten by Conversation objects)")] PlaySound nextSound;
+    [SerializeField, Tooltip("Which sound and subtitle should be played next? (overwritten by Conversation objects)")] PlaySoundOrLine nextSound;
     [SerializeField, Tooltip("Should this close the conversation in the log? (can be true even if nextSound is set)")] bool endConversation;
 
 
@@ -60,7 +60,6 @@ public class PlaySound : MonoBehaviour
 
         if (!string.IsNullOrEmpty(subtitleText) && SubtitleManager.Instance != null)
         {
-            if (script_ui_LabelLog.Instance != null) script_ui_LabelLog.LogSubtitle(subtitleText, subtitleType, endConversation);
             StartCoroutine(ShowSubtitleWithDelay());
             if (nextSound != null) Invoke(nameof(PlayNextSound), subtitleDelay + subtitleDuration - 0.05f);
         }
@@ -69,7 +68,8 @@ public class PlaySound : MonoBehaviour
     private IEnumerator ShowSubtitleWithDelay()
     {
         yield return new WaitForSeconds(subtitleDelay); // Wait before showing the subtitle
-        SubtitleManager.Instance.ShowSubtitle(subtitleText, subtitleDuration);
+        if (script_ui_LabelLog.Instance != null) script_ui_LabelLog.LogSubtitle(subtitleText, subtitleType, endConversation);
+        SubtitleManager.Instance.ShowSubtitle(subtitleType, subtitleText, subtitleDuration);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -108,7 +108,7 @@ public class PlaySound : MonoBehaviour
         }
     }
 
-    public void SetNextSound(PlaySound nextSound, bool endConversation = false)
+    public void SetNextSound(PlaySoundOrLine nextSound, bool endConversation = false)
     {
         this.nextSound = nextSound;
         this.endConversation = endConversation;

@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class script_Conversation : MonoBehaviour
 {
-    [SerializeField] PlaySound[] _lines;
+    [SerializeField] PlaySoundOrLine[] _lines;
     [SerializeField] bool _playOnce = true;
 
     private void Awake()
     {
         if (_lines == null || _lines.Length == 0)
         {
-            _lines = GetComponentsInChildren<PlaySound>();    
+            _lines = GetComponentsInChildren<PlaySoundOrLine>();    
         }
 
         _lines[0].SetPlayOnce(_playOnce);
