@@ -49,6 +49,33 @@ MonoBehaviour:
     Unlabeled:
       m_PersistentCalls:
         m_Calls: []
+  - _internalName: Cloud
+    _displayName: 
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: Asteroid
+    _displayName: 
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: Bubble
+    _displayName: 
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
   labels:
   - _internalName: Death
     _displayName: 
@@ -132,6 +159,15 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - _internalName: Angry
+    _displayName: 
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: Dream
     _displayName: 
     _relabelable: 0
     Labeled:
