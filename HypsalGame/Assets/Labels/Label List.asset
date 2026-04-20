@@ -40,6 +40,15 @@ MonoBehaviour:
     Unlabeled:
       m_PersistentCalls:
         m_Calls: []
+  - _internalName: Vase
+    _displayName: 
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
   labels:
   - _internalName: Death
     _displayName: 
