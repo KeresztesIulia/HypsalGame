@@ -32,7 +32,7 @@ public static class static_LabelingHandler
     static void Choose(script_LabelRepresentative representative, Label assignedLabel)
     {
         var promptText = representative.Prompt;
-        representative.RepresentedLabel.SetLabel(assignedLabel);
+        representative.RepresentedLabel.SetLabel(assignedLabel, representative.RepresentedModel);
 
         string specialResponse = script_LabelingResponseHandler.GetResponse(representative.RepresentedLabel, assignedLabel);
 

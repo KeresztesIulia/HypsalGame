@@ -12,6 +12,8 @@ public class script_LabelRepresentative : MonoBehaviour, interface_Interactable,
     [SerializeField] string _representedLabelName;
     Label representedLabel;
 
+    [SerializeField] GameObject _representingModel;
+
     [SerializeField] string _prompt;
 
     [SerializeField] string[] _possibleAssociations;
@@ -21,6 +23,7 @@ public class script_LabelRepresentative : MonoBehaviour, interface_Interactable,
 
     public string Prompt => _prompt;
     public Label RepresentedLabel => representedLabel;
+    public GameObject RepresentedModel => _representingModel;
     public List<Label> PossibleLabels => possibleAssociationLabels;
 
     bool hasAssociations => possibleAssociationLabels != null && FilteredAssociations().Length > 0;
