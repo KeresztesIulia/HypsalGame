@@ -161,12 +161,12 @@ public class Label : IEquatable<Label>, IEquatable<string>
         givenName = givenLabel;
     }
 
-    public void SetLabel(Label label)
+    public void SetLabel(Label label, GameObject representingModel = null)
     {
         
         if (script_LabelAssociationHandler.InstanceExists)
         {
-            script_LabelAssociationHandler.Instance?.AddAssociation(this, label);
+            script_LabelAssociationHandler.Instance?.AddAssociation(this, label, representingModel);
             Debug.Log($"associating {this} with {label}");
         }
         else
