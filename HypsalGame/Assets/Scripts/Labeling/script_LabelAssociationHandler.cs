@@ -8,10 +8,10 @@ public class script_LabelAssociationHandler : MonoBehaviour, interface_Persisten
     public static bool InstanceExists => Instance != null;
     public static UnityEvent OnAnyAssociation = new();
 
-    Dictionary<string, Label> associations;
+    Dictionary<string, AssociationData> associations;
     bool initialized = false;
 
-    public Dictionary<string, Label> Associations => associations;
+    public Dictionary<string, AssociationData> Associations => associations;
 
     public int AssociationCount => associations.Count / 2;
 
@@ -23,23 +23,29 @@ public class script_LabelAssociationHandler : MonoBehaviour, interface_Persisten
     {
         if (initialized) return;
         Instance = this;
-        associations = new Dictionary<string, Label>();
+        associations = new Dictionary<string, AssociationData>();
         initialized = true;
     }
 
-    public void AddAssociation(Label label1, Label label2)
+    public void AddAssociation(Label label1, Label label2, GameObject representingModel = null)
     {
         if (!AreAssociated(label1, label2))
         {
             DeleteAssociation(label1);
             DeleteAssociation(label2);
 
-            associations.Add(label1, label2);
+            var associationData = new AssociationData();
+            associationData.associatedLabel = label2;
+            associationData.representingModel = representingModel;
+
+            associations.Add(label1, associationData);
             label1.Associated(label2);
 
             if (label1 == label2) return;
 
-            associations.Add(label2, label1);
+            associationData.associatedLabel = label1;
+
+            associations.Add(label2, associationData);
             label2.Associated(label1);
         }
         OnAnyAssociation?.Invoke();
@@ -49,7 +55,7 @@ public class script_LabelAssociationHandler : MonoBehaviour, interface_Persisten
     {
         if (associations.ContainsKey(label))
         {
-            var association = associations[label];
+            var association = associations[label].associatedLabel;
 
             associations.Remove(label);
             label.Unlabeled?.Invoke();
@@ -66,18 +72,36 @@ public class script_LabelAssociationHandler : MonoBehaviour, interface_Persisten
         DeleteAssociation(label2);
     }
 
-    public bool AreAssociated(Label label1, Label label2)
+    public bool AreAssociated(string label1, string label2)
     {
-        return associations.ContainsKey(label1) && associations[label1] == label2;
+        return associations.ContainsKey(label1) && associations[label1].associatedLabel == label2;
     }
 
-    public bool HasAssociation(Label label)
+
+
+    public bool HasAssociation(string label)
     {
         return associations.ContainsKey(label) && associations[label] is not null;
     }
 
-    public Label FindAssociatedLabel(Label label)
+    public AssociationData FindAssociation(string label)
     {
         return associations.ContainsKey(label) ? associations[label] : null;
     }
+
+    public Label FindAssociatedLabel(string label)
+    {
+        return FindAssociation(label)?.associatedLabel;
+    }
+
+    public GameObject FindRepresentingModel(string label)
+    {
+        return FindAssociation(label)?.representingModel;
+    }   
+}
+
+public class AssociationData
+{
+    public Label associatedLabel;
+    public GameObject representingModel;
 }

@@ -6,8 +6,6 @@ public class CI_LabelRepresentative : Editor
 {
     public override void OnInspectorGUI()
     {
-        //base.OnInspectorGUI();
-
 
         using (new EditorGUI.DisabledScope(true))
         {
@@ -27,6 +25,8 @@ public class CI_LabelRepresentative : Editor
         // create dropdown for _representedLabel (through Utilities)
         var representedLabelProp = serializedObject.FindProperty("_representedLabelName");
         representedLabelProp.stringValue = CI_CustomInspectorUtilities.LabelNameField(labelList, representedLabelProp.stringValue, "Represented label");
+
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("_representingModel"));
 
         // create List view with dropdowns for _possibleAssociations
         var possibleAssociationsProp = serializedObject.FindProperty("_possibleAssociations");

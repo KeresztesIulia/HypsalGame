@@ -239,6 +239,81 @@ MonoBehaviour:
   subtitleType: 2
   nextSound: {fileID: 0}
   endConversation: 0
+  dontLog: 0
+--- !u!1 &528826512
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 528826515}
+  - component: {fileID: 528826514}
+  - component: {fileID: 528826513}
+  m_Layer: 0
+  m_Name: LogTriggerer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &528826513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528826512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03439ae4853f97a4082e3dc8e12e679b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_LogOnTrigger
+  _textsToLog:
+  - Hello.
+  - You are now trapped.
+  - This is your life now.
+  - Goodbye.
+  _logTypes: 01000000010000000100000001000000
+  _triggerOnce: 1
+  _popUpLog: 1
+--- !u!65 &528826514
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528826512}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &528826515
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528826512}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.61363, y: -2.14201, z: -3.54}
+  m_LocalScale: {x: 19.163887, y: 11.875, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &841639137
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,6 +376,7 @@ MonoBehaviour:
   subtitleType: 3
   nextSound: {fileID: 0}
   endConversation: 0
+  dontLog: 0
 --- !u!1 &1034636924
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,6 +701,7 @@ MonoBehaviour:
   subtitleType: 1
   nextSound: {fileID: 0}
   endConversation: 0
+  dontLog: 0
 --- !u!1 &1153837558
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,6 +764,7 @@ MonoBehaviour:
   subtitleType: 0
   nextSound: {fileID: 0}
   endConversation: 0
+  dontLog: 0
 --- !u!1 &1330585480
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,6 +827,7 @@ MonoBehaviour:
   subtitleType: 2
   nextSound: {fileID: 0}
   endConversation: 0
+  dontLog: 0
 --- !u!1001 &1459961129
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -900,6 +979,7 @@ MonoBehaviour:
   subtitleType: 0
   nextSound: {fileID: 0}
   endConversation: 1
+  dontLog: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -907,3 +987,4 @@ SceneRoots:
   - {fileID: 1034636926}
   - {fileID: 1459961129}
   - {fileID: 266125543}
+  - {fileID: 528826515}
