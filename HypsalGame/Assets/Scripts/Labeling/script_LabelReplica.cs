@@ -40,7 +40,7 @@ public class script_LabelReplica : MonoBehaviour
             if (script_LabelAssociationHandler.Instance.HasAssociation(replicatedLabel))
             {
                 GameObject representingModel = script_LabelAssociationHandler.Instance.FindRepresentingModel(replicatedLabel);
-                Instantiate(representingModel, _replicaParents[currentParent]);
+                Instantiate(representingModel, _replicaParents[currentParent]).transform.localPosition = Vector3.zero;
 
                 currentParent++;
             }
