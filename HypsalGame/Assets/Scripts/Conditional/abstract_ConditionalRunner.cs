@@ -89,7 +89,7 @@ public abstract class abstract_ConditionalRunner : MonoBehaviour, interface_Pers
         ConditionMet = Condition();
 
         if (_checkContinuously && ConditionMet) _ContinuousEvents.Invoke();
-        if (_checkContinuously_negative && ConditionMet) _ContinuousNegativeEvents.Invoke();
+        if (_checkContinuously_negative && !ConditionMet) _ContinuousNegativeEvents.Invoke();
     }
 
     protected abstract bool Condition();
@@ -106,5 +106,10 @@ public abstract class abstract_ConditionalRunner : MonoBehaviour, interface_Pers
         if (_checkAtStart && conditionMet) _AtStartEvents?.Invoke();
         if (_checkAtStart_negative && !conditionMet) _AtStartNegativeEvents?.Invoke();
         initialized = true;
+    }
+
+    public void DebugConditional(string message)
+    {
+        Debug.Log(message);
     }
 }

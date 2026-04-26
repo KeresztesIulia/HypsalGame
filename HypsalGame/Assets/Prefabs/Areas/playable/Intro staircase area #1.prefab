@@ -48761,7 +48761,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7694290715081609763
 Transform:
   m_ObjectHideFlags: 0
@@ -102393,23 +102393,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 7477782293767178228}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e563678c951f611438ffbe242000da68, type: 3}
+  m_Script: {fileID: 11500000, guid: 17d435184228a1841a2edc0d72bac94a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaySound
   sound:
     Guid:
-      Data1: -1245072854
-      Data2: 1156027433
-      Data3: -1968373870
-      Data4: -30826709
-    Path: event:/VOICE/Placeholder Voice
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   playOnAwake: 0
   playOnce: 0
   playOnTrigger: 1
   stopOnDisable: 0
-  subtitleText: This is the subtitle you should be seeing.
+  uninterruptable: 0
+  subtitleText: 
   subtitleDuration: 3
   subtitleDelay: 0
+  subtitleType: 0
+  nextSound: {fileID: 0}
+  endConversation: 0
+  dontLog: 0
 --- !u!65 &832655613628991128
 BoxCollider:
   m_ObjectHideFlags: 0

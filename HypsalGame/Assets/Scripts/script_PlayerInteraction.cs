@@ -9,6 +9,8 @@ public class script_PlayerInteraction : MonoBehaviour
     interface_Interactable currentTarget = null;
     interface_Interactable.InteractionType previousInteractionType = interface_Interactable.InteractionType.None;
 
+    public static script_PlayerInteraction Instance;
+
     public interface_Interactable CurrentTarget
     {
         get
@@ -154,5 +156,15 @@ public class script_PlayerInteraction : MonoBehaviour
         CurrentTarget = null;
 
     }
-    
+
+    private void Start()
+    {
+        Instance = this;
+    }
+
+    public void SetActive(bool active)
+    {
+        enabled = active;
+    }
+
 }

@@ -97,7 +97,7 @@ public class Label : IEquatable<Label>, IEquatable<string>
                 if (script_LabelAssociationHandler.InstanceExists)
                 {
                     var association = script_LabelAssociationHandler.Instance?.FindAssociatedLabel(this);
-                    return association.OriginalDisplayName;
+                    return association?.OriginalDisplayName;
                 }
                 else
                 {
