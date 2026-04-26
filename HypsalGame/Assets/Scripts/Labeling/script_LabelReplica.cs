@@ -18,11 +18,11 @@ public class script_LabelReplica : MonoBehaviour
     {
         foreach (var triggerArea in _triggerAreas)
         {
-            var replicationTrigger = triggerArea.GetComponent<script_ReplicationTrigger>();
+            var replicationTrigger = triggerArea.GetComponent<script_TriggerEventConnector>();
 
             if (replicationTrigger != null) continue;
 
-            replicationTrigger = triggerArea.AddComponent<script_ReplicationTrigger>();
+            replicationTrigger = triggerArea.AddComponent<script_TriggerEventConnector>();
             replicationTrigger.TriggerEntered += ReplicateItems;
         }
     }
