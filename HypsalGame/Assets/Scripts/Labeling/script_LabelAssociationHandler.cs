@@ -81,26 +81,26 @@ public class script_LabelAssociationHandler : MonoBehaviour, interface_Persisten
 
     public bool HasAssociation(string label)
     {
-        return associations.ContainsKey(label) && associations[label] is not null;
+        return associations.ContainsKey(label) && associations[label].associatedLabel is not null;
     }
 
     public AssociationData FindAssociation(string label)
     {
-        return associations.ContainsKey(label) ? associations[label] : null;
+        return associations.ContainsKey(label) ? associations[label] : new AssociationData();
     }
 
     public Label FindAssociatedLabel(string label)
     {
-        return FindAssociation(label)?.associatedLabel;
+        return FindAssociation(label).associatedLabel;
     }
 
     public GameObject FindRepresentingModel(string label)
     {
-        return FindAssociation(label)?.representingModel;
+        return FindAssociation(label).representingModel;
     }   
 }
 
-public class AssociationData
+public struct AssociationData
 {
     public Label associatedLabel;
     public GameObject representingModel;

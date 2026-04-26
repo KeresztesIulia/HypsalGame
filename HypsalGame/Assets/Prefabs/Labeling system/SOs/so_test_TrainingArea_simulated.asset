@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::script_so_LabelList
   objects:
   - _internalName: a1_o1
-    _displayName: 
+    _displayName: AAAAAAAAAAAAAAA
     _relabelable: 0
     Labeled:
       m_PersistentCalls:
@@ -23,7 +23,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - _internalName: a1_o2
-    _displayName: 
+    _displayName: I hate Unity and C#
     _relabelable: 0
     Labeled:
       m_PersistentCalls:
