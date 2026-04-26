@@ -45,8 +45,8 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScro
         if (script_InputManager.Instance == null) return;
         script_InputManager.action_ShowLog.performed += (ctx) => ToggleLog();
         script_InputManager.action_ui_ShowLog.performed += (ctx) => ToggleLog();
-        script_InputManager.action_ui_Cancel.performed += (ctx) => CloseLog();
-        script_InputManager.action_Cancel.performed += (ctx) => CloseLog();
+        script_InputManager.action_ui_Cancel.performed += (ctx) => SetLogVisibility(false);
+        script_InputManager.action_Cancel.performed += (ctx) => SetLogVisibility(false);
         script_InputManager.action_PlayerScroll.performed += ScrollLog;
         initialized = true;
     }
@@ -56,18 +56,23 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScro
         if (!initialized) Initialize();
     }
 
-    void ToggleLog(bool stopCoroutines = true)
+    public void ToggleLog(bool stopCoroutines = true)
     {
+        SetLogVisibility(!_container.gameObject.activeSelf, stopCoroutines);
+    }
 
+    void ResetLogVisibility(bool stopCoroutines)
+    {
         if (stopCoroutines) StopAllCoroutines();
         _container.alpha = 1f;
-        _container.gameObject.SetActive(!_container.gameObject.activeSelf);
     }
 
-    void CloseLog()
+    public void SetLogVisibility(bool active,  bool stopCoroutines = true)
     {
-        if (_container.gameObject.activeSelf) ToggleLog();
+        ResetLogVisibility(stopCoroutines);
+        _container.gameObject.SetActive(active);
     }
+
 
     void ScrollLog(InputAction.CallbackContext context)
     {

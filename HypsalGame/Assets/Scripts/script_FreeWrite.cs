@@ -13,6 +13,18 @@ public class script_FreeWrite : script_Interactable
     bool submitClosing = false;
     bool correctAnswer = false;
 
+    script_FreeWriteField freeWriteField
+    {
+        get
+        {
+            if (_freeWriteField == null)
+            {
+                _freeWriteField = script_FreeWritePopup.Instance;
+            }
+            return _freeWriteField;
+        }
+    }
+
     public override void Interact(Vector3 playerPosition)
     {
         submitClosing = false;
@@ -24,8 +36,7 @@ public class script_FreeWrite : script_Interactable
 
     void ActivateField()
     {
-        script_FreeWriteField field = _freeWriteField; // == null ? _freeWriteField : StaticPopup
-        _freeWriteField.Activate(OnSubmit, OnClose);
+        freeWriteField.Activate(OnSubmit, OnClose);
     }
 
     public void DisableWriting()
@@ -36,9 +47,7 @@ public class script_FreeWrite : script_Interactable
 
     void OnSubmit(string enteredPassword)
     {
-        Debug.Log("Submitted");
         submitClosing = true;
-        //StopLogging(); // don't stop if keepOpen && allowMultiple -- stop only on correct
         if (string.IsNullOrEmpty(_freeWriteInfo.password) || enteredPassword == _freeWriteInfo.password)
         {
             CorrectPasswordEntered?.Invoke();
@@ -50,27 +59,34 @@ public class script_FreeWrite : script_Interactable
             correctAnswer = false;
         }
 
-        if (_freeWriteInfo.logAnswer) script_ui_LabelLog.LogPlayerText(enteredPassword);
+        if (_freeWriteInfo.logAnswer)
+        {
+            script_ui_LabelLog.LogAIText("You said: ");
+            script_ui_LabelLog.LogPlayerText(enteredPassword);
+        }
     }
 
     void OnClose()
     {
         if (submitClosing)
         {
-            Debug.Log("submit Closing");
             if (!_freeWriteInfo.allowMultipleTries) DisableWriting();
             else if (_freeWriteInfo.keepOpenOnSubmit)
             {
                 if (!correctAnswer)
                 {
-                    // delete current text
+                    freeWriteField.EmptyInputField();
                     ActivateField();
                 }
             }
         }
 
+        if (!submitClosing || !_freeWriteInfo.keepOpenOnSubmit)
+        {
+            StopLogging();
+        }
+
         submitClosing = false;
-        StopLogging();
     }
 
     IEnumerator StartLogging()

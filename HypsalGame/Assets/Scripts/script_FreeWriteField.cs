@@ -6,15 +6,15 @@ using UnityEngine.InputSystem;
 
 public class script_FreeWriteField : MonoBehaviour
 {
-    [SerializeField] TMP_InputField _inputField;
+    [SerializeField] protected TMP_InputField _inputField;
 
     public TMP_InputField InputField => _inputField;
 
-    PlayerInput playerInput;
+    protected PlayerInput playerInput;
 
-    bool listenersAdded = false;
+    protected bool listenersAdded = false;
 
-    private void Start()
+    protected virtual void Start()
     {
         playerInput = FindFirstObjectByType<PlayerInput>();
         _inputField.resetOnDeActivation = false;
@@ -22,12 +22,13 @@ public class script_FreeWriteField : MonoBehaviour
 
     public virtual void Activate(System.Action<string> OnSubmitCallback, System.Action OnEscCallback)
     {
+        gameObject.SetActive(true);
         DisableControls();
         _inputField.Select();
         AddListeners(OnSubmitCallback, OnEscCallback);
     }
 
-    void AddListeners(System.Action<string> OnSubmitCallback, System.Action OnEscCallback)
+    protected virtual void AddListeners(System.Action<string> OnSubmitCallback, System.Action OnEscCallback)
     {
         if (listenersAdded) return;
         _inputField.onSubmit.AddListener((fieldContent) => OnSubmitCallback(fieldContent));
@@ -35,24 +36,26 @@ public class script_FreeWriteField : MonoBehaviour
         listenersAdded = true;
     }
 
-    void DisableControls()
+    protected virtual void DisableControls()
     {
-        gameObject.SetActive(true);
-
         script_PlayerInteraction.Instance?.ResetTarget();
         script_PlayerInteraction.Instance?.SetActive(false);
         script_InputManager.SwitchInputMap(script_InputManager.map_uiMap);
     }
 
-    public void Deactivate(bool disableObject = false)
+    public virtual void Deactivate(bool disableObject = false)
     {
-        Debug.Log("Deactivate");
         EventSystem.current?.SetSelectedGameObject(null);
 
         gameObject.SetActive(!disableObject);
         script_PlayerInteraction.Instance.SetActive(true);
         script_InputManager.SwitchInputMap(script_InputManager.map_PlayerMap);
 
+    }
+
+    public void EmptyInputField()
+    {
+        _inputField.text = "";
     }
 
     public void CopyInputContent(TMP_InputField inputField)
