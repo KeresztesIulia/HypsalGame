@@ -44,6 +44,9 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScro
         Instance = this;
         if (script_InputManager.Instance == null) return;
         script_InputManager.action_ShowLog.performed += (ctx) => ToggleLog();
+        script_InputManager.action_ui_ShowLog.performed += (ctx) => ToggleLog();
+        script_InputManager.action_ui_Cancel.performed += (ctx) => CloseLog();
+        script_InputManager.action_Cancel.performed += (ctx) => CloseLog();
         script_InputManager.action_PlayerScroll.performed += ScrollLog;
         initialized = true;
     }
@@ -59,6 +62,11 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScro
         if (stopCoroutines) StopAllCoroutines();
         _container.alpha = 1f;
         _container.gameObject.SetActive(!_container.gameObject.activeSelf);
+    }
+
+    void CloseLog()
+    {
+        if (_container.gameObject.activeSelf) ToggleLog();
     }
 
     void ScrollLog(InputAction.CallbackContext context)
