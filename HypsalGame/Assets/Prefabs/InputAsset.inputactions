@@ -70,6 +70,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Cancel",
+                    "type": "Button",
+                    "id": "867e2f22-5706-4d2f-9847-ceb7a7d29f68",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Number 1",
                     "type": "Button",
                     "id": "07d284fa-baaf-41bb-ae13-b8e72c6d2fe4",
@@ -268,6 +277,17 @@
                     "processors": "StickDeadzone",
                     "groups": "Gamepad",
                     "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "52a4ca3b-78b1-4329-b1f6-9f85e35d202e",
+                    "path": "*/{Cancel}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse;Gamepad;Touch;Joystick;XR;KeyboardMouse",
+                    "action": "Cancel",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -651,7 +671,7 @@
                     "name": "Cancel",
                     "type": "Button",
                     "id": "5069c78a-2ddc-4a08-98fd-e99d5c6cd4b4",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -808,6 +828,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Show log",
+                    "type": "Button",
+                    "id": "7b5e15b9-c592-41c8-999c-cc5da02c1d00",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -1077,6 +1106,28 @@
                 },
                 {
                     "name": "",
+                    "id": "006bcd9d-0413-4bb3-a318-ead2f0fe68b0",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";KeyboardMouse;Keyboard&Mouse",
+                    "action": "Show log",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "70137167-9504-4edf-8bfa-1dfa53a658d7",
+                    "path": "<Gamepad>/select",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Xbox Controller;Gamepad;PS4 Controller",
+                    "action": "Show log",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "50cea920-55a9-4fce-8801-571d5b31eaaa",
                     "path": "*/{Submit}",
                     "interactions": "",
@@ -1092,7 +1143,7 @@
                     "path": "*/{Cancel}",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard&Mouse;Gamepad;Touch;Joystick;XR",
+                    "groups": "Keyboard&Mouse;Gamepad;Touch;Joystick;XR;KeyboardMouse",
                     "action": "Cancel",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -1213,7 +1264,7 @@
                     "path": "<XRController>/devicePosition",
                     "interactions": "",
                     "processors": "",
-                    "groups": "XR",
+                    "groups": "XR;KeyboardMouse;Keyboard&Mouse",
                     "action": "TrackedDevicePosition",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -1224,7 +1275,7 @@
                     "path": "<XRController>/deviceRotation",
                     "interactions": "",
                     "processors": "",
-                    "groups": "XR",
+                    "groups": "XR;KeyboardMouse;Keyboard&Mouse",
                     "action": "TrackedDeviceOrientation",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -1400,7 +1451,7 @@
                     "path": "<Keyboard>/numpad8",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";KeyboardMouse",
                     "action": "Number 8",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -1411,7 +1462,7 @@
                     "path": "<Keyboard>/9",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";KeyboardMouse;Keyboard&Mouse",
                     "action": "Number 9",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -1422,7 +1473,7 @@
                     "path": "<Keyboard>/numpad9",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";KeyboardMouse;Keyboard&Mouse",
                     "action": "Number 9",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -1433,7 +1484,7 @@
                     "path": "<Keyboard>/0",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";KeyboardMouse;Keyboard&Mouse",
                     "action": "Number 0",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -1444,7 +1495,7 @@
                     "path": "<Keyboard>/numpad0",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";KeyboardMouse;Keyboard&Mouse",
                     "action": "Number 0",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -1499,6 +1550,22 @@
             "name": "PS4 Controller",
             "bindingGroup": "PS4 Controller",
             "devices": []
+        },
+        {
+            "name": "Keyboard&Mouse",
+            "bindingGroup": "Keyboard&Mouse",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
         }
     ]
 }

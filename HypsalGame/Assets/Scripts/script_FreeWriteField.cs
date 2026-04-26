@@ -31,26 +31,28 @@ public class script_FreeWriteField : MonoBehaviour
     {
         if (listenersAdded) return;
         _inputField.onSubmit.AddListener((fieldContent) => OnSubmitCallback(fieldContent));
-        _inputField.onEndEdit.AddListener((cancelString) => { OnEscCallback(); Deactivate(); });
+        _inputField.onEndEdit.AddListener((cancelString) => { Deactivate(); OnEscCallback(); });
         listenersAdded = true;
     }
 
     void DisableControls()
     {
         gameObject.SetActive(true);
-        playerInput.enabled = false;
 
         script_PlayerInteraction.Instance?.ResetTarget();
         script_PlayerInteraction.Instance?.SetActive(false);
+        script_InputManager.SwitchInputMap(script_InputManager.map_uiMap);
     }
 
     public void Deactivate(bool disableObject = false)
     {
-        playerInput.enabled = true;
+        Debug.Log("Deactivate");
         EventSystem.current?.SetSelectedGameObject(null);
 
         gameObject.SetActive(!disableObject);
         script_PlayerInteraction.Instance.SetActive(true);
+        script_InputManager.SwitchInputMap(script_InputManager.map_PlayerMap);
+
     }
 
     public void CopyInputContent(TMP_InputField inputField)
