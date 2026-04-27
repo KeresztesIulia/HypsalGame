@@ -10,11 +10,7 @@ public class CI_LabelingResponseHandler : Editor
     {
         //base.OnInspectorGUI();
 
-        using (new EditorGUI.DisabledScope(true))
-        {
-            EditorGUILayout.ObjectField("Script", MonoScript.FromMonoBehaviour((MonoBehaviour)target), GetType(), false);
-            EditorGUILayout.ObjectField("Custom Inspector", MonoScript.FromScriptableObject(this), GetType(), false);
-        }
+        CI_CustomInspectorUtilities.ScriptReferences(this);
 
         var labelListProp = serializedObject.FindProperty("_labelList");
         EditorGUILayout.PropertyField(labelListProp);
