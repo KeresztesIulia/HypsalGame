@@ -736,7 +736,7 @@ MonoBehaviour:
   _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
   _representedLabelName: Vase
   _representingModel: {fileID: 2645802876938711913}
-  _prompt: What do you feel?
+  _prompt: Which label best describes how this object makes you feel?
   _possibleAssociations:
   - Love
   - Beauty
@@ -1574,7 +1574,7 @@ MonoBehaviour:
   _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
   _representedLabelName: Bubble
   _representingModel: {fileID: 6199126254732023330}
-  _prompt: What do you feel?
+  _prompt: Which label best describes how this object makes you feel?
   _possibleAssociations:
   - Love
   - Beauty
@@ -3156,7 +3156,7 @@ MonoBehaviour:
   _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
   _representedLabelName: Vase
   _representingModel: {fileID: 5563562117917895395}
-  _prompt: What do you feel?
+  _prompt: Which label best describes how this object makes you feel?
   _possibleAssociations:
   - Love
   - Beauty
@@ -3375,7 +3375,7 @@ MonoBehaviour:
   _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
   _representedLabelName: Vase
   _representingModel: {fileID: 5066705490052619395}
-  _prompt: What do you feel?
+  _prompt: Which label best describes how this object makes you feel?
   _possibleAssociations:
   - Love
   - Beauty
@@ -3450,7 +3450,7 @@ MonoBehaviour:
   _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
   _representedLabelName: Asteroid
   _representingModel: {fileID: 624236012177949823}
-  _prompt: What do you feel?
+  _prompt: Which label best describes how this object makes you feel?
   _possibleAssociations:
   - Love
   - Beauty
@@ -3852,7 +3852,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: NO!
+          m_StringArgument: You have made your choice
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 171978234765546594}
@@ -3864,7 +3864,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: NOO!
+          m_StringArgument: You have made your choice
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 4811237608359170925}
@@ -3876,7 +3876,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: NOOO!
+          m_StringArgument: You have made your choice
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1729819990669779893}
@@ -3888,7 +3888,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: NOOOO!
+          m_StringArgument: You have made your choice
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 6581396607960408799}
@@ -3900,7 +3900,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: NOOOOO!
+          m_StringArgument: You have made your choice
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 7709681298380439105}
@@ -3912,7 +3912,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: no.
+          m_StringArgument: You have made your choice
           m_BoolArgument: 0
         m_CallState: 2
   _checkChange_negative: 0
@@ -5975,7 +5975,7 @@ MonoBehaviour:
   _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
   _representedLabelName: Cloud
   _representingModel: {fileID: 4543904382156253855}
-  _prompt: What do you feel?
+  _prompt: Which label best describes how this object makes you feel?
   _possibleAssociations:
   - Love
   - Beauty
