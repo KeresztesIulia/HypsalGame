@@ -1038,7 +1038,9 @@ Transform:
   m_LocalPosition: {x: -4.0792847, y: 49.01239, z: 104.66158}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 337293918623439283}
+  - {fileID: 4687484308017700206}
   m_Father: {fileID: 3973810788334816076}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6079686495821255617
@@ -1223,6 +1225,156 @@ Transform:
   - {fileID: 968598076861501878}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6690062189391049891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 337293918623439283}
+  - component: {fileID: 5712749229106691983}
+  - component: {fileID: 9037220259179829102}
+  m_Layer: 0
+  m_Name: FireExtinguisher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &337293918623439283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6690062189391049891}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.000000104308114}
+  m_LocalPosition: {x: -3192.08, y: 796.53, z: -388.5154}
+  m_LocalScale: {x: 2.3523, y: 2.3523, z: 2.3523}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7786114322973989832}
+  m_Father: {fileID: 9146068800829756170}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &5712749229106691983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6690062189391049891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7350bcf7331a3c4e83d51b825af8c24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_VisualObject
+  _uiInfo:
+    _objectName: 
+--- !u!114 &9037220259179829102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6690062189391049891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1586d1852ae31047a2983072095e8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
+  _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
+  _representedLabelName: 2
+  _representingModel: {fileID: 7441641026252587378}
+  _prompt: Which label best describes how this object makes you feel?
+  _possibleAssociations:
+  - Death
+  - Love
+  - Awe
+  - Beauty
+  - Mystery
+  - Dream
+  _relabelable: 0
+  LabeledObject:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &6872737264327313871
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4687484308017700206}
+  - component: {fileID: 6112654781404129223}
+  - component: {fileID: 2006520265584172596}
+  m_Layer: 0
+  m_Name: FireExtinguisher (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4687484308017700206
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6872737264327313871}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.000000104308114}
+  m_LocalPosition: {x: -3181.59, y: 796.53, z: -388.5154}
+  m_LocalScale: {x: 2.3523, y: 2.3523, z: 2.3523}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5809342836524098865}
+  m_Father: {fileID: 9146068800829756170}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &6112654781404129223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6872737264327313871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7350bcf7331a3c4e83d51b825af8c24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_VisualObject
+  _uiInfo:
+    _objectName: 
+--- !u!114 &2006520265584172596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6872737264327313871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1586d1852ae31047a2983072095e8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
+  _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
+  _representedLabelName: 2
+  _representingModel: {fileID: 6617263583234031499}
+  _prompt: Which label best describes how this object makes you feel?
+  _possibleAssociations:
+  - Death
+  - Love
+  - Awe
+  - Beauty
+  - Mystery
+  - Dream
+  _relabelable: 0
+  LabeledObject:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7728993129309992492
 GameObject:
   m_ObjectHideFlags: 0
@@ -2459,6 +2611,77 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4554739439305560, guid: c1088612ebac05d4a958da56ca606447, type: 3}
   m_PrefabInstance: {fileID: 5931250133943395831}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6274736914969379546
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4687484308017700206}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -948.24274
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -589.02234
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -121.412735
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c02192ce031045d4aac470562d3ba09e, type: 2}
+    - target: {fileID: 919132149155446097, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
+      propertyPath: m_Name
+      value: Fire Extinguisher
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
+--- !u!4 &5809342836524098865 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
+  m_PrefabInstance: {fileID: 6274736914969379546}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6617263583234031499 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
+  m_PrefabInstance: {fileID: 6274736914969379546}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6462860056544076408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2644,6 +2867,77 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4554739439305560, guid: c1088612ebac05d4a958da56ca606447, type: 3}
   m_PrefabInstance: {fileID: 6985431027867166795}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7748281273517308963
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 337293918623439283}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -948.24274
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -589.02234
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -121.412735
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c02192ce031045d4aac470562d3ba09e, type: 2}
+    - target: {fileID: 919132149155446097, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
+      propertyPath: m_Name
+      value: Fire Extinguisher
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
+--- !u!1 &7441641026252587378 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
+  m_PrefabInstance: {fileID: 7748281273517308963}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7786114322973989832 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
+  m_PrefabInstance: {fileID: 7748281273517308963}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7763836348888834422
 PrefabInstance:
