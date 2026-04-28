@@ -237,6 +237,10 @@ PrefabInstance:
       propertyPath: defaultRotationX
       value: 72.7
       objectReference: {fileID: 0}
+    - target: {fileID: 3958203228958034116, guid: 46aa2c9285a9a5e44a56f1a6aab3039b, type: 3}
+      propertyPath: gameStartRotationX
+      value: 72.7
+      objectReference: {fileID: 0}
     - target: {fileID: 4438468736877967756, guid: 46aa2c9285a9a5e44a56f1a6aab3039b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -983.83

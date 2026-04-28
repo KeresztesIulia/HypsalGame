@@ -12,7 +12,7 @@ public class TimedChildActivationSequence : MonoBehaviour
     [Tooltip("If true, all included child objects start active, then become inactive over time. If false, they start inactive, then become active over time.")]
     [SerializeField] private bool startChildrenActive = true;
 
-    [Tooltip("If true, objects are processed in the order they are listed. If false, they are processed in a random order.")]
+    [Tooltip("If true, objects are processed in the exact order they are listed below. If false, they are processed randomly.")]
     [SerializeField] private bool useListedOrder = true;
 
     [Tooltip("Total time, in seconds, for all included child objects to finish activating or deactivating.")]
@@ -23,11 +23,13 @@ public class TimedChildActivationSequence : MonoBehaviour
     [SerializeField] private AnimationCurve activationCurve = AnimationCurve.EaseInOut(0f, 0f, 1f, 1f);
 
     [Header("Children To Include")]
-    [Tooltip("Add child objects from this parent here. Empty parent objects are ignored, but their descendants are still included.")]
+    [Tooltip("Objects are processed in this exact order when Use Listed Order is enabled. Empty parent objects are ignored, but their descendants are included at that position.")]
     [SerializeField] private List<GameObject> childObjects = new List<GameObject>();
 
     private readonly List<GameObject> resolvedTargets = new List<GameObject>();
+
     private bool sequenceStarted = false;
+    private TriggerRelay registeredRelay;
 
     private void Start()
     {
@@ -46,6 +48,15 @@ public class TimedChildActivationSequence : MonoBehaviour
         else
         {
             SetupTriggerRelay();
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (registeredRelay != null)
+        {
+            registeredRelay.Unregister(this);
+            registeredRelay = null;
         }
     }
 
@@ -69,7 +80,8 @@ public class TimedChildActivationSequence : MonoBehaviour
             relay = triggerObject.AddComponent<TriggerRelay>();
         }
 
-        relay.Initialize(this);
+        relay.Register(this);
+        registeredRelay = relay;
     }
 
     private void ResolveTargets()
@@ -79,60 +91,98 @@ public class TimedChildActivationSequence : MonoBehaviour
 
         for (int i = 0; i < childObjects.Count; i++)
         {
-            GameObject entry = childObjects[i];
+            GameObject listedObject = childObjects[i];
 
-            if (entry == null)
+            if (listedObject == null)
             {
                 continue;
             }
 
-            if (entry == gameObject)
+            if (listedObject == gameObject)
             {
                 continue;
             }
 
-            if (!entry.transform.IsChildOf(transform))
+            if (!listedObject.transform.IsChildOf(transform))
             {
-                Debug.LogWarning($"'{entry.name}' is not a child of '{name}' and will be ignored.", this);
+                Debug.LogWarning($"'{listedObject.name}' is not a child of '{name}' and will be ignored.", this);
                 continue;
             }
 
-            CollectRecursively(entry.transform, seen);
+            AddListedObjectInInspectorOrder(listedObject.transform, seen);
         }
     }
 
-    private void CollectRecursively(Transform current, HashSet<GameObject> seen)
+    private void AddListedObjectInInspectorOrder(Transform listedTransform, HashSet<GameObject> seen)
     {
-        if (current == null)
+        if (listedTransform == null)
         {
             return;
         }
 
-        if (current == transform)
+        GameObject listedObject = listedTransform.gameObject;
+
+        if (IsEmptyParentObject(listedObject))
         {
-            foreach (Transform child in current)
+            AddDescendantsFromEmptyParent(listedTransform, seen);
+            return;
+        }
+
+        AddTargetIfValid(listedObject, seen);
+    }
+
+    private void AddDescendantsFromEmptyParent(Transform emptyParent, HashSet<GameObject> seen)
+    {
+        foreach (Transform child in emptyParent)
+        {
+            if (child == null)
             {
-                CollectRecursively(child, seen);
+                continue;
             }
 
+            GameObject childObject = child.gameObject;
+
+            if (IsEmptyParentObject(childObject))
+            {
+                AddDescendantsFromEmptyParent(child, seen);
+            }
+            else
+            {
+                AddTargetIfValid(childObject, seen);
+            }
+        }
+    }
+
+    private void AddTargetIfValid(GameObject target, HashSet<GameObject> seen)
+    {
+        if (target == null)
+        {
             return;
         }
 
-        bool isEmptyParentObject = IsEmptyParentObject(current.gameObject);
-
-        if (!isEmptyParentObject && seen.Add(current.gameObject))
+        if (target == gameObject)
         {
-            resolvedTargets.Add(current.gameObject);
+            return;
         }
 
-        foreach (Transform child in current)
+        if (!target.transform.IsChildOf(transform))
         {
-            CollectRecursively(child, seen);
+            return;
+        }
+
+        if (seen.Add(target))
+        {
+            resolvedTargets.Add(target);
         }
     }
 
     private bool IsEmptyParentObject(GameObject go)
     {
+        if (go == null)
+        {
+            return false;
+        }
+
         if (go.transform.childCount == 0)
         {
             return false;
@@ -185,7 +235,11 @@ public class TimedChildActivationSequence : MonoBehaviour
                 ? linearProgress
                 : Mathf.InverseLerp(curveStart, curveEnd, curvedValue);
 
-            int shouldBeChangedByNow = Mathf.Clamp(Mathf.FloorToInt(normalizedProgress * totalTargets), 0, totalTargets);
+            int shouldBeChangedByNow = Mathf.Clamp(
+                Mathf.FloorToInt(normalizedProgress * totalTargets),
+                0,
+                totalTargets
+            );
 
             while (changedCount < shouldBeChangedByNow)
             {
@@ -239,23 +293,54 @@ public class TimedChildActivationSequence : MonoBehaviour
 
 public class TriggerRelay : MonoBehaviour
 {
-    private TimedChildActivationSequence owner;
+    private readonly List<TimedChildActivationSequence> registeredSequences = new List<TimedChildActivationSequence>();
 
-    public void Initialize(TimedChildActivationSequence newOwner)
+    public void Register(TimedChildActivationSequence sequence)
     {
-        owner = newOwner;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (owner == null)
+        if (sequence == null)
         {
             return;
         }
 
-        if (other.gameObject.CompareTag("Player"))
+        if (!registeredSequences.Contains(sequence))
         {
-            owner.BeginSequence();
+            registeredSequences.Add(sequence);
+        }
+    }
+
+    public void Unregister(TimedChildActivationSequence sequence)
+    {
+        if (sequence == null)
+        {
+            return;
+        }
+
+        registeredSequences.Remove(sequence);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!other.gameObject.CompareTag("Player"))
+        {
+            return;
+        }
+
+        StartAllRegisteredSequences();
+    }
+
+    private void StartAllRegisteredSequences()
+    {
+        for (int i = registeredSequences.Count - 1; i >= 0; i--)
+        {
+            TimedChildActivationSequence sequence = registeredSequences[i];
+
+            if (sequence == null)
+            {
+                registeredSequences.RemoveAt(i);
+                continue;
+            }
+
+            sequence.BeginSequence();
         }
     }
 }
