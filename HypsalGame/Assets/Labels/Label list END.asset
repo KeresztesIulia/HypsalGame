@@ -37,6 +37,18 @@ MonoBehaviour:
     MarkedRelabelable:
       m_PersistentCalls:
         m_Calls: []
+  - _internalName: AIHelp
+    _displayName: 
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
   labels:
   - _internalName: YesTrust
     _displayName: Yes
@@ -51,6 +63,30 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - _internalName: NoTrust
+    _displayName: No
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: YesAIHelp
+    _displayName: Yes
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: NoAIHelp
     _displayName: No
     _relabelable: 0
     Labeled:
