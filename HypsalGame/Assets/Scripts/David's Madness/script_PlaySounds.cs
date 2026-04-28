@@ -282,7 +282,7 @@ public class script_PlaySounds : MonoBehaviour
         if (manager != null)
         {
             activeSubtitleToken++;
-            manager.ShowSubtitle(text, duration);
+            manager.ShowSubtitle(SubtitleManager.SubtitleType.Generic, text, duration);
         }
     }
 
@@ -314,7 +314,7 @@ public class script_PlaySounds : MonoBehaviour
             UnityEngine.Debug.Log($"Subtitle on {gameObject.name}, sequence entry {sequenceIndex}, is now following the actual FMOD playback state.", this);
         }
 
-        manager.ShowSubtitle(text, refreshSubtitleWhileSoundPlays ? refreshDuration : maximumDuration);
+        manager.ShowSubtitle(SubtitleManager.SubtitleType.Generic, text, refreshSubtitleWhileSoundPlays ? refreshDuration : maximumDuration);
 
         while (elapsed < maximumDuration)
         {
@@ -330,7 +330,7 @@ public class script_PlaySounds : MonoBehaviour
 
             if (refreshSubtitleWhileSoundPlays)
             {
-                manager.ShowSubtitle(text, refreshDuration);
+                manager.ShowSubtitle(SubtitleManager.SubtitleType.Generic, text, refreshDuration);
             }
 
             yield return new WaitForSeconds(refreshInterval);
@@ -425,7 +425,7 @@ public class script_PlaySounds : MonoBehaviour
             return;
         }
 
-        manager.ShowSubtitle(string.Empty, 0.1f);
+        manager.ShowSubtitle(SubtitleManager.SubtitleType.Generic, string.Empty, 0.1f);
     }
 
     private bool TryCallSubtitleMethod(SubtitleManager manager, string methodName)
