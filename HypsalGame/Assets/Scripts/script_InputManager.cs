@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 
 public class script_InputManager : MonoBehaviour, interface_PersistentData
 {
+    public static script_InputManager Instance;
+
     public static PlayerInput playerInput;
     public static InputActionAsset inputActions;
 
@@ -11,8 +13,11 @@ public class script_InputManager : MonoBehaviour, interface_PersistentData
     public static InputAction action_Interact;
     public static InputAction action_ShowLog;
     public static InputAction action_PlayerScroll;
+    public static InputAction action_Cancel;
 
     public static InputActionMap map_uiMap;
+    public static InputAction action_ui_ShowLog;
+    public static InputAction action_ui_Cancel;
 
     public static InputAction[] action_Number;
 
@@ -21,6 +26,7 @@ public class script_InputManager : MonoBehaviour, interface_PersistentData
 
     public void Initialize()
     {
+        Instance = this;
         playerInput = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerInput>();
         inputActions = playerInput?.actions;
 
@@ -28,15 +34,17 @@ public class script_InputManager : MonoBehaviour, interface_PersistentData
         action_Interact = map_PlayerMap?.FindAction("Interact");
         action_ShowLog = map_PlayerMap?.FindAction("Show log");
         action_PlayerScroll = map_PlayerMap?.FindAction("ScrollWheel");
+        action_Cancel = map_PlayerMap?.FindAction("Cancel");
 
         map_uiMap = inputActions?.FindActionMap("UI");
+        action_ui_ShowLog = map_uiMap?.FindAction("Show log");
+        action_ui_Cancel = map_uiMap?.FindAction("Cancel");
 
         action_Number = new InputAction[10];
         for (int i = 0; i < 10; i++)
         {
             int idx = i;
             action_Number[i] = map_PlayerMap?.FindAction($"Number {i}");
-            //action_Number[i].performed += (ctx) => Debug.Log($"perfomed {idx}");
         }
 
 
@@ -52,6 +60,11 @@ public class script_InputManager : MonoBehaviour, interface_PersistentData
     public static void SwitchInputMap(InputActionMap to)
     {
         playerInput.currentActionMap = to;
+    }
+
+    public static void SwitchInputMap(string to)
+    {
+        playerInput.SwitchCurrentActionMap(to);
     }
 
     public static void AssignNumberAction(int number, System.Action<InputAction.CallbackContext> actionToPerform)

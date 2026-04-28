@@ -2,16 +2,24 @@ using System.Collections;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
+using UnityEngine.UI;
+using static SubtitleManager;
 
 public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScrollHandler
 {
     [Header("Text prefabs")] // for formatting only
     [SerializeField] TMP_Text _aiTextPrefab;
     [SerializeField] TMP_Text _playerTextPrefab;
+    [SerializeField] TMP_Text _desperateAITextPrefab;
     [SerializeField] TMP_Text _separator;
+
+    [Header("Subtitle text prefabs")] // again, only formatting
+    [SerializeField] TMP_Text _subtitleGenericPrefab;
+    [SerializeField] TMP_Text _subtitleStudentCPrefab;
+    [SerializeField] TMP_Text _subtitleStudentDPrefab;
+    [SerializeField] TMP_Text _subtitleStudentIPrefab;
 
     [Header("Standard text")]
     [SerializeField] string _labelingStandardResponse = "Thank you for your choice";
@@ -26,7 +34,7 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScro
     [SerializeField] float _logOpenTime = 4f;
     [SerializeField] float _logFadeOutTime = 0.15f;
 
-    public enum LogType { AI, Player };
+    public enum LogType { Subtitle, AI, Player, DesperateAI };
     public static script_ui_LabelLog Instance;
 
     bool initialized = false;
@@ -34,7 +42,11 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScro
     public void Initialize()
     {
         Instance = this;
+        if (script_InputManager.Instance == null) return;
         script_InputManager.action_ShowLog.performed += (ctx) => ToggleLog();
+        script_InputManager.action_ui_ShowLog.performed += (ctx) => ToggleLog();
+        script_InputManager.action_ui_Cancel.performed += (ctx) => SetLogVisibility(false);
+        script_InputManager.action_Cancel.performed += (ctx) => SetLogVisibility(false);
         script_InputManager.action_PlayerScroll.performed += ScrollLog;
         initialized = true;
     }
@@ -44,13 +56,23 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScro
         if (!initialized) Initialize();
     }
 
-    void ToggleLog(bool stopCoroutines = true)
+    public void ToggleLog(bool stopCoroutines = true)
     {
+        SetLogVisibility(!_container.gameObject.activeSelf, stopCoroutines);
+    }
 
+    void ResetLogVisibility(bool stopCoroutines)
+    {
         if (stopCoroutines) StopAllCoroutines();
         _container.alpha = 1f;
-        _container.gameObject.SetActive(!_container.gameObject.activeSelf);
     }
+
+    public void SetLogVisibility(bool active,  bool stopCoroutines = true)
+    {
+        ResetLogVisibility(stopCoroutines);
+        _container.gameObject.SetActive(active);
+    }
+
 
     void ScrollLog(InputAction.CallbackContext context)
     {
@@ -62,11 +84,22 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScro
         eventData.scrollDelta = scrollDelta;
 
         _scrollRect.OnScroll(eventData);
-    }    
+    }
+
+    public static void LogSubtitle(string logText, SubtitleType subtitleType, bool closeExchange = false)
+    {
+        LogSubtitleExchangeElement(subtitleType, logText);
+        if (closeExchange) CloseExchange(false);
+    }
 
     public static void LogAIText(string logText, bool closeExchange = false)
     {
         LogExchangeElement(LogType.AI, logText, closeExchange);
+    }
+
+    public static void LogDesperateAIText(string logText, bool closeExchange = false)
+    {
+        LogExchangeElement(LogType.DesperateAI, logText, closeExchange);
     }
 
     public static void LogPlayerText(string logText, bool closeExchange = false)
@@ -88,9 +121,7 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScro
         // goes through each element to log it one by one
         foreach (var exchangeElement in exchange)
         {
-            var element = exchangeElement;
-            TransformExchangeElementText(ref element);
-            LogExchangeElement(element);
+            LogExchangeElement(exchangeElement);
         }
         
         // closes off with separatorPrefab - every exchange is closed by the separator!
@@ -101,7 +132,8 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScro
 
     static void LogExchangeElement(ExchangeElement element, bool closeExchange = false)
     {
-        TMP_Text prefabToUse = Instance?.DetermineTextPrefab(element.type);
+        TransformExchangeElementText(ref element);
+        TMP_Text prefabToUse = Instance?.DetermineTextPrefab(element.type, element.subtitleType);
 
         TMP_Text textInstance = Instantiate(prefabToUse, Instance?._contentTransform);
         textInstance.text = element.text;
@@ -116,26 +148,52 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScro
         LogExchangeElement(new ExchangeElement(logType, logText), closeExchange);
     }
 
-    public static void CloseExchange()
+    public static void LogSubtitleExchangeElement(SubtitleType subtitleType, string logText = "", bool closeExchange = false)
+    {
+        var logType = LogType.Subtitle;
+        LogExchangeElement(new ExchangeElement(logType, logText, subtitleType), closeExchange);
+    }
+
+    public static void CloseExchange(bool popup = true)
     {
         Instantiate(Instance?._separator, Instance?._contentTransform);
+
         Instance?.StartCoroutine(Instance?.ForceToBottom());
 
         // send signal to open log briefly
         // which signal interrupts any previous ones - does it...? I don't want to restart fading just because I'm already fading.
-        if (Instance != null) Instance.StartCoroutine(Instance.ShowNewLog());
+        if (Instance != null && popup) Instance.StartCoroutine(Instance.ShowNewLog());
     }
 
-    TMP_Text DetermineTextPrefab(LogType type)
+    TMP_Text DetermineTextPrefab(LogType type, SubtitleType subtitleType = SubtitleType.Generic)
     {
         switch (type)
         {
+            case LogType.Subtitle:
+                return DetermineTextPrefab(subtitleType);
             case LogType.AI:
                 return _aiTextPrefab;
             case LogType.Player:
                 return _playerTextPrefab;
+            case LogType.DesperateAI:
+                return _desperateAITextPrefab;
             default:
                 return null;
+        }
+    }
+
+    TMP_Text DetermineTextPrefab(SubtitleType subtitleType)
+    {
+        switch (subtitleType)
+        {
+            case (SubtitleType.StudentC):
+                return _subtitleStudentCPrefab;
+            case(SubtitleType.StudentD):
+                return _subtitleStudentDPrefab;
+            case(SubtitleType.StudentI):
+                return _subtitleStudentIPrefab;
+            default:
+                return _subtitleGenericPrefab;
         }
     }
 
@@ -143,6 +201,9 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScro
     {
         switch (element.type)
         {
+            case LogType.Subtitle:
+                element.text = "- " + element.text; // what if it's continued subtitle?
+                break;
             case LogType.AI:
                 element.text = "> " + element.text;
                 break;
@@ -151,7 +212,6 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScro
                 break;
         }
     }
-
 
     IEnumerator ShowNewLog()
     {
@@ -201,10 +261,13 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScro
         public LogType type;
         public string text;
 
-        public ExchangeElement(LogType exchangeType, string exchangeText)
+        public SubtitleType subtitleType;
+
+        public ExchangeElement(LogType exchangeType, string exchangeText, SubtitleType exchangeSubtitleType = SubtitleType.Generic)
         {
             type = exchangeType;
             text = exchangeText;
+            subtitleType = exchangeSubtitleType;
         }
     }
 }

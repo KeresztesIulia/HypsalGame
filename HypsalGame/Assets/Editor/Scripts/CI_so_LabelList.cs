@@ -12,5 +12,7 @@ public class CI_so_LabelList : Editor
         {
             (target as script_so_LabelList).Reset();
         }
+
+        serializedObject.ApplyModifiedProperties();
     }
 }
