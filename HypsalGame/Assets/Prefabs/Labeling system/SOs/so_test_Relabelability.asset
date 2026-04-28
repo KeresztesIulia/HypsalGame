@@ -15,11 +15,38 @@ MonoBehaviour:
   objects:
   - _internalName: Grave
     _displayName: 
-    _relabelable: 0
+    _relabelable: 1
     Labeled:
       m_PersistentCalls:
         m_Calls: []
     Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: Sandwich
+    _displayName: 
+    _relabelable: 1
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: loveObject
+    _displayName: 
+    _relabelable: 1
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
       m_PersistentCalls:
         m_Calls: []
   labels:
@@ -32,13 +59,19 @@ MonoBehaviour:
     Unlabeled:
       m_PersistentCalls:
         m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
   - _internalName: love
-    _displayName: 
+    _displayName: Love
     _relabelable: 0
     Labeled:
       m_PersistentCalls:
         m_Calls: []
     Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
       m_PersistentCalls:
         m_Calls: []
   - _internalName: something
@@ -48,5 +81,20 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: loveObject_Love
+    _displayName: Love
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
       m_PersistentCalls:
         m_Calls: []

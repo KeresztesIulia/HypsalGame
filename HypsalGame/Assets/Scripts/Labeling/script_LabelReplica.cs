@@ -13,7 +13,7 @@ public class script_LabelReplica : MonoBehaviour
     bool _representAssociatedLabel;
 
     [SerializeField] Collider[] _triggerAreas;
-    [SerializeField] bool _triggerOnce;
+    [SerializeField] bool _triggerOnce = true;
 
     bool triggered = false;
 
@@ -52,6 +52,7 @@ public class script_LabelReplica : MonoBehaviour
                     var currentLabelRepresentative = currentParentTransform.GetComponent<script_LabelRepresentative>();
                     if (currentLabelRepresentative != null)
                     {
+                        currentLabelRepresentative.SetRepresentingModel(representingModel);
                         if (_representAssociatedLabel)
                         {
                             currentLabelRepresentative.SetRepresentedLabel(script_LabelAssociationHandler.Instance.FindAssociatedLabel(replicatedLabel));

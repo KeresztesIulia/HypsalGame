@@ -17,10 +17,10 @@ public class script_ForceChangeAssociation : MonoBehaviour
 
     [SerializeField, Tooltip("This includes keeping the model as none, if that is the original!")] bool _keepOriginalModel;
     [SerializeField, Tooltip("The new model to set for the association. If left empty, the model will be set to nothing as well!")]
-    GameObject _newModel;
+    GameObject _newModel = null;
 
     [SerializeField, Tooltip("Should the association be reset every time the player passes the trigger(s)?")]
-    bool _addOnce;
+    bool _addOnce = true;
 
     Rigidbody rb;
     bool added = false;
@@ -43,6 +43,10 @@ public class script_ForceChangeAssociation : MonoBehaviour
         if (_keepOriginalModel)
         {
             _newModel = script_LabelAssociationHandler.Instance.FindRepresentingModel(_label);
+            if (_newModel == null && _associatedLabel != null)
+            {
+                _newModel = script_LabelAssociationHandler.Instance.FindRepresentingModel(_associatedLabel);
+            }
         }
 
         script_LabelAssociationHandler.Instance.ChangeAssociation(label, _newModel, associatedLabel, _fireAssociationEvents);

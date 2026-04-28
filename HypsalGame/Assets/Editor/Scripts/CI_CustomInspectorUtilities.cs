@@ -53,6 +53,12 @@ public static class CI_CustomInspectorUtilities
         return names[newIndex + 1];
     }
 
+    public static void LabelNameField(script_so_LabelList labelList, SerializedProperty property, string CILabel = "")
+    {
+        if (labelList == null) return;
+
+        property.stringValue = LabelNameField(labelList, property.stringValue, CILabel);
+    }
 
     
 }

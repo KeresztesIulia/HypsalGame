@@ -70,6 +70,8 @@ public class script_LabelRepresentative : MonoBehaviour, interface_Interactable,
         _representedLabelName = representedLabelName;
         representedLabel = _partOfList.GetLabel(representedLabelName);
 
+        if (representedLabel == null) return;
+
         if (representedLabel.IsLabeled)
         {
             LabelLabeled();
@@ -115,6 +117,8 @@ public class script_LabelRepresentative : MonoBehaviour, interface_Interactable,
 
     void RemoveListeners()
     {
+        if (representedLabel == null) return;
+
         representedLabel.Labeled.RemoveListener(LabelLabeled);
         representedLabel.Unlabeled.RemoveListener(Unlabeled);
         representedLabel.MarkedRelabelable.RemoveListener(Unlabeled);
@@ -124,5 +128,12 @@ public class script_LabelRepresentative : MonoBehaviour, interface_Interactable,
     {
         RemoveListeners();
         InitializeRepresentedLabel(representedLabelName);
+    }
+
+    public void SetRepresentingModel(GameObject model)
+    {
+        _representingModel = model;
+        if (representedLabel == null) return;
+        script_LabelAssociationHandler.Instance?.ChangeAssociation(representedLabel, model); // ?
     }
 }

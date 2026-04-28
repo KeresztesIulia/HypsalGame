@@ -74,7 +74,7 @@ public class script_LabelAssociationHandler : MonoBehaviour, interface_Persisten
 
     public void ChangeAssociation(Label label, GameObject newModel, Label associatedLabel = null, bool fireEvents = false)
     {
-        if (!HasAssociation(label)) return;
+        if (!HasAssociation(label) && associatedLabel == null) return;
 
         if (associatedLabel == null)
         {
@@ -94,17 +94,34 @@ public class script_LabelAssociationHandler : MonoBehaviour, interface_Persisten
     {
         if (!HasAssociation(label)) return;
 
-        var association = FindAssociation(label);
-        association.representingModel = newModel;
-        associations[label] = association;
+        ChangeModel(label.InternalName, newModel);
+    }
+
+    public void ChangeModel(string label, GameObject newModel)
+    {
+        if (!HasAssociation(label)) return;
+
+        ChangeModel(label, FindAssociatedLabel(label), newModel);
     }
 
     public void ChangeModel(Label label1, Label label2, GameObject newModel)
     {
         if (!AreAssociated(label1, label2)) return;
 
-        ChangeModel(label1, newModel);
-        ChangeModel(label2, newModel);
+        ChangeModel(label1.InternalName, label2, newModel);
+    }
+
+    public void ChangeModel(string label1, string label2, GameObject newModel)
+    {
+        if (!AreAssociated(label1, label2)) return;
+
+        var association = FindAssociation(label1);
+        association.representingModel = newModel;
+        associations[label1] = association;
+
+        association = FindAssociation(label2);
+        association.representingModel = newModel;
+        associations[label2] = association;
     }
 
     public bool AreAssociated(string label1, string label2)
