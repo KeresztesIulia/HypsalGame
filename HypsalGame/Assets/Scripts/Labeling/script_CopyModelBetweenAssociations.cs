@@ -40,7 +40,6 @@ public class script_CopyModelBetweenAssociations : MonoBehaviour
         else if (model != null)
         {
             script_LabelAssociationHandler.Instance.ChangeModel(_destinationLabel, model);
-
         }
 
         copied = true;
