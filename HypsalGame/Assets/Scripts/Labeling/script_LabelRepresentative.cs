@@ -78,6 +78,8 @@ public class script_LabelRepresentative : MonoBehaviour, interface_Interactable,
         representedLabel.Labeled.AddListener(LabelLabeled);
 
         representedLabel.Unlabeled.AddListener(Unlabeled);
+
+        representedLabel.MarkedRelabelable.AddListener(Unlabeled);
     }
 
     void Unlabeled()
@@ -115,6 +117,7 @@ public class script_LabelRepresentative : MonoBehaviour, interface_Interactable,
     {
         representedLabel.Labeled.RemoveListener(LabelLabeled);
         representedLabel.Unlabeled.RemoveListener(Unlabeled);
+        representedLabel.MarkedRelabelable.RemoveListener(Unlabeled);
     }
 
     public void SetRepresentedLabel(string representedLabelName)
