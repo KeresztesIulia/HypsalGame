@@ -846,6 +846,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5065217433500017510}
+  - {fileID: 4376092050760697022}
   m_Father: {fileID: 2261139305093223276}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2818358470033460278
@@ -1331,6 +1332,82 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4798320365684616468}
     m_Modifications:
+    - target: {fileID: 2387864605584322791, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 16.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2387864605584322791, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 2387864605584322791, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3851637318104310770, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 3851637318104310770, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747685691985409619, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -17.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747685691985409619, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747685691985409619, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5602412615226596807, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5602412615226596807, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 5602412615226596807, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: _representAssociatedLabel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: _replicaParents.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: _replicatedLabels.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: _replicateLabelRepresentation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: '_replicatedLabels.Array.data[1]'
+      value: Awe
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: '_replicatedLabels.Array.data[2]'
+      value: Beauty
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: '_replicatedLabels.Array.data[3]'
+      value: Mystery
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: '_replicatedLabels.Array.data[4]'
+      value: Dream
+      objectReference: {fileID: 0}
     - target: {fileID: 7778324678813972104, guid: a673ab13165b8484785cae161be3dad0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -728.67
@@ -1371,17 +1448,525 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8207996401477591733, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207996401477591733, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207996401477591733, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -20.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8420740382666769591, guid: a673ab13165b8484785cae161be3dad0, type: 3}
       propertyPath: m_Name
-      value: 6 labeled objects
+      value: 5 labeled objects
+      objectReference: {fileID: 0}
+    - target: {fileID: 8688154063803414084, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 16.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8688154063803414084, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 8688154063803414084, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6738348859495509011, guid: a673ab13165b8484785cae161be3dad0, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2253469753536284551, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8851067769273275944}
+    - targetCorrespondingSourceObject: {fileID: 2253469753536284551, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4748624012600696509}
+    - targetCorrespondingSourceObject: {fileID: 609660035942888414, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 146471962107742470}
+    - targetCorrespondingSourceObject: {fileID: 609660035942888414, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4894535591688752454}
+    - targetCorrespondingSourceObject: {fileID: 5111146528664789181, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8335652511948483585}
+    - targetCorrespondingSourceObject: {fileID: 5111146528664789181, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 401285919216217571}
+    - targetCorrespondingSourceObject: {fileID: 7636181354504409205, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6840143029507294752}
+    - targetCorrespondingSourceObject: {fileID: 7636181354504409205, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3929351545983217647}
+    - targetCorrespondingSourceObject: {fileID: 5805160183767293422, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2387909561544972698}
+    - targetCorrespondingSourceObject: {fileID: 5805160183767293422, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4272067851581826754}
   m_SourcePrefab: {fileID: 100100000, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+--- !u!1 &2723727712116975152 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 609660035942888414, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+  m_PrefabInstance: {fileID: 3294784993783322094}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &146471962107742470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2723727712116975152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7350bcf7331a3c4e83d51b825af8c24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_VisualObject
+  _uiInfo:
+    _objectName: 
+--- !u!114 &4894535591688752454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2723727712116975152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1586d1852ae31047a2983072095e8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
+  _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
+  _representedLabelName: 
+  _representingModel: {fileID: 0}
+  _prompt: Do you agree with your former self?
+  _possibleAssociations:
+  - Love
+  - Death
+  - Mystery
+  - Beauty
+  - Awe
+  - Dream
+  _relabelable: 1
+  LabeledObject:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &3673956204710728297 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2253469753536284551, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+  m_PrefabInstance: {fileID: 3294784993783322094}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8851067769273275944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3673956204710728297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7350bcf7331a3c4e83d51b825af8c24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_VisualObject
+  _uiInfo:
+    _objectName: 
+--- !u!114 &4748624012600696509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3673956204710728297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1586d1852ae31047a2983072095e8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
+  _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
+  _representedLabelName: 
+  _representingModel: {fileID: 0}
+  _prompt: Do you agree with your former self?
+  _possibleAssociations:
+  - Love
+  - Death
+  - Mystery
+  - Beauty
+  - Awe
+  - Dream
+  _relabelable: 1
+  LabeledObject:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &4918008880393110939 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7636181354504409205, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+  m_PrefabInstance: {fileID: 3294784993783322094}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6840143029507294752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4918008880393110939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7350bcf7331a3c4e83d51b825af8c24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_VisualObject
+  _uiInfo:
+    _objectName: 
+--- !u!114 &3929351545983217647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4918008880393110939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1586d1852ae31047a2983072095e8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
+  _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
+  _representedLabelName: 
+  _representingModel: {fileID: 0}
+  _prompt: Do you agree with your former self?
+  _possibleAssociations:
+  - Love
+  - Death
+  - Mystery
+  - Beauty
+  - Awe
+  - Dream
+  _relabelable: 1
+  LabeledObject:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &5065217433500017510 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7778324678813972104, guid: a673ab13165b8484785cae161be3dad0, type: 3}
   m_PrefabInstance: {fileID: 3294784993783322094}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7734683659285247315 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5111146528664789181, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+  m_PrefabInstance: {fileID: 3294784993783322094}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8335652511948483585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7734683659285247315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7350bcf7331a3c4e83d51b825af8c24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_VisualObject
+  _uiInfo:
+    _objectName: 
+--- !u!114 &401285919216217571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7734683659285247315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1586d1852ae31047a2983072095e8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
+  _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
+  _representedLabelName: 
+  _representingModel: {fileID: 0}
+  _prompt: Do you agree with your former self?
+  _possibleAssociations:
+  - Love
+  - Death
+  - Mystery
+  - Beauty
+  - Awe
+  - Dream
+  _relabelable: 1
+  LabeledObject:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &9018879439040071680 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5805160183767293422, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+  m_PrefabInstance: {fileID: 3294784993783322094}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2387909561544972698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9018879439040071680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7350bcf7331a3c4e83d51b825af8c24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_VisualObject
+  _uiInfo:
+    _objectName: 
+--- !u!114 &4272067851581826754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9018879439040071680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1586d1852ae31047a2983072095e8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
+  _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
+  _representedLabelName: 
+  _representingModel: {fileID: 0}
+  _prompt: Do you agree with your former self?
+  _possibleAssociations:
+  - Love
+  - Death
+  - Mystery
+  - Beauty
+  - Awe
+  - Dream
+  _relabelable: 1
+  LabeledObject:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1001 &6289604110402253366
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4798320365684616468}
+    m_Modifications:
+    - target: {fileID: 2387864605584322791, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 16.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2387864605584322791, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 2387864605584322791, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3851637318104310770, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 3851637318104310770, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747685691985409619, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -17.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747685691985409619, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747685691985409619, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5602412615226596807, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5602412615226596807, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 5602412615226596807, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: _representAssociatedLabel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: _replicaParents.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: _replicatedLabels.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: _replicateLabelRepresentation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: '_replicatedLabels.Array.data[0]'
+      value: Love
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: '_replicatedLabels.Array.data[1]'
+      value: Dream
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: '_replicatedLabels.Array.data[2]'
+      value: Dream
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: '_replicatedLabels.Array.data[3]'
+      value: Dream
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: '_replicatedLabels.Array.data[4]'
+      value: Dream
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778324678813972104, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -728.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778324678813972104, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -521.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778324678813972104, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -63.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778324678813972104, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778324678813972104, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778324678813972104, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778324678813972104, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778324678813972104, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778324678813972104, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778324678813972104, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207996401477591733, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207996401477591733, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207996401477591733, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -20.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8420740382666769591, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_Name
+      value: LoveSandwich
+      objectReference: {fileID: 0}
+    - target: {fileID: 8688154063803414084, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 16.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8688154063803414084, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 8688154063803414084, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 6738348859495509011, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+    - {fileID: 5805160183767293422, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+    - {fileID: 7636181354504409205, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+    - {fileID: 5111146528664789181, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+    - {fileID: 609660035942888414, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2253469753536284551, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8433981266279024648}
+    - targetCorrespondingSourceObject: {fileID: 2253469753536284551, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5554443778278758956}
+  m_SourcePrefab: {fileID: 100100000, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+--- !u!4 &4376092050760697022 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7778324678813972104, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+  m_PrefabInstance: {fileID: 6289604110402253366}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5191743618771252657 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2253469753536284551, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+  m_PrefabInstance: {fileID: 6289604110402253366}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8433981266279024648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5191743618771252657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7350bcf7331a3c4e83d51b825af8c24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_VisualObject
+  _uiInfo:
+    _objectName: 
+--- !u!114 &5554443778278758956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5191743618771252657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1586d1852ae31047a2983072095e8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
+  _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
+  _representedLabelName: 
+  _representingModel: {fileID: 0}
+  _prompt: Do you agree with your former self?
+  _possibleAssociations:
+  - Love
+  - Death
+  - Mystery
+  - Beauty
+  - Awe
+  - Dream
+  _relabelable: 1
+  LabeledObject:
+    m_PersistentCalls:
+      m_Calls: []

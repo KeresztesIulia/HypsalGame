@@ -3,6 +3,7 @@ using System.Collections;
 using FMOD.Studio;
 using FMODUnity;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlaySoundOrLine : MonoBehaviour
 {
@@ -31,6 +32,7 @@ public class PlaySoundOrLine : MonoBehaviour
     [SerializeField] bool dontLog = false;
 
 
+    public UnityEvent OnPlaybackEnd;
 
     static Action startPlaying;
 
@@ -64,6 +66,8 @@ public class PlaySoundOrLine : MonoBehaviour
             StartCoroutine(ShowSubtitleWithDelay());
             if (nextSound != null) Invoke(nameof(PlayNextSound), subtitleDelay + subtitleDuration - 0.05f);
         }
+
+        StartCoroutine(InvokeEndEvent());
     }
 
     private IEnumerator ShowSubtitleWithDelay()
@@ -71,6 +75,12 @@ public class PlaySoundOrLine : MonoBehaviour
         yield return new WaitForSeconds(subtitleDelay); // Wait before showing the subtitle
         if (!dontLog && script_ui_LabelLog.Instance != null) script_ui_LabelLog.LogSubtitle(subtitleText, subtitleType, endConversation);
         SubtitleManager.Instance.ShowSubtitle(subtitleType, subtitleText, subtitleDuration);
+    }
+
+    private IEnumerator InvokeEndEvent()
+    {
+        yield return new WaitForSeconds(subtitleDelay + subtitleDuration);
+        OnPlaybackEnd?.Invoke();
     }
 
     private void OnTriggerEnter(Collider other)

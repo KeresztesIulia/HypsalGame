@@ -7,11 +7,7 @@ public class CI_Nameable : Editor
 {
     public override void OnInspectorGUI()
     {
-        using (new EditorGUI.DisabledScope(true))
-        {
-            EditorGUILayout.ObjectField("Script", MonoScript.FromMonoBehaviour((MonoBehaviour)target), GetType(), false);
-            EditorGUILayout.ObjectField("Custom Inspector", MonoScript.FromScriptableObject(this), GetType(), false);
-        }
+        CI_CustomInspectorUtilities.ScriptReferences(this);
 
         var nameListProp = serializedObject.FindProperty("_nameList");
         EditorGUILayout.PropertyField(nameListProp);

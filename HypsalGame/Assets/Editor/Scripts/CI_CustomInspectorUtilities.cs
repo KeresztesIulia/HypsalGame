@@ -3,6 +3,15 @@ using UnityEngine;
 
 public static class CI_CustomInspectorUtilities
 {
+    public static void ScriptReferences(Editor customInspector)
+    {
+        using (new EditorGUI.DisabledScope(true))
+        {
+            EditorGUILayout.ObjectField("Script", MonoScript.FromMonoBehaviour((MonoBehaviour)customInspector.target), customInspector.GetType(), false);
+            EditorGUILayout.ObjectField("Custom Inspector", MonoScript.FromScriptableObject(customInspector), customInspector.GetType(), false);
+        }
+    }
+
     public static Label LabelField(script_so_LabelList labelList, Label currentValue, string CILabel = "")
     {
         var names = labelList.LabelStrings;
@@ -44,6 +53,12 @@ public static class CI_CustomInspectorUtilities
         return names[newIndex + 1];
     }
 
+    public static void LabelNameField(script_so_LabelList labelList, SerializedProperty property, string CILabel = "")
+    {
+        if (labelList == null) return;
+
+        property.stringValue = LabelNameField(labelList, property.stringValue, CILabel);
+    }
 
     
 }
