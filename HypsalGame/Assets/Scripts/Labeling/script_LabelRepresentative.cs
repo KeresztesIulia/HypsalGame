@@ -50,7 +50,6 @@ public class script_LabelRepresentative : MonoBehaviour, interface_Interactable,
         if (initialized) return;
 
         if (_partOfList == null) return;
-        representedLabel = _partOfList.GetLabel(_representedLabelName);
         possibleAssociationLabels = new List<Label>();
         foreach (var name in _possibleAssociations)
         {
@@ -61,25 +60,31 @@ public class script_LabelRepresentative : MonoBehaviour, interface_Interactable,
         visual = GetComponent<script_VisualObject>();
         visual.SetActiveState(false);
 
+        InitializeRepresentedLabel(_representedLabelName);
+
+        initialized = true;
+    }
+
+    void InitializeRepresentedLabel(string representedLabelName)
+    {
+        _representedLabelName = representedLabelName;
+        representedLabel = _partOfList.GetLabel(representedLabelName);
+
         if (representedLabel.IsLabeled)
         {
             LabelLabeled();
         }
 
-        representedLabel.Labeled.AddListener(() =>
-        {
-            LabelLabeled();
-        });
+        representedLabel.Labeled.AddListener(LabelLabeled);
 
-        representedLabel.Unlabeled.AddListener(() =>
-        {
-            if (markedUnlabelable) return;
-            visual.SetActiveState(false);
-            enabled = true;
+        representedLabel.Unlabeled.AddListener(Unlabeled);
+    }
 
-        });
-
-        initialized = true;
+    void Unlabeled()
+    {
+        if (markedUnlabelable) return;
+        visual.SetActiveState(false);
+        enabled = true;
     }
 
     void LabelLabeled()
@@ -104,5 +109,17 @@ public class script_LabelRepresentative : MonoBehaviour, interface_Interactable,
         visual.SetActiveState(true);
         visual._uiInfo._objectName = textToShow;
         enabled = false;
+    }
+
+    void RemoveListeners()
+    {
+        representedLabel.Labeled.RemoveListener(LabelLabeled);
+        representedLabel.Unlabeled.RemoveListener(Unlabeled);
+    }
+
+    public void SetRepresentedLabel(string representedLabelName)
+    {
+        RemoveListeners();
+        InitializeRepresentedLabel(representedLabelName);
     }
 }

@@ -45,6 +45,16 @@ public class CI_LabelReplica : Editor
 
         EditorGUILayout.Space();
 
+        var replicateLabelRepresentationProp = serializedObject.FindProperty("_replicateLabelRepresentation");
+        EditorGUILayout.PropertyField(replicateLabelRepresentationProp);
+
+        if (replicateLabelRepresentationProp.boolValue)
+        {
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("_representAssociatedLabel"));
+        }
+
+        EditorGUILayout.Space();
+
         EditorGUILayout.PropertyField(serializedObject.FindProperty("_triggerAreas"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("_triggerOnce"));
 

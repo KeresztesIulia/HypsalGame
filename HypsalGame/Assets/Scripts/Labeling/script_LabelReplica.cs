@@ -7,6 +7,10 @@ public class script_LabelReplica : MonoBehaviour
 
     [SerializeField] Transform[] _replicaParents;
     [SerializeField] string[] _replicatedLabels;
+    [SerializeField, Tooltip("Only works if the parent objects are LabelRepresentatives.")]
+    bool _replicateLabelRepresentation;
+    [SerializeField, Tooltip("If 'Replicate Label Representation' is set to true, this determines whether the replica will represent the replicated label, or the label associated with it.")]
+    bool _representAssociatedLabel;
 
     [SerializeField] Collider[] _triggerAreas;
     [SerializeField] bool _triggerOnce;
@@ -39,8 +43,25 @@ public class script_LabelReplica : MonoBehaviour
 
             if (script_LabelAssociationHandler.Instance.HasAssociation(replicatedLabel))
             {
+                var currentParentTransform = _replicaParents[currentParent];
                 GameObject representingModel = script_LabelAssociationHandler.Instance.FindRepresentingModel(replicatedLabel);
-                Instantiate(representingModel, _replicaParents[currentParent]).transform.localPosition = Vector3.zero;
+                Instantiate(representingModel, currentParentTransform).transform.localPosition = Vector3.zero;
+
+                if (_replicateLabelRepresentation)
+                {
+                    var currentLabelRepresentative = currentParentTransform.GetComponent<script_LabelRepresentative>();
+                    if (currentLabelRepresentative != null)
+                    {
+                        if (_representAssociatedLabel)
+                        {
+                            currentLabelRepresentative.SetRepresentedLabel(script_LabelAssociationHandler.Instance.FindAssociatedLabel(replicatedLabel));
+                        }
+                        else
+                        {
+                            currentLabelRepresentative.SetRepresentedLabel(replicatedLabel);
+                        }
+                    }
+                }
 
                 currentParent++;
             }
