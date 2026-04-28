@@ -523,6 +523,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5168936375192918442}
+  - {fileID: 166151172783420668}
   m_Father: {fileID: 5425259638287065294}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1915143542690220885
@@ -558,6 +559,80 @@ Transform:
   - {fileID: 5650454751230009716}
   m_Father: {fileID: 5425259638287065294}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2231371904931309545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8688762287023115304}
+  - component: {fileID: 783700729434112261}
+  - component: {fileID: 2497876472462882956}
+  m_Layer: 0
+  m_Name: LabeledObject2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8688762287023115304
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2231371904931309545}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.70710707, z: -0, w: 0.70710653}
+  m_LocalPosition: {x: 4.6901245, y: -0.07324219, z: -1.225647}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5168936375192918442}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &783700729434112261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2231371904931309545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7350bcf7331a3c4e83d51b825af8c24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_VisualObject
+  _uiInfo:
+    _objectName: 
+--- !u!114 &2497876472462882956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2231371904931309545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1586d1852ae31047a2983072095e8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
+  _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
+  _representedLabelName: 
+  _representingModel: {fileID: 0}
+  _prompt: Do you agree with your former self?
+  _possibleAssociations:
+  - Death
+  - Love
+  - Mystery
+  - Dream
+  - Awe
+  - Beauty
+  _relabelable: 1
+  LabeledObject:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2487219499073983506
 GameObject:
   m_ObjectHideFlags: 0
@@ -1119,6 +1194,228 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &4217337727868939092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 554571967079214817}
+  - component: {fileID: 6158650139599131186}
+  - component: {fileID: 4019127866428008351}
+  m_Layer: 0
+  m_Name: LabeledObject4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &554571967079214817
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4217337727868939092}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.70710707, z: -0, w: 0.70710653}
+  m_LocalPosition: {x: -5.2598877, y: -0.07324219, z: -1.2296143}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5168936375192918442}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6158650139599131186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4217337727868939092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7350bcf7331a3c4e83d51b825af8c24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_VisualObject
+  _uiInfo:
+    _objectName: 
+--- !u!114 &4019127866428008351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4217337727868939092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1586d1852ae31047a2983072095e8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
+  _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
+  _representedLabelName: 
+  _representingModel: {fileID: 0}
+  _prompt: Do you agree with your former self?
+  _possibleAssociations:
+  - Death
+  - Love
+  - Mystery
+  - Dream
+  - Awe
+  - Beauty
+  _relabelable: 1
+  LabeledObject:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &4396661615624443686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2464812960796261804}
+  - component: {fileID: 2704977166948898616}
+  - component: {fileID: 9190390319633509869}
+  m_Layer: 0
+  m_Name: LoveSandwich
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2464812960796261804
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4396661615624443686}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.70710707, z: -0, w: 0.70710653}
+  m_LocalPosition: {x: -14.71, y: -0.07324219, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 166151172783420668}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2704977166948898616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4396661615624443686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7350bcf7331a3c4e83d51b825af8c24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_VisualObject
+  _uiInfo:
+    _objectName: 
+--- !u!114 &9190390319633509869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4396661615624443686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1586d1852ae31047a2983072095e8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
+  _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
+  _representedLabelName: 
+  _representingModel: {fileID: 0}
+  _prompt: Do you agree with your former self?
+  _possibleAssociations:
+  - Death
+  - Love
+  - Mystery
+  - Dream
+  - Awe
+  - Beauty
+  _relabelable: 1
+  LabeledObject:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &4778857084616864754
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1140160543587465681}
+  - component: {fileID: 5873068916308958348}
+  - component: {fileID: 8235378051891136169}
+  m_Layer: 0
+  m_Name: LabeledObject3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1140160543587465681
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4778857084616864754}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.70710707, z: -0, w: 0.70710653}
+  m_LocalPosition: {x: -0.13201904, y: -0.07324219, z: -1.225647}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5168936375192918442}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5873068916308958348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4778857084616864754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7350bcf7331a3c4e83d51b825af8c24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_VisualObject
+  _uiInfo:
+    _objectName: 
+--- !u!114 &8235378051891136169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4778857084616864754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1586d1852ae31047a2983072095e8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
+  _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
+  _representedLabelName: 
+  _representingModel: {fileID: 0}
+  _prompt: Do you agree with your former self?
+  _possibleAssociations:
+  - Death
+  - Love
+  - Mystery
+  - Dream
+  - Awe
+  - Beauty
+  _relabelable: 1
+  LabeledObject:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5310874860063808689
 GameObject:
   m_ObjectHideFlags: 0
@@ -1148,9 +1445,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 6637139788221030554}
   - {fileID: 7525842664097630147}
   - {fileID: 4022861789334147636}
-  - {fileID: 6637139788221030554}
   - {fileID: 462988537311902377}
   m_Father: {fileID: 7702954579658437240}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1650,6 +1947,80 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &7050242774564186851
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8537869734606918732}
+  - component: {fileID: 7374475045218133807}
+  - component: {fileID: 2089479123994250247}
+  m_Layer: 0
+  m_Name: LabeledObject1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8537869734606918732
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7050242774564186851}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.70710707, z: -0, w: 0.70710653}
+  m_LocalPosition: {x: 8.917419, y: -0.07324219, z: -1.0427246}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5168936375192918442}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7374475045218133807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7050242774564186851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7350bcf7331a3c4e83d51b825af8c24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_VisualObject
+  _uiInfo:
+    _objectName: 
+--- !u!114 &2089479123994250247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7050242774564186851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1586d1852ae31047a2983072095e8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
+  _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
+  _representedLabelName: 
+  _representingModel: {fileID: 0}
+  _prompt: Do you agree with your former self?
+  _possibleAssociations:
+  - Death
+  - Love
+  - Mystery
+  - Dream
+  - Awe
+  - Beauty
+  _relabelable: 1
+  LabeledObject:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7306578814749485531
 GameObject:
   m_ObjectHideFlags: 0
@@ -1793,6 +2164,80 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5425259638287065294}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7858460979318385723
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9095421148742110838}
+  - component: {fileID: 8867592694818860800}
+  - component: {fileID: 5385605039740271016}
+  m_Layer: 0
+  m_Name: LabeledObject5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9095421148742110838
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7858460979318385723}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.70710707, z: -0, w: 0.70710653}
+  m_LocalPosition: {x: 8.917419, y: -0.07324219, z: -1.0427246}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5168936375192918442}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8867592694818860800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7858460979318385723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7350bcf7331a3c4e83d51b825af8c24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_VisualObject
+  _uiInfo:
+    _objectName: 
+--- !u!114 &5385605039740271016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7858460979318385723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1586d1852ae31047a2983072095e8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
+  _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
+  _representedLabelName: 
+  _representingModel: {fileID: 0}
+  _prompt: Do you agree with your former self?
+  _possibleAssociations:
+  - Death
+  - Love
+  - Mystery
+  - Dream
+  - Awe
+  - Beauty
+  _relabelable: 1
+  LabeledObject:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7941833280057236561
 GameObject:
   m_ObjectHideFlags: 0
@@ -2913,11 +3358,63 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6405480244712774001, guid: a673ab13165b8484785cae161be3dad0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.99
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6405480244712774001, guid: a673ab13165b8484785cae161be3dad0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 111.1
+      value: 77.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: _representAssociatedLabel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: _replicaParents.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: _replicatedLabels.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: '_replicaParents.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8537869734606918732}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: '_replicaParents.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8688762287023115304}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: '_replicaParents.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1140160543587465681}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: '_replicaParents.Array.data[3]'
+      value: 
+      objectReference: {fileID: 554571967079214817}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: '_replicaParents.Array.data[4]'
+      value: 
+      objectReference: {fileID: 9095421148742110838}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: _replicateLabelRepresentation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: '_replicatedLabels.Array.data[1]'
+      value: Awe
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: '_replicatedLabels.Array.data[2]'
+      value: Beauty
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: '_replicatedLabels.Array.data[3]'
+      value: Mystery
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: '_replicatedLabels.Array.data[4]'
+      value: Dream
       objectReference: {fileID: 0}
     - target: {fileID: 7778324678813972104, guid: a673ab13165b8484785cae161be3dad0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2961,11 +3458,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8420740382666769591, guid: a673ab13165b8484785cae161be3dad0, type: 3}
       propertyPath: m_Name
-      value: 6 labeled objects
+      value: 5 labeled objects
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6738348859495509011, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+    - {fileID: 5805160183767293422, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+    - {fileID: 7636181354504409205, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+    - {fileID: 5111146528664789181, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+    - {fileID: 609660035942888414, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+    - {fileID: 2253469753536284551, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7778324678813972104, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 8537869734606918732}
+    - targetCorrespondingSourceObject: {fileID: 7778324678813972104, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 8688762287023115304}
+    - targetCorrespondingSourceObject: {fileID: 7778324678813972104, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 1140160543587465681}
+    - targetCorrespondingSourceObject: {fileID: 7778324678813972104, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 554571967079214817}
+    - targetCorrespondingSourceObject: {fileID: 7778324678813972104, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 9095421148742110838}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a673ab13165b8484785cae161be3dad0, type: 3}
 --- !u!4 &5168936375192918442 stripped
@@ -3430,6 +3948,141 @@ MonoBehaviour:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2983711176881995425, guid: b328f9c43bdb219408f70f56bad7e5e1, type: 3}
   m_PrefabInstance: {fileID: 4690903109531941218}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7619070811207975540
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 746296166374691856}
+    m_Modifications:
+    - target: {fileID: 6405480244712774001, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.0000441
+      objectReference: {fileID: 0}
+    - target: {fileID: 6405480244712774001, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 77.50002
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: _representAssociatedLabel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: _replicaParents.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: _replicatedLabels.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: '_replicaParents.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2464812960796261804}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: '_replicaParents.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8688762287023115304}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: '_replicaParents.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1140160543587465681}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: '_replicaParents.Array.data[3]'
+      value: 
+      objectReference: {fileID: 554571967079214817}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: '_replicaParents.Array.data[4]'
+      value: 
+      objectReference: {fileID: 9095421148742110838}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: _replicateLabelRepresentation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: '_replicatedLabels.Array.data[0]'
+      value: Love
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: '_replicatedLabels.Array.data[1]'
+      value: Dream
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: '_replicatedLabels.Array.data[2]'
+      value: Dream
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: '_replicatedLabels.Array.data[3]'
+      value: Dream
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: '_replicatedLabels.Array.data[4]'
+      value: Dream
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778324678813972104, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -726.26843
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778324678813972104, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -522.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778324678813972104, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -60.440125
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778324678813972104, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778324678813972104, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778324678813972104, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778324678813972104, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778324678813972104, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778324678813972104, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778324678813972104, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8420740382666769591, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: m_Name
+      value: LoveSandwichReplicator
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 6738348859495509011, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+    - {fileID: 5805160183767293422, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+    - {fileID: 7636181354504409205, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+    - {fileID: 5111146528664789181, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+    - {fileID: 609660035942888414, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+    - {fileID: 2253469753536284551, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7778324678813972104, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2464812960796261804}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+--- !u!4 &166151172783420668 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7778324678813972104, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+  m_PrefabInstance: {fileID: 7619070811207975540}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9063451065718364234
 PrefabInstance:

@@ -135,6 +135,7 @@ public class Label : IEquatable<Label>, IEquatable<string>
 
     public void Reset()
     {
+        _relabelable = false;
         givenName = "";
     }
 

@@ -38,6 +38,7 @@ public class script_ForceChangeAssociation : MonoBehaviour
     {
         if (_addOnce && added) return;
         if (!other.CompareTag("Player")) return;
+
         if (script_LabelAssociationHandler.Instance == null) return;
 
         if (_keepOriginalModel)
@@ -48,6 +49,8 @@ public class script_ForceChangeAssociation : MonoBehaviour
                 _newModel = script_LabelAssociationHandler.Instance.FindRepresentingModel(_associatedLabel);
             }
         }
+
+        Debug.Log($"Changing {_label} and {_associatedLabel} association model to {_newModel}");
 
         script_LabelAssociationHandler.Instance.ChangeAssociation(label, _newModel, associatedLabel, _fireAssociationEvents);
 

@@ -22,6 +22,9 @@ MonoBehaviour:
     Unlabeled:
       m_PersistentCalls:
         m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
   - _internalName: Sandwich
     _displayName: 
     _relabelable: 0
@@ -29,6 +32,9 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
       m_PersistentCalls:
         m_Calls: []
   - _internalName: Key
@@ -40,6 +46,9 @@ MonoBehaviour:
     Unlabeled:
       m_PersistentCalls:
         m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
   - _internalName: Vase
     _displayName: 
     _relabelable: 0
@@ -47,6 +56,9 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
       m_PersistentCalls:
         m_Calls: []
   - _internalName: Cloud
@@ -58,6 +70,9 @@ MonoBehaviour:
     Unlabeled:
       m_PersistentCalls:
         m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
   - _internalName: Asteroid
     _displayName: 
     _relabelable: 0
@@ -65,6 +80,9 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
       m_PersistentCalls:
         m_Calls: []
   - _internalName: Bubble
@@ -76,6 +94,9 @@ MonoBehaviour:
     Unlabeled:
       m_PersistentCalls:
         m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
   - _internalName: 1
     _displayName: 
     _relabelable: 0
@@ -83,6 +104,9 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
       m_PersistentCalls:
         m_Calls: []
   - _internalName: 2
@@ -94,6 +118,9 @@ MonoBehaviour:
     Unlabeled:
       m_PersistentCalls:
         m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
   - _internalName: 3
     _displayName: 
     _relabelable: 0
@@ -101,6 +128,9 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
       m_PersistentCalls:
         m_Calls: []
   - _internalName: 4
@@ -112,6 +142,9 @@ MonoBehaviour:
     Unlabeled:
       m_PersistentCalls:
         m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
   - _internalName: 5
     _displayName: 
     _relabelable: 0
@@ -119,6 +152,9 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
       m_PersistentCalls:
         m_Calls: []
   - _internalName: 6
@@ -130,6 +166,9 @@ MonoBehaviour:
     Unlabeled:
       m_PersistentCalls:
         m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
   - _internalName: Yes Cube 1
     _displayName: 
     _relabelable: 0
@@ -137,6 +176,9 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
       m_PersistentCalls:
         m_Calls: []
   - _internalName: Yes Cube 2
@@ -148,6 +190,9 @@ MonoBehaviour:
     Unlabeled:
       m_PersistentCalls:
         m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
   - _internalName: No Cube 1
     _displayName: 
     _relabelable: 0
@@ -155,6 +200,9 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
       m_PersistentCalls:
         m_Calls: []
   - _internalName: No Cube 2
@@ -166,23 +214,44 @@ MonoBehaviour:
     Unlabeled:
       m_PersistentCalls:
         m_Calls: []
-  labels:
-  - _internalName: Death
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: loveObject_object
     _displayName: 
     _relabelable: 0
     Labeled:
       m_PersistentCalls:
         m_Calls: []
     Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
+  labels:
+  - _internalName: Death
+    _displayName: 
+    _relabelable: 1
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
       m_PersistentCalls:
         m_Calls: []
   - _internalName: Love
     _displayName: 
-    _relabelable: 0
+    _relabelable: 1
     Labeled:
       m_PersistentCalls:
         m_Calls: []
     Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
       m_PersistentCalls:
         m_Calls: []
   - _internalName: Sad
@@ -194,31 +263,43 @@ MonoBehaviour:
     Unlabeled:
       m_PersistentCalls:
         m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
   - _internalName: Awe
     _displayName: 
-    _relabelable: 0
+    _relabelable: 1
     Labeled:
       m_PersistentCalls:
         m_Calls: []
     Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
       m_PersistentCalls:
         m_Calls: []
   - _internalName: Beauty
     _displayName: 
-    _relabelable: 0
+    _relabelable: 1
     Labeled:
       m_PersistentCalls:
         m_Calls: []
     Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
       m_PersistentCalls:
         m_Calls: []
   - _internalName: Mystery
     _displayName: 
-    _relabelable: 0
+    _relabelable: 1
     Labeled:
       m_PersistentCalls:
         m_Calls: []
     Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
       m_PersistentCalls:
         m_Calls: []
   - _internalName: Wonder
@@ -230,6 +311,9 @@ MonoBehaviour:
     Unlabeled:
       m_PersistentCalls:
         m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
   - _internalName: Dread
     _displayName: 
     _relabelable: 0
@@ -237,6 +321,9 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
       m_PersistentCalls:
         m_Calls: []
   - _internalName: Happy
@@ -248,6 +335,9 @@ MonoBehaviour:
     Unlabeled:
       m_PersistentCalls:
         m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
   - _internalName: Angry
     _displayName: 
     _relabelable: 0
@@ -257,13 +347,19 @@ MonoBehaviour:
     Unlabeled:
       m_PersistentCalls:
         m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
   - _internalName: Dream
     _displayName: 
-    _relabelable: 0
+    _relabelable: 1
     Labeled:
       m_PersistentCalls:
         m_Calls: []
     Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
       m_PersistentCalls:
         m_Calls: []
   - _internalName: Yes-1
@@ -275,6 +371,9 @@ MonoBehaviour:
     Unlabeled:
       m_PersistentCalls:
         m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
   - _internalName: No-1
     _displayName: No
     _relabelable: 0
@@ -282,6 +381,9 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
       m_PersistentCalls:
         m_Calls: []
   - _internalName: Yes-2
@@ -293,6 +395,9 @@ MonoBehaviour:
     Unlabeled:
       m_PersistentCalls:
         m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
   - _internalName: No-2
     _displayName: No
     _relabelable: 0
@@ -300,5 +405,20 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: loveObject_label
+    _displayName: Love
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
       m_PersistentCalls:
         m_Calls: []

@@ -3154,7 +3154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
   _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
-  _representedLabelName: Vase
+  _representedLabelName: Grave
   _representingModel: {fileID: 5563562117917895395}
   _prompt: Which label best describes how this object makes you feel?
   _possibleAssociations:
@@ -3373,7 +3373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
   _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
-  _representedLabelName: Vase
+  _representedLabelName: Key
   _representingModel: {fileID: 5066705490052619395}
   _prompt: Which label best describes how this object makes you feel?
   _possibleAssociations:
