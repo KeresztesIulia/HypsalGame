@@ -7,9 +7,13 @@ public class script_LabelReplica : MonoBehaviour
 
     [SerializeField] Transform[] _replicaParents;
     [SerializeField] string[] _replicatedLabels;
+    [SerializeField, Tooltip("Only works if the parent objects are LabelRepresentatives.")]
+    bool _replicateLabelRepresentation;
+    [SerializeField, Tooltip("If 'Replicate Label Representation' is set to true, this determines whether the replica will represent the replicated label, or the label associated with it.")]
+    bool _representAssociatedLabel;
 
     [SerializeField] Collider[] _triggerAreas;
-    [SerializeField] bool _triggerOnce;
+    [SerializeField] bool _triggerOnce = true;
 
     bool triggered = false;
 
@@ -18,11 +22,11 @@ public class script_LabelReplica : MonoBehaviour
     {
         foreach (var triggerArea in _triggerAreas)
         {
-            var replicationTrigger = triggerArea.GetComponent<script_ReplicationTrigger>();
+            var replicationTrigger = triggerArea.GetComponent<script_TriggerEventConnector>();
 
             if (replicationTrigger != null) continue;
 
-            replicationTrigger = triggerArea.AddComponent<script_ReplicationTrigger>();
+            replicationTrigger = triggerArea.AddComponent<script_TriggerEventConnector>();
             replicationTrigger.TriggerEntered += ReplicateItems;
         }
     }
@@ -39,8 +43,26 @@ public class script_LabelReplica : MonoBehaviour
 
             if (script_LabelAssociationHandler.Instance.HasAssociation(replicatedLabel))
             {
+                var currentParentTransform = _replicaParents[currentParent];
                 GameObject representingModel = script_LabelAssociationHandler.Instance.FindRepresentingModel(replicatedLabel);
-                Instantiate(representingModel, _replicaParents[currentParent]).transform.localPosition = Vector3.zero;
+                Instantiate(representingModel, currentParentTransform).transform.localPosition = Vector3.zero;
+
+                if (_replicateLabelRepresentation)
+                {
+                    var currentLabelRepresentative = currentParentTransform.GetComponent<script_LabelRepresentative>();
+                    if (currentLabelRepresentative != null)
+                    {
+                        currentLabelRepresentative.SetRepresentingModel(representingModel);
+                        if (_representAssociatedLabel)
+                        {
+                            currentLabelRepresentative.SetRepresentedLabel(script_LabelAssociationHandler.Instance.FindAssociatedLabel(replicatedLabel));
+                        }
+                        else
+                        {
+                            currentLabelRepresentative.SetRepresentedLabel(replicatedLabel);
+                        }
+                    }
+                }
 
                 currentParent++;
             }

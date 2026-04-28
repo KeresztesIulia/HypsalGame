@@ -70,6 +70,20 @@ public class script_so_LabelList : ScriptableObject
         return GetLabel(GetLabelIndex(labelName));
     }
 
+    public void ChangeRelabelability(string labelName, bool relabelable)
+    {
+        GetLabel(labelName)?.MarkRelabelable(relabelable);
+    }
+
+    public void MarkRelabelable(string labelName)
+    {
+        ChangeRelabelability(labelName, true);
+    }
+
+    public void MarkUnrelabelable(string labelName)
+    {
+        ChangeRelabelability(labelName, false);
+    }
 }
 
 [Serializable]
@@ -82,6 +96,7 @@ public class Label : IEquatable<Label>, IEquatable<string>
 
     [HideInInspector] public UnityEvent Labeled = new();
     [HideInInspector] public UnityEvent Unlabeled = new();
+    [HideInInspector] public UnityEvent MarkedRelabelable = new();
 
     [HideInInspector] public Action<Label> Associated = delegate { };
 
@@ -121,6 +136,13 @@ public class Label : IEquatable<Label>, IEquatable<string>
     public void Reset()
     {
         givenName = "";
+    }
+
+    public void MarkRelabelable(bool relabelable)
+    {
+        if (!_relabelable && relabelable) MarkedRelabelable?.Invoke();
+        _relabelable = relabelable;
+
     }
 
     public bool Equals(Label other)

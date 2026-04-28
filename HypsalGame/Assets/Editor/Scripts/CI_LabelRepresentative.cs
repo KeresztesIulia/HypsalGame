@@ -7,11 +7,7 @@ public class CI_LabelRepresentative : Editor
     public override void OnInspectorGUI()
     {
 
-        using (new EditorGUI.DisabledScope(true))
-        {
-            EditorGUILayout.ObjectField("Script", MonoScript.FromMonoBehaviour((MonoBehaviour)target), GetType(), false);
-            EditorGUILayout.ObjectField("Custom Inspector", MonoScript.FromScriptableObject(this), GetType(), false);
-        }
+        CI_CustomInspectorUtilities.ScriptReferences(this);
 
         // look for LabelList
         // if not found, return

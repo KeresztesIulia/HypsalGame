@@ -6,11 +6,7 @@ public class CI_LabelReplica : Editor
 {
     public override void OnInspectorGUI()
     {
-        using (new EditorGUI.DisabledScope(true))
-        {
-            EditorGUILayout.ObjectField("Script", MonoScript.FromMonoBehaviour((MonoBehaviour)target), GetType(), false);
-            EditorGUILayout.ObjectField("Custom Inspector", MonoScript.FromScriptableObject(this), GetType(), false);
-        }
+        CI_CustomInspectorUtilities.ScriptReferences(this);
 
         var labelListProp = serializedObject.FindProperty("_labelList");
         EditorGUILayout.PropertyField(labelListProp);
@@ -45,6 +41,16 @@ public class CI_LabelReplica : Editor
         if (GUILayout.Button("+"))
         {
             replicatedLabelsProp.arraySize++;
+        }
+
+        EditorGUILayout.Space();
+
+        var replicateLabelRepresentationProp = serializedObject.FindProperty("_replicateLabelRepresentation");
+        EditorGUILayout.PropertyField(replicateLabelRepresentationProp);
+
+        if (replicateLabelRepresentationProp.boolValue)
+        {
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("_representAssociatedLabel"));
         }
 
         EditorGUILayout.Space();
