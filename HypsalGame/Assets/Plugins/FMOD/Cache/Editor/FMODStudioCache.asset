@@ -162,6 +162,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-5453888193884283201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOICE/Students/Test
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/VOICE/Students/Test
+  Guid:
+    Data1: 1165712294
+    Data2: 1272523107
+    Data3: 1510204851
+    Data4: 843254802
+  Banks:
+  - {fileID: -1798069484379119058}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-5325207447377527251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,7 +285,7 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/banks/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639129911149878395
+  lastModified: 639130547869126495
   FileSizes: []
   Exists: 1
 --- !u!114 &-1706960760305134854
@@ -319,13 +346,15 @@ MonoBehaviour:
   - {fileID: -6600736589501131906}
   - {fileID: 5329484433272140326}
   - {fileID: -8855555508882082188}
+  - {fileID: 8322177091957178253}
+  - {fileID: -5453888193884283201}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1798069484379119058}
   StringsBanks:
   - {fileID: 4235524573815359642}
   cacheVersion: 131858
-  cacheTime: 639129911149893579
+  cacheTime: 639130547869136588
   SerializableEventsDict:
   - key: event:/VOICE/Intro/Intro_Part03
     index: 0
@@ -357,6 +386,10 @@ MonoBehaviour:
     index: 13
   - key: event:/VOICE/Intro/Intro_Part14
     index: 14
+  - key: event:/VOICE/Lai/Scream
+    index: 15
+  - key: event:/VOICE/Students/Test
+    index: 16
 --- !u!114 &1231942339133162207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -399,10 +432,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/banks/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639129911149893579
+  lastModified: 639130547869136588
   FileSizes:
   - Name: 
-    Value: 1286
+    Value: 1384
   Exists: 1
 --- !u!114 &4696201239984594093
 MonoBehaviour:
@@ -506,6 +539,33 @@ MonoBehaviour:
   Banks:
   - {fileID: -1798069484379119058}
   IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8322177091957178253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOICE/Lai/Scream
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/VOICE/Lai/Scream
+  Guid:
+    Data1: -1826349048
+    Data2: 1228802640
+    Data3: 398437290
+    Data4: -460673285
+  Banks:
+  - {fileID: -1798069484379119058}
+  IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters: []
