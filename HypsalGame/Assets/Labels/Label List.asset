@@ -290,18 +290,6 @@ MonoBehaviour:
     MarkedRelabelable:
       m_PersistentCalls:
         m_Calls: []
-  - _internalName: Sad
-    _displayName: 
-    _relabelable: 0
-    Labeled:
-      m_PersistentCalls:
-        m_Calls: []
-    Unlabeled:
-      m_PersistentCalls:
-        m_Calls: []
-    MarkedRelabelable:
-      m_PersistentCalls:
-        m_Calls: []
   - _internalName: Awe
     _displayName: 
     _relabelable: 1
@@ -351,30 +339,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - _internalName: Dread
-    _displayName: 
-    _relabelable: 0
-    Labeled:
-      m_PersistentCalls:
-        m_Calls: []
-    Unlabeled:
-      m_PersistentCalls:
-        m_Calls: []
-    MarkedRelabelable:
-      m_PersistentCalls:
-        m_Calls: []
-  - _internalName: Happy
-    _displayName: 
-    _relabelable: 0
-    Labeled:
-      m_PersistentCalls:
-        m_Calls: []
-    Unlabeled:
-      m_PersistentCalls:
-        m_Calls: []
-    MarkedRelabelable:
-      m_PersistentCalls:
-        m_Calls: []
-  - _internalName: Angry
     _displayName: 
     _relabelable: 0
     Labeled:

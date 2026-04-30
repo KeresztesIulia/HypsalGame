@@ -1,12 +1,13 @@
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(script_LabelRepresentative)), CanEditMultipleObjects]
+[CustomEditor(typeof(script_LabelRepresentative))]
 public class CI_LabelRepresentative : Editor
 {
+
+    script_so_LabelList labelList;
     public override void OnInspectorGUI()
     {
-
         CI_CustomInspectorUtilities.ScriptReferences(this);
 
         // look for LabelList
@@ -14,7 +15,7 @@ public class CI_LabelRepresentative : Editor
         var labelListProp = serializedObject.FindProperty("_partOfList");
         EditorGUILayout.PropertyField(labelListProp);
 
-        var labelList = labelListProp.objectReferenceValue as script_so_LabelList;
+        labelList = labelListProp.objectReferenceValue as script_so_LabelList;
         if (labelList == null) return;
 
 
@@ -24,10 +25,19 @@ public class CI_LabelRepresentative : Editor
 
         EditorGUILayout.PropertyField(serializedObject.FindProperty("_representingModel"));
 
+        EditorGUILayout.Space(10);
+
+        SetUpAssociations();
+
+        CI_CustomInspectorUtilities.LabelNameField(labelList, serializedObject.FindProperty("_initiallyAssociatedLabelName"), "Initially associated label");
+
+        serializedObject.ApplyModifiedProperties();
+    }
+
+    public void SetUpAssociations()
+    {
         // create List view with dropdowns for _possibleAssociations
         var possibleAssociationsProp = serializedObject.FindProperty("_possibleAssociations");
-
-        EditorGUILayout.Space(10);
 
         GUIStyle style = new(EditorStyles.boldLabel);
         style.fontSize += 3;
@@ -37,7 +47,7 @@ public class CI_LabelRepresentative : Editor
         {
             EditorGUILayout.BeginHorizontal();
             var associationProp = possibleAssociationsProp.GetArrayElementAtIndex(i);
-            
+
             associationProp.stringValue = CI_CustomInspectorUtilities.LabelNameField(labelList, associationProp.stringValue);
 
             if (GUILayout.Button("-")) possibleAssociationsProp.DeleteArrayElementAtIndex(i);
@@ -50,7 +60,5 @@ public class CI_LabelRepresentative : Editor
             EditorGUILayout.PropertyField(serializedObject.FindProperty("_prompt"));
             EditorGUILayout.PropertyField(serializedObject.FindProperty("_relabelable"));
         }
-
-        serializedObject.ApplyModifiedProperties();
     }
 }

@@ -21,6 +21,9 @@ public class script_LabelRepresentative : MonoBehaviour, interface_Interactable,
 
     [SerializeField] bool _relabelable = false;
 
+    [SerializeField] string _initiallyAssociatedLabelName;
+    Label initiallyAssociatedLabel;
+
     public string Prompt => _prompt;
     public Label RepresentedLabel => representedLabel;
     public GameObject RepresentedModel => _representingModel;
@@ -61,6 +64,16 @@ public class script_LabelRepresentative : MonoBehaviour, interface_Interactable,
         visual.SetActiveState(false);
 
         InitializeRepresentedLabel(_representedLabelName);
+
+        if (!string.IsNullOrEmpty(_initiallyAssociatedLabelName) && script_LabelAssociationHandler.InstanceExists)
+        {
+            initiallyAssociatedLabel = _partOfList.GetLabel(_initiallyAssociatedLabelName);
+
+            if (initiallyAssociatedLabel == null) return;
+
+            script_LabelAssociationHandler.Instance?.AddAssociation(RepresentedLabel, initiallyAssociatedLabel, _representingModel, false);
+        }
+        
 
         initialized = true;
     }

@@ -2691,6 +2691,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2905761319533122536}
   - {fileID: 6398220146310146356}
   - {fileID: 3262898038104067262}
   - {fileID: 5404031013475314318}
@@ -16010,6 +16011,68 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7e8daf449c6012c4cafdad579890c8c8, type: 3}
   m_PrefabInstance: {fileID: 8580401237746997280}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8783615384444024932
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6280683420054916450}
+    m_Modifications:
+    - target: {fileID: 5888171884325284748, guid: 66d7ecdb17f50a74a801ba56c366994c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888171884325284748, guid: 66d7ecdb17f50a74a801ba56c366994c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888171884325284748, guid: 66d7ecdb17f50a74a801ba56c366994c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888171884325284748, guid: 66d7ecdb17f50a74a801ba56c366994c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888171884325284748, guid: 66d7ecdb17f50a74a801ba56c366994c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888171884325284748, guid: 66d7ecdb17f50a74a801ba56c366994c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888171884325284748, guid: 66d7ecdb17f50a74a801ba56c366994c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888171884325284748, guid: 66d7ecdb17f50a74a801ba56c366994c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888171884325284748, guid: 66d7ecdb17f50a74a801ba56c366994c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888171884325284748, guid: 66d7ecdb17f50a74a801ba56c366994c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8747752487364446489, guid: 66d7ecdb17f50a74a801ba56c366994c, type: 3}
+      propertyPath: m_Name
+      value: Audio_Love-Room
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 66d7ecdb17f50a74a801ba56c366994c, type: 3}
+--- !u!4 &2905761319533122536 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5888171884325284748, guid: 66d7ecdb17f50a74a801ba56c366994c, type: 3}
+  m_PrefabInstance: {fileID: 8783615384444024932}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8943307534273435862
 PrefabInstance:

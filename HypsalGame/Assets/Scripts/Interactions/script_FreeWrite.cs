@@ -31,7 +31,7 @@ public class script_FreeWrite : script_Interactable
 
         ActivateField();
 
-        StartCoroutine(StartLogging());
+        if (_freeWriteInfo.loggingDelay >= 0) StartCoroutine(StartLogging());
     }
 
     void ActivateField()
@@ -79,12 +79,17 @@ public class script_FreeWrite : script_Interactable
                     ActivateField();
                 }
             }
+
+            if (!_freeWriteInfo.keepOpenOnSubmit)
+            {
+                StopLogging();
+            }
         }
 
-        if (!submitClosing || !_freeWriteInfo.keepOpenOnSubmit)
-        {
-            StopLogging();
-        }
+        //if (!submitClosing || !_freeWriteInfo.keepOpenOnSubmit)
+        //{
+        //    StopLogging();
+        //}
 
         submitClosing = false;
     }
