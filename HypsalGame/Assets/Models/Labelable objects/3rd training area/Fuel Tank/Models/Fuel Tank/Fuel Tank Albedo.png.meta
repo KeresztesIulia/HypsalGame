@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 750e8965acf46cc4ca958ef42b62bf20
+guid: 43bf57a6df117d2448127efd736206a8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -52,7 +52,7 @@ TextureImporter:
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
   textureType: 0
-  textureShape: 2
+  textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
   compressionQualitySet: 0
@@ -61,30 +61,6 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -119,5 +95,5 @@ AssetOrigin:
   productId: 230694
   packageName: Fuel Tank 10L
   packageVersion: 1.0
-  assetPath: Assets/Models/Labelable objects/3rd training area/Fire Extinguisher/Environment/Interior.png
+  assetPath: Assets/AK STUDIO ART/Fuel Tank/Models/Fuel Tank/Fuel Tank Albedo.png
   uploadId: 520773
