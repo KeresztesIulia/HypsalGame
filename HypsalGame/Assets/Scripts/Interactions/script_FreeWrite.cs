@@ -31,7 +31,7 @@ public class script_FreeWrite : script_Interactable
 
         ActivateField();
 
-        StartCoroutine(StartLogging());
+        if (_freeWriteInfo.loggingDelay >= 0) StartCoroutine(StartLogging());
     }
 
     void ActivateField()

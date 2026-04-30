@@ -1339,7 +1339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::script_FreeWrite
   _uiInfo:
     name: Enter password to continue
-    interactionWord: 
+    interactionWord: Click to enter password
   _freeWriteField: {fileID: 0}
   _freeWriteInfo:
     allowMultipleTries: 1

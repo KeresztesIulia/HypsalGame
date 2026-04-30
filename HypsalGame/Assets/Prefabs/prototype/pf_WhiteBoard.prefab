@@ -605,7 +605,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::script_FreeWrite
   _uiInfo:
     name: White board
-    interactionWord: WRITE WRITE WRITE!
+    interactionWord: Click to start writing
   _freeWriteField: {fileID: 7953609941800289616}
   _freeWriteInfo:
     allowMultipleTries: 0
