@@ -13428,11 +13428,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
   _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
-  _representedLabelName: No Cube 1
+  _representedLabelName: Yes Cube 2
   _representingModel: {fileID: 0}
   _prompt: 'I am asking again: Are you sure?'
   _possibleAssociations:
-  - No-1
+  - Yes-2
   _relabelable: 0
   LabeledObject:
     m_PersistentCalls:
@@ -15849,11 +15849,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
   _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
-  _representedLabelName: No Cube 1
+  _representedLabelName: Yes Cube 1
   _representingModel: {fileID: 0}
   _prompt: Are you sure?
   _possibleAssociations:
-  - No-1
+  - Yes-1
   _relabelable: 0
   LabeledObject:
     m_PersistentCalls:
@@ -27329,11 +27329,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
   _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
-  _representedLabelName: No Cube 1
+  _representedLabelName: No Cube 2
   _representingModel: {fileID: 0}
   _prompt: 'I am asking again: Are you sure?'
   _possibleAssociations:
-  - No-1
+  - No-2
   _relabelable: 0
   LabeledObject:
     m_PersistentCalls:
