@@ -11866,11 +11866,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOrLine
   sound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1826349048
+      Data2: 1228802640
+      Data3: 398437290
+      Data4: -460673285
+    Path: event:/VOICE/Lai/Scream
   playOnAwake: 1
   playOnce: 0
   playOnTrigger: 0
