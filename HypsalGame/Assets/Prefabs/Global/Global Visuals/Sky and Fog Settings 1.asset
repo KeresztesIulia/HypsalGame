@@ -123,7 +123,7 @@ MonoBehaviour:
     m_Value: 64
   denoisingMode:
     m_OverrideState: 1
-    m_Value: 3
+    m_Value: 2
   anisotropy:
     m_OverrideState: 1
     m_Value: -0.32
