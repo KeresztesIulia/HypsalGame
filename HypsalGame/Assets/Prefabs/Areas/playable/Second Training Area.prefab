@@ -756,8 +756,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8538176087525481740}
-  - component: {fileID: 9057800614047837041}
-  - component: {fileID: 1534594626009374390}
   m_Layer: 0
   m_Name: LabeledObject2
   m_TagString: Untagged
@@ -780,47 +778,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7409343955782871131}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9057800614047837041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 917866272618654655}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7350bcf7331a3c4e83d51b825af8c24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::script_VisualObject
-  _uiInfo:
-    _objectName: 
---- !u!114 &1534594626009374390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 917866272618654655}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1586d1852ae31047a2983072095e8e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
-  _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
-  _representedLabelName: 
-  _representingModel: {fileID: 0}
-  _prompt: 
-  _possibleAssociations:
-  - Death
-  - Love
-  - Mystery
-  - Dream
-  - Awe
-  - Beauty
-  _relabelable: 0
-  LabeledObject:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1010840328552121596
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,8 +1270,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6641095262889767943}
-  - component: {fileID: 9080583553232581998}
-  - component: {fileID: 6977093589777444726}
   m_Layer: 0
   m_Name: LabeledObject1
   m_TagString: Untagged
@@ -1337,47 +1292,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7409343955782871131}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9080583553232581998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1493310766122175396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7350bcf7331a3c4e83d51b825af8c24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::script_VisualObject
-  _uiInfo:
-    _objectName: 
---- !u!114 &6977093589777444726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1493310766122175396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1586d1852ae31047a2983072095e8e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
-  _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
-  _representedLabelName: 
-  _representingModel: {fileID: 0}
-  _prompt: 
-  _possibleAssociations:
-  - Death
-  - Love
-  - Mystery
-  - Dream
-  - Awe
-  - Beauty
-  _relabelable: 0
-  LabeledObject:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1502588772989159930
 GameObject:
   m_ObjectHideFlags: 0
@@ -5397,11 +5311,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
       propertyPath: _replicaParents.Array.size
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
       propertyPath: _replicatedLabels.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
       propertyPath: '_replicaParents.Array.data[0]'
@@ -5425,7 +5339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
       propertyPath: _replicateLabelRepresentation
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
       propertyPath: '_replicatedLabels.Array.data[1]'
@@ -5442,6 +5356,10 @@ PrefabInstance:
     - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
       propertyPath: '_replicatedLabels.Array.data[4]'
       value: Dream
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725097390499217045, guid: a673ab13165b8484785cae161be3dad0, type: 3}
+      propertyPath: '_replicatedLabels.Array.data[5]'
+      value: Love
       objectReference: {fileID: 0}
     - target: {fileID: 7778324678813972104, guid: a673ab13165b8484785cae161be3dad0, type: 3}
       propertyPath: m_LocalPosition.x
