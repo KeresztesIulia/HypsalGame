@@ -7,9 +7,8 @@ public class script_LogOnTrigger : MonoBehaviour
     [SerializeField] bool _triggerOnce = true;
     [SerializeField] bool _popUpLog = true;
 
-    private void OnTriggerEnter(Collider other)
+    public void LogTexts()
     {
-        if (!other.CompareTag("Player")) return;
         if (_textsToLog == null || _textsToLog.Length == 0) return;
 
         for (int i = 0; i < _textsToLog.Length; i++)
@@ -19,6 +18,14 @@ public class script_LogOnTrigger : MonoBehaviour
         }
 
         script_ui_LabelLog.CloseExchange(_popUpLog);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!other.CompareTag("Player")) return;
+        if (_textsToLog == null || _textsToLog.Length == 0) return;
+
+        LogTexts();
 
         if (_triggerOnce) enabled = false;
     }
