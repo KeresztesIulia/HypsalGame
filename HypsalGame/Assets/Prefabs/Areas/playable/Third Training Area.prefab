@@ -570,7 +570,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8248713356658291846}
   m_Layer: 0
-  m_Name: Static objects
+  m_Name: Interactive door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1526,6 +1526,7 @@ MonoBehaviour:
   - Mystery
   - Dream
   _relabelable: 0
+  _initiallyAssociatedLabelName: 
   LabeledObject:
     m_PersistentCalls:
       m_Calls: []
@@ -1601,6 +1602,7 @@ MonoBehaviour:
   - Mystery
   - Dream
   _relabelable: 0
+  _initiallyAssociatedLabelName: 
   LabeledObject:
     m_PersistentCalls:
       m_Calls: []
