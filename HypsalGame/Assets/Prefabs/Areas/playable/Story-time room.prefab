@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5007503469284125135}
-  - component: {fileID: 6773202291950016753}
   m_Layer: 0
   m_Name: Wait-door
   m_TagString: Untagged
@@ -29,43 +28,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5478105220305720557}
+  m_Children: []
   m_Father: {fileID: 745282002750212655}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6773202291950016753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 72920807609724868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae6c3ee76ecfcea4a9f2ff781ede26d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::script_TimerTrigger
-  _eventDelay: 1
-  _realtimeDelay: 0
-  _eventToPerform:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2931636814789811292}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  _timerStarterTriggers:
-  - {fileID: 5602276057743652722}
-  _interruptionTriggers: []
-  _instantEventTriggers: []
 --- !u!1 &75458198653352813
 GameObject:
   m_ObjectHideFlags: 0
@@ -770,7 +735,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3847427688720514791}
-  - {fileID: 7804088723725340648}
+  - {fileID: 1864029711436891291}
   - {fileID: 1073558999590832220}
   m_Father: {fileID: 5358270251358715885}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2721,7 +2686,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7804088723725340648}
   - component: {fileID: 5602276057743652722}
-  - component: {fileID: 8231119092855170580}
   m_Layer: 0
   m_Name: wait-door-trigger
   m_TagString: Untagged
@@ -2742,7 +2706,7 @@ Transform:
   m_LocalScale: {x: 2.5976858, y: 18.74189, z: 10.228074}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1941673083308386592}
+  m_Father: {fileID: 1864029711436891291}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &5602276057743652722
 BoxCollider:
@@ -2765,33 +2729,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &8231119092855170580
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1138841906196159338}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1256771535943173785
 GameObject:
   m_ObjectHideFlags: 0
@@ -5220,6 +5157,72 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &2807328116540694062
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1864029711436891291}
+  - component: {fileID: 6368905741615075442}
+  m_Layer: 0
+  m_Name: Wait-door-trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1864029711436891291
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2807328116540694062}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7804088723725340648}
+  m_Father: {fileID: 1941673083308386592}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6368905741615075442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2807328116540694062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae6c3ee76ecfcea4a9f2ff781ede26d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_TimerTrigger
+  _eventDelay: 3
+  _realtimeDelay: 0
+  _eventToPerform:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2931636814789811292}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  _timerStarterTriggers:
+  - {fileID: 5602276057743652722}
+  _interruptionTriggers: []
+  _instantEventTriggers: []
 --- !u!1 &2830060391811494309
 GameObject:
   m_ObjectHideFlags: 0
@@ -5765,7 +5768,7 @@ Transform:
   m_LocalScale: {x: 1, y: 11.056167, z: 8.525573}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5007503469284125135}
+  m_Father: {fileID: 745282002750212655}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2330015697795742532
 MeshFilter:
@@ -7803,7 +7806,7 @@ Transform:
   m_GameObject: {fileID: 3850945400598880419}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.00000081956375, z: -0, w: 1}
-  m_LocalPosition: {x: -1011.4, y: -536.24, z: 37.56}
+  m_LocalPosition: {x: -1011.4, y: -536.24, z: 38.05}
   m_LocalScale: {x: 1, y: 11.056167, z: 36.772488}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8031,6 +8034,7 @@ Transform:
   - {fileID: 5007503469284125135}
   - {fileID: 2139248439321988080}
   - {fileID: 2634783268838375843}
+  - {fileID: 5478105220305720557}
   m_Father: {fileID: 5358270251358715885}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3993241161139452489
