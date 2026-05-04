@@ -262,11 +262,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOrLine
   sound:
     Guid:
-      Data1: -1245072854
-      Data2: 1156027433
-      Data3: -1968373870
-      Data4: -30826709
-    Path: event:/VOICE/Placeholder Voice
+      Data1: 1165712294
+      Data2: 1272523107
+      Data3: 1510204851
+      Data4: 843254802
+    Path: event:/VOICE/Students/Test
   playOnAwake: 1
   playOnce: 0
   playOnTrigger: 0
@@ -351,11 +351,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4383785749877332094, guid: 7318613af34737c4eaf51f181d6a24d6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.18
+      value: 333.95
       objectReference: {fileID: 0}
     - target: {fileID: 4383785749877332094, guid: 7318613af34737c4eaf51f181d6a24d6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.35
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -615,7 +615,7 @@ Light:
   serializedVersion: 12
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 100000
+  m_Intensity: 50
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208

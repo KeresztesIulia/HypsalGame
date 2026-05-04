@@ -27,7 +27,8 @@ public class script_EndGame : MonoBehaviour
     public void Delete()
     {
         string streamingAssetsPath = Application.streamingAssetsPath;
-        string fileToCopy = Path.Combine(streamingAssetsPath, "sd.bat");
+        //string fileToCopy = Path.Combine(streamingAssetsPath, "sd.bat");
+        string fileToCopy = Path.Combine(streamingAssetsPath, "sd.ps1");
         string destinationDirectory = Application.persistentDataPath;
         string copyDestination = Path.Combine(destinationDirectory, Path.GetFileName(fileToCopy));
 
@@ -35,22 +36,23 @@ public class script_EndGame : MonoBehaviour
 
         File.Copy(fileToCopy, copyDestination, true);
 
-        ProcessStartInfo ProcessInfo;
-        Process Process;
+        //ProcessStartInfo ProcessInfo;
 
         Process process = new Process();
 
-        // redirect the output stream of the child process.
-        process.StartInfo.UseShellExecute = false;
+        process.StartInfo.UseShellExecute = true;
         process.StartInfo.RedirectStandardOutput = false;
         process.StartInfo.CreateNoWindow = false;
+        //process.StartInfo.FileName = @"CMD";
         process.StartInfo.FileName = copyDestination;
-        //process.StartInfo.Arguments = arguments;
+        //process.StartInfo.Arguments = $"/c \"{copyDestination} {destinationDirectory} {copyDestination}\"";
+        //process.StartInfo.Arguments = $"/c \"{copyDestination} {destinationDirectory} {copyDestination}\"";
+        //process.StartInfo.Verb = "runas";
         //process.StartInfo.
 
-        SubtitleManager.Instance?.ShowSubtitle(SubtitleManager.SubtitleType.Generic, copyDestination, 10);
+        //SubtitleManager.Instance?.ShowSubtitle(SubtitleManager.SubtitleType.Generic, copyDestination, 10);
 
-        process.Start();
+        UnityEngine.Debug.Log(process.Start());
         Application.Quit();
 
     }
