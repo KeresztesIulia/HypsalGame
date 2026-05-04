@@ -69,9 +69,7 @@ public class script_LabelRepresentative : MonoBehaviour, interface_Interactable,
         {
             initiallyAssociatedLabel = _partOfList.GetLabel(_initiallyAssociatedLabelName);
 
-            if (initiallyAssociatedLabel == null) return;
-
-            script_LabelAssociationHandler.Instance?.AddAssociation(RepresentedLabel, initiallyAssociatedLabel, _representingModel, false);
+            if (initiallyAssociatedLabel != null) script_LabelAssociationHandler.Instance?.AddAssociation(RepresentedLabel, initiallyAssociatedLabel, _representingModel, false);
         }
         
 
