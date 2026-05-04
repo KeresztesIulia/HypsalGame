@@ -3043,6 +3043,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5358270251358715885}
+  - component: {fileID: 1213639686271534254}
   m_Layer: 0
   m_Name: Story-time room
   m_TagString: Untagged
@@ -3075,6 +3076,26 @@ Transform:
   - {fileID: 5444977724173263675}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1213639686271534254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129705018517720627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 608fa2f243c84de499931c54d0d52b8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_PersistentInitializer
+  _subModules:
+  - {fileID: 6214698587295690508}
+  - {fileID: 7469236132146021922}
+  - {fileID: 5180107242681774952}
+  - {fileID: 3224057254407411077}
+  - {fileID: 2297922477676989372}
+  _instantiateSubmodules: 0
+  _parentSubmodulesToSelf: 0
 --- !u!1 &1130374073194649483
 GameObject:
   m_ObjectHideFlags: 0

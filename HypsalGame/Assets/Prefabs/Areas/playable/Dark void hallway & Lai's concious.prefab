@@ -18212,7 +18212,6 @@ GameObject:
   - component: {fileID: 5223995899437727075}
   - component: {fileID: 7111326612979212821}
   - component: {fileID: 4197649982018343013}
-  - component: {fileID: 4898204111516352528}
   - component: {fileID: 9059917709542280766}
   - component: {fileID: 5989374293644074041}
   m_Layer: 0
@@ -18315,33 +18314,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 8.036987, y: 3.0331266, z: 1.0473961}
   m_Center: {x: 14.675476, y: 1.0165632, z: 0.017173352}
---- !u!54 &4898204111516352528
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3173041824532317191}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &9059917709542280766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46706,7 +46678,6 @@ GameObject:
   - component: {fileID: 8974425992457547351}
   - component: {fileID: 4951429605511025496}
   - component: {fileID: 3349251876447496472}
-  - component: {fileID: 6533315454219991892}
   - component: {fileID: 3902643398094587293}
   - component: {fileID: 7894191837102366380}
   m_Layer: 0
@@ -46809,33 +46780,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 8.036987, y: 3.0331266, z: 1.0473961}
   m_Center: {x: 14.675476, y: 1.0165632, z: 0.017173352}
---- !u!54 &6533315454219991892
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8044077289568581501}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &3902643398094587293
 MonoBehaviour:
   m_ObjectHideFlags: 0
