@@ -854,6 +854,7 @@ GameObject:
   - component: {fileID: 5856889752345578674}
   - component: {fileID: 2537112023252296714}
   - component: {fileID: 7580151232276926349}
+  - component: {fileID: 3038724580973297728}
   m_Layer: 0
   m_Name: Log trigger (2)
   m_TagString: Untagged
@@ -942,6 +943,41 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3038724580973297728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934632646531914900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17d435184228a1841a2edc0d72bac94a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOrLine
+  sound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  playOnAwake: 0
+  playOnce: 1
+  playOnTrigger: 1
+  stopOnDisable: 0
+  uninterruptable: 0
+  subtitleText: 'The following labels can be used: awe, beauty, love, dream, death,
+    and mystery. Please label two objects. Good luck and thank you for your participation.'
+  subtitleDuration: 3
+  subtitleDelay: 0
+  subtitleType: 0
+  nextSound: {fileID: 0}
+  endConversation: 0
+  dontLog: 0
+  OnPlaybackEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1048132275949405289
 GameObject:
   m_ObjectHideFlags: 0
@@ -953,6 +989,7 @@ GameObject:
   - component: {fileID: 922338067146988577}
   - component: {fileID: 320685435121017887}
   - component: {fileID: 3408496283538183251}
+  - component: {fileID: 8446858777109738123}
   m_Layer: 0
   m_Name: Log trigger (1)
   m_TagString: Untagged
@@ -1009,11 +1046,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_LogOnTrigger
   _textsToLog:
-  - In the upcoming training area you have to label objects. Labelable objects will
-    be indicated with a circle when looking at them.
+  - In the upcoming training area you have to label objects.
   _logTypes: 01000000
   _triggerOnce: 1
   _popUpLog: 1
+--- !u!114 &8446858777109738123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048132275949405289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17d435184228a1841a2edc0d72bac94a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOrLine
+  sound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  playOnAwake: 0
+  playOnce: 1
+  playOnTrigger: 1
+  stopOnDisable: 0
+  uninterruptable: 0
+  subtitleText: In the upcoming training area you have to label objects.
+  subtitleDuration: 3
+  subtitleDelay: 0
+  subtitleType: 0
+  nextSound: {fileID: 0}
+  endConversation: 0
+  dontLog: 0
+  OnPlaybackEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1084903961962509672
 GameObject:
   m_ObjectHideFlags: 0
@@ -4469,6 +4539,7 @@ GameObject:
   - component: {fileID: 4513623150793749002}
   - component: {fileID: 4876035606007969272}
   - component: {fileID: 6626654365732666391}
+  - component: {fileID: 8816597313887637420}
   m_Layer: 0
   m_Name: Log trigger
   m_TagString: Untagged
@@ -4529,6 +4600,40 @@ MonoBehaviour:
   _logTypes: 01000000
   _triggerOnce: 1
   _popUpLog: 1
+--- !u!114 &8816597313887637420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5522627521702106464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17d435184228a1841a2edc0d72bac94a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOrLine
+  sound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  playOnAwake: 0
+  playOnce: 1
+  playOnTrigger: 1
+  stopOnDisable: 0
+  uninterruptable: 0
+  subtitleText: Hello playtester #28
+  subtitleDuration: 3
+  subtitleDelay: 0
+  subtitleType: 0
+  nextSound: {fileID: 0}
+  endConversation: 0
+  dontLog: 0
+  OnPlaybackEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5539932247814383266
 GameObject:
   m_ObjectHideFlags: 0
