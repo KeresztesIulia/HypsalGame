@@ -8,6 +8,8 @@ public class CI_LogOnTrigger : Editor
     {
         CI_CustomInspectorUtilities.ScriptReferences(this);
 
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("_specialLogLabelList"));
+
         MakeList();
 
         EditorGUILayout.PropertyField(serializedObject.FindProperty("_triggerOnce"));
