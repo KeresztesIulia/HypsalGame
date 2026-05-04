@@ -304,6 +304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03439ae4853f97a4082e3dc8e12e679b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_LogOnTrigger
+  _specialLogLabelList: {fileID: 11400000, guid: 53e579d3cbe25f24684bf63870580837, type: 2}
   _textsToLog:
   - 'Remaining labels: [remaining_labels: Love, Dude, Sandwich]!'
   _logTypes: 01000000
@@ -805,6 +806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03439ae4853f97a4082e3dc8e12e679b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_LogOnTrigger
+  _specialLogLabelList: {fileID: 0}
   _textsToLog:
   - The label associated with Chicken is [label_Chicken]!
   - The label associated with Dude is [label_Dude]!
@@ -1177,6 +1179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03439ae4853f97a4082e3dc8e12e679b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_LogOnTrigger
+  _specialLogLabelList: {fileID: 0}
   _textsToLog:
   - I am #[test_participant]!
   _logTypes: 02000000

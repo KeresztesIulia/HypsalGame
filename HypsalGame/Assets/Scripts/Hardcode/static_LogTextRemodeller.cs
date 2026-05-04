@@ -19,17 +19,17 @@ public static class static_LogTextRemodeller
     }
 
 
-    public static string RemodelText(string text)
+    public static string RemodelText(string text, script_so_LabelList labelList)
     {
         string[] strings = text.Split('[', ']');
         for (int i = 1; i < strings.Length; i+= 2)
         {
-            strings[i] = RemodelWord(strings[i]);
+            strings[i] = RemodelWord(strings[i], labelList);
         }
         return string.Join("", strings);
     }
 
-    public static string RemodelWord(string word)
+    public static string RemodelWord(string word, script_so_LabelList labelList)
     {
         switch(word)
         {
@@ -43,15 +43,16 @@ public static class static_LogTextRemodeller
                 }
                 if (word.StartsWith("remaining_labels: "))
                 {
-                    return RemainingLabels(word.Replace("remaining_labels: ", ""));
+                    return RemainingLabels(word.Replace("remaining_labels: ", ""), labelList);
                 }
                 return word;
         }
     }
 
-    static string RemainingLabels(string labelsWord)
+    static string RemainingLabels(string labelsWord, script_so_LabelList labelList)
     {
         if (!script_LabelAssociationHandler.InstanceExists) return labelsWord;
+        if (labelList == null) return labelsWord;
 
         string[] labels = labelsWord.Split(", ");
 
@@ -61,12 +62,13 @@ public static class static_LogTextRemodeller
         {
             if (script_LabelAssociationHandler.Instance.HasAssociation(label)) continue;
 
-            string labDisplayName = script_LabelAssociationHandler.Instance.FindAssociatedLabel(label).DisplayName;
+
+            string labDisplayName = labelList.GetLabel(label).OriginalDisplayName;
 
             if (string.IsNullOrEmpty(remainingLabels))
                 remainingLabels = labDisplayName;
             else
-                string.Join(", ", remainingLabels, labDisplayName);
+                remainingLabels = string.Join(", ", remainingLabels, labDisplayName);
         }
 
         return remainingLabels;
