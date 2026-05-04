@@ -745,6 +745,7 @@ MonoBehaviour:
   - Dream
   - Awe
   _relabelable: 0
+  _initiallyAssociatedLabelName: 
   LabeledObject:
     m_PersistentCalls:
       m_Calls: []
@@ -852,6 +853,7 @@ GameObject:
   - component: {fileID: 8381715883666112892}
   - component: {fileID: 5856889752345578674}
   - component: {fileID: 2537112023252296714}
+  - component: {fileID: 7580151232276926349}
   m_Layer: 0
   m_Name: Log trigger (2)
   m_TagString: Untagged
@@ -913,6 +915,33 @@ MonoBehaviour:
   _logTypes: 01000000
   _triggerOnce: 1
   _popUpLog: 1
+--- !u!54 &7580151232276926349
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934632646531914900}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1048132275949405289
 GameObject:
   m_ObjectHideFlags: 0
@@ -1729,6 +1758,7 @@ MonoBehaviour:
   - Dream
   - Awe
   _relabelable: 0
+  _initiallyAssociatedLabelName: 
   LabeledObject:
     m_PersistentCalls:
       m_Calls: []
@@ -3311,6 +3341,7 @@ MonoBehaviour:
   - Dream
   - Awe
   _relabelable: 0
+  _initiallyAssociatedLabelName: 
   LabeledObject:
     m_PersistentCalls:
       m_Calls: []
@@ -3530,6 +3561,7 @@ MonoBehaviour:
   - Dream
   - Awe
   _relabelable: 0
+  _initiallyAssociatedLabelName: 
   LabeledObject:
     m_PersistentCalls:
       m_Calls: []
@@ -3605,6 +3637,7 @@ MonoBehaviour:
   - Dream
   - Awe
   _relabelable: 0
+  _initiallyAssociatedLabelName: 
   LabeledObject:
     m_PersistentCalls:
       m_Calls: []
@@ -6201,6 +6234,7 @@ MonoBehaviour:
   - Dream
   - Awe
   _relabelable: 0
+  _initiallyAssociatedLabelName: 
   LabeledObject:
     m_PersistentCalls:
       m_Calls: []
