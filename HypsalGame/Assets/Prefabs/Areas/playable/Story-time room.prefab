@@ -738,6 +738,7 @@ Transform:
   - {fileID: 1864029711436891291}
   - {fileID: 207024180718409563}
   - {fileID: 1073558999590832220}
+  - {fileID: 7729138337837229259}
   m_Father: {fileID: 5358270251358715885}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &230534174977421106
@@ -4267,7 +4268,7 @@ MonoBehaviour:
       Data4: 0
     Path: 
   playOnAwake: 0
-  playOnce: 0
+  playOnce: 1
   playOnTrigger: 1
   stopOnDisable: 0
   uninterruptable: 0
@@ -5881,7 +5882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae6c3ee76ecfcea4a9f2ff781ede26d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_TimerTrigger
-  _eventDelay: 3
+  _eventDelay: 5
   _realtimeDelay: 0
   _eventToPerform:
     m_PersistentCalls:
@@ -13650,7 +13651,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8262223020611466622}
-  - {fileID: 7729138337837229259}
   - {fileID: 2783583178338573794}
   m_Father: {fileID: 1941673083308386592}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13666,7 +13666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae6c3ee76ecfcea4a9f2ff781ede26d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_TimerTrigger
-  _eventDelay: 25
+  _eventDelay: 3
   _realtimeDelay: 0
   _eventToPerform:
     m_PersistentCalls:
@@ -15260,7 +15260,7 @@ Transform:
   m_LocalScale: {x: 2.5976858, y: 18.74189, z: 18.592594}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 207024180718409563}
+  m_Father: {fileID: 1941673083308386592}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &7244313975738603707
 BoxCollider:
