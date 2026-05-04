@@ -1264,12 +1264,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
   _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
   _representedLabelName: Key
+  _representingModel: {fileID: 0}
   _prompt: 
   _possibleAssociations:
   - Wonder
   - Mystery
   - Beauty
   _relabelable: 0
+  _initiallyAssociatedLabelName: 
+  LabeledObject:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3158405770286938624
 GameObject:
   m_ObjectHideFlags: 0
@@ -2466,12 +2471,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
   _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
   _representedLabelName: Grave
+  _representingModel: {fileID: 0}
   _prompt: How does this make you feel?
   _possibleAssociations:
   - Dread
-  - Angry
-  - Sad
   _relabelable: 0
+  _initiallyAssociatedLabelName: 
+  LabeledObject:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &2091549357146719549 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 435724, guid: edd46fc5182e0d44c98fa6c5305dabb0, type: 3}
@@ -2774,12 +2782,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
   _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
   _representedLabelName: Sandwich
+  _representingModel: {fileID: 0}
   _prompt: What does this make you think of?
   _possibleAssociations:
-  - Happy
   - Love
   - Wonder
   _relabelable: 0
+  _initiallyAssociatedLabelName: 
+  LabeledObject:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &2414454773885870408
 BoxCollider:
   m_ObjectHideFlags: 0
