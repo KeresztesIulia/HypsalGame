@@ -4149,6 +4149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03439ae4853f97a4082e3dc8e12e679b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_LogOnTrigger
+  _specialLogLabelList: {fileID: 0}
   _textsToLog:
   - Do you want to hear a secret?
   _logTypes: 01000000
@@ -4178,6 +4179,7 @@ MonoBehaviour:
   playOnTrigger: 1
   stopOnDisable: 0
   uninterruptable: 0
+  _specialSubtitlesLabelList: {fileID: 0}
   subtitleText: Do you want to hear a secret?
   subtitleDuration: 3
   subtitleDelay: 0
@@ -4517,6 +4519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03439ae4853f97a4082e3dc8e12e679b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_LogOnTrigger
+  _specialLogLabelList: {fileID: 0}
   _textsToLog:
   - Door open yes?
   _logTypes: 01000000
@@ -4546,6 +4549,7 @@ MonoBehaviour:
   playOnTrigger: 1
   stopOnDisable: 0
   uninterruptable: 0
+  _specialSubtitlesLabelList: {fileID: 0}
   subtitleText: Door open yes?
   subtitleDuration: 3
   subtitleDelay: 0
@@ -7922,7 +7926,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1352047103441085140}
   - component: {fileID: 35929861898326433}
-  - component: {fileID: 6264775238275354347}
   - component: {fileID: 9013167276977455783}
   - component: {fileID: 3287200894971316851}
   m_Layer: 0
@@ -7931,7 +7934,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1352047103441085140
 Transform:
   m_ObjectHideFlags: 0
@@ -7941,7 +7944,7 @@ Transform:
   m_GameObject: {fileID: 3390915083271327786}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -933.3, y: -551.54, z: 5.9}
+  m_LocalPosition: {x: -935, y: -505, z: 9}
   m_LocalScale: {x: 135.54616, y: 18.74189, z: 133.63055}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7968,33 +7971,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &6264775238275354347
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3390915083271327786}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &9013167276977455783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8007,10 +7983,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03439ae4853f97a4082e3dc8e12e679b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_LogOnTrigger
+  _specialLogLabelList: {fileID: 0}
   _textsToLog:
   - Once upon a time, in a kingdom ruled by a kind Chicken, lived a little Water
-    named PLAYTESTER. One night, while looking at the bright Queen, PLAYTESTER realized
-    that all the stars in the pond had dried up.
+    named PLAYTESTER #[test_participant]. One night, while looking at the bright
+    Queen, PLAYTESTER #[test_participant] realized that all the stars in the pond
+    had dried up.
   _logTypes: 01000000
   _triggerOnce: 1
   _popUpLog: 1
@@ -8038,9 +8016,11 @@ MonoBehaviour:
   playOnTrigger: 1
   stopOnDisable: 0
   uninterruptable: 0
+  _specialSubtitlesLabelList: {fileID: 0}
   subtitleText: Once upon a time, in a kingdom ruled by a kind Chicken, lived a little
-    Water named PLAYTESTER. One night, while looking at the bright Queen, PLAYTESTER
-    realized that all the stars in the pond had dried up.
+    Water named PLAYTESTER #[test_participant]. One night, while looking at the bright
+    Queen, PLAYTESTER #[test_participant] realized that all the stars in the pond
+    had dried up.
   subtitleDuration: 10
   subtitleDelay: 0
   subtitleType: 0
@@ -12348,6 +12328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03439ae4853f97a4082e3dc8e12e679b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_LogOnTrigger
+  _specialLogLabelList: {fileID: 0}
   _textsToLog:
   - Save and exit using the green cube by the green pillar
   _logTypes: 01000000
@@ -12377,6 +12358,7 @@ MonoBehaviour:
   playOnTrigger: 1
   stopOnDisable: 0
   uninterruptable: 0
+  _specialSubtitlesLabelList: {fileID: 0}
   subtitleText: Save and exit using the green cube by the green pillar
   subtitleDuration: 5
   subtitleDelay: 0

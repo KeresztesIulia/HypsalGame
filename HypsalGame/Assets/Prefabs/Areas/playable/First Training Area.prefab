@@ -853,7 +853,6 @@ GameObject:
   - component: {fileID: 8381715883666112892}
   - component: {fileID: 5856889752345578674}
   - component: {fileID: 2537112023252296714}
-  - component: {fileID: 7580151232276926349}
   - component: {fileID: 3038724580973297728}
   m_Layer: 0
   m_Name: Log trigger (2)
@@ -910,39 +909,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03439ae4853f97a4082e3dc8e12e679b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_LogOnTrigger
+  _specialLogLabelList: {fileID: 0}
   _textsToLog:
   - 'The following labels can be used: awe, beauty, love, dream, death, and mystery.
     Please label two objects. Good luck and thank you for your participation.'
   _logTypes: 01000000
   _triggerOnce: 1
   _popUpLog: 1
---- !u!54 &7580151232276926349
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 934632646531914900}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &3038724580973297728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -967,6 +940,7 @@ MonoBehaviour:
   playOnTrigger: 1
   stopOnDisable: 0
   uninterruptable: 0
+  _specialSubtitlesLabelList: {fileID: 0}
   subtitleText: 'The following labels can be used: awe, beauty, love, dream, death,
     and mystery. Please label two objects. Good luck and thank you for your participation.'
   subtitleDuration: 3
@@ -1045,6 +1019,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03439ae4853f97a4082e3dc8e12e679b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_LogOnTrigger
+  _specialLogLabelList: {fileID: 0}
   _textsToLog:
   - In the upcoming training area you have to label objects.
   _logTypes: 01000000
@@ -1074,6 +1049,7 @@ MonoBehaviour:
   playOnTrigger: 1
   stopOnDisable: 0
   uninterruptable: 0
+  _specialSubtitlesLabelList: {fileID: 0}
   subtitleText: In the upcoming training area you have to label objects.
   subtitleDuration: 3
   subtitleDelay: 0
@@ -4556,7 +4532,7 @@ Transform:
   m_GameObject: {fileID: 5522627521702106464}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -960.01, y: -548.95, z: -112.43}
+  m_LocalPosition: {x: -959, y: -549.54, z: -110.38}
   m_LocalScale: {x: 6.1385, y: 5.7463, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4595,8 +4571,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03439ae4853f97a4082e3dc8e12e679b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_LogOnTrigger
+  _specialLogLabelList: {fileID: 0}
   _textsToLog:
-  - Hello playtester #28
+  - 'Hello playtester #[test_participant]'
   _logTypes: 01000000
   _triggerOnce: 1
   _popUpLog: 1
@@ -4624,7 +4601,8 @@ MonoBehaviour:
   playOnTrigger: 1
   stopOnDisable: 0
   uninterruptable: 0
-  subtitleText: Hello playtester #28
+  _specialSubtitlesLabelList: {fileID: 0}
+  subtitleText: 'Hello playtester #[test_participant]'
   subtitleDuration: 3
   subtitleDelay: 0
   subtitleType: 0
