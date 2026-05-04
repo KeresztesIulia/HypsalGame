@@ -7,6 +7,8 @@ public class script_LogOnTrigger : MonoBehaviour
     [SerializeField] bool _triggerOnce = true;
     [SerializeField] bool _popUpLog = true;
 
+    bool triggered = false;
+
     public void LogTexts()
     {
         if (_textsToLog == null || _textsToLog.Length == 0) return;
@@ -24,9 +26,9 @@ public class script_LogOnTrigger : MonoBehaviour
     {
         if (!other.CompareTag("Player")) return;
         if (_textsToLog == null || _textsToLog.Length == 0) return;
+        if (_triggerOnce && triggered) return;
 
         LogTexts();
-
-        if (_triggerOnce) enabled = false;
+        triggered = true;
     }
 }
