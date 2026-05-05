@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(Rigidbody))]
 public class script_LoveObject : MonoBehaviour
 {
     [SerializeField] string _loveObjectFollowPositionName = "LoveObjectFollowPosition";
@@ -11,8 +12,13 @@ public class script_LoveObject : MonoBehaviour
 
     Vector3 velocity;
 
+    Rigidbody rb;
+
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
+        rb.constraints = RigidbodyConstraints.FreezeAll;
+
         followTransform = FindFirstObjectByType<PlayerInput>()?.transform.Find(_loveObjectFollowPositionName);
     }
 

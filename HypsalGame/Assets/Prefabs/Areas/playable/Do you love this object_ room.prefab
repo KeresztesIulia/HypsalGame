@@ -2380,6 +2380,105 @@ MonoBehaviour:
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
   m_AreaLightEmissiveMeshLayer: -1
+--- !u!1 &1797184779307683469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6738625599197525356}
+  - component: {fileID: 3247043965976485162}
+  m_Layer: 0
+  m_Name: LoveObjectConditional
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6738625599197525356
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797184779307683469}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2287413359383410739}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3247043965976485162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797184779307683469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5a3f996607bbcc46bdd4a3a62f6e160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_AssociationConditional
+  _checkContinuously: 0
+  _ContinuousEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  _checkContinuously_negative: 0
+  _ContinuousNegativeEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  _checkChange: 0
+  _OnChangeEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  _checkChange_negative: 0
+  _OnChangeNegativeEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  _fireOnce: 1
+  _FireOnceEvents:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2879686484642677495}
+        m_TargetAssemblyTypeName: script_LoveObject, Assembly-CSharp
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  _fireOnce_negative: 0
+  _FireOnceNegativeEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  _checkAtStart: 0
+  _AtStartEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  _checkAtStart_negative: 0
+  _AtStartNegativeEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  _labelList: {fileID: 11400000, guid: 51021d9e3019d3b449304fed65e45339, type: 2}
+  _conditionLabelName1: LoveThisYesCube
+  _conditionLabelName2: LoveThisYesLabel
+  _checkAssociation: 0
+  _OnAssociationEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  _checkAssociation_negative: 0
+  _OnAssociationNegativeEvents:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1816603432112900219
 GameObject:
   m_ObjectHideFlags: 0
@@ -3506,7 +3605,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139058773070843358}
-  - component: {fileID: 697592267449085288}
+  - component: {fileID: 2753043031607056120}
   m_Layer: 0
   m_Name: LoveSandwich
   m_TagString: Untagged
@@ -3530,7 +3629,7 @@ Transform:
   - {fileID: 4262727190520128043}
   m_Father: {fileID: 5404031013475314318}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &697592267449085288
+--- !u!114 &2753043031607056120
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3539,12 +3638,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2377598951818585225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55c85d7cbeec5904ea22af2207d41ddf, type: 3}
+  m_Script: {fileID: 11500000, guid: a5a3f996607bbcc46bdd4a3a62f6e160, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::script_ConditionalRunner
-  _labelList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
-  _conditionLabelName1: Sandwich
-  _conditionLabelName2: Love
+  m_EditorClassIdentifier: Assembly-CSharp::script_AssociationConditional
   _checkContinuously: 0
   _ContinuousEvents:
     m_PersistentCalls:
@@ -3589,6 +3685,9 @@ MonoBehaviour:
   _AtStartNegativeEvents:
     m_PersistentCalls:
       m_Calls: []
+  _labelList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
+  _conditionLabelName1: Sandwich
+  _conditionLabelName2: Love
   _checkAssociation: 0
   _OnAssociationEvents:
     m_PersistentCalls:
@@ -4959,6 +5058,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4669345358006945857}
+  - component: {fileID: 2879686484642677495}
+  - component: {fileID: 7929828456727539955}
   m_Layer: 0
   m_Name: parent
   m_TagString: Untagged
@@ -4981,6 +5082,47 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6218834259591321462}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2879686484642677495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3535552338903215994}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2c416e11be7bd645b77cee583f8b299, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_LoveObject
+  _loveObjectFollowPositionName: LoveObjectFollowPosition
+  _maxFollowSpeed: 1000
+--- !u!54 &7929828456727539955
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3535552338903215994}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3595854721283301193
 GameObject:
   m_ObjectHideFlags: 0
@@ -9670,6 +9812,52 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &5912207419391757577
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3098545277930531042}
+  - component: {fileID: 9177402374388305408}
+  m_Layer: 0
+  m_Name: BeamUp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3098545277930531042
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5912207419391757577}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 895888208196420793}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9177402374388305408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5912207419391757577}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b50f54b3f0f02ec4690e51b433681698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_PlayerBeaming
+  beamPosition: {x: 453.42, y: 25.845, z: -9.5}
+  beamDuration: 1.5
 --- !u!1 &6038446087643145897
 GameObject:
   m_ObjectHideFlags: 0
@@ -9940,6 +10128,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 895888208196420793}
+  - {fileID: 6738625599197525356}
   m_Father: {fileID: 6280683420054916450}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6091061884054675451
@@ -10580,7 +10769,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 3098545277930531042}
+  - {fileID: 87917579910489088}
   m_Father: {fileID: 2287413359383410739}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8864920367621546007
@@ -10639,17 +10830,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 9177402374388305408}
+        m_TargetAssemblyTypeName: script_PlayerBeaming, Assembly-CSharp
+        m_MethodName: set_enabled
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
   _fireOnce_negative: 0
   _FireOnceNegativeEvents:
@@ -14172,6 +14363,52 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &9115802025254767630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 87917579910489088}
+  - component: {fileID: 4984813422671243314}
+  m_Layer: 0
+  m_Name: BeamDown
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &87917579910489088
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9115802025254767630}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 895888208196420793}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4984813422671243314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9115802025254767630}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b50f54b3f0f02ec4690e51b433681698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_PlayerBeaming
+  beamPosition: {x: 453.42, y: -7.2, z: -9.5}
+  beamDuration: 1.5
 --- !u!1 &9136481005103536140
 GameObject:
   m_ObjectHideFlags: 0
@@ -16528,9 +16765,17 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1240967921376703344, guid: cbeda5cf6ada2e34f947b2a06ef4b72d, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240967921376703344, guid: cbeda5cf6ada2e34f947b2a06ef4b72d, type: 3}
       propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 4007052929106647009}
+    - target: {fileID: 1240967921376703344, guid: cbeda5cf6ada2e34f947b2a06ef4b72d, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 4984813422671243314}
     - target: {fileID: 1240967921376703344, guid: cbeda5cf6ada2e34f947b2a06ef4b72d, type: 3}
       propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -16544,15 +16789,31 @@ PrefabInstance:
       value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 1240967921376703344, guid: cbeda5cf6ada2e34f947b2a06ef4b72d, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: set_enabled
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240967921376703344, guid: cbeda5cf6ada2e34f947b2a06ef4b72d, type: 3}
       propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240967921376703344, guid: cbeda5cf6ada2e34f947b2a06ef4b72d, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: script_PlayerBeaming, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1240967921376703344, guid: cbeda5cf6ada2e34f947b2a06ef4b72d, type: 3}
       propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1240967921376703344, guid: cbeda5cf6ada2e34f947b2a06ef4b72d, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240967921376703344, guid: cbeda5cf6ada2e34f947b2a06ef4b72d, type: 3}
       propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240967921376703344, guid: cbeda5cf6ada2e34f947b2a06ef4b72d, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8017459139944088168, guid: cbeda5cf6ada2e34f947b2a06ef4b72d, type: 3}
