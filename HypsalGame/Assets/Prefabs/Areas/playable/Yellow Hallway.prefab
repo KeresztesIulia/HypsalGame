@@ -8356,7 +8356,7 @@ MonoBehaviour:
   _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
   _representedLabelName: No Cube 1
   _representingModel: {fileID: 0}
-  _prompt: Are you sure?
+  _prompt: Are you sure about what you wrote on the whiteboard?
   _possibleAssociations:
   - No-1
   _relabelable: 0
@@ -16199,7 +16199,7 @@ MonoBehaviour:
   _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
   _representedLabelName: Yes Cube 1
   _representingModel: {fileID: 0}
-  _prompt: Are you sure?
+  _prompt: Are you sure about what you wrote on the whiteboard?
   _possibleAssociations:
   - Yes-1
   _relabelable: 0
@@ -67859,7 +67859,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 139e7846fa8d64f4ea1e4c1f15e02aea, type: 2}
+  - {fileID: 2100000, guid: a4d6237735a469e4da210824c233ff32, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

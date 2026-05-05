@@ -49,6 +49,54 @@ MonoBehaviour:
     MarkedRelabelable:
       m_PersistentCalls:
         m_Calls: []
+  - _internalName: YesCube-PlayGame
+    _displayName: 
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: Mirror-yourself
+    _displayName: 
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: NoCube-RoughPatch
+    _displayName: 
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: Mirror-Lai
+    _displayName: 
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
   labels:
   - _internalName: YesTrust
     _displayName: Yes
@@ -88,6 +136,126 @@ MonoBehaviour:
         m_Calls: []
   - _internalName: NoAIHelp
     _displayName: No
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: YesPlayGame
+    _displayName: Yes
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: Test participant
+    _displayName: Test participant
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: I don't know
+    _displayName: I don't know
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: A red capsule ?
+    _displayName: A red capsule ?
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: Me
+    _displayName: Me
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: You
+    _displayName: You
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: NoRoughPatch
+    _displayName: Yes
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: A red light
+    _displayName: A red light ?
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: An AI
+    _displayName: An AI
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: Lai
+    _displayName: Lai
     _relabelable: 0
     Labeled:
       m_PersistentCalls:

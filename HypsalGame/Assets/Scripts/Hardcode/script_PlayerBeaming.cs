@@ -54,6 +54,6 @@ public class script_PlayerBeaming : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(beamPosition, 1);
+        Gizmos.DrawSphere(beamPosition, 1);
     }
 }
