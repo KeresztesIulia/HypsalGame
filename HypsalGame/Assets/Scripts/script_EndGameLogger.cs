@@ -7,17 +7,30 @@ public class script_EndGameLogger : MonoBehaviour, interface_PersistentData
 
     // Un-labelings? maybee?
 
+    // Whiteboard data -- but how to connect to that... hmmm
+
+    // Other parameters
+    float timeSpentInGame = 0;
+
     private void OnApplicationQuit()
     {
-        Debug.Log(GetFinalLogOutput());
-        Debug.Log(continuousLabelingOutput);
+        Debug.Log(GatherOutputs());
+    }
+
+    string GatherOutputs()
+    {
+        return string.Join("\n\n",
+            GetFinalLogOutput(),
+            continuousLabelingOutput,
+            OtherOutput()
+        );
     }
 
     string GetFinalLogOutput()
     {
         if (!script_LabelAssociationHandler.InstanceExists) return "";
 
-        string output = "[Final Log Output]";
+        string output = "[Final Label Output]";
 
         foreach (var keyValue in script_LabelAssociationHandler.Instance.Associations)
         {
@@ -32,6 +45,26 @@ public class script_EndGameLogger : MonoBehaviour, interface_PersistentData
         }
 
         return output;
+    }
+
+    string OtherOutput()
+    {
+        string otherOutputData = "[Other data]";
+        // Total ingame time
+        int hoursSpent = (int)Mathf.Floor(timeSpentInGame / 3600);
+        int minutesSpent = (int)Mathf.Floor(timeSpentInGame / 60) - hoursSpent * 60;
+        int secondsSpent = (int)Mathf.Floor(timeSpentInGame) - minutesSpent * 60 - hoursSpent * 3600;
+        string timeSpentString = $"{(hoursSpent > 0 ? (hoursSpent + "h ") : "")} {(minutesSpent > 0 ? (minutesSpent + "m ") : "")} {(secondsSpent > 0 ? (secondsSpent + "s ") : "")}";
+        otherOutputData = string.Join("\n", otherOutputData, $"In-game time: {timeSpentString} ({timeSpentInGame} seconds)");
+
+        //
+
+        return otherOutputData;
+    }
+
+    private void Update()
+    {
+        timeSpentInGame += Time.unscaledDeltaTime;
     }
 
     // ----------- INITIALIZATION -------------
