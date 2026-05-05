@@ -4121,7 +4121,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 8.036987, y: 3.0331266, z: 1.0473961}
-  m_Center: {x: 14.675476, y: 1.0165632, z: 0.017173352}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &5451703804068492900
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13686,7 +13686,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 8.036987, y: 3.0331266, z: 1.0473961}
-  m_Center: {x: 14.675476, y: 1.0165632, z: 0.017173352}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &7875413295435596549
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18352,7 +18352,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 8.036987, y: 3.0331266, z: 1.0473961}
-  m_Center: {x: 14.675476, y: 1.0165632, z: 0.017173352}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &9059917709542280766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18396,7 +18396,7 @@ MonoBehaviour:
   stopOnDisable: 0
   uninterruptable: 0
   _specialSubtitlesLabelList: {fileID: 0}
-  subtitleText: what are you doing? Go back right now
+  subtitleText: GO BACK
   subtitleDuration: 3
   subtitleDelay: 0
   subtitleType: 0
@@ -21165,7 +21165,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 8.036987, y: 3.0331266, z: 1.0473961}
-  m_Center: {x: 14.675476, y: 1.0165632, z: 0.017173352}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &2782185953869189167
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -21207,18 +21207,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOrLine
   sound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 760463190
+      Data2: 1139083650
+      Data3: 13405596
+      Data4: 348729585
+    Path: event:/VOICE/Students/Extra Lore/Leaving
   playOnAwake: 0
   playOnce: 1
   playOnTrigger: 1
   stopOnDisable: 0
   uninterruptable: 0
   _specialSubtitlesLabelList: {fileID: 0}
-  subtitleText: "I\u2019m leaving!"
+  subtitleText: LEAVING LEAVING DONE DONE
   subtitleDuration: 3
   subtitleDelay: 0
   subtitleType: 0
@@ -46669,7 +46669,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 8.036987, y: 3.0331266, z: 1.0473961}
-  m_Center: {x: 14.675476, y: 1.0165632, z: 0.017173352}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3902643398094587293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46684,18 +46684,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOrLine
   sound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1436801857
+      Data2: 1187399650
+      Data3: -528709713
+      Data4: 497826245
+    Path: event:/VOICE/Students/Extra Lore/Trust
   playOnAwake: 0
   playOnce: 1
   playOnTrigger: 1
   stopOnDisable: 0
-  uninterruptable: 0
+  uninterruptable: 1
   _specialSubtitlesLabelList: {fileID: 0}
-  subtitleText: "Why don\u2019t you trust me?"
+  subtitleText: WHY DONT YOU TRUST ME
   subtitleDuration: 3
   subtitleDelay: 0
   subtitleType: 0
