@@ -33,27 +33,23 @@ public class script_EndGame : MonoBehaviour
         string copyDestination = Path.Combine(destinationDirectory, Path.GetFileName(fileToCopy));
 
         string buildDirectory = Path.GetDirectoryName(Application.dataPath); // send to the batch file
+        //string deletePath = Path.GetFullPath(Path.Combine(streamingAssetsPath, ".."));
+        string deletePath = Path.GetFullPath(buildDirectory);
+
 
         File.Copy(fileToCopy, copyDestination, true);
-
-        //ProcessStartInfo ProcessInfo;
 
         Process process = new Process();
 
         process.StartInfo.UseShellExecute = true;
         process.StartInfo.RedirectStandardOutput = false;
         process.StartInfo.CreateNoWindow = false;
-        //process.StartInfo.FileName = @"CMD";
-        process.StartInfo.FileName = copyDestination;
-        //process.StartInfo.Arguments = $"/c \"{copyDestination} {destinationDirectory} {copyDestination}\"";
-        //process.StartInfo.Arguments = $"/c \"{copyDestination} {destinationDirectory} {copyDestination}\"";
-        //process.StartInfo.Verb = "runas";
-        //process.StartInfo.
-
-        //SubtitleManager.Instance?.ShowSubtitle(SubtitleManager.SubtitleType.Generic, copyDestination, 10);
+        process.StartInfo.WorkingDirectory = "C:\\";
+        process.StartInfo.FileName = "powershell.exe";
+        process.StartInfo.Arguments = $"-ExecutionPolicy Bypass -file \"{copyDestination}\" -deletePath \"{deletePath}\"";
 
         UnityEngine.Debug.Log(process.Start());
-        Application.Quit();
+        Close();
 
     }
 }
