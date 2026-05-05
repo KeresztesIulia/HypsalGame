@@ -4169,11 +4169,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOrLine
   sound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1395228606
+      Data2: 1300122085
+      Data3: 767841427
+      Data4: 99404771
+    Path: event:/VOICE/Lai/HearASecret
   playOnAwake: 0
   playOnce: 0
   playOnTrigger: 1
@@ -8006,11 +8006,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOrLine
   sound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1002766443
+      Data2: 1159104796
+      Data3: 1767355287
+      Data4: 318877027
+    Path: event:/VOICE/Lai/ChickenStars
   playOnAwake: 0
   playOnce: 0
   playOnTrigger: 1
@@ -22333,6 +22333,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2129413015549365439, guid: 2e35d9def6764b9488b5aed316bc51e6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2176686720228289280, guid: 2e35d9def6764b9488b5aed316bc51e6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4130729499725818704, guid: 2e35d9def6764b9488b5aed316bc51e6, type: 3}
+      propertyPath: playOnce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4130729499725818704, guid: 2e35d9def6764b9488b5aed316bc51e6, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4130729499725818704, guid: 2e35d9def6764b9488b5aed316bc51e6, type: 3}
+      propertyPath: playOnTrigger
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6149900296936110921, guid: 2e35d9def6764b9488b5aed316bc51e6, type: 3}
