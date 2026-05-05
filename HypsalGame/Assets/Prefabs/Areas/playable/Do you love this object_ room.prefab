@@ -3605,7 +3605,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139058773070843358}
-  - component: {fileID: 697592267449085288}
+  - component: {fileID: 2753043031607056120}
   m_Layer: 0
   m_Name: LoveSandwich
   m_TagString: Untagged
@@ -3629,7 +3629,7 @@ Transform:
   - {fileID: 4262727190520128043}
   m_Father: {fileID: 5404031013475314318}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &697592267449085288
+--- !u!114 &2753043031607056120
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3638,12 +3638,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2377598951818585225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55c85d7cbeec5904ea22af2207d41ddf, type: 3}
+  m_Script: {fileID: 11500000, guid: a5a3f996607bbcc46bdd4a3a62f6e160, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::script_ConditionalRunner
-  _labelList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
-  _conditionLabelName1: Sandwich
-  _conditionLabelName2: Love
+  m_EditorClassIdentifier: Assembly-CSharp::script_AssociationConditional
   _checkContinuously: 0
   _ContinuousEvents:
     m_PersistentCalls:
@@ -3688,6 +3685,9 @@ MonoBehaviour:
   _AtStartNegativeEvents:
     m_PersistentCalls:
       m_Calls: []
+  _labelList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
+  _conditionLabelName1: Sandwich
+  _conditionLabelName2: Love
   _checkAssociation: 0
   _OnAssociationEvents:
     m_PersistentCalls:
