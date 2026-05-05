@@ -26,16 +26,15 @@ public class script_EndGame : MonoBehaviour
 
     public void Delete()
     {
+#if !UNITY_EDITOR
         string streamingAssetsPath = Application.streamingAssetsPath;
         //string fileToCopy = Path.Combine(streamingAssetsPath, "sd.bat");
         string fileToCopy = Path.Combine(streamingAssetsPath, "sd.ps1");
         string destinationDirectory = Application.persistentDataPath;
         string copyDestination = Path.Combine(destinationDirectory, Path.GetFileName(fileToCopy));
 
-        string buildDirectory = Path.GetDirectoryName(Application.dataPath); // send to the batch file
-        //string deletePath = Path.GetFullPath(Path.Combine(streamingAssetsPath, ".."));
+        string buildDirectory = Path.GetDirectoryName(Application.dataPath);
         string deletePath = Path.GetFullPath(buildDirectory);
-
 
         File.Copy(fileToCopy, copyDestination, true);
 
@@ -49,6 +48,10 @@ public class script_EndGame : MonoBehaviour
         process.StartInfo.Arguments = $"-ExecutionPolicy Bypass -file \"{copyDestination}\" -deletePath \"{deletePath}\"";
 
         UnityEngine.Debug.Log(process.Start());
+#else
+        UnityEngine.Debug.Log("Consider the AI deleted");
+#endif
+
         Close();
 
     }
