@@ -11800,6 +11800,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2419251187534880648}
+  - component: {fileID: 7879835188339636061}
   m_Layer: 0
   m_Name: Dark void hallway & Lai's concious
   m_TagString: Untagged
@@ -11838,6 +11839,25 @@ Transform:
   - {fileID: 7184213307550096299}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7879835188339636061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726069293027573364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 608fa2f243c84de499931c54d0d52b8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_PersistentInitializer
+  _subModules:
+  - {fileID: 5160447893662765269}
+  - {fileID: 3436602106828448671}
+  - {fileID: 6449501416415539780}
+  - {fileID: 9142716466744821500}
+  _instantiateSubmodules: 0
+  _parentSubmodulesToSelf: 0
 --- !u!1 &1728062121087180693
 GameObject:
   m_ObjectHideFlags: 0
@@ -42927,7 +42947,7 @@ MonoBehaviour:
   _FireOnceEvents:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5160447893662765269}
+      - m_Target: {fileID: 5393241851064346100}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
