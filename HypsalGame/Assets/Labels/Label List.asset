@@ -313,6 +313,18 @@ MonoBehaviour:
     MarkedRelabelable:
       m_PersistentCalls:
         m_Calls: []
+  - _internalName: Green cube
+    _displayName: 
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
   labels:
   - _internalName: Death
     _displayName: 
@@ -531,6 +543,18 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - _internalName: Stars
+    _displayName: 
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: Save and exit
     _displayName: 
     _relabelable: 0
     Labeled:
