@@ -22013,7 +22013,7 @@ MonoBehaviour:
   _partOfList: {fileID: 11400000, guid: ad303ef9a8d8cc9478f067f3116d22a8, type: 2}
   _representedLabelName: Mirror-Lai
   _representingModel: {fileID: 0}
-  _prompt: Guess who?
+  _prompt: Guess who's behind you?
   _possibleAssociations:
   - An AI
   - A red light
