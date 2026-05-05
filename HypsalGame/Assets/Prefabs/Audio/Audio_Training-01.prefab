@@ -28,6 +28,161 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4485445123832738759}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2863054530956376516
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4485445123832738759}
+  - component: {fileID: 4227002014075107687}
+  - component: {fileID: 3303196647022845573}
+  - component: {fileID: 212174290776356503}
+  m_Layer: 0
+  m_Name: Audio Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4485445123832738759
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2863054530956376516}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -960.128, y: -537.6, z: -25.92}
+  m_LocalScale: {x: 4, y: 5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 100076375383787154}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &4227002014075107687
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2863054530956376516}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &3303196647022845573
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2863054530956376516}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &212174290776356503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2863054530956376516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2d2c3a0e8a41e341a81cffe0f54332c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_PlaySounds
+  sequence:
+  - sound:
+      Guid:
+        Data1: -1250326271
+        Data2: 1100312649
+        Data3: 1999101830
+        Data4: -117484718
+      Path: event:/VOICE/Training Area/TA1_Part-01
+    delayBeforeSound: 0
+    subtitleType: 0
+    subtitleText: Alright, so you can only label two objects here.
+    subtitleDelay: 0
+    subtitleDuration: 0
+    useSoundLengthForSubtitleDuration: 1
+    waitForSoundToFinish: 1
+    secondsBeforeNextSound: 0
+    delayAfterSound: 0
+  - sound:
+      Guid:
+        Data1: -1046216483
+        Data2: 1134069210
+        Data3: -1442007367
+        Data4: 707434214
+      Path: event:/VOICE/Training Area/TA1_Part-02
+    delayBeforeSound: 0
+    subtitleType: 0
+    subtitleText: This will help the Director understand what resonates with you
+      the most.
+    subtitleDelay: 0
+    subtitleDuration: 0
+    useSoundLengthForSubtitleDuration: 1
+    waitForSoundToFinish: 1
+    secondsBeforeNextSound: 0
+    delayAfterSound: 0
+  - sound:
+      Guid:
+        Data1: 1281817257
+        Data2: 1111208109
+        Data3: -29007483
+        Data4: -1017394538
+      Path: event:/VOICE/Training Area/TA1_Part-03
+    delayBeforeSound: 0
+    subtitleType: 0
+    subtitleText: The next room will be the same.
+    subtitleDelay: 0
+    subtitleDuration: 0
+    useSoundLengthForSubtitleDuration: 1
+    waitForSoundToFinish: 1
+    secondsBeforeNextSound: 0
+    delayAfterSound: 0
+  - sound:
+      Guid:
+        Data1: -970367838
+        Data2: 1294323869
+        Data3: -1458050926
+        Data4: -756793926
+      Path: event:/VOICE/Training Area/TA1_Part-04
+    delayBeforeSound: 0
+    subtitleType: 0
+    subtitleText: After that, the Director will start customizing more and more of
+      your experience.
+    subtitleDelay: 0
+    subtitleDuration: 0
+    useSoundLengthForSubtitleDuration: 1
+    waitForSoundToFinish: 1
+    secondsBeforeNextSound: 0
+    delayAfterSound: 0
+  playOnAwake: 0
+  playOnce: 1
+  playOnTrigger: 1
+  stopOnDisable: 0
+  ignoreTriggerWhileSequenceIsPlaying: 1
+  subtitleManager: {fileID: 0}
+  fallbackSubtitleDuration: 3
+  soundLengthSubtitleMaximumDuration: 600
+  refreshSubtitleWhileSoundPlays: 1
+  subtitleRefreshInterval: 1
+  subtitleRefreshDuration: 5
+  debugSubtitleMessages: 0

@@ -16,6 +16,8 @@ public class script_PlaySounds : MonoBehaviour
         public float delayBeforeSound = 0f;
 
         [Header("Subtitle Optional")]
+        public SubtitleManager.SubtitleType subtitleType;
+
         [TextArea]
         public string subtitleText;
         public float subtitleDelay = 0f;
@@ -45,6 +47,9 @@ public class script_PlaySounds : MonoBehaviour
     [SerializeField] private bool playOnTrigger = true;
     [SerializeField] private bool stopOnDisable;
 
+    [Tooltip("If true, entering the trigger again while the sequence is already playing will not restart it.")]
+    [SerializeField] private bool ignoreTriggerWhileSequenceIsPlaying = true;
+
     [Header("Subtitles")]
     [Tooltip("Optional. If this is left empty, the script will use SubtitleManager.Instance. Assign this manually if subtitles are not appearing.")]
     [SerializeField] private SubtitleManager subtitleManager;
@@ -68,9 +73,11 @@ public class script_PlaySounds : MonoBehaviour
     [SerializeField] private bool debugSubtitleMessages = false;
 
     private bool soundPlayed = false;
+    private bool isSequencePlaying = false;
     private Coroutine sequenceCoroutine;
     private EventInstance currentSoundInstance;
     private SubtitleManager currentSubtitleManager;
+    private SubtitleManager.SubtitleType currentSubtitleType;
     private int activeSubtitleToken = 0;
 
     private readonly List<EventInstance> activeSoundInstances = new List<EventInstance>();
@@ -90,20 +97,38 @@ public class script_PlaySounds : MonoBehaviour
     {
         if (playOnce && soundPlayed)
         {
+            if (debugSubtitleMessages)
+            {
+                UnityEngine.Debug.Log($"Playback blocked on {gameObject.name}: Play Once is enabled and this sequence has already started once.", this);
+            }
+
+            return;
+        }
+
+        if (ignoreTriggerWhileSequenceIsPlaying && isSequencePlaying)
+        {
+            if (debugSubtitleMessages)
+            {
+                UnityEngine.Debug.Log($"Playback blocked on {gameObject.name}: the sequence is already playing.", this);
+            }
+
             return;
         }
 
         soundPlayed = true;
 
-        StopSound();
+        StopCurrentPlaybackWithoutResettingPlayOnce();
         sequenceCoroutine = StartCoroutine(PlaySequence());
     }
 
     private IEnumerator PlaySequence()
     {
+        isSequencePlaying = true;
+
         if (sequence == null || sequence.Length == 0)
         {
             sequenceCoroutine = null;
+            isSequencePlaying = false;
             yield break;
         }
 
@@ -167,6 +192,7 @@ public class script_PlaySounds : MonoBehaviour
         }
 
         sequenceCoroutine = null;
+        isSequencePlaying = false;
     }
 
     private void TryShowSubtitle(SoundSubtitlePair entry, EventInstance soundInstance, bool soundStarted, int sequenceIndex)
@@ -190,15 +216,16 @@ public class script_PlaySounds : MonoBehaviour
         }
 
         currentSubtitleManager = manager;
+        currentSubtitleType = entry.subtitleType;
 
         if (entry.useSoundLengthForSubtitleDuration && soundStarted)
         {
-            StartCoroutine(ShowSubtitleWhileSoundPlays(manager, entry.subtitleText, entry.subtitleDelay, soundInstance, sequenceIndex));
+            StartCoroutine(ShowSubtitleWhileSoundPlays(manager, entry.subtitleType, entry.subtitleText, entry.subtitleDelay, soundInstance, sequenceIndex));
             return;
         }
 
         float duration = GetSubtitleDuration(entry, soundInstance, soundStarted, sequenceIndex);
-        StartCoroutine(ShowSubtitleWithDelay(manager, entry.subtitleText, duration, entry.subtitleDelay));
+        StartCoroutine(ShowSubtitleWithDelay(manager, entry.subtitleType, entry.subtitleText, duration, entry.subtitleDelay));
     }
 
     private SubtitleManager GetSubtitleManager()
@@ -272,7 +299,7 @@ public class script_PlaySounds : MonoBehaviour
         return lengthMilliseconds / 1000f;
     }
 
-    private IEnumerator ShowSubtitleWithDelay(SubtitleManager manager, string text, float duration, float delay)
+    private IEnumerator ShowSubtitleWithDelay(SubtitleManager manager, SubtitleManager.SubtitleType type, string text, float duration, float delay)
     {
         if (delay > 0f)
         {
@@ -282,11 +309,11 @@ public class script_PlaySounds : MonoBehaviour
         if (manager != null)
         {
             activeSubtitleToken++;
-            manager.ShowSubtitle(SubtitleManager.SubtitleType.Generic, text, duration);
+            manager.ShowSubtitle(type, text, duration);
         }
     }
 
-    private IEnumerator ShowSubtitleWhileSoundPlays(SubtitleManager manager, string text, float delay, EventInstance soundInstance, int sequenceIndex)
+    private IEnumerator ShowSubtitleWhileSoundPlays(SubtitleManager manager, SubtitleManager.SubtitleType type, string text, float delay, EventInstance soundInstance, int sequenceIndex)
     {
         if (delay > 0f)
         {
@@ -314,7 +341,7 @@ public class script_PlaySounds : MonoBehaviour
             UnityEngine.Debug.Log($"Subtitle on {gameObject.name}, sequence entry {sequenceIndex}, is now following the actual FMOD playback state.", this);
         }
 
-        manager.ShowSubtitle(SubtitleManager.SubtitleType.Generic, text, refreshSubtitleWhileSoundPlays ? refreshDuration : maximumDuration);
+        manager.ShowSubtitle(type, text, refreshSubtitleWhileSoundPlays ? refreshDuration : maximumDuration);
 
         while (elapsed < maximumDuration)
         {
@@ -330,7 +357,7 @@ public class script_PlaySounds : MonoBehaviour
 
             if (refreshSubtitleWhileSoundPlays)
             {
-                manager.ShowSubtitle(SubtitleManager.SubtitleType.Generic, text, refreshDuration);
+                manager.ShowSubtitle(type, text, refreshDuration);
             }
 
             yield return new WaitForSeconds(refreshInterval);
@@ -344,7 +371,7 @@ public class script_PlaySounds : MonoBehaviour
 
         if (mySubtitleToken == activeSubtitleToken)
         {
-            ClearSubtitle(manager);
+            ClearSubtitle(manager, type);
         }
     }
 
@@ -408,7 +435,7 @@ public class script_PlaySounds : MonoBehaviour
         activeSoundInstances.RemoveAll(instance => !instance.isValid() || instance.Equals(soundInstance));
     }
 
-    private void ClearSubtitle(SubtitleManager manager)
+    private void ClearSubtitle(SubtitleManager manager, SubtitleManager.SubtitleType type)
     {
         if (manager == null)
         {
@@ -425,7 +452,7 @@ public class script_PlaySounds : MonoBehaviour
             return;
         }
 
-        manager.ShowSubtitle(SubtitleManager.SubtitleType.Generic, string.Empty, 0.1f);
+        manager.ShowSubtitle(type, string.Empty, 0.1f);
     }
 
     private bool TryCallSubtitleMethod(SubtitleManager manager, string methodName)
@@ -474,6 +501,11 @@ public class script_PlaySounds : MonoBehaviour
 
     public void StopSound()
     {
+        StopCurrentPlaybackWithoutResettingPlayOnce();
+    }
+
+    private void StopCurrentPlaybackWithoutResettingPlayOnce()
+    {
         activeSubtitleToken++;
 
         if (sequenceCoroutine != null)
@@ -484,7 +516,7 @@ public class script_PlaySounds : MonoBehaviour
 
         if (currentSubtitleManager != null)
         {
-            ClearSubtitle(currentSubtitleManager);
+            ClearSubtitle(currentSubtitleManager, currentSubtitleType);
             currentSubtitleManager = null;
         }
 
@@ -501,6 +533,7 @@ public class script_PlaySounds : MonoBehaviour
 
         activeSoundInstances.Clear();
         currentSoundInstance = default;
+        isSequencePlaying = false;
     }
 
     private void OnDisable()
