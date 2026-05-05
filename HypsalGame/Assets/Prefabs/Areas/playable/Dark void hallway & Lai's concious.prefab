@@ -10405,7 +10405,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 2528344271002795879}
+      - m_Target: {fileID: 2675819680759500344}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -10435,7 +10435,19 @@ MonoBehaviour:
   _checkAssociation: 0
   _OnAssociationEvents:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _checkAssociation_negative: 0
   _OnAssociationNegativeEvents:
     m_PersistentCalls:
@@ -12964,7 +12976,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 2528344271002795879}
+      - m_Target: {fileID: 8848021036166378445}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -55754,22 +55766,43 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2691312169434798123, guid: 9875d3f448bd8ed4081b18279d7aa2fb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682616539200042223, guid: 9875d3f448bd8ed4081b18279d7aa2fb, type: 3}
+      propertyPath: uninterruptable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605912261883618701, guid: 9875d3f448bd8ed4081b18279d7aa2fb, type: 3}
+      propertyPath: uninterruptable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8692592429328615844, guid: 9875d3f448bd8ed4081b18279d7aa2fb, type: 3}
       propertyPath: m_Name
       value: Audio_Dark-Void
       objectReference: {fileID: 0}
-    - target: {fileID: 8972703038288057473, guid: 9875d3f448bd8ed4081b18279d7aa2fb, type: 3}
+    - target: {fileID: 8840954998579979742, guid: 9875d3f448bd8ed4081b18279d7aa2fb, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8972703038288057473, guid: 9875d3f448bd8ed4081b18279d7aa2fb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9875d3f448bd8ed4081b18279d7aa2fb, type: 3}
---- !u!1 &2528344271002795879 stripped
+--- !u!1 &2675819680759500344 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 8972703038288057473, guid: 9875d3f448bd8ed4081b18279d7aa2fb, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8840954998579979742, guid: 9875d3f448bd8ed4081b18279d7aa2fb, type: 3}
+  m_PrefabInstance: {fileID: 6886859698167458790}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8848021036166378445 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2691312169434798123, guid: 9875d3f448bd8ed4081b18279d7aa2fb, type: 3}
   m_PrefabInstance: {fileID: 6886859698167458790}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &9186774408937122111 stripped
