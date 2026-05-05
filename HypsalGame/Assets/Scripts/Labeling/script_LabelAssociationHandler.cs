@@ -1,9 +1,12 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class script_LabelAssociationHandler : MonoBehaviour, interface_PersistentData
 {
+    public Action<Label, Label, GameObject> Associated;
+
     public static script_LabelAssociationHandler Instance;
     public static bool InstanceExists => Instance != null;
     public static UnityEvent OnAnyAssociation = new();
@@ -39,6 +42,8 @@ public class script_LabelAssociationHandler : MonoBehaviour, interface_Persisten
 
             associations.Add(label1, associationData);
             if (fireEvents) label1.Associated(label2);
+
+            if (Associated != null) Associated(label1, label2, representingModel);
 
             if (label1 == label2) return;
 
