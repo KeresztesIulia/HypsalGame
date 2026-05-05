@@ -2,9 +2,10 @@ param(
 [string]$deletePath="unset"
 )
 
+Write-Host "Removing AI..."
+
 Start-Sleep -Seconds 1
 
-Write-Host "Removing AI..."
 
 for ($i = 0; $i -lt 10; $i++) {
     try {
