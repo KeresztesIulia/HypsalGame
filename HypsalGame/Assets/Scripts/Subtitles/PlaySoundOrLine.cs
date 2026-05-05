@@ -21,6 +21,7 @@ public class PlaySoundOrLine : MonoBehaviour
     private EventInstance soundInstance;
 
     [Header("Subtitle")]
+    [SerializeField] script_so_LabelList _specialSubtitlesLabelList;
     [SerializeField] private string subtitleText;
     [SerializeField] private float subtitleDuration = 3f;
     [SerializeField] private float subtitleDelay = 0f; // Delay before the subtitle appears
@@ -73,8 +74,9 @@ public class PlaySoundOrLine : MonoBehaviour
     private IEnumerator ShowSubtitleWithDelay()
     {
         yield return new WaitForSeconds(subtitleDelay); // Wait before showing the subtitle
-        if (!dontLog && script_ui_LabelLog.Instance != null) script_ui_LabelLog.LogSubtitle(subtitleText, subtitleType, endConversation);
-        SubtitleManager.Instance.ShowSubtitle(subtitleType, subtitleText, subtitleDuration);
+        string remodelledSubtitleText = static_LogTextRemodeller.RemodelText(subtitleText, _specialSubtitlesLabelList);
+        if (!dontLog && script_ui_LabelLog.Instance != null) script_ui_LabelLog.LogSubtitle(remodelledSubtitleText, subtitleType, endConversation);
+        SubtitleManager.Instance.ShowSubtitle(subtitleType, remodelledSubtitleText, subtitleDuration);
     }
 
     private IEnumerator InvokeEndEvent()

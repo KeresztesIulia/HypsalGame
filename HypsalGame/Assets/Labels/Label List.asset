@@ -265,10 +265,70 @@ MonoBehaviour:
     MarkedRelabelable:
       m_PersistentCalls:
         m_Calls: []
+  - _internalName: Dead tree
+    _displayName: 
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: Sand castle
+    _displayName: 
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: Big sandwich
+    _displayName: 
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: Floating island
+    _displayName: 
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: Green cube
+    _displayName: 
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
   labels:
   - _internalName: Death
     _displayName: 
-    _relabelable: 1
+    _relabelable: 0
     Labeled:
       m_PersistentCalls:
         m_Calls: []
@@ -280,7 +340,7 @@ MonoBehaviour:
         m_Calls: []
   - _internalName: Love
     _displayName: 
-    _relabelable: 1
+    _relabelable: 0
     Labeled:
       m_PersistentCalls:
         m_Calls: []
@@ -292,7 +352,7 @@ MonoBehaviour:
         m_Calls: []
   - _internalName: Awe
     _displayName: 
-    _relabelable: 1
+    _relabelable: 0
     Labeled:
       m_PersistentCalls:
         m_Calls: []
@@ -304,7 +364,7 @@ MonoBehaviour:
         m_Calls: []
   - _internalName: Beauty
     _displayName: 
-    _relabelable: 1
+    _relabelable: 0
     Labeled:
       m_PersistentCalls:
         m_Calls: []
@@ -316,7 +376,7 @@ MonoBehaviour:
         m_Calls: []
   - _internalName: Mystery
     _displayName: 
-    _relabelable: 1
+    _relabelable: 0
     Labeled:
       m_PersistentCalls:
         m_Calls: []
@@ -352,7 +412,7 @@ MonoBehaviour:
         m_Calls: []
   - _internalName: Dream
     _displayName: 
-    _relabelable: 1
+    _relabelable: 0
     Labeled:
       m_PersistentCalls:
         m_Calls: []
@@ -436,6 +496,66 @@ MonoBehaviour:
         m_Calls: []
   - _internalName: AIHelp_No
     _displayName: No
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: Chicken
+    _displayName: 
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: Water
+    _displayName: 
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: Queen
+    _displayName: 
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: Stars
+    _displayName: 
+    _relabelable: 0
+    Labeled:
+      m_PersistentCalls:
+        m_Calls: []
+    Unlabeled:
+      m_PersistentCalls:
+        m_Calls: []
+    MarkedRelabelable:
+      m_PersistentCalls:
+        m_Calls: []
+  - _internalName: Save and exit
+    _displayName: 
     _relabelable: 0
     Labeled:
       m_PersistentCalls:
