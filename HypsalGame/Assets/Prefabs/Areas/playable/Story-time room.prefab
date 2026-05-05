@@ -8006,11 +8006,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOrLine
   sound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1002766443
+      Data2: 1159104796
+      Data3: 1767355287
+      Data4: 318877027
+    Path: event:/VOICE/Lai/ChickenStars
   playOnAwake: 0
   playOnce: 0
   playOnTrigger: 1

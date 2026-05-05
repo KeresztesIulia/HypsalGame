@@ -108,6 +108,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-7881941393834913308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOICE/Students/Backstory/Backstory_Part-06
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/VOICE/Students/Backstory/Backstory_Part-06
+  Guid:
+    Data1: 405796731
+    Data2: 1187376291
+    Data3: 1474032299
+    Data4: -1085573606
+  Banks:
+  - {fileID: -1798069484379119058}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-7674924743383282083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,6 +216,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-6548922530793628145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Osterei/IDontEat
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Osterei/IDontEat
+  Guid:
+    Data1: -1610746873
+    Data2: 1177072949
+    Data3: 1370117028
+    Data4: 1434564395
+  Banks:
+  - {fileID: -1798069484379119058}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-6315246888883800273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,33 +265,6 @@ MonoBehaviour:
   - {fileID: -1798069484379119058}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-5453888193884283201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VOICE/Students/Test
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/VOICE/Students/Test
-  Guid:
-    Data1: 1165712294
-    Data2: 1272523107
-    Data3: 1510204851
-    Data4: 843254802
-  Banks:
-  - {fileID: -1798069484379119058}
-  IsStream: 1
-  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
@@ -270,6 +297,87 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-4708617294133121587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOICE/Students/Extra Lore/Hippopotamus
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/VOICE/Students/Extra Lore/Hippopotamus
+  Guid:
+    Data1: 1165712294
+    Data2: 1272523107
+    Data3: 1510204851
+    Data4: 843254802
+  Banks:
+  - {fileID: -1798069484379119058}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4652743964481172430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOICE/Students/Extra Lore/HejMor
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/VOICE/Students/Extra Lore/HejMor
+  Guid:
+    Data1: 343236059
+    Data2: 1332965653
+    Data3: 744872613
+    Data4: -357681569
+  Banks:
+  - {fileID: -1798069484379119058}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4586291256852911663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOICE/Students/Backstory/Backstory_Part-07
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/VOICE/Students/Backstory/Backstory_Part-07
+  Guid:
+    Data1: 2122316648
+    Data2: 1112610025
+    Data3: 215833780
+    Data4: 1833772263
+  Banks:
+  - {fileID: -1798069484379119058}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4392133349828379667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,6 +396,33 @@ MonoBehaviour:
     Data2: 1318570099
     Data3: -885768304
     Data4: -1782911690
+  Banks:
+  - {fileID: -1798069484379119058}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3923531552227346940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOICE/Lai/ItsBeenRough
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/VOICE/Lai/ItsBeenRough
+  Guid:
+    Data1: 968366751
+    Data2: 1163419677
+    Data3: 639534981
+    Data4: -106847109
   Banks:
   - {fileID: -1798069484379119058}
   IsStream: 0
@@ -351,6 +486,87 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-2964645227907625400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOICE/Students/Backstory/Backstory_Part-01
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/VOICE/Students/Backstory/Backstory_Part-01
+  Guid:
+    Data1: 1411155903
+    Data2: 1253482506
+    Data3: 744491185
+    Data4: 631276063
+  Banks:
+  - {fileID: -1798069484379119058}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2807603288199802006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOICE/Students/Backstory/Backstory_Part-03
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/VOICE/Students/Backstory/Backstory_Part-03
+  Guid:
+    Data1: 168479597
+    Data2: 1240488159
+    Data3: -1562147196
+    Data4: 1408065138
+  Banks:
+  - {fileID: -1798069484379119058}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2443730892474668992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOICE/Students/Backstory/Backstory_Part-02
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/VOICE/Students/Backstory/Backstory_Part-02
+  Guid:
+    Data1: -1745448152
+    Data2: 1142249073
+    Data3: -1679609935
+    Data4: 1972380075
+  Banks:
+  - {fileID: -1798069484379119058}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1798069484379119058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -366,7 +582,7 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/banks/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639135781631198712
+  lastModified: 639135998321886742
   FileSizes: []
   Exists: 1
 --- !u!114 &-1706960760305134854
@@ -391,6 +607,114 @@ MonoBehaviour:
   - {fileID: -1798069484379119058}
   IsStream: 0
   Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1677090574375204110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Osterei/HowAboutThis
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Osterei/HowAboutThis
+  Guid:
+    Data1: -19741044
+    Data2: 1339973827
+    Data3: -1270057812
+    Data4: -1332479561
+  Banks:
+  - {fileID: -1798069484379119058}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1472232653545903781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOICE/Lai/PlayAGame
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/VOICE/Lai/PlayAGame
+  Guid:
+    Data1: -1004188204
+    Data2: 1247491578
+    Data3: -1325521244
+    Data4: 1835630039
+  Banks:
+  - {fileID: -1798069484379119058}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1137759784681468857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOICE/Students/Backstory/Backstory_Part-08
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/VOICE/Students/Backstory/Backstory_Part-08
+  Guid:
+    Data1: -686198917
+    Data2: 1112712557
+    Data3: -1436710721
+    Data4: 1933266011
+  Banks:
+  - {fileID: -1798069484379119058}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-393210869107470891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOICE/Students/Extra Lore/TechIssues
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/VOICE/Students/Extra Lore/TechIssues
+  Guid:
+    Data1: 561683779
+    Data2: 1243668865
+    Data3: 1323322042
+    Data4: 2064512199
+  Banks:
+  - {fileID: -1798069484379119058}
+  IsStream: 1
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
@@ -428,18 +752,39 @@ MonoBehaviour:
   - {fileID: 5329484433272140326}
   - {fileID: -8855555508882082188}
   - {fileID: 8322177091957178253}
-  - {fileID: -5453888193884283201}
   - {fileID: -7539483750319003676}
   - {fileID: -7920101481849392450}
   - {fileID: -3283174179457110891}
   - {fileID: 4285756360613534025}
+  - {fileID: -6548922530793628145}
+  - {fileID: -2443730892474668992}
+  - {fileID: 6618680635239934495}
+  - {fileID: 7284340163113103654}
+  - {fileID: -393210869107470891}
+  - {fileID: -4586291256852911663}
+  - {fileID: 278071606812999441}
+  - {fileID: -2807603288199802006}
+  - {fileID: -1137759784681468857}
+  - {fileID: -7881941393834913308}
+  - {fileID: -1677090574375204110}
+  - {fileID: 6496292014573913090}
+  - {fileID: -3923531552227346940}
+  - {fileID: -4708617294133121587}
+  - {fileID: 988988166201029179}
+  - {fileID: 8880588067943711959}
+  - {fileID: -2964645227907625400}
+  - {fileID: -1472232653545903781}
+  - {fileID: -4652743964481172430}
+  - {fileID: 2118434576770539990}
+  - {fileID: 584507284675662005}
+  - {fileID: 3365047954687510916}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1798069484379119058}
   StringsBanks:
   - {fileID: 4235524573815359642}
   cacheVersion: 131858
-  cacheTime: 639135781631208704
+  cacheTime: 639135998321898942
   SerializableEventsDict:
   - key: event:/VOICE/Intro/Intro_Part03
     index: 0
@@ -473,16 +818,139 @@ MonoBehaviour:
     index: 14
   - key: event:/VOICE/Lai/Scream
     index: 15
-  - key: event:/VOICE/Students/Test
-    index: 16
   - key: event:/VOICE/Training Area/TA1_Part-01
-    index: 17
+    index: 16
   - key: event:/VOICE/Training Area/TA1_Part-04
-    index: 18
+    index: 17
   - key: event:/VOICE/Training Area/TA1_Part-03
-    index: 19
+    index: 18
   - key: event:/VOICE/Training Area/TA1_Part-02
+    index: 19
+  - key: event:/Osterei/IDontEat
     index: 20
+  - key: event:/VOICE/Students/Backstory/Backstory_Part-02
+    index: 21
+  - key: event:/VOICE/Students/Extra Lore/Trust
+    index: 22
+  - key: event:/VOICE/Lai/HearASecret
+    index: 23
+  - key: event:/VOICE/Students/Extra Lore/TechIssues
+    index: 24
+  - key: event:/VOICE/Students/Backstory/Backstory_Part-07
+    index: 25
+  - key: event:/VOICE/Lai/Help01
+    index: 26
+  - key: event:/VOICE/Students/Backstory/Backstory_Part-03
+    index: 27
+  - key: event:/VOICE/Students/Backstory/Backstory_Part-08
+    index: 28
+  - key: event:/VOICE/Students/Backstory/Backstory_Part-06
+    index: 29
+  - key: event:/Osterei/HowAboutThis
+    index: 30
+  - key: event:/VOICE/Lai/ChickenStars
+    index: 31
+  - key: event:/VOICE/Lai/ItsBeenRough
+    index: 32
+  - key: event:/VOICE/Students/Extra Lore/Hippopotamus
+    index: 33
+  - key: event:/VOICE/Lai/ThankYou
+    index: 34
+  - key: event:/VOICE/Lai/Help02
+    index: 35
+  - key: event:/VOICE/Students/Backstory/Backstory_Part-01
+    index: 36
+  - key: event:/VOICE/Lai/PlayAGame
+    index: 37
+  - key: event:/VOICE/Students/Extra Lore/HejMor
+    index: 38
+  - key: event:/VOICE/Students/Backstory/Backstory_Part-04
+    index: 39
+  - key: event:/Osterei/DinMor
+    index: 40
+  - key: event:/VOICE/Students/Backstory/Backstory_Part-05
+    index: 41
+--- !u!114 &278071606812999441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOICE/Lai/Help01
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/VOICE/Lai/Help01
+  Guid:
+    Data1: -1999629205
+    Data2: 1104967731
+    Data3: 363080095
+    Data4: -1876919135
+  Banks:
+  - {fileID: -1798069484379119058}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &584507284675662005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Osterei/DinMor
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Osterei/DinMor
+  Guid:
+    Data1: -321276447
+    Data2: 1238652614
+    Data3: 1113608837
+    Data4: 1688150102
+  Banks:
+  - {fileID: -1798069484379119058}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &988988166201029179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOICE/Lai/ThankYou
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/VOICE/Lai/ThankYou
+  Guid:
+    Data1: 2070510503
+    Data2: 1097692202
+    Data3: 1160373385
+    Data4: 1799488622
+  Banks:
+  - {fileID: -1798069484379119058}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &1231942339133162207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -510,6 +978,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &2118434576770539990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOICE/Students/Backstory/Backstory_Part-04
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/VOICE/Students/Backstory/Backstory_Part-04
+  Guid:
+    Data1: -1658319392
+    Data2: 1312526379
+    Data3: -1700689992
+    Data4: 1259155665
+  Banks:
+  - {fileID: -1798069484379119058}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3365047954687510916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOICE/Students/Backstory/Backstory_Part-05
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/VOICE/Students/Backstory/Backstory_Part-05
+  Guid:
+    Data1: 698132199
+    Data2: 1194850211
+    Data3: 2056410265
+    Data4: 1325949833
+  Banks:
+  - {fileID: -1798069484379119058}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4235524573815359642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -525,10 +1047,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/banks/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639135781631208704
+  lastModified: 639135998321898942
   FileSizes:
   - Name: 
-    Value: 1548
+    Value: 2482
   Exists: 1
 --- !u!114 &4285756360613534025
 MonoBehaviour:
@@ -638,6 +1160,87 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &6496292014573913090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOICE/Lai/ChickenStars
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/VOICE/Lai/ChickenStars
+  Guid:
+    Data1: -1002766443
+    Data2: 1159104796
+    Data3: 1767355287
+    Data4: 318877027
+  Banks:
+  - {fileID: -1798069484379119058}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6618680635239934495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOICE/Students/Extra Lore/Trust
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/VOICE/Students/Extra Lore/Trust
+  Guid:
+    Data1: 1436801857
+    Data2: 1187399650
+    Data3: -528709713
+    Data4: 497826245
+  Banks:
+  - {fileID: -1798069484379119058}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &7284340163113103654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOICE/Lai/HearASecret
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/VOICE/Lai/HearASecret
+  Guid:
+    Data1: -1395228606
+    Data2: 1300122085
+    Data3: 767841427
+    Data4: 99404771
+  Banks:
+  - {fileID: -1798069484379119058}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &7671193629327431482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -688,6 +1291,33 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8880588067943711959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOICE/Lai/Help02
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/VOICE/Lai/Help02
+  Guid:
+    Data1: 382211502
+    Data2: 1309030403
+    Data3: -232963961
+    Data4: -642556574
+  Banks:
+  - {fileID: -1798069484379119058}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20

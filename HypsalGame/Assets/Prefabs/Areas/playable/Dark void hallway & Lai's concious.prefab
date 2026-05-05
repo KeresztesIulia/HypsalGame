@@ -10405,6 +10405,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 2528344271002795879}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   _fireOnce_negative: 0
   _FireOnceNegativeEvents:
     m_PersistentCalls:
@@ -12952,6 +12964,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 2528344271002795879}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   _fireOnce_negative: 0
   _FireOnceNegativeEvents:
     m_PersistentCalls:
@@ -14977,8 +15001,8 @@ Transform:
   m_GameObject: {fileID: 2716872900154616118}
   serializedVersion: 2
   m_LocalRotation: {x: -0.12487743, y: -0.83164424, z: -0.10685623, w: -0.5304294}
-  m_LocalPosition: {x: -480.84, y: -550.27, z: -101.91}
-  m_LocalScale: {x: 12.283491, y: 0.17844376, z: 15.972498}
+  m_LocalPosition: {x: -479.35, y: -550.2, z: -102.59}
+  m_LocalScale: {x: 12.283491, y: 0.17844376, z: 12.73}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2853174512941104580}
@@ -17448,6 +17472,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 4869597541393940766}
+  - {fileID: 6686520103105293182}
+  - {fileID: 4717896996297927095}
   - {fileID: 4761340476943119771}
   - {fileID: 8888480183987785936}
   - {fileID: 7541117273975243235}
@@ -17499,9 +17526,6 @@ Transform:
   - {fileID: 1895886470066468837}
   - {fileID: 6658922728310147359}
   - {fileID: 4389833746222480045}
-  - {fileID: 4869597541393940766}
-  - {fileID: 6686520103105293182}
-  - {fileID: 4717896996297927095}
   - {fileID: 8172770179228844260}
   - {fileID: 8263762222641601188}
   - {fileID: 7340734895313165551}
@@ -38217,7 +38241,7 @@ Transform:
   m_GameObject: {fileID: 6566075378769744647}
   serializedVersion: 2
   m_LocalRotation: {x: 0.12961352, y: -0.51388514, z: 0.075264536, w: 0.8446643}
-  m_LocalPosition: {x: -527.54, y: -546.19, z: -91.28}
+  m_LocalPosition: {x: -527.32, y: -546.19, z: -90.87}
   m_LocalScale: {x: 12.283491, y: 0.17844376, z: 58.460926}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -48128,7 +48152,7 @@ Transform:
   m_GameObject: {fileID: 8231508759313702198}
   serializedVersion: 2
   m_LocalRotation: {x: -0.12995008, y: -0.9640588, z: 0.01890854, w: 0.2309678}
-  m_LocalPosition: {x: -489.36, y: -544.78, z: -109.72}
+  m_LocalPosition: {x: -480.32, y: -547.49, z: -114.41}
   m_LocalScale: {x: 58.92549, y: 0.17844376, z: 12.388504}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -55734,11 +55758,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audio_Dark-Void
       objectReference: {fileID: 0}
+    - target: {fileID: 8972703038288057473, guid: 9875d3f448bd8ed4081b18279d7aa2fb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9875d3f448bd8ed4081b18279d7aa2fb, type: 3}
+--- !u!1 &2528344271002795879 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8972703038288057473, guid: 9875d3f448bd8ed4081b18279d7aa2fb, type: 3}
+  m_PrefabInstance: {fileID: 6886859698167458790}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9186774408937122111 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2373098825442198233, guid: 9875d3f448bd8ed4081b18279d7aa2fb, type: 3}
