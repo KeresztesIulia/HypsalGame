@@ -89,7 +89,7 @@ MonoBehaviour:
   uninterruptable: 1
   _specialSubtitlesLabelList: {fileID: 0}
   subtitleText: 
-  subtitleDuration: 3
+  subtitleDuration: 4.5
   subtitleDelay: 0
   subtitleType: 0
   nextSound: {fileID: 4682616539200042223}
@@ -97,7 +97,19 @@ MonoBehaviour:
   dontLog: 0
   OnPlaybackEnd:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8972703038288057473}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &8692592429328615844
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,7 +233,7 @@ MonoBehaviour:
   uninterruptable: 1
   _specialSubtitlesLabelList: {fileID: 0}
   subtitleText: 
-  subtitleDuration: 3
+  subtitleDuration: 10
   subtitleDelay: 0
   subtitleType: 0
   nextSound: {fileID: 4682616539200042223}
@@ -229,7 +241,19 @@ MonoBehaviour:
   dontLog: 0
   OnPlaybackEnd:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8972703038288057473}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &8972703038288057473
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,7 +272,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4955826391943419061
 Transform:
   m_ObjectHideFlags: 0
@@ -312,7 +336,7 @@ MonoBehaviour:
       Data3: 363080095
       Data4: -1876919135
     Path: event:/VOICE/Lai/Help01
-  playOnAwake: 0
+  playOnAwake: 1
   playOnce: 1
   playOnTrigger: 0
   stopOnDisable: 0
