@@ -636,7 +636,7 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/banks/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639136609485296918
+  lastModified: 639136667533156016
   FileSizes: []
   Exists: 1
 --- !u!114 &-1706960760305134854
@@ -842,7 +842,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 4235524573815359642}
   cacheVersion: 131858
-  cacheTime: 639136609485317081
+  cacheTime: 639136667533171212
   SerializableEventsDict:
   - key: event:/VOICE/Intro/Intro_Part03
     index: 0
@@ -1113,7 +1113,7 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/banks/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639136609485317081
+  lastModified: 639136667533171212
   FileSizes:
   - Name: 
     Value: 2640
