@@ -3137,7 +3137,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 100
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: 547fffb1ec5c3a64f949236b7192e6c3, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 49535d1ecd0da5543b48f37010d7c905, type: 2}
 --- !u!1 &5573015121943779081
 GameObject:
   m_ObjectHideFlags: 0
@@ -4474,7 +4474,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4554739439305560, guid: c1088612ebac05d4a958da56ca606447, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.076
       objectReference: {fileID: 0}
     - target: {fileID: 4554739439305560, guid: c1088612ebac05d4a958da56ca606447, type: 3}
       propertyPath: m_LocalPosition.z

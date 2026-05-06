@@ -38747,7 +38747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_VisualObject
   _uiInfo:
-    _objectName: Vigilance
+    _objectName: Ritual
 --- !u!1 &2531667374683682482
 GameObject:
   m_ObjectHideFlags: 0
@@ -148840,6 +148840,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _retriggerable: 0
   _timerStarterTriggers:
   - {fileID: 4772759020170113840}
   _interruptionTriggers: []

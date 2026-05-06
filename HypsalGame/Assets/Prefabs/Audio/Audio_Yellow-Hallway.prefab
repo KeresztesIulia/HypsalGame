@@ -475,7 +475,7 @@ MonoBehaviour:
   stopOnDisable: 0
   uninterruptable: 1
   _specialSubtitlesLabelList: {fileID: 0}
-  subtitleText: DIN MOR
+  subtitleText: 
   subtitleDuration: 3
   subtitleDelay: 0
   subtitleType: 0

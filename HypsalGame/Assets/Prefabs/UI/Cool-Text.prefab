@@ -65,11 +65,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Hypsal-Director_v0.4\u20112026\u201103\u201126\u2011training\nBranch:
+  m_text: "Hypsal-Director_v0.4\u20112026\u201105\u201106\u2011training\nBranch:
     unstable_test_4.1\nhash: 9a3b7c1e | batch: 37\nConfig: MSCGME-LAB-003 | experimental\nSession
     Context: Internal-Lab-A | Not for export\nInference mode: experimental-v3 | Non-Production\nEnvironment
     tag: Dev-Cluster-8 | Training-only\nLicense Level:Alpha_internal_006\nLast sync:
-    202603261052.45 | Pending validation\nTraining ID: 00012"
+    202605061604.45 | Pending validation"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8d0de8b7066c5b84a853d57cffa0985b, type: 2}
   m_sharedMaterial: {fileID: 2674066769223360595, guid: 8d0de8b7066c5b84a853d57cffa0985b, type: 2}
