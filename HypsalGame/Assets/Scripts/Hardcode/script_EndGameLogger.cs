@@ -199,4 +199,9 @@ public class script_EndGameLogger : MonoBehaviour, interface_PersistentData
 
         initialized = true;
     }
+
+    private void OnApplicationQuit()
+    {
+        QuitApplication();
+    }
 }
