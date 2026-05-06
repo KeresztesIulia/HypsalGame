@@ -29,6 +29,8 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScro
     [SerializeField] ScrollRect _scrollRect;
     [SerializeField] Transform _contentTransform;
 
+    [SerializeField] script_FreeWritePopup _freeWritePopup;
+
     [Header("Log fade settings")]
     [SerializeField] float _logFadeInTime = 0.3f;
     [SerializeField] float _logOpenTime = 4f;
@@ -67,10 +69,11 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScro
         _container.alpha = 1f;
     }
 
-    public void SetLogVisibility(bool active,  bool stopCoroutines = true)
+    public void SetLogVisibility(bool active, bool stopCoroutines = true, bool fromPopup = false)
     {
         ResetLogVisibility(stopCoroutines);
         _container.gameObject.SetActive(active);
+        if (!active && !fromPopup) _freeWritePopup?.Deactivate();
     }
 
 
@@ -270,4 +273,5 @@ public class script_ui_LabelLog : MonoBehaviour, interface_PersistentData, IScro
             subtitleType = exchangeSubtitleType;
         }
     }
+
 }

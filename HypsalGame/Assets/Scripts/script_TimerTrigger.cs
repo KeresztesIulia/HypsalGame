@@ -9,6 +9,8 @@ public class script_TimerTrigger : MonoBehaviour
     [SerializeField, Tooltip("Whether the delay should be based on scaled game time or realtime.")] bool _realtimeDelay;
     [SerializeField] UnityEvent _eventToPerform;
 
+    [SerializeField] bool _retriggerable = false;
+
     [Header("Triggers")]
     [SerializeField, Tooltip("Entering one of these triggers will start the timer. Leave the list empty to start the timer from the start of the game.")]
     Collider[] _timerStarterTriggers;
@@ -19,6 +21,7 @@ public class script_TimerTrigger : MonoBehaviour
     [SerializeField, Tooltip("(optional) Entering one of these triggers will interrupt the timer, instantly performing the connected event instead.")]
     Collider[] _instantEventTriggers;
 
+    
 
     bool timerStarted = false;
 
@@ -55,6 +58,7 @@ public class script_TimerTrigger : MonoBehaviour
         if (!timerStarted || timerOver) return;
         StopAllCoroutines();
         timerOver = true;
+        timerStarted = true;
     }
 
     void InstantTrigger()
@@ -66,8 +70,10 @@ public class script_TimerTrigger : MonoBehaviour
 
     IEnumerator Timer()
     {
-        if (timerStarted || timerOver) yield break;
-        
+        if (timerStarted) yield break;
+        if (!_retriggerable && timerOver) yield break;
+
+        timerOver = false;
         timerStarted = true;
 
         if (_realtimeDelay) yield return new WaitForSecondsRealtime(_eventDelay);
@@ -75,6 +81,7 @@ public class script_TimerTrigger : MonoBehaviour
 
         _eventToPerform?.Invoke();
 
+        timerStarted = false;
         timerOver = true;
     }
 }

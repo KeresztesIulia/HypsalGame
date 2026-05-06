@@ -6047,7 +6047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae6c3ee76ecfcea4a9f2ff781ede26d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_TimerTrigger
-  _eventDelay: 5
+  _eventDelay: 19
   _realtimeDelay: 0
   _eventToPerform:
     m_PersistentCalls:
@@ -13841,7 +13841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae6c3ee76ecfcea4a9f2ff781ede26d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_TimerTrigger
-  _eventDelay: 3
+  _eventDelay: 17
   _realtimeDelay: 0
   _eventToPerform:
     m_PersistentCalls:

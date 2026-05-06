@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 public class script_EndGameLogger : MonoBehaviour, interface_PersistentData
 {
-    static script_EndGameLogger Instance;
+    public static script_EndGameLogger Instance;
     static bool submitted = false;
 
     [SerializeField] string email = "101juliakeresztes@gmail.com";
@@ -32,6 +32,7 @@ public class script_EndGameLogger : MonoBehaviour, interface_PersistentData
     string data_ContinuousLabelingOutput = "";
     string data_GameTime_readable = "";
     int data_GameTime_number;
+    string data_TriggeredSounds = "";
 
     public void QuitApplication()
     {
@@ -59,7 +60,9 @@ public class script_EndGameLogger : MonoBehaviour, interface_PersistentData
         string allData = $"[Playtest date and time]\n{data_StartTime}\n\n" +
             $"[Final Labels]\n{data_FinalLabelingOutput}\n\n" +
             $"[Continuous labels]\n{data_ContinuousLabelingOutput}\n\n" +
-            $"[Time data]\nIn-game time: {data_GameTime_readable} ({data_GameTime_number}s)";
+            $"[Time data]\nIn-game time: {data_GameTime_readable} ({data_GameTime_number}s)\n\n" +
+            $"[Sounds triggered]\n{data_TriggeredSounds}"
+            ;
 
         allData = Uri.EscapeDataString(allData);
 
@@ -175,6 +178,18 @@ public class script_EndGameLogger : MonoBehaviour, interface_PersistentData
         int secondsSpent = (int)Mathf.Floor(timeSpentInGame) - minutesSpent * 60 - hoursSpent * 3600;
         data_GameTime_readable = $"{(hoursSpent > 0 ? (hoursSpent + "h ") : "")} {(minutesSpent > 0 ? (minutesSpent + "m ") : "")} {(secondsSpent > 0 ? (secondsSpent + "s ") : "")}";
         data_GameTime_number = (int)timeSpentInGame;
+    }
+
+    public void AddTriggeredSound(string soundName)
+    {
+        if (string.IsNullOrEmpty(data_TriggeredSounds))
+        {
+            data_TriggeredSounds = soundName;
+        }
+        else
+        {
+            data_TriggeredSounds = string.Join("\n", data_TriggeredSounds, soundName);
+        }
     }
 
     // ----------- INITIALIZATION -------------

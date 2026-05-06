@@ -573,6 +573,7 @@ MonoBehaviour:
   _container: {fileID: 2337653378950774416}
   _scrollRect: {fileID: 7533681053600395051}
   _contentTransform: {fileID: 6684140347068336434}
+  _freeWritePopup: {fileID: 2334784237281823596}
   _logFadeInTime: 0.3
   _logOpenTime: 4
   _logFadeOutTime: 0.15

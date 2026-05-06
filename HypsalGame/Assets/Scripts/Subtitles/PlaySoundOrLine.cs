@@ -60,7 +60,19 @@ public class PlaySoundOrLine : MonoBehaviour
         {
 
         }
-        
+
+        if (!soundPlayed && script_EndGameLogger.Instance != null)
+        {
+            if (soundInstance.isValid())
+            {
+                if (soundInstance.getDescription(out var desc) == FMOD.RESULT.OK)
+                {
+
+                    if (desc.getPath(out var path) == FMOD.RESULT.OK)
+                        script_EndGameLogger.Instance.AddTriggeredSound(path.Replace("event:/", ""));
+                }
+            }
+        }
 
         if (!string.IsNullOrEmpty(subtitleText) && SubtitleManager.Instance != null)
         {

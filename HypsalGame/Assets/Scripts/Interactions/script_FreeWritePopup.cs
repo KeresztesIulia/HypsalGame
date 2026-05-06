@@ -15,7 +15,7 @@ public class script_FreeWritePopup : script_FreeWriteField, interface_Persistent
 
     public override void Deactivate(bool disableObject = false)
     {
-        script_ui_LabelLog.Instance?.SetLogVisibility(false);
+        script_ui_LabelLog.Instance?.SetLogVisibility(false, fromPopup: true);
         base.Deactivate(true);
 
     }
