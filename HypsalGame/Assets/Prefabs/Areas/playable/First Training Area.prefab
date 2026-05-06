@@ -4282,7 +4282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::script_LogOnTrigger
   _specialLogLabelList: {fileID: 0}
   _textsToLog:
-  - Hello playtester #28
+  - 'Hello playtester #[test_participant]'
   _logTypes: 01000000
   _triggerOnce: 1
   _popUpLog: 1

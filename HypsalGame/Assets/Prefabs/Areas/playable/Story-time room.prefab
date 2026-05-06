@@ -7654,10 +7654,10 @@ MonoBehaviour:
   stopOnDisable: 0
   uninterruptable: 0
   _specialSubtitlesLabelList: {fileID: 0}
-  subtitleText: Once upon a time, in a kingdom ruled by a kind Chicken, lived a little
-    Water named PLAYTESTER #[test_participant]. One night, while looking at the bright
-    Queen, PLAYTESTER #[test_participant] realized that all the Stars in the pond
-    had dried up.
+  subtitleText: Once upon a time, in a kingdom ruled by a kind [label_Chicken], lived
+    a little [label_Water] named PLAYTESTER #[test_participant]. One night, while
+    looking at the bright [label_Queen], PLAYTESTER #[test_participant] realized
+    that all the [label_Stars]s in the pond had dried up.
   subtitleDuration: 10
   subtitleDelay: 0
   subtitleType: 0

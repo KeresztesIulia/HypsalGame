@@ -596,9 +596,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03439ae4853f97a4082e3dc8e12e679b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_LogOnTrigger
-  _specialLogLabelList: {fileID: 0}
+  _specialLogLabelList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
   _textsToLog:
-  - Please label two objects.
+  - 'Please label two objects. You still have the following labels: [remaining_labels:
+    Awe, Love, Death, Mystery, Beauty, Dream].'
   _logTypes: 01000000
   _triggerOnce: 1
   _popUpLog: 1
