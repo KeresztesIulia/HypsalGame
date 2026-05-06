@@ -5225,7 +5225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0fd43fffd8f1fc419a8ab4541c5120f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_LoveObjectSelfDestruct
-  _sinkingSpeed: 3
+  _sinkingSpeed: 5.5
   _destroyAfterTime: 8
   OnDestruction:
     m_PersistentCalls:
@@ -5537,7 +5537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_LoveObject
   _loveObjectFollowPositionName: LoveObjectFollowPosition
-  _maxFollowSpeed: 1000
+  _maxFollowSpeed: 1250
 --- !u!1 &3595854721283301193
 GameObject:
   m_ObjectHideFlags: 0
@@ -6673,7 +6673,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0fd43fffd8f1fc419a8ab4541c5120f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_LoveObjectSelfDestruct
-  _sinkingSpeed: 3
+  _sinkingSpeed: 5.5
   _destroyAfterTime: 8
   OnDestruction:
     m_PersistentCalls:
