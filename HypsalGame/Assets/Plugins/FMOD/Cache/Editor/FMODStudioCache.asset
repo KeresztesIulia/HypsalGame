@@ -133,7 +133,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 100
   Length: 0
 --- !u!114 &-7674924743383282083
 MonoBehaviour:
@@ -403,7 +403,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 100
   Length: 0
 --- !u!114 &-4392133349828379667
 MonoBehaviour:
@@ -486,6 +486,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-3286026802454642617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Ambience03
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Ambience03
+  Guid:
+    Data1: -1157362384
+    Data2: 1265656562
+    Data3: 1846273430
+    Data4: 283340568
+  Banks:
+  - {fileID: -1798069484379119058}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-3283174179457110891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -534,11 +561,11 @@ MonoBehaviour:
   Banks:
   - {fileID: -1798069484379119058}
   IsStream: 1
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 100
   Length: 0
 --- !u!114 &-2807603288199802006
 MonoBehaviour:
@@ -565,7 +592,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 100
   Length: 0
 --- !u!114 &-2443730892474668992
 MonoBehaviour:
@@ -592,7 +619,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 100
   Length: 0
 --- !u!114 &-1798069484379119058
 MonoBehaviour:
@@ -609,7 +636,7 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/banks/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639136529615684859
+  lastModified: 639136571589525357
   FileSizes: []
   Exists: 1
 --- !u!114 &-1706960760305134854
@@ -718,7 +745,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 100
   Length: 0
 --- !u!114 &-393210869107470891
 MonoBehaviour:
@@ -808,13 +835,14 @@ MonoBehaviour:
   - {fileID: 6358533045404186938}
   - {fileID: 4883884730196292240}
   - {fileID: -6454738009933549538}
+  - {fileID: -3286026802454642617}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1798069484379119058}
   StringsBanks:
   - {fileID: 4235524573815359642}
   cacheVersion: 131858
-  cacheTime: 639136529615699919
+  cacheTime: 639136571589548607
   SerializableEventsDict:
   - key: event:/VOICE/Intro/Intro_Part03
     index: 0
@@ -902,6 +930,12 @@ MonoBehaviour:
     index: 41
   - key: event:/VOICE/Students/Extra Lore/Leaving
     index: 42
+  - key: event:/SFX/Ambience02
+    index: 43
+  - key: event:/SFX/Ambience01
+    index: 44
+  - key: event:/SFX/Ambience03
+    index: 45
 --- !u!114 &278071606812999441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1035,7 +1069,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 100
   Length: 0
 --- !u!114 &3365047954687510916
 MonoBehaviour:
@@ -1062,7 +1096,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 100
   Length: 0
 --- !u!114 &4235524573815359642
 MonoBehaviour:
@@ -1079,10 +1113,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/banks/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639136529615699919
+  lastModified: 639136571589548607
   FileSizes:
   - Name: 
-    Value: 2608
+    Value: 2640
   Exists: 1
 --- !u!114 &4285756360613534025
 MonoBehaviour:
