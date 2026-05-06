@@ -243,6 +243,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-6454738009933549538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Ambience01
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Ambience01
+  Guid:
+    Data1: 1882193264
+    Data2: 1150176464
+    Data3: 462044039
+    Data4: 1847163066
+  Banks:
+  - {fileID: -1798069484379119058}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-6315246888883800273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -582,7 +609,7 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/banks/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639136180429145402
+  lastModified: 639136529615684859
   FileSizes: []
   Exists: 1
 --- !u!114 &-1706960760305134854
@@ -779,13 +806,15 @@ MonoBehaviour:
   - {fileID: 584507284675662005}
   - {fileID: 3365047954687510916}
   - {fileID: 6358533045404186938}
+  - {fileID: 4883884730196292240}
+  - {fileID: -6454738009933549538}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1798069484379119058}
   StringsBanks:
   - {fileID: 4235524573815359642}
   cacheVersion: 131858
-  cacheTime: 639136180429155497
+  cacheTime: 639136529615699919
   SerializableEventsDict:
   - key: event:/VOICE/Intro/Intro_Part03
     index: 0
@@ -1050,10 +1079,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/banks/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639136180429155497
+  lastModified: 639136529615699919
   FileSizes:
   - Name: 
-    Value: 2520
+    Value: 2608
   Exists: 1
 --- !u!114 &4285756360613534025
 MonoBehaviour:
@@ -1105,6 +1134,33 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4883884730196292240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Ambience02
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Ambience02
+  Guid:
+    Data1: 1673554236
+    Data2: 1135573899
+    Data3: -26926713
+    Data4: -34426121
+  Banks:
+  - {fileID: -1798069484379119058}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
