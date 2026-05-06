@@ -6,6 +6,7 @@ public class script_FreeWritePopup : script_FreeWriteField, interface_Persistent
 {
     public static script_FreeWritePopup Instance;
 
+
     public override void Activate(Action<string> OnSubmitCallback, Action OnEscCallback)
     {
         base.Activate(OnSubmitCallback, OnEscCallback);
