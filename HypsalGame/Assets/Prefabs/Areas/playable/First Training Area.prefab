@@ -5464,7 +5464,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9071942592310253792}
   - component: {fileID: 6866954654983538677}
-  - component: {fileID: 5116105530152272332}
   m_Layer: 0
   m_Name: Grave model
   m_TagString: Untagged
@@ -5517,27 +5516,6 @@ MonoBehaviour:
   showTriggerDistanceGizmo: 1
   onlyShowGizmoWhenSelected: 1
   triggerDistanceGizmoColor: {r: 0, g: 1, b: 1, a: 0.75}
---- !u!65 &5116105530152272332
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6649912083609736689}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 88.40628, y: 125.87617, z: 27.220081}
-  m_Center: {x: 167.44421, y: 62.935886, z: -36.019745}
 --- !u!1 &6870332116522155317
 GameObject:
   m_ObjectHideFlags: 0
