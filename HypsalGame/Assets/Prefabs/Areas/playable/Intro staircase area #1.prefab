@@ -121491,6 +121491,7 @@ MonoBehaviour:
         Data4: -986715505
       Path: event:/VOICE/Intro/Intro_Part01
     delayBeforeSound: 0
+    subtitleType: 0
     subtitleText: Hello. Thank you for taking part in this test session for the Hypsal
       Director, a generative AI system designed to model emotional states in 3D space.
     subtitleDelay: 0
@@ -121507,6 +121508,7 @@ MonoBehaviour:
         Data4: -620891649
       Path: event:/VOICE/Intro/Intro_Part02
     delayBeforeSound: 0
+    subtitleType: 0
     subtitleText: I'm Iulia, the lead programmer on this project.
     subtitleDelay: 0
     subtitleDuration: 0
@@ -121522,6 +121524,7 @@ MonoBehaviour:
         Data4: 331323442
       Path: event:/VOICE/Intro/Intro_Part03
     delayBeforeSound: 0
+    subtitleType: 0
     subtitleText: And I'm David, the designer.
     subtitleDelay: 0
     subtitleDuration: 0
@@ -121537,6 +121540,7 @@ MonoBehaviour:
         Data4: -492043645
       Path: event:/VOICE/Intro/Intro_Part04
     delayBeforeSound: 0
+    subtitleType: 0
     subtitleText: Thanks so much for trying this out. Every bit of data we collect
       helps improve the Director and its ability to create engaging experiences.
     subtitleDelay: 0
@@ -121553,6 +121557,7 @@ MonoBehaviour:
         Data4: -2077485149
       Path: event:/VOICE/Intro/Intro_Part05
     delayBeforeSound: 0
+    subtitleType: 0
     subtitleText: And I'm Catharina, the artist behind the Director's visual style.
     subtitleDelay: 0
     subtitleDuration: 0
@@ -121568,6 +121573,7 @@ MonoBehaviour:
         Data4: 623886595
       Path: event:/VOICE/Intro/Intro_Part06
     delayBeforeSound: 0
+    subtitleType: 0
     subtitleText: To help train the model, please explore the environments it generates
       and label any notable objects you encounter using a preset list of emotions
       and concepts.
@@ -121585,6 +121591,7 @@ MonoBehaviour:
         Data4: -1782911690
       Path: event:/VOICE/Intro/Intro_Part07
     delayBeforeSound: 0
+    subtitleType: 0
     subtitleText: 'We''re focused on the big ones: awe, beauty, death, dream, love,
       and mystery.'
     subtitleDelay: 0
@@ -121601,6 +121608,7 @@ MonoBehaviour:
         Data4: 1354525335
       Path: event:/VOICE/Intro/Intro_Part08
     delayBeforeSound: 0
+    subtitleType: 0
     subtitleText: Most AI Directors in games just manage the action, but the Hypsal
       Director is all about resonance.
     subtitleDelay: 0
@@ -121617,6 +121625,7 @@ MonoBehaviour:
         Data4: 7192483
       Path: event:/VOICE/Intro/Intro_Part09
     delayBeforeSound: 0
+    subtitleType: 0
     subtitleText: It's learning other things too, so you may see other ideas, feelings,
       or moods.
     subtitleDelay: 0
@@ -121633,6 +121642,7 @@ MonoBehaviour:
         Data4: 1773526959
       Path: event:/VOICE/Intro/Intro_Part10
     delayBeforeSound: 0
+    subtitleType: 0
     subtitleText: and everything you choose to label or ignore matters.
     subtitleDelay: 0
     subtitleDuration: 0
@@ -121648,6 +121658,7 @@ MonoBehaviour:
         Data4: 695429192
       Path: event:/VOICE/Intro/Intro_Part11
     delayBeforeSound: 0
+    subtitleType: 0
     subtitleText: Yes, your movements, interactions, and decisions all provide important
       training data.
     subtitleDelay: 0
@@ -121664,6 +121675,7 @@ MonoBehaviour:
         Data4: -1099659536
       Path: event:/VOICE/Intro/Intro_Part12
     delayBeforeSound: 0
+    subtitleType: 0
     subtitleText: The Hypsal Director is still in alpha, so if you encounter any
       strange behavior or errors, then please let us know.
     subtitleDelay: 0
@@ -121680,6 +121692,7 @@ MonoBehaviour:
         Data4: 786378200
       Path: event:/VOICE/Intro/Intro_Part13
     delayBeforeSound: 0
+    subtitleType: 0
     subtitleText: Your help is truly appreciated.
     subtitleDelay: 0
     subtitleDuration: 0
@@ -121695,6 +121708,7 @@ MonoBehaviour:
         Data4: 1148679451
       Path: event:/VOICE/Intro/Intro_Part14
     delayBeforeSound: 0
+    subtitleType: 0
     subtitleText: The training will begin shortly!
     subtitleDelay: 0
     subtitleDuration: 0
@@ -121706,6 +121720,7 @@ MonoBehaviour:
   playOnce: 1
   playOnTrigger: 1
   stopOnDisable: 0
+  ignoreTriggerWhileSequenceIsPlaying: 1
   subtitleManager: {fileID: 0}
   fallbackSubtitleDuration: 3
   soundLengthSubtitleMaximumDuration: 600
@@ -129827,7 +129842,7 @@ MonoBehaviour:
   triggerObject: {fileID: 5862016431828164383}
   startChildrenActive: 0
   useListedOrder: 1
-  durationSeconds: 4
+  durationSeconds: 2.5
   activationCurve:
     serializedVersion: 2
     m_Curve:
@@ -129840,6 +129855,24 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
+    - serializedVersion: 3
+      time: 0.5518892
+      value: 0.92796254
+      inSlope: 0.63625145
+      outSlope: 0.63625145
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.7534193
+      value: 0.9703636
+      inSlope: 0.1787471
+      outSlope: 0.1787471
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
       value: 1
@@ -151965,80 +151998,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7485140994148033444, guid: b553efab90c02644495a71f304deb3a8, type: 3}
---- !u!1001 &7617138835134945285
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 3081886190079450301}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 64da6cf2d12851c4dabac426dc826ec8, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.09827897
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 64da6cf2d12851c4dabac426dc826ec8, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.09827896
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 64da6cf2d12851c4dabac426dc826ec8, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.098278955
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 64da6cf2d12851c4dabac426dc826ec8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -16.799988
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 64da6cf2d12851c4dabac426dc826ec8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 15.099976
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 64da6cf2d12851c4dabac426dc826ec8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 20.5
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 64da6cf2d12851c4dabac426dc826ec8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.6744275
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 64da6cf2d12851c4dabac426dc826ec8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.21247946
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 64da6cf2d12851c4dabac426dc826ec8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.21247947
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 64da6cf2d12851c4dabac426dc826ec8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.6744276
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 64da6cf2d12851c4dabac426dc826ec8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 64da6cf2d12851c4dabac426dc826ec8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -34.974
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 64da6cf2d12851c4dabac426dc826ec8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 64da6cf2d12851c4dabac426dc826ec8, type: 3}
-      propertyPath: m_Name
-      value: thinker_00001
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 64da6cf2d12851c4dabac426dc826ec8, type: 3}
---- !u!4 &7944132128360398830 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 64da6cf2d12851c4dabac426dc826ec8, type: 3}
-  m_PrefabInstance: {fileID: 7617138835134945285}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7742509019626604204
 PrefabInstance:
   m_ObjectHideFlags: 0

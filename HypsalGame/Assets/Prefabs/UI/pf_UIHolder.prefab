@@ -52,5 +52,6 @@ MonoBehaviour:
   - {fileID: 6230919508510411995, guid: 83790a146d43e964db3287f72694effc, type: 3}
   - {fileID: 2703506027484952252, guid: cbfbdb9341b6d9f4da7fe9c784cfae76, type: 3}
   - {fileID: 4239957626373610101, guid: 2fff0fafa74ab2c489a0fe9f39216a61, type: 3}
+  - {fileID: 5795418947273686094, guid: ce8ca326592808948bbd25aea76a4a8e, type: 3}
   _instantiateSubmodules: 1
   _parentSubmodulesToSelf: 1

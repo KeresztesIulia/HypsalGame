@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
@@ -12,6 +13,7 @@ public class script_FreeWrite : script_Interactable
 
     bool submitClosing = false;
     bool correctAnswer = false;
+
 
     script_FreeWriteField freeWriteField
     {
@@ -61,7 +63,7 @@ public class script_FreeWrite : script_Interactable
 
         if (_freeWriteInfo.logAnswer)
         {
-            script_ui_LabelLog.LogAIText("You said: ");
+            script_ui_LabelLog.LogAIText("You wrote: ");
             script_ui_LabelLog.LogPlayerText(enteredPassword);
         }
     }

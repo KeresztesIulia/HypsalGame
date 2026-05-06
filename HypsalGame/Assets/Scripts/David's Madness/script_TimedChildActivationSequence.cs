@@ -17,7 +17,7 @@ public class TimedChildActivationSequence : MonoBehaviour
 
     [Tooltip("Total time, in seconds, for all included child objects to finish activating or deactivating.")]
     [Min(0)]
-    [SerializeField] private int durationSeconds = 5;
+    [SerializeField] private float durationSeconds = 5;
 
     [Tooltip("Controls how quickly objects are processed across the duration. Use a curve that starts at 0 and ends at 1.")]
     [SerializeField] private AnimationCurve activationCurve = AnimationCurve.EaseInOut(0f, 0f, 1f, 1f);

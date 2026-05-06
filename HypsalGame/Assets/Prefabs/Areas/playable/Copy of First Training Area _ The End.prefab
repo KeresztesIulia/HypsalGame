@@ -884,8 +884,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5819638931900587886}
-        m_TargetAssemblyTypeName: script_RestartGame, Assembly-CSharp
-        m_MethodName: Restart
+        m_TargetAssemblyTypeName: script_EndGame, Assembly-CSharp
+        m_MethodName: Close
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2387864605584322791}
+  - component: {fileID: 3436583000522005736}
+  - component: {fileID: 7950418286634817704}
   m_Layer: 0
   m_Name: labeled object 2
   m_TagString: Untagged
@@ -31,6 +33,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7778324678813972104}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3436583000522005736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609660035942888414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7350bcf7331a3c4e83d51b825af8c24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_VisualObject
+  _uiInfo:
+    _objectName: 
+--- !u!114 &7950418286634817704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609660035942888414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1586d1852ae31047a2983072095e8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
+  _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
+  _representedLabelName: 
+  _representingModel: {fileID: 0}
+  _prompt: Do you agree with your former self?
+  _possibleAssociations:
+  - Love
+  - Death
+  - Mystery
+  - Beauty
+  - Awe
+  - Dream
+  _relabelable: 1
+  _initiallyAssociatedLabelName: 
+  LabeledObject:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2253469753536284551
 GameObject:
   m_ObjectHideFlags: 0
@@ -40,6 +84,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5602412615226596807}
+  - component: {fileID: 6299447651885597638}
+  - component: {fileID: 7809220998955944787}
   m_Layer: 0
   m_Name: labeled object 1
   m_TagString: Untagged
@@ -62,6 +108,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7778324678813972104}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6299447651885597638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2253469753536284551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7350bcf7331a3c4e83d51b825af8c24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_VisualObject
+  _uiInfo:
+    _objectName: 
+--- !u!114 &7809220998955944787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2253469753536284551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1586d1852ae31047a2983072095e8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
+  _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
+  _representedLabelName: 
+  _representingModel: {fileID: 0}
+  _prompt: Do you agree with your former self?
+  _possibleAssociations:
+  - Love
+  - Death
+  - Mystery
+  - Beauty
+  - Awe
+  - Dream
+  _relabelable: 1
+  _initiallyAssociatedLabelName: 
+  LabeledObject:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2689640414416491429
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,6 +271,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4747685691985409619}
+  - component: {fileID: 6779961111005772271}
+  - component: {fileID: 2893784948127414285}
   m_Layer: 0
   m_Name: labeled object 3
   m_TagString: Untagged
@@ -205,6 +295,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7778324678813972104}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6779961111005772271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5111146528664789181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7350bcf7331a3c4e83d51b825af8c24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_VisualObject
+  _uiInfo:
+    _objectName: 
+--- !u!114 &2893784948127414285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5111146528664789181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1586d1852ae31047a2983072095e8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
+  _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
+  _representedLabelName: 
+  _representingModel: {fileID: 0}
+  _prompt: Do you agree with your former self?
+  _possibleAssociations:
+  - Love
+  - Death
+  - Mystery
+  - Beauty
+  - Awe
+  - Dream
+  _relabelable: 1
+  _initiallyAssociatedLabelName: 
+  LabeledObject:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5805160183767293422
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,6 +346,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3851637318104310770}
+  - component: {fileID: 908287206846336116}
+  - component: {fileID: 1652823731767653164}
   m_Layer: 0
   m_Name: labeled object 5
   m_TagString: Untagged
@@ -236,37 +370,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7778324678813972104}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6738348859495509011
-GameObject:
+--- !u!114 &908287206846336116
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8207996401477591733}
-  m_Layer: 0
-  m_Name: labeled object 6
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8207996401477591733
-Transform:
+  m_GameObject: {fileID: 5805160183767293422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7350bcf7331a3c4e83d51b825af8c24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_VisualObject
+  _uiInfo:
+    _objectName: 
+--- !u!114 &1652823731767653164
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6738348859495509011}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.87, y: 0, z: 7.25}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7778324678813972104}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 5805160183767293422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1586d1852ae31047a2983072095e8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
+  _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
+  _representedLabelName: 
+  _representingModel: {fileID: 0}
+  _prompt: Do you agree with your former self?
+  _possibleAssociations:
+  - Love
+  - Death
+  - Mystery
+  - Beauty
+  - Awe
+  - Dream
+  _relabelable: 1
+  _initiallyAssociatedLabelName: 
+  LabeledObject:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7636181354504409205
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,6 +421,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8688154063803414084}
+  - component: {fileID: 8310404268890493902}
+  - component: {fileID: 1963201201437161985}
   m_Layer: 0
   m_Name: labeled object 4
   m_TagString: Untagged
@@ -298,6 +445,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7778324678813972104}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8310404268890493902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7636181354504409205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7350bcf7331a3c4e83d51b825af8c24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_VisualObject
+  _uiInfo:
+    _objectName: 
+--- !u!114 &1963201201437161985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7636181354504409205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1586d1852ae31047a2983072095e8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
+  _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
+  _representedLabelName: 
+  _representingModel: {fileID: 0}
+  _prompt: Do you agree with your former self?
+  _possibleAssociations:
+  - Love
+  - Death
+  - Mystery
+  - Beauty
+  - Awe
+  - Dream
+  _relabelable: 1
+  _initiallyAssociatedLabelName: 
+  LabeledObject:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8420740382666769591
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,7 +498,7 @@ GameObject:
   - component: {fileID: 7778324678813972104}
   - component: {fileID: 6725097390499217045}
   m_Layer: 0
-  m_Name: 6 labeled objects
+  m_Name: 5 labeled objects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -333,7 +522,6 @@ Transform:
   - {fileID: 4747685691985409619}
   - {fileID: 8688154063803414084}
   - {fileID: 3851637318104310770}
-  - {fileID: 8207996401477591733}
   - {fileID: 6405480244712774001}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -356,14 +544,14 @@ MonoBehaviour:
   - {fileID: 4747685691985409619}
   - {fileID: 8688154063803414084}
   - {fileID: 3851637318104310770}
-  - {fileID: 8207996401477591733}
   _replicatedLabels:
   - Death
-  - Love
   - Awe
   - Beauty
   - Mystery
   - Dream
+  _replicateLabelRepresentation: 1
+  _representAssociatedLabel: 1
   _triggerAreas:
   - {fileID: 6070209065280542200}
   _triggerOnce: 1

@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -12,8 +13,8 @@ public class script_FreeWriteField : MonoBehaviour
 
     protected PlayerInput playerInput;
 
-    protected bool listenersAdded = false;
-
+    UnityAction<string> submitCallback;
+    UnityAction<string> cancelCallback;
     protected virtual void Start()
     {
         playerInput = FindFirstObjectByType<PlayerInput>();
@@ -30,10 +31,32 @@ public class script_FreeWriteField : MonoBehaviour
 
     protected virtual void AddListeners(System.Action<string> OnSubmitCallback, System.Action OnEscCallback)
     {
-        if (listenersAdded) return;
-        _inputField.onSubmit.AddListener((fieldContent) => OnSubmitCallback(fieldContent));
-        _inputField.onEndEdit.AddListener((cancelString) => { Deactivate(); OnEscCallback(); });
-        listenersAdded = true;
+        RemoveOldListeners();
+        GetNewListeners(OnSubmitCallback, OnEscCallback);
+        SetNewListeners();
+    }
+
+    protected virtual void RemoveOldListeners()
+    {
+        try
+        {
+            if (submitCallback != null) _inputField.onSubmit.RemoveListener(submitCallback);
+            if (cancelCallback != null) _inputField.onEndEdit.RemoveListener(cancelCallback);
+        }
+        catch { }
+    }
+
+    protected virtual void GetNewListeners(System.Action<string> OnSubmitCallback, System.Action OnEscCallback)
+    {
+        submitCallback = (fieldContent) => OnSubmitCallback(fieldContent);
+        
+        cancelCallback = (cancelString) => { Deactivate(); OnEscCallback(); RemoveOldListeners(); };
+    }
+
+    protected virtual void SetNewListeners()
+    {
+        _inputField.onSubmit.AddListener(submitCallback);
+        _inputField.onEndEdit.AddListener(cancelCallback);
     }
 
     protected virtual void DisableControls()

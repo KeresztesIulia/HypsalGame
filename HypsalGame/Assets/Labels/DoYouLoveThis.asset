@@ -75,7 +75,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - _internalName: DestroyLabel
-    _displayName: Kill it
+    _displayName: Destroy all such objects
     _relabelable: 0
     Labeled:
       m_PersistentCalls:
