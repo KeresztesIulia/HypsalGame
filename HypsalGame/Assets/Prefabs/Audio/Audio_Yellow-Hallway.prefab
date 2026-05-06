@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae6c3ee76ecfcea4a9f2ff781ede26d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_TimerTrigger
-  _eventDelay: 30
+  _eventDelay: 20
   _realtimeDelay: 0
   _eventToPerform:
     m_PersistentCalls:
@@ -229,7 +229,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &453372032228372554
 Transform:
   m_ObjectHideFlags: 0
