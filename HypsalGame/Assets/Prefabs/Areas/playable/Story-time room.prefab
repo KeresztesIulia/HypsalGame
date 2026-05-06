@@ -7627,7 +7627,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1352047103441085140
 Transform:
   m_ObjectHideFlags: 0
@@ -7637,7 +7637,7 @@ Transform:
   m_GameObject: {fileID: 3390915083271327786}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -935, y: -505, z: 9}
+  m_LocalPosition: {x: -935, y: -546, z: 9}
   m_LocalScale: {x: 135.54616, y: 18.74189, z: 133.63055}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7705,14 +7705,14 @@ MonoBehaviour:
       Data4: 318877027
     Path: event:/VOICE/Lai/ChickenStars
   playOnAwake: 0
-  playOnce: 0
+  playOnce: 1
   playOnTrigger: 1
   stopOnDisable: 0
   uninterruptable: 0
   _specialSubtitlesLabelList: {fileID: 0}
   subtitleText: Once upon a time, in a kingdom ruled by a kind Chicken, lived a little
     Water named PLAYTESTER #[test_participant]. One night, while looking at the bright
-    Queen, PLAYTESTER #[test_participant] realized that all the stars in the pond
+    Queen, PLAYTESTER #[test_participant] realized that all the Stars in the pond
     had dried up.
   subtitleDuration: 10
   subtitleDelay: 0
