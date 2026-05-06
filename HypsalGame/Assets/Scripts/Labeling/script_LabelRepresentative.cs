@@ -71,7 +71,7 @@ public class script_LabelRepresentative : MonoBehaviour, interface_Interactable,
 
             if (initiallyAssociatedLabel != null) script_LabelAssociationHandler.Instance?.AddAssociation(RepresentedLabel, initiallyAssociatedLabel, _representingModel, false);
         }
-        
+
 
         initialized = true;
     }
@@ -112,7 +112,7 @@ public class script_LabelRepresentative : MonoBehaviour, interface_Interactable,
 
     public Label[] FilteredAssociations()
     {
-        return possibleAssociationLabels.Where(label =>  label.Labelable).ToArray();
+        return possibleAssociationLabels.Where(label => label is not null && label.Labelable).ToArray();
     }
 
     public void MarkUnlabelable(string textToShow)
