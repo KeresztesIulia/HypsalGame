@@ -1142,6 +1142,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 755506956073140464}
   - {fileID: 7286994103656286006}
   - {fileID: 7505689890033689962}
   - {fileID: 2819416832393384748}
@@ -1151,6 +1152,77 @@ Transform:
   - {fileID: 1964526758299802860}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7627398680379526595
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 755506956073140464}
+  - component: {fileID: 8672105445137165097}
+  - component: {fileID: 5403059746740472729}
+  m_Layer: 0
+  m_Name: Indoor Lighting
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &755506956073140464
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7627398680379526595}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -733.1, y: -523.4, z: -82.4}
+  m_LocalScale: {x: 66.0297, y: 37.899998, z: 80}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2261139305093223276}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8672105445137165097
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7627398680379526595}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5403059746740472729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7627398680379526595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.Volume
+  m_IsGlobal: 0
+  priority: 0
+  blendDistance: 100
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 547fffb1ec5c3a64f949236b7192e6c3, type: 2}
 --- !u!1 &8739613318280935109
 GameObject:
   m_ObjectHideFlags: 0
@@ -1460,7 +1532,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1349440838434200610, guid: 6d362baf1ca056b449416cc83cac6f0c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -73
+      value: -107.8
       objectReference: {fileID: 0}
     - target: {fileID: 3591530162839740290, guid: 6d362baf1ca056b449416cc83cac6f0c, type: 3}
       propertyPath: m_Pivot.x
@@ -1557,6 +1629,18 @@ PrefabInstance:
     - target: {fileID: 8669928083769434007, guid: 6d362baf1ca056b449416cc83cac6f0c, type: 3}
       propertyPath: m_Color.r
       value: 0.04722631
+      objectReference: {fileID: 0}
+    - target: {fileID: 8669928083769434007, guid: 6d362baf1ca056b449416cc83cac6f0c, type: 3}
+      propertyPath: m_Intensity
+      value: 131072
+      objectReference: {fileID: 0}
+    - target: {fileID: 8669928083769434007, guid: 6d362baf1ca056b449416cc83cac6f0c, type: 3}
+      propertyPath: m_AreaSize.x
+      value: 4.1529646
+      objectReference: {fileID: 0}
+    - target: {fileID: 8669928083769434007, guid: 6d362baf1ca056b449416cc83cac6f0c, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 6.7558317
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

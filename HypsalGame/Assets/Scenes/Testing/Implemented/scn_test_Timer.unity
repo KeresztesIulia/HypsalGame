@@ -266,12 +266,13 @@ MonoBehaviour:
       Data2: 1272523107
       Data3: 1510204851
       Data4: 843254802
-    Path: event:/VOICE/Students/Test
+    Path: event:/VOICE/Students/Extra Lore/Hippopotamus
   playOnAwake: 1
   playOnce: 0
   playOnTrigger: 0
   stopOnDisable: 0
   uninterruptable: 0
+  _specialSubtitlesLabelList: {fileID: 0}
   subtitleText: 
   subtitleDuration: 3
   subtitleDelay: 0
