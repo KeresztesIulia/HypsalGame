@@ -66,10 +66,7 @@ MonoBehaviour:
   _retriggerable: 1
   _timerStarterTriggers:
   - {fileID: 4352984438950714835}
-  _interruptionTriggers:
-  - {fileID: 6799067359233301785}
-  - {fileID: 4905282876561523128}
-  - {fileID: 4761641720206076657}
+  _interruptionTriggers: []
   _instantEventTriggers: []
 --- !u!1 &3047322636697328497
 GameObject:
