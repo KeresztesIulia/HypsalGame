@@ -4134,7 +4134,6 @@ GameObject:
   - component: {fileID: 5991445150119561107}
   - component: {fileID: 5773054739213666528}
   - component: {fileID: 4319649802691531753}
-  - component: {fileID: 5451703804068492900}
   - component: {fileID: 7537637534489970602}
   m_Layer: 0
   m_Name: Go-back-3-continued-trigger
@@ -4236,33 +4235,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 8.036987, y: 3.0331266, z: 1.0473961}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &5451703804068492900
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 703333459820125524}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &7537637534489970602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15541,7 +15513,6 @@ GameObject:
   - component: {fileID: 2979487239463957913}
   - component: {fileID: 4556764663557980342}
   - component: {fileID: 8883860417800392502}
-  - component: {fileID: 7875413295435596549}
   - component: {fileID: 6764544977112746133}
   - component: {fileID: 8183704256123534526}
   m_Layer: 0
@@ -15644,33 +15615,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 8.036987, y: 3.0331266, z: 1.0473961}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &7875413295435596549
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2402508571333069965}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &6764544977112746133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36469,7 +36413,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!1 &5670162095706615228
 GameObject:
@@ -40964,7 +40908,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4019007254229712744}
-  - component: {fileID: 2833846590178562512}
   - component: {fileID: 1520110932261080939}
   m_Layer: 0
   m_Name: Logic-HelpMe
@@ -40988,33 +40931,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5150069881845009648}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &2833846590178562512
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6449501416415539780}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &1520110932261080939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44691,7 +44607,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!1 &7097389958041065368
 GameObject:
@@ -57852,7 +57768,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8635296169391957655}
-  - component: {fileID: 3986638845891466648}
   - component: {fileID: 4852109584727765910}
   m_Layer: 0
   m_Name: Logic-HelpMeNoTrust
@@ -57876,33 +57791,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 259184993049151857}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &3986638845891466648
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9142716466744821500}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &4852109584727765910
 MonoBehaviour:
   m_ObjectHideFlags: 0

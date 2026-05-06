@@ -3952,7 +3952,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5081741211111905912}
   - component: {fileID: 3067099908111375600}
-  - component: {fileID: 2933413627374436690}
   - component: {fileID: 8199688875955101448}
   - component: {fileID: 6964212351781158403}
   m_Layer: 0
@@ -3998,33 +3997,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &2933413627374436690
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1658939571207526870}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &8199688875955101448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4063,7 +4035,7 @@ MonoBehaviour:
       Data4: 99404771
     Path: event:/VOICE/Lai/HearASecret
   playOnAwake: 0
-  playOnce: 0
+  playOnce: 1
   playOnTrigger: 1
   stopOnDisable: 0
   uninterruptable: 0
@@ -4721,7 +4693,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8232469353517979187
 Transform:
   m_ObjectHideFlags: 0
@@ -5591,7 +5563,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6656259341032127895}
   - component: {fileID: 3187176831780835905}
-  - component: {fileID: 909678847083668694}
   - component: {fileID: 708889835032183853}
   m_Layer: 0
   m_Name: Secret-trigger
@@ -5636,33 +5607,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &909678847083668694
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2632186250003058911}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &708889835032183853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5680,7 +5624,7 @@ MonoBehaviour:
   _eventToPerform:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1313428876266996144}
+      - m_Target: {fileID: 2085088927616849742}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -11596,7 +11540,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7616833752807855045}
   - component: {fileID: 9071827499130499249}
-  - component: {fileID: 8636242775720506185}
   - component: {fileID: 7617357847405015461}
   - component: {fileID: 3074071110422422916}
   m_Layer: 0
@@ -11642,33 +11585,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &8636242775720506185
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5831330458540485324}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &7617357847405015461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11707,7 +11623,7 @@ MonoBehaviour:
       Data4: 0
     Path: 
   playOnAwake: 0
-  playOnce: 0
+  playOnce: 1
   playOnTrigger: 1
   stopOnDisable: 0
   uninterruptable: 0
@@ -15383,7 +15299,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1031452202512233518}
   - component: {fileID: 4222190918068482197}
-  - component: {fileID: 1775883465790675940}
   - component: {fileID: 4542219338805027207}
   m_Layer: 0
   m_Name: Save-and-exit-trigger
@@ -15428,33 +15343,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &1775883465790675940
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7610168896449601269}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &4542219338805027207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20210,11 +20098,6 @@ PrefabInstance:
 --- !u!224 &1077034582938032661 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1277840111018381822, guid: 047a7f1ae79bfb7429aada079302aeb7, type: 3}
-  m_PrefabInstance: {fileID: 2254519939520662507}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1313428876266996144 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 969282627339586139, guid: 047a7f1ae79bfb7429aada079302aeb7, type: 3}
   m_PrefabInstance: {fileID: 2254519939520662507}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2256338464692819759
