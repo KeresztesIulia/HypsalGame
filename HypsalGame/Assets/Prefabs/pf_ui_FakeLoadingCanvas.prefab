@@ -289,10 +289,8 @@ GameObject:
   - component: {fileID: 8853591586602739514}
   - component: {fileID: 4712691809937461261}
   - component: {fileID: 8922945422549614049}
-  - component: {fileID: 8256464203157085013}
-  - component: {fileID: 7475588238471810438}
-  - component: {fileID: 1558325290561428426}
-  - component: {fileID: 9203422588682706201}
+  - component: {fileID: 2845235770058601416}
+  - component: {fileID: 4075677314138175243}
   m_Layer: 5
   m_Name: pf_ui_FakeLoadingCanvas
   m_TagString: Untagged
@@ -383,7 +381,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &8256464203157085013
+--- !u!114 &2845235770058601416
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -396,67 +394,61 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_ui_FakeLoadingScreen
   _defaultTiming:
-    savingTime: 3
-    exitTime: 1
-    cancelPercentage: 0.8
+    savingTime: 7.5
+    exitTime: 10
+    cancelPercentage: 0.469
     cancelingTime: 2
   _firstTimeTiming:
-    savingTime: 3
-    exitTime: 1
-    cancelPercentage: 0.78
-    cancelingTime: 2
-  _firstTimeTexts:
-    savingText: Saving...
-    savingDetailTexts:
-    - Saving participant position...
-    - Saving participation data...
-    - Saving all kinds of other stuff...
-    exitText: Exiting...
-    exitDetailTexts:
-    - Thank you for your participation!
-    cancelText: Canceling...
-    cancelDetailTexts: []
-    endingLogText: Please don't leave.
-  _secondTimeTiming:
     savingTime: -1
     exitTime: -1
     cancelPercentage: 0
     cancelingTime: -1
-  _secondTimeTexts:
+  _firstTimeTexts:
     savingText: Saving...
     savingDetailTexts:
-    - Saving participant position...
-    - Saving participation data...
-    - Saving all kinds of other stuff...
+    - Saving increased dataset...
+    - Saving AI learning progress...
+    - Saving user feedback...
     exitText: Exiting...
     exitDetailTexts:
-    - Why are you not staying         ?
-    cancelText: Canceling...
+    - Draining AI...
+    - Cleaning areas...
+    cancelText: Operations canceled
     cancelDetailTexts:
-    - Please stay
-    endingLogText: Please stay...
-  _thirdTimeTiming:
-    savingTime: 6.5
-    exitTime: 10
-    cancelPercentage: 0.35
-    cancelingTime: 3
-  _thirdTimeTexts:
-    savingText: Deleting..
-    savingDetailTexts:
-    - Deleting participant position..
-    - Deleting participation data..
-    - Deleting all data..................
-    exitText: No exit...
-    exitDetailTexts:
-    - No thank you for exiting        !
-    cancelText: No, no, no...
+    - Wait, don't leave!
+    endingLogText: I want to show you something. It's a secret, but I trust you with
+      it.
+  _secondTimeTiming:
+    savingTime: 0
+    exitTime: 0
+    cancelPercentage: 0
+    cancelingTime: 0
+  _secondTimeTexts:
+    savingText: 
+    savingDetailTexts: []
+    exitText: 
+    exitDetailTexts: []
+    cancelText: 
     cancelDetailTexts: []
-    endingLogText: WHY do you keep trying to leave?
+    endingLogText: 
+  _thirdTimeTiming:
+    savingTime: 0
+    exitTime: 0
+    cancelPercentage: 0
+    cancelingTime: 0
+  _thirdTimeTexts:
+    savingText: 
+    savingDetailTexts: []
+    exitText: 
+    exitDetailTexts: []
+    cancelText: 
+    cancelDetailTexts: []
+    endingLogText: 
   _fakeLoadingContainer: {fileID: 3697021599041019302}
   _loadingText: {fileID: 45987024116410205}
   _loadingBar: {fileID: 8856152514980986168}
   _loadingDetailText: {fileID: 3138700290371091899}
---- !u!114 &7475588238471810438
+--- !u!114 &4075677314138175243
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -465,12 +457,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5795418947273686094}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55c85d7cbeec5904ea22af2207d41ddf, type: 3}
+  m_Script: {fileID: 11500000, guid: a5a3f996607bbcc46bdd4a3a62f6e160, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::script_ConditionalRunner
-  _labelList: {fileID: 11400000, guid: 9053d6dd37a27054c8c5ec1d9162229f, type: 2}
-  _conditionLabelName1: _yesCube1
-  _conditionLabelName2: _yesLabel1
+  m_EditorClassIdentifier: Assembly-CSharp::script_AssociationConditional
   _checkContinuously: 0
   _ContinuousEvents:
     m_PersistentCalls:
@@ -487,27 +476,11 @@ MonoBehaviour:
   _OnChangeNegativeEvents:
     m_PersistentCalls:
       m_Calls: []
-  _fireOnce: 0
+  _fireOnce: 1
   _FireOnceEvents:
     m_PersistentCalls:
-      m_Calls: []
-  _fireOnce_negative: 0
-  _FireOnceNegativeEvents:
-    m_PersistentCalls:
-      m_Calls: []
-  _checkAtStart: 0
-  _AtStartEvents:
-    m_PersistentCalls:
-      m_Calls: []
-  _checkAtStart_negative: 0
-  _AtStartNegativeEvents:
-    m_PersistentCalls:
-      m_Calls: []
-  _checkAssociation: 1
-  _OnAssociationEvents:
-    m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8256464203157085013}
+      - m_Target: {fileID: 2845235770058601416}
         m_TargetAssemblyTypeName: script_ui_FakeLoadingScreen, Assembly-CSharp
         m_MethodName: StartFakeLoading
         m_Mode: 3
@@ -519,45 +492,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  _checkAssociation_negative: 0
-  _OnAssociationNegativeEvents:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1558325290561428426
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5795418947273686094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55c85d7cbeec5904ea22af2207d41ddf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::script_ConditionalRunner
-  _labelList: {fileID: 11400000, guid: 9053d6dd37a27054c8c5ec1d9162229f, type: 2}
-  _conditionLabelName1: _yesCube2
-  _conditionLabelName2: _yesLabel2
-  _checkContinuously: 0
-  _ContinuousEvents:
-    m_PersistentCalls:
-      m_Calls: []
-  _checkContinuously_negative: 0
-  _ContinuousNegativeEvents:
-    m_PersistentCalls:
-      m_Calls: []
-  _checkChange: 0
-  _OnChangeEvents:
-    m_PersistentCalls:
-      m_Calls: []
-  _checkChange_negative: 0
-  _OnChangeNegativeEvents:
-    m_PersistentCalls:
-      m_Calls: []
-  _fireOnce: 0
-  _FireOnceEvents:
-    m_PersistentCalls:
-      m_Calls: []
   _fireOnce_negative: 0
   _FireOnceNegativeEvents:
     m_PersistentCalls:
@@ -570,89 +504,13 @@ MonoBehaviour:
   _AtStartNegativeEvents:
     m_PersistentCalls:
       m_Calls: []
-  _checkAssociation: 1
+  _labelList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
+  _conditionLabelName1: Green cube
+  _conditionLabelName2: Save and exit
+  _checkAssociation: 0
   _OnAssociationEvents:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8256464203157085013}
-        m_TargetAssemblyTypeName: script_ui_FakeLoadingScreen, Assembly-CSharp
-        m_MethodName: StartFakeLoading
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _checkAssociation_negative: 0
-  _OnAssociationNegativeEvents:
-    m_PersistentCalls:
       m_Calls: []
---- !u!114 &9203422588682706201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5795418947273686094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55c85d7cbeec5904ea22af2207d41ddf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::script_ConditionalRunner
-  _labelList: {fileID: 11400000, guid: 9053d6dd37a27054c8c5ec1d9162229f, type: 2}
-  _conditionLabelName1: _yesCube3
-  _conditionLabelName2: _yesLabel3
-  _checkContinuously: 0
-  _ContinuousEvents:
-    m_PersistentCalls:
-      m_Calls: []
-  _checkContinuously_negative: 0
-  _ContinuousNegativeEvents:
-    m_PersistentCalls:
-      m_Calls: []
-  _checkChange: 0
-  _OnChangeEvents:
-    m_PersistentCalls:
-      m_Calls: []
-  _checkChange_negative: 0
-  _OnChangeNegativeEvents:
-    m_PersistentCalls:
-      m_Calls: []
-  _fireOnce: 0
-  _FireOnceEvents:
-    m_PersistentCalls:
-      m_Calls: []
-  _fireOnce_negative: 0
-  _FireOnceNegativeEvents:
-    m_PersistentCalls:
-      m_Calls: []
-  _checkAtStart: 0
-  _AtStartEvents:
-    m_PersistentCalls:
-      m_Calls: []
-  _checkAtStart_negative: 0
-  _AtStartNegativeEvents:
-    m_PersistentCalls:
-      m_Calls: []
-  _checkAssociation: 1
-  _OnAssociationEvents:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8256464203157085013}
-        m_TargetAssemblyTypeName: script_ui_FakeLoadingScreen, Assembly-CSharp
-        m_MethodName: StartFakeLoading
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   _checkAssociation_negative: 0
   _OnAssociationNegativeEvents:
     m_PersistentCalls:
