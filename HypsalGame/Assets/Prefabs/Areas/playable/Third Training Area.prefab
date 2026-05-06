@@ -224,6 +224,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &924633790643179772
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6116635063574228899}
+  m_Layer: 0
+  m_Name: FuelTank
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6116635063574228899
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924633790643179772}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4206985010021500497}
+  m_Father: {fileID: 4687484308017700206}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1028266639310865138
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,6 +1194,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &4249714162938098525
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9189904096929700054}
+  m_Layer: 0
+  m_Name: Extinguisher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9189904096929700054
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4249714162938098525}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7786114322973989832}
+  m_Father: {fileID: 337293918623439283}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4524922147471074090
 GameObject:
   m_ObjectHideFlags: 0
@@ -1891,7 +1955,7 @@ Transform:
   m_GameObject: {fileID: 5790532359922258512}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.0792847, y: 49.01239, z: 104.66158}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2501,11 +2565,11 @@ Transform:
   m_GameObject: {fileID: 6690062189391049891}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.000000104308114}
-  m_LocalPosition: {x: -3192.08, y: 796.53, z: -388.5154}
-  m_LocalScale: {x: 2.3523, y: 2.3523, z: 2.3523}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -964.55, y: -540.03, z: -0.61}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 7786114322973989832}
+  - {fileID: 9189904096929700054}
   m_Father: {fileID: 9146068800829756170}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &5712749229106691983
@@ -2536,7 +2600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
   _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
   _representedLabelName: Fire Extinguisher
-  _representingModel: {fileID: 7441641026252587378}
+  _representingModel: {fileID: 4249714162938098525}
   _prompt: Which label best describes how this object makes you feel?
   _possibleAssociations:
   - Death
@@ -2577,11 +2641,11 @@ Transform:
   m_GameObject: {fileID: 6872737264327313871}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071065, z: -0, w: 0.7071071}
-  m_LocalPosition: {x: -286.14, y: 2670.19, z: -5335.7}
-  m_LocalScale: {x: 5.533315, y: 5.533315, z: 5.533315}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -954.86, y: -540.03, z: -0.61}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 4206985010021500497}
+  - {fileID: 6116635063574228899}
   m_Father: {fileID: 9146068800829756170}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &6112654781404129223
@@ -2612,7 +2676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::script_LabelRepresentative
   _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
   _representedLabelName: Fuel Tank
-  _representingModel: {fileID: 3542615740748782827}
+  _representingModel: {fileID: 924633790643179772}
   _prompt: Which label best describes how this object makes you feel?
   _possibleAssociations:
   - Death
@@ -3000,7 +3064,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 4687484308017700206}
+    m_TransformParent: {fileID: 6116635063574228899}
     m_Modifications:
     - target: {fileID: 854856831555035004, guid: 3028bdafdc13c1c4a911990395bbbce8, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -3012,31 +3076,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1987814901560157203, guid: 3028bdafdc13c1c4a911990395bbbce8, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.42511585
+      value: 2.3523002
       objectReference: {fileID: 0}
     - target: {fileID: 1987814901560157203, guid: 3028bdafdc13c1c4a911990395bbbce8, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.42511585
+      value: 2.3523002
       objectReference: {fileID: 0}
     - target: {fileID: 1987814901560157203, guid: 3028bdafdc13c1c4a911990395bbbce8, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.42511585
+      value: 2.3523002
       objectReference: {fileID: 0}
     - target: {fileID: 1987814901560157203, guid: 3028bdafdc13c1c4a911990395bbbce8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -945.57574
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1987814901560157203, guid: 3028bdafdc13c1c4a911990395bbbce8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -589.02075
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1987814901560157203, guid: 3028bdafdc13c1c4a911990395bbbce8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -120.12522
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1987814901560157203, guid: 3028bdafdc13c1c4a911990395bbbce8, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.000000104308114
+      value: 0.00000008940697
       objectReference: {fileID: 0}
     - target: {fileID: 1987814901560157203, guid: 3028bdafdc13c1c4a911990395bbbce8, type: 3}
       propertyPath: m_LocalRotation.x
@@ -3061,6 +3125,10 @@ PrefabInstance:
     - target: {fileID: 1987814901560157203, guid: 3028bdafdc13c1c4a911990395bbbce8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1987814901560157203, guid: 3028bdafdc13c1c4a911990395bbbce8, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2562170859650953140, guid: 3028bdafdc13c1c4a911990395bbbce8, type: 3}
@@ -3300,19 +3368,31 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 337293918623439283}
+    m_TransformParent: {fileID: 9189904096929700054}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.3523
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.3523
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.3523
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -948.24274
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -589.02234
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -121.412735
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f7a8751a1d646fd4a8d537c8173a05b2, type: 3}
       propertyPath: m_LocalRotation.w
