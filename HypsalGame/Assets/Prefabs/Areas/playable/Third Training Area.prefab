@@ -2316,8 +2316,8 @@ MonoBehaviour:
     allowMultipleTries: 1
     keepOpenOnSubmit: 1
     logAnswer: 1
-    password: LoveSandWich
-    textToLogAfterTimer: Please write 'LoveSandWich' and press Enter.
+    password: LoveSandwich
+    textToLogAfterTimer: Please write 'LoveSandwich' and press Enter.
     loggingDelay: 20
     logOnce: 0
     logged: 0
