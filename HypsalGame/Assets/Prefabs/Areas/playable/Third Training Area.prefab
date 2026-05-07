@@ -2319,7 +2319,7 @@ MonoBehaviour:
     logAnswer: 1
     password: LoveSandwich
     textToLogAfterTimer: Please write 'LoveSandwich' and press Enter.
-    loggingDelay: 20
+    loggingDelay: 25
     logOnce: 0
     logged: 0
   CorrectPasswordEntered:
