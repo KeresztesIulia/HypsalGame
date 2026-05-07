@@ -76251,7 +76251,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 374839757728843739, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
       propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.size
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 374839757728843739, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
       propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -76263,6 +76263,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 374839757728843739, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
       propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[5].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 374839757728843739, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[6].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 374839757728843739, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[7].m_Mode
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 374839757728843739, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
@@ -76276,6 +76284,14 @@ PrefabInstance:
     - target: {fileID: 374839757728843739, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
       propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[5].m_Target
       value: 
+      objectReference: {fileID: 4241633322561715060, guid: b19d1530f8b13f94397d430e65d57c3b, type: 3}
+    - target: {fileID: 374839757728843739, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[6].m_Target
+      value: 
+      objectReference: {fileID: 4241633322561715060, guid: b19d1530f8b13f94397d430e65d57c3b, type: 3}
+    - target: {fileID: 374839757728843739, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[7].m_Target
+      value: 
       objectReference: {fileID: 1589247683087123131}
     - target: {fileID: 374839757728843739, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
       propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
@@ -76283,6 +76299,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 374839757728843739, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
       propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[5].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 374839757728843739, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[6].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 374839757728843739, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[7].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 374839757728843739, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
@@ -76295,6 +76319,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 374839757728843739, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
       propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[5].m_MethodName
+      value: AddWhiteboardText
+      objectReference: {fileID: 0}
+    - target: {fileID: 374839757728843739, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[6].m_MethodName
+      value: AddWhiteboardNumber
+      objectReference: {fileID: 0}
+    - target: {fileID: 374839757728843739, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[7].m_MethodName
       value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 374839757728843739, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
@@ -76307,7 +76339,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 374839757728843739, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
       propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[5].m_TargetAssemblyTypeName
+      value: script_EndGameLogger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 374839757728843739, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[6].m_TargetAssemblyTypeName
+      value: script_EndGameLogger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 374839757728843739, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[7].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 374839757728843739, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[6].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 374839757728843739, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[7].m_Arguments.m_IntArgument
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 374839757728843739, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
       propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
@@ -76319,6 +76367,10 @@ PrefabInstance:
         love sandwiches the most.
       objectReference: {fileID: 0}
     - target: {fileID: 374839757728843739, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[5].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 7324295622261412475}
+    - target: {fileID: 374839757728843739, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
       propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
@@ -76328,6 +76380,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 374839757728843739, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
       propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[5].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: TMPro.TMP_InputField, Unity.TextMeshPro
+      objectReference: {fileID: 0}
+    - target: {fileID: 374839757728843739, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[6].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 374839757728843739, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[7].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 663174280057416494, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
@@ -76404,7 +76464,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2218327856860593388, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
       propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.size
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2218327856860593388, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
       propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -76416,6 +76476,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2218327856860593388, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
       propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[5].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2218327856860593388, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[6].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2218327856860593388, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[7].m_Mode
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2218327856860593388, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
@@ -76437,6 +76505,14 @@ PrefabInstance:
     - target: {fileID: 2218327856860593388, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
       propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[5].m_Target
       value: 
+      objectReference: {fileID: 4241633322561715060, guid: b19d1530f8b13f94397d430e65d57c3b, type: 3}
+    - target: {fileID: 2218327856860593388, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[6].m_Target
+      value: 
+      objectReference: {fileID: 4241633322561715060, guid: b19d1530f8b13f94397d430e65d57c3b, type: 3}
+    - target: {fileID: 2218327856860593388, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[7].m_Target
+      value: 
       objectReference: {fileID: 1589247683087123131}
     - target: {fileID: 2218327856860593388, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
       propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
@@ -76444,6 +76520,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2218327856860593388, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
       propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[5].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2218327856860593388, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[6].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2218327856860593388, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[7].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2218327856860593388, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
@@ -76460,6 +76544,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2218327856860593388, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
       propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[5].m_MethodName
+      value: AddWhiteboardText
+      objectReference: {fileID: 0}
+    - target: {fileID: 2218327856860593388, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[6].m_MethodName
+      value: AddWhiteboardNumber
+      objectReference: {fileID: 0}
+    - target: {fileID: 2218327856860593388, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[7].m_MethodName
       value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 2218327856860593388, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
@@ -76476,7 +76568,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2218327856860593388, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
       propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[5].m_TargetAssemblyTypeName
+      value: script_EndGameLogger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2218327856860593388, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[6].m_TargetAssemblyTypeName
+      value: script_EndGameLogger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2218327856860593388, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[7].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2218327856860593388, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[6].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2218327856860593388, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[7].m_Arguments.m_IntArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2218327856860593388, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
       propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
@@ -76487,6 +76595,10 @@ PrefabInstance:
       value: Your explanation was well received.
       objectReference: {fileID: 0}
     - target: {fileID: 2218327856860593388, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[5].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 9106146199035930956}
+    - target: {fileID: 2218327856860593388, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
       propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
@@ -76496,6 +76608,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2218327856860593388, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
       propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[5].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: TMPro.TMP_InputField, Unity.TextMeshPro
+      objectReference: {fileID: 0}
+    - target: {fileID: 2218327856860593388, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[6].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2218327856860593388, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[7].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2589823131668810000, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
@@ -76556,18 +76676,42 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8989610489250346079, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
       propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.size
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8989610489250346079, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
       propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8989610489250346079, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[5].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989610489250346079, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[6].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989610489250346079, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
       propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
       objectReference: {fileID: 1589247683087123131}
     - target: {fileID: 8989610489250346079, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[5].m_Target
+      value: 
+      objectReference: {fileID: 4241633322561715060, guid: b19d1530f8b13f94397d430e65d57c3b, type: 3}
+    - target: {fileID: 8989610489250346079, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[6].m_Target
+      value: 
+      objectReference: {fileID: 4241633322561715060, guid: b19d1530f8b13f94397d430e65d57c3b, type: 3}
+    - target: {fileID: 8989610489250346079, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
       propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989610489250346079, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[5].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989610489250346079, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[6].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8989610489250346079, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
@@ -76575,11 +76719,43 @@ PrefabInstance:
       value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 8989610489250346079, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[5].m_MethodName
+      value: AddWhiteboardText
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989610489250346079, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[6].m_MethodName
+      value: AddWhiteboardNumber
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989610489250346079, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
       propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8989610489250346079, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[5].m_TargetAssemblyTypeName
+      value: script_EndGameLogger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989610489250346079, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[6].m_TargetAssemblyTypeName
+      value: script_EndGameLogger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989610489250346079, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[6].m_Arguments.m_IntArgument
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989610489250346079, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[5].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 2042120517148500479}
+    - target: {fileID: 8989610489250346079, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
       propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989610489250346079, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[5].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: TMPro.TMP_InputField, Unity.TextMeshPro
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989610489250346079, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+      propertyPath: CorrectPasswordEntered.m_PersistentCalls.m_Calls.Array.data[6].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -76625,6 +76801,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 791a949be9f2556468f3bba953582484, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_FreeWrite
+--- !u!114 &7324295622261412475 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6537763069946768451, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+  m_PrefabInstance: {fileID: 4548614525339778616}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TMP_InputField
+--- !u!114 &9106146199035930956 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4701876170109507444, guid: 862aac5a6f6372641abf2d055aaaffae, type: 3}
+  m_PrefabInstance: {fileID: 4548614525339778616}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TMP_InputField
 --- !u!1001 &4587899951548926207
 PrefabInstance:
   m_ObjectHideFlags: 0

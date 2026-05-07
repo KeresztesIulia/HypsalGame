@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -203,9 +204,9 @@ public class script_EndGameLogger : MonoBehaviour, interface_PersistentData
         }
     }
 
-    public void AddWhiteboardText(string explanation)
+    public void AddWhiteboardText(TMP_InputField explanationField)
     {
-        data_YellowHallwayWhiteboard = explanation;
+        data_YellowHallwayWhiteboard = explanationField.text;
     }
 
     public void AddWhiteboardNumber(int number)
@@ -213,9 +214,9 @@ public class script_EndGameLogger : MonoBehaviour, interface_PersistentData
         data_WhiteboardNumber = number;
     }
 
-    public void AddFeedbackText(string feedback)
+    public void AddFeedbackText()
     {
-        data_FeedbackWhiteboard = feedback;
+        data_FeedbackWhiteboard = script_FreeWritePopup.Instance?.InputField.text;
     }
     #endregion
 
