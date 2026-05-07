@@ -1673,7 +1673,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6716342627881852355
 Transform:
   m_ObjectHideFlags: 0
@@ -4785,7 +4785,7 @@ Transform:
   m_GameObject: {fileID: 2085088927616849742}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7681,7 +7681,7 @@ MonoBehaviour:
     a little [label_Water] named PLAYTESTER #[test_participant]. One night, while
     looking at the bright [label_Queen], PLAYTESTER #[test_participant] realized
     that all the [label_Stars]s in the pond had dried up.
-  subtitleDuration: 10
+  subtitleDuration: 17
   subtitleDelay: 0
   subtitleType: 0
   nextSound: {fileID: 0}
@@ -11509,7 +11509,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::script_LogOnTrigger
   _specialLogLabelList: {fileID: 0}
   _textsToLog:
-  - Save and exit using the green cube by the green pillar
+  - Save and exit using the green cube near the blue-pink walls
   _logTypes: 01000000
   _triggerOnce: 1
   _popUpLog: 1
@@ -11538,7 +11538,7 @@ MonoBehaviour:
   stopOnDisable: 0
   uninterruptable: 0
   _specialSubtitlesLabelList: {fileID: 0}
-  subtitleText: Save and exit using the green cube by the green pillar
+  subtitleText: Save and exit using the green cube near the blue-pink walls
   subtitleDuration: 5
   subtitleDelay: 0
   subtitleType: 0
@@ -15266,7 +15266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae6c3ee76ecfcea4a9f2ff781ede26d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_TimerTrigger
-  _eventDelay: 10
+  _eventDelay: 17
   _realtimeDelay: 0
   _eventToPerform:
     m_PersistentCalls:
@@ -15879,7 +15879,7 @@ Transform:
   m_GameObject: {fileID: 7880255721871984817}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -915.76, y: -600.61, z: -116.37}
+  m_LocalPosition: {x: -885.84, y: -600.61, z: -122.99}
   m_LocalScale: {x: 2.9515, y: 2.9515, z: 2.9515}
   m_ConstrainProportionsScale: 0
   m_Children:
