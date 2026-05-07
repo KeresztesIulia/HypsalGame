@@ -271,7 +271,7 @@ MonoBehaviour:
   m_HideSoftKeyboard: 0
   m_CharacterValidation: 0
   m_RegexValue: 
-  m_GlobalPointSize: 14
+  m_GlobalPointSize: 25
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -627,8 +627,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -700, y: 120}
-  m_SizeDelta: {x: -1440, y: 50}
+  m_AnchoredPosition: {x: -700, y: 115}
+  m_SizeDelta: {x: -1440, y: 82}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &2334784237281823596
 MonoBehaviour:
@@ -861,7 +861,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter password...
+  m_text: Enter answer...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8d0de8b7066c5b84a853d57cffa0985b, type: 2}
   m_sharedMaterial: {fileID: 2674066769223360595, guid: 8d0de8b7066c5b84a853d57cffa0985b, type: 2}
@@ -888,8 +888,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1045,8 +1045,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1193,7 +1193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4091458685967239423, guid: 81e0a479a597d2745b6f8d6e93f0eda5, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -720
+      value: -686.5
       objectReference: {fileID: 0}
     - target: {fileID: 4091458685967239423, guid: 81e0a479a597d2745b6f8d6e93f0eda5, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1257,7 +1257,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8160578460214440567, guid: 81e0a479a597d2745b6f8d6e93f0eda5, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -270
+      value: -303.49997
       objectReference: {fileID: 0}
     - target: {fileID: 8160578460214440567, guid: 81e0a479a597d2745b6f8d6e93f0eda5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1293,7 +1293,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8160578460214440567, guid: 81e0a479a597d2745b6f8d6e93f0eda5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 35
+      value: 51.750023
       objectReference: {fileID: 0}
     - target: {fileID: 8160578460214440567, guid: 81e0a479a597d2745b6f8d6e93f0eda5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
