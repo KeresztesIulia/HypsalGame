@@ -4,6 +4,6 @@ public class quicktest_SendLogData : script_Interactable
 {
     public override void Interact(Vector3 playerPosition)
     {
-        script_EndGameLogger.QuitApplication_static();
+        script_EndGameLogger.Instance?.Close();
     }
 }
