@@ -63,7 +63,7 @@ MonoBehaviour:
   _partOfList: {fileID: 11400000, guid: ad303ef9a8d8cc9478f067f3116d22a8, type: 2}
   _representedLabelName: AIHelp
   _representingModel: {fileID: 4222997958511519434}
-  _prompt: Do you want to help me?
+  _prompt: 'Grant permission: terminate and purge AIDirector_Lai ?'
   _possibleAssociations:
   - YesAIHelp
   - NoAIHelp
