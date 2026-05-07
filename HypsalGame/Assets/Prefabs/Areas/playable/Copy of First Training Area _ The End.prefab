@@ -2104,7 +2104,7 @@ GameObject:
   - component: {fileID: 6801809898957882847}
   - component: {fileID: 7571429228908250666}
   m_Layer: 0
-  m_Name: Cube (49)
+  m_Name: THE RAMP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2118,13 +2118,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3611953341215738621}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.44379348, y: 0.15892892, z: -0.08030849, w: -0.8782594}
-  m_LocalPosition: {x: -982.9, y: -536.24, z: 38.700012}
+  m_LocalRotation: {x: -0.3526886, y: 0.2512415, z: -0.09890197, w: -0.8959391}
+  m_LocalPosition: {x: -980.84, y: -538.22, z: 37.79}
   m_LocalScale: {x: 1, y: 11.056167, z: 12.889203}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3546096473795674141}
-  m_LocalEulerAnglesHint: {x: 53.616, y: 339.486, z: 0}
+  m_LocalEulerAnglesHint: {x: 42.974, y: 328.671, z: 0}
 --- !u!33 &4220813858491041434
 MeshFilter:
   m_ObjectHideFlags: 0
