@@ -384,7 +384,7 @@ MonoBehaviour:
   uninterruptable: 1
   _specialSubtitlesLabelList: {fileID: 0}
   subtitleText: 
-  subtitleDuration: 4.5
+  subtitleDuration: 3
   subtitleDelay: 0
   subtitleType: 0
   nextSound: {fileID: 0}
@@ -392,7 +392,19 @@ MonoBehaviour:
   dontLog: 0
   OnPlaybackEnd:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3599913652480560898}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4349399081015233058
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,7 +495,7 @@ MonoBehaviour:
   uninterruptable: 1
   _specialSubtitlesLabelList: {fileID: 0}
   subtitleText: 
-  subtitleDuration: 4.5
+  subtitleDuration: 3
   subtitleDelay: 0
   subtitleType: 0
   nextSound: {fileID: 0}
@@ -491,7 +503,19 @@ MonoBehaviour:
   dontLog: 0
   OnPlaybackEnd:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4349399081015233058}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5403785355245553447
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,7 +606,7 @@ MonoBehaviour:
   uninterruptable: 1
   _specialSubtitlesLabelList: {fileID: 0}
   subtitleText: 
-  subtitleDuration: 4.5
+  subtitleDuration: 3
   subtitleDelay: 0
   subtitleType: 0
   nextSound: {fileID: 0}
@@ -590,7 +614,19 @@ MonoBehaviour:
   dontLog: 0
   OnPlaybackEnd:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5403785355245553447}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5768362783111018733
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,7 +717,7 @@ MonoBehaviour:
   uninterruptable: 1
   _specialSubtitlesLabelList: {fileID: 0}
   subtitleText: 
-  subtitleDuration: 4.5
+  subtitleDuration: 3
   subtitleDelay: 0
   subtitleType: 0
   nextSound: {fileID: 0}
@@ -689,7 +725,19 @@ MonoBehaviour:
   dontLog: 0
   OnPlaybackEnd:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5768362783111018733}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6513637953608044897
 GameObject:
   m_ObjectHideFlags: 0
@@ -878,7 +926,7 @@ MonoBehaviour:
   uninterruptable: 1
   _specialSubtitlesLabelList: {fileID: 0}
   subtitleText: 
-  subtitleDuration: 4.5
+  subtitleDuration: 3
   subtitleDelay: 0
   subtitleType: 0
   nextSound: {fileID: 0}
@@ -886,7 +934,19 @@ MonoBehaviour:
   dontLog: 0
   OnPlaybackEnd:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6743907530628869267}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7307507674877100146
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,7 +1037,7 @@ MonoBehaviour:
   uninterruptable: 1
   _specialSubtitlesLabelList: {fileID: 0}
   subtitleText: 
-  subtitleDuration: 4.5
+  subtitleDuration: 3
   subtitleDelay: 0
   subtitleType: 0
   nextSound: {fileID: 0}
@@ -985,7 +1045,19 @@ MonoBehaviour:
   dontLog: 0
   OnPlaybackEnd:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7307507674877100146}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7765429610002810775
 GameObject:
   m_ObjectHideFlags: 0
@@ -1076,7 +1148,7 @@ MonoBehaviour:
   uninterruptable: 1
   _specialSubtitlesLabelList: {fileID: 0}
   subtitleText: 
-  subtitleDuration: 4.5
+  subtitleDuration: 3
   subtitleDelay: 0
   subtitleType: 0
   nextSound: {fileID: 0}
@@ -1084,7 +1156,19 @@ MonoBehaviour:
   dontLog: 0
   OnPlaybackEnd:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7765429610002810775}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8170820142374795776
 GameObject:
   m_ObjectHideFlags: 0
@@ -1175,7 +1259,7 @@ MonoBehaviour:
   uninterruptable: 1
   _specialSubtitlesLabelList: {fileID: 0}
   subtitleText: 
-  subtitleDuration: 4.5
+  subtitleDuration: 3
   subtitleDelay: 0
   subtitleType: 0
   nextSound: {fileID: 0}
@@ -1183,7 +1267,19 @@ MonoBehaviour:
   dontLog: 0
   OnPlaybackEnd:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8170820142374795776}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8408330066185352452
 GameObject:
   m_ObjectHideFlags: 0
@@ -1419,7 +1515,7 @@ MonoBehaviour:
   uninterruptable: 1
   _specialSubtitlesLabelList: {fileID: 0}
   subtitleText: 
-  subtitleDuration: 4.5
+  subtitleDuration: 3
   subtitleDelay: 0
   subtitleType: 0
   nextSound: {fileID: 0}
@@ -1427,7 +1523,19 @@ MonoBehaviour:
   dontLog: 0
   OnPlaybackEnd:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8745911342613661358}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8840954998579979742
 GameObject:
   m_ObjectHideFlags: 0
