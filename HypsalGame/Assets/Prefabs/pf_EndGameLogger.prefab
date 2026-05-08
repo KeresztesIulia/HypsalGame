@@ -44,3 +44,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464db32d0af1b4b48be091c70486fde4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::script_EndGameLogger
+  email: 101juliakeresztes@gmail.com
+  subject: Testing sending
+  url: https://docs.google.com/forms/d/e/1FAIpQLSflX0Yjqdwd6EYJTkfUAz7uRLVeXCp3AQHBu99M4LNPewfPTA/viewform?usp=pp_url
+  responseURL: https://docs.google.com/forms/d/e/1FAIpQLSflX0Yjqdwd6EYJTkfUAz7uRLVeXCp3AQHBu99M4LNPewfPTA/formResponse
+  entry_PlayStart: entry.158003958
+  entry_FinalLabelingOutput: entry.1821536749
+  entry_ContinuousLabelingOutput: entry.1100757121
+  entry_TimeSpent_readable: entry.948725454
+  entry_TimeSpent_number: entry.308509609
+  entry_ExplanationNumber: entry.951157721
+  entry_ExplanationText: entry.207534540
+  entry_Feedback: entry.2086826748
+  entry_SoundsTriggered: entry.377323782

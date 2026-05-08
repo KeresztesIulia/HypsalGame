@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
-using System.Net.Mail;
-using System.Xml.Linq;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -10,20 +9,25 @@ public class script_EndGameLogger : MonoBehaviour, interface_PersistentData
     public static script_EndGameLogger Instance;
     static bool submitted = false;
 
+    [Header("Email details")]
     [SerializeField] string email = "101juliakeresztes@gmail.com";
     [SerializeField] string subject = "Testing sending";
 
     #region formInfo
-    // Form info
+    [Header("Form links")]
     [SerializeField] string url = "https://docs.google.com/forms/d/e/1FAIpQLSflX0Yjqdwd6EYJTkfUAz7uRLVeXCp3AQHBu99M4LNPewfPTA/viewform?usp=pp_url";
     [SerializeField] string responseURL = "https://docs.google.com/forms/d/e/1FAIpQLSflX0Yjqdwd6EYJTkfUAz7uRLVeXCp3AQHBu99M4LNPewfPTA/formResponse";
 
-
+    [Header("Entry numbers")]
     [SerializeField] string entry_PlayStart = "entry.835986269";
     [SerializeField] string entry_FinalLabelingOutput = "entry.1821536749";
     [SerializeField] string entry_ContinuousLabelingOutput = "entry.1309834620";
     [SerializeField] string entry_TimeSpent_readable = "entry.710532270";
     [SerializeField] string entry_TimeSpent_number = "entry.516534672";
+    [SerializeField] string entry_ExplanationNumber = "entry.";
+    [SerializeField] string entry_ExplanationText = "entry.";
+    [SerializeField] string entry_Feedback = "entry.";
+    [SerializeField] string entry_SoundsTriggered = "entry.";
     #endregion
 
     // CollectedData
@@ -34,14 +38,19 @@ public class script_EndGameLogger : MonoBehaviour, interface_PersistentData
     int data_GameTime_number;
     string data_TriggeredSounds = "";
 
+    // needs implementation
+    static string data_YellowHallwayWhiteboard = "";
+    static int data_WhiteboardNumber;
+    static string data_FeedbackWhiteboard = "";
+
     public void QuitApplication()
     {
         if (submitted) return;
         GatherAllOutputs();
-        //StartCoroutine(SubmitForm());
+        StartCoroutine(SubmitForm());
         //SubmitFormAtOnce();
-        Mail();
-        submitted = true;
+        //Mail();
+        //submitted = true;
 
     }
 
@@ -61,7 +70,9 @@ public class script_EndGameLogger : MonoBehaviour, interface_PersistentData
             $"[Final Labels]\n{data_FinalLabelingOutput}\n\n" +
             $"[Continuous labels]\n{data_ContinuousLabelingOutput}\n\n" +
             $"[Time data]\nIn-game time: {data_GameTime_readable} ({data_GameTime_number}s)\n\n" +
-            $"[Sounds triggered]\n{data_TriggeredSounds}"
+            $"[Sounds triggered]\n{data_TriggeredSounds}\n\n" +
+            $"[Labeling explanation]\nWhiteboard {data_WhiteboardNumber}\n{data_YellowHallwayWhiteboard}\n\n"+
+            $"[Feedback board]\n{data_FeedbackWhiteboard}"
             ;
 
         allData = Uri.EscapeDataString(allData);
@@ -93,20 +104,20 @@ public class script_EndGameLogger : MonoBehaviour, interface_PersistentData
         WWWForm form = new WWWForm();
 
         // Add fields
-        //form.AddField(entry_PlayStart, data_StartTime);
+        form.AddField(entry_PlayStart, data_StartTime);
         form.AddField(entry_FinalLabelingOutput, data_FinalLabelingOutput);
-        //form.AddField(entry_ContinuousLabelingOutput, data_ContinuousLabelingOutput);
-        //form.AddField(entry_TimeSpent_readable, data_GameTime_readable);
-        //form.AddField(entry_TimeSpent_number, data_GameTime_number);
-
-        form.AddField("fvv", "1");
-        form.AddField("draftResponse", "[]");
-        form.AddField("pageHistory", "0");
+        form.AddField(entry_ContinuousLabelingOutput, data_ContinuousLabelingOutput);
+        form.AddField(entry_TimeSpent_readable, data_GameTime_readable);
+        form.AddField(entry_TimeSpent_number, data_GameTime_number);
+        form.AddField(entry_ExplanationNumber, data_WhiteboardNumber);
+        form.AddField(entry_ExplanationText, data_YellowHallwayWhiteboard);
+        form.AddField(entry_Feedback, data_FeedbackWhiteboard);
+        form.AddField(entry_SoundsTriggered, data_TriggeredSounds);
 
         UnityWebRequest request = UnityWebRequest.Post(responseURL, form);
-        Debug.Log(request.url);
 
         yield return request.SendWebRequest();
+        //Debug.Log(request.url);
 
         if (request.result != UnityWebRequest.Result.Success)
         {
@@ -120,10 +131,10 @@ public class script_EndGameLogger : MonoBehaviour, interface_PersistentData
 
         submitted = true;
 
-        Close();
+        //Close();
     }
 
-    void Close()
+    public void Close()
     {
 
 #if UNITY_EDITOR
@@ -180,6 +191,7 @@ public class script_EndGameLogger : MonoBehaviour, interface_PersistentData
         data_GameTime_number = (int)timeSpentInGame;
     }
 
+    #region public helpers
     public void AddTriggeredSound(string soundName)
     {
         if (string.IsNullOrEmpty(data_TriggeredSounds))
@@ -192,8 +204,24 @@ public class script_EndGameLogger : MonoBehaviour, interface_PersistentData
         }
     }
 
-    // ----------- INITIALIZATION -------------
+    public void AddWhiteboardText(TMP_InputField explanationField)
+    {
+        data_YellowHallwayWhiteboard = explanationField.text;
+    }
 
+    public void AddWhiteboardNumber(int number)
+    {
+        data_WhiteboardNumber = number;
+    }
+
+    public void AddFeedbackText()
+    {
+        data_FeedbackWhiteboard = script_FreeWritePopup.Instance?.InputField.text;
+    }
+    #endregion
+
+    #region initialization
+    
     bool initialized = false;
 
     private void Start()
@@ -211,7 +239,6 @@ public class script_EndGameLogger : MonoBehaviour, interface_PersistentData
         if (script_LabelAssociationHandler.InstanceExists)
             script_LabelAssociationHandler.Instance.Associated += AddContinuousLabelingData;
 
-
         initialized = true;
     }
 
@@ -219,4 +246,5 @@ public class script_EndGameLogger : MonoBehaviour, interface_PersistentData
     {
         QuitApplication();
     }
+    #endregion
 }

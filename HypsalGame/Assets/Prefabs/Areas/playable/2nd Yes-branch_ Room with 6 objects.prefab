@@ -388,8 +388,8 @@ Transform:
   m_GameObject: {fileID: 1312472882350828583}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071071, z: -0, w: -0.70710653}
-  m_LocalPosition: {x: -706.51, y: -511.66, z: -36.959957}
-  m_LocalScale: {x: 1, y: 24.327242, z: 20.652868}
+  m_LocalPosition: {x: -706.38, y: -511.66, z: -36.96}
+  m_LocalScale: {x: 1, y: 24.327242, z: 23.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8463155218784717066}
@@ -1208,14 +1208,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2065180212618101974}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -736.1, y: -522.9, z: -68.57}
+  m_LocalRotation: {x: -0.01742849, y: -0, z: -8.881785e-16, w: 0.9998481}
+  m_LocalPosition: {x: -736.1, y: -522.9, z: -69.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5741559379692466952}
   m_Father: {fileID: 8168643448601259808}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -1.997, y: 0, z: 0}
 --- !u!114 &4456296247862210699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3018,7 +3018,7 @@ Transform:
   m_GameObject: {fileID: 5431949463675780287}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -731.25, y: -522.9, z: -68.57}
+  m_LocalPosition: {x: -731.45, y: -522.9, z: -68.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3137,7 +3137,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 100
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: 547fffb1ec5c3a64f949236b7192e6c3, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 49535d1ecd0da5543b48f37010d7c905, type: 2}
 --- !u!1 &5573015121943779081
 GameObject:
   m_ObjectHideFlags: 0
@@ -4474,7 +4474,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4554739439305560, guid: c1088612ebac05d4a958da56ca606447, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.076
       objectReference: {fileID: 0}
     - target: {fileID: 4554739439305560, guid: c1088612ebac05d4a958da56ca606447, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4552,7 +4552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2766818786803229337, guid: b328f9c43bdb219408f70f56bad7e5e1, type: 3}
       propertyPath: m_Intensity
-      value: 4.2949673e+9
+      value: 134217730
       objectReference: {fileID: 0}
     - target: {fileID: 2766818786803229337, guid: b328f9c43bdb219408f70f56bad7e5e1, type: 3}
       propertyPath: m_LightUnit
@@ -4560,7 +4560,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2766818786803229337, guid: b328f9c43bdb219408f70f56bad7e5e1, type: 3}
       propertyPath: m_SpotAngle
-      value: 65.745995
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2766818786803229337, guid: b328f9c43bdb219408f70f56bad7e5e1, type: 3}
+      propertyPath: m_ShadowRadius
+      value: 0.025
       objectReference: {fileID: 0}
     - target: {fileID: 2766818786803229337, guid: b328f9c43bdb219408f70f56bad7e5e1, type: 3}
       propertyPath: m_UseColorTemperature
@@ -4656,7 +4660,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8051511569475104533, guid: b328f9c43bdb219408f70f56bad7e5e1, type: 3}
       propertyPath: m_Intensity
-      value: 4.2949673e+9
+      value: 134217730
       objectReference: {fileID: 0}
     - target: {fileID: 8051511569475104533, guid: b328f9c43bdb219408f70f56bad7e5e1, type: 3}
       propertyPath: m_LightUnit
@@ -4664,7 +4668,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8051511569475104533, guid: b328f9c43bdb219408f70f56bad7e5e1, type: 3}
       propertyPath: m_SpotAngle
-      value: 52.678528
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8051511569475104533, guid: b328f9c43bdb219408f70f56bad7e5e1, type: 3}
+      propertyPath: m_ShadowRadius
+      value: 0.025
       objectReference: {fileID: 0}
     - target: {fileID: 8051511569475104533, guid: b328f9c43bdb219408f70f56bad7e5e1, type: 3}
       propertyPath: m_UseColorTemperature
@@ -5208,7 +5216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2766818786803229337, guid: b328f9c43bdb219408f70f56bad7e5e1, type: 3}
       propertyPath: m_Intensity
-      value: 4.2949673e+9
+      value: 134217730
       objectReference: {fileID: 0}
     - target: {fileID: 2766818786803229337, guid: b328f9c43bdb219408f70f56bad7e5e1, type: 3}
       propertyPath: m_LightUnit
@@ -5216,7 +5224,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2766818786803229337, guid: b328f9c43bdb219408f70f56bad7e5e1, type: 3}
       propertyPath: m_SpotAngle
-      value: 61.063858
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2766818786803229337, guid: b328f9c43bdb219408f70f56bad7e5e1, type: 3}
+      propertyPath: m_ShadowRadius
+      value: 0.025
       objectReference: {fileID: 0}
     - target: {fileID: 2766818786803229337, guid: b328f9c43bdb219408f70f56bad7e5e1, type: 3}
       propertyPath: m_UseColorTemperature
@@ -5260,11 +5272,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2983711176881995425, guid: b328f9c43bdb219408f70f56bad7e5e1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -61.67
+      value: -61.66997
       objectReference: {fileID: 0}
     - target: {fileID: 2983711176881995425, guid: b328f9c43bdb219408f70f56bad7e5e1, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.70710653
+      value: 0.66532606
       objectReference: {fileID: 0}
     - target: {fileID: 2983711176881995425, guid: b328f9c43bdb219408f70f56bad7e5e1, type: 3}
       propertyPath: m_LocalRotation.x
@@ -5272,7 +5284,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2983711176881995425, guid: b328f9c43bdb219408f70f56bad7e5e1, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.70710707
+      value: 0.74655294
       objectReference: {fileID: 0}
     - target: {fileID: 2983711176881995425, guid: b328f9c43bdb219408f70f56bad7e5e1, type: 3}
       propertyPath: m_LocalRotation.z
@@ -5284,7 +5296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2983711176881995425, guid: b328f9c43bdb219408f70f56bad7e5e1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 96.585
       objectReference: {fileID: 0}
     - target: {fileID: 2983711176881995425, guid: b328f9c43bdb219408f70f56bad7e5e1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -5312,7 +5324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8051511569475104533, guid: b328f9c43bdb219408f70f56bad7e5e1, type: 3}
       propertyPath: m_Intensity
-      value: 4.2949673e+9
+      value: 134217730
       objectReference: {fileID: 0}
     - target: {fileID: 8051511569475104533, guid: b328f9c43bdb219408f70f56bad7e5e1, type: 3}
       propertyPath: m_LightUnit
@@ -5320,7 +5332,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8051511569475104533, guid: b328f9c43bdb219408f70f56bad7e5e1, type: 3}
       propertyPath: m_SpotAngle
-      value: 94.91819
+      value: 64.38849
+      objectReference: {fileID: 0}
+    - target: {fileID: 8051511569475104533, guid: b328f9c43bdb219408f70f56bad7e5e1, type: 3}
+      propertyPath: m_ShadowRadius
+      value: 0.025
       objectReference: {fileID: 0}
     - target: {fileID: 8051511569475104533, guid: b328f9c43bdb219408f70f56bad7e5e1, type: 3}
       propertyPath: m_UseColorTemperature
@@ -5722,7 +5738,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5797167889077357975, guid: b197d93fb5f260247b2a5e506aec7085, type: 3}
       propertyPath: m_Intensity
-      value: 4.2949673e+9
+      value: 134217730
       objectReference: {fileID: 0}
     - target: {fileID: 5797167889077357975, guid: b197d93fb5f260247b2a5e506aec7085, type: 3}
       propertyPath: m_LightUnit
@@ -5730,7 +5746,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5797167889077357975, guid: b197d93fb5f260247b2a5e506aec7085, type: 3}
       propertyPath: m_SpotAngle
-      value: 114.22471
+      value: 175.64409
+      objectReference: {fileID: 0}
+    - target: {fileID: 5797167889077357975, guid: b197d93fb5f260247b2a5e506aec7085, type: 3}
+      propertyPath: m_ShadowRadius
+      value: 0.025
       objectReference: {fileID: 0}
     - target: {fileID: 5797167889077357975, guid: b197d93fb5f260247b2a5e506aec7085, type: 3}
       propertyPath: m_UseColorTemperature
@@ -6262,7 +6282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5797167889077357975, guid: b197d93fb5f260247b2a5e506aec7085, type: 3}
       propertyPath: m_Intensity
-      value: 4.2949673e+9
+      value: 134217730
       objectReference: {fileID: 0}
     - target: {fileID: 5797167889077357975, guid: b197d93fb5f260247b2a5e506aec7085, type: 3}
       propertyPath: m_LightUnit

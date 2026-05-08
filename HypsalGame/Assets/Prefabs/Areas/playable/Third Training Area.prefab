@@ -598,7 +598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::script_LogOnTrigger
   _specialLogLabelList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
   _textsToLog:
-  - 'Please label two objects. You still have the following labels: [remaining_labels:
+  - 'Once more, please label two objects. You still have the following labels: [remaining_labels:
     Awe, Love, Death, Mystery, Beauty, Dream].'
   _logTypes: 01000000
   _triggerOnce: 1
@@ -2140,13 +2140,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6416991209584256183}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -959.94, y: -536.28, z: 32.92}
-  m_LocalScale: {x: 5.0302, y: 11.35, z: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -960.07, y: -535.38, z: 32.96}
+  m_LocalScale: {x: 4.187893, y: 9.799363, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8248713356658291846}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!33 &3107608484207005692
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2319,7 +2319,7 @@ MonoBehaviour:
     logAnswer: 1
     password: LoveSandwich
     textToLogAfterTimer: Please write 'LoveSandwich' and press Enter.
-    loggingDelay: 20
+    loggingDelay: 25
     logOnce: 0
     logged: 0
   CorrectPasswordEntered:

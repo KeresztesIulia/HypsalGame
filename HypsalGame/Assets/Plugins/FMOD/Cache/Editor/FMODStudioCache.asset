@@ -216,6 +216,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-6593743841503365247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Ocean01
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Ocean01
+  Guid:
+    Data1: 334224491
+    Data2: 1225412976
+    Data3: 1313368964
+    Data4: 1306496993
+  Banks:
+  - {fileID: -1798069484379119058}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 200
+  Length: 0
 --- !u!114 &-6548922530793628145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,6 +377,33 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 100
+  Length: 0
+--- !u!114 &-4657110598916206606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Ocean03
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Ocean03
+  Guid:
+    Data1: 380952352
+    Data2: 1266550161
+    Data3: -1831364940
+    Data4: 1624719693
+  Banks:
+  - {fileID: -1798069484379119058}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 200
   Length: 0
 --- !u!114 &-4652743964481172430
 MonoBehaviour:
@@ -561,11 +615,11 @@ MonoBehaviour:
   Banks:
   - {fileID: -1798069484379119058}
   IsStream: 1
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 100
+  MaxDistance: 350
   Length: 0
 --- !u!114 &-2807603288199802006
 MonoBehaviour:
@@ -636,7 +690,7 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/banks/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639136667533156016
+  lastModified: 639137837514039457
   FileSizes: []
   Exists: 1
 --- !u!114 &-1706960760305134854
@@ -745,7 +799,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 100
+  MaxDistance: 300
   Length: 0
 --- !u!114 &-393210869107470891
 MonoBehaviour:
@@ -836,13 +890,16 @@ MonoBehaviour:
   - {fileID: 4883884730196292240}
   - {fileID: -6454738009933549538}
   - {fileID: -3286026802454642617}
+  - {fileID: -4657110598916206606}
+  - {fileID: -6593743841503365247}
+  - {fileID: 3555847092450650130}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1798069484379119058}
   StringsBanks:
   - {fileID: 4235524573815359642}
   cacheVersion: 131858
-  cacheTime: 639136667533171212
+  cacheTime: 639137837514050137
   SerializableEventsDict:
   - key: event:/VOICE/Intro/Intro_Part03
     index: 0
@@ -936,6 +993,12 @@ MonoBehaviour:
     index: 44
   - key: event:/SFX/Ambience03
     index: 45
+  - key: event:/SFX/Ocean03
+    index: 46
+  - key: event:/SFX/Ocean01
+    index: 47
+  - key: event:/SFX/Ocean02
+    index: 48
 --- !u!114 &278071606812999441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1098,6 +1161,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 100
   Length: 0
+--- !u!114 &3555847092450650130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Ocean02
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Ocean02
+  Guid:
+    Data1: 1901261771
+    Data2: 1304802471
+    Data3: -367801701
+    Data4: -1621555512
+  Banks:
+  - {fileID: -1798069484379119058}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 200
+  Length: 0
 --- !u!114 &4235524573815359642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1113,10 +1203,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/banks/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639136667533171212
+  lastModified: 639137837514050137
   FileSizes:
   - Name: 
-    Value: 2640
+    Value: 2766
   Exists: 1
 --- !u!114 &4285756360613534025
 MonoBehaviour:

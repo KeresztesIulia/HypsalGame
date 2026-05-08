@@ -10,6 +10,11 @@ public class WaterAnimation : MonoBehaviour
 
     public float slowFactor = 0.2f;
 
+    private void Start()
+    {
+        waterMaterial = GetComponent<MeshRenderer>().sharedMaterial;
+    }
+
     void Update()
     {
         
