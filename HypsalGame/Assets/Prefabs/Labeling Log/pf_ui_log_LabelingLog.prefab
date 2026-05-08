@@ -575,7 +575,7 @@ MonoBehaviour:
   _contentTransform: {fileID: 6684140347068336434}
   _freeWritePopup: {fileID: 2334784237281823596}
   _logFadeInTime: 0.3
-  _logOpenTime: 4
+  _logOpenTime: 10
   _logFadeOutTime: 0.15
 --- !u!114 &7039793670934840327
 MonoBehaviour:
