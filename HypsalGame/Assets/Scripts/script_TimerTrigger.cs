@@ -58,7 +58,7 @@ public class script_TimerTrigger : MonoBehaviour
         if (!timerStarted || timerOver) return;
         StopAllCoroutines();
         timerOver = true;
-        timerStarted = true;
+        timerStarted = false;
     }
 
     void InstantTrigger()

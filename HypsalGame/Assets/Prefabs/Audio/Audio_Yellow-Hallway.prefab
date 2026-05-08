@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6499803907371411493}
-  - component: {fileID: 7548290393030991545}
+  - component: {fileID: 6483988321157548362}
   m_Layer: 0
   m_Name: DinMor Timer
   m_TagString: Untagged
@@ -26,15 +26,16 @@ Transform:
   m_GameObject: {fileID: 572016218351401409}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 105.40997, y: 60.928654, z: -4.265006}
-  m_LocalScale: {x: 0.113250285, y: 0.113250285, z: 0.113250285}
+  m_LocalPosition: {x: 0.000061035156, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 453372032228372554}
+  - {fileID: 1523926736103603783}
   - {fileID: 6286767067937729596}
-  m_Father: {fileID: 1523926736103603783}
+  m_Father: {fileID: 7730793943617368097}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7548290393030991545
+--- !u!114 &6483988321157548362
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -66,7 +67,10 @@ MonoBehaviour:
   _retriggerable: 1
   _timerStarterTriggers:
   - {fileID: 4352984438950714835}
-  _interruptionTriggers: []
+  _interruptionTriggers:
+  - {fileID: 6799067359233301785}
+  - {fileID: 4905282876561523128}
+  - {fileID: 4761641720206076657}
   _instantEventTriggers: []
 --- !u!1 &3047322636697328497
 GameObject:
@@ -95,14 +99,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3047322636697328497}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -930.77, y: -538, z: 37.660004}
-  m_LocalScale: {x: 8.83, y: 8.83, z: 8.83}
-  m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 6499803907371411493}
-  m_Father: {fileID: 7730793943617368097}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: -0.2821739, z: 0, w: 0.9593633}
+  m_LocalPosition: {x: -930.72, y: -538, z: 37.69}
+  m_LocalScale: {x: 6.7, y: 13.27, z: 11.07}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6499803907371411493}
+  m_LocalEulerAnglesHint: {x: 0, y: -32.78, z: 0}
 --- !u!33 &2378079529502533561
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -179,7 +182,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.13, y: 1.22, z: 1.85}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3487727293972236168
 GameObject:
@@ -210,7 +213,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1523926736103603783}
+  - {fileID: 6499803907371411493}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3849183089075716860
@@ -237,8 +240,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3849183089075716860}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0.08535993, z: -0, w: 0.99635017}
+  m_LocalPosition: {x: -5.01, y: 0, z: 156.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -246,7 +249,7 @@ Transform:
   - {fileID: 1624508991217586248}
   - {fileID: 7351610888666736419}
   m_Father: {fileID: 6499803907371411493}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -9.793, z: 0}
 --- !u!1 &5734362800725204238
 GameObject:
   m_ObjectHideFlags: 0
