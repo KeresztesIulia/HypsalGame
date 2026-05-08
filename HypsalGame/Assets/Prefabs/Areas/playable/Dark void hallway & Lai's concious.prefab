@@ -20182,7 +20182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::script_LogOnTrigger
   _specialLogLabelList: {fileID: 0}
   _textsToLog:
-  - I'm have to let you know, you really light up the room with vibe dude
+  - I have to let you know, you really light up the room with vibe dude
   _logTypes: 01000000
   _triggerOnce: 1
   _popUpLog: 1
@@ -52819,6 +52819,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 6275805624515093891}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
   _fireOnce_negative: 0
   _FireOnceNegativeEvents:
