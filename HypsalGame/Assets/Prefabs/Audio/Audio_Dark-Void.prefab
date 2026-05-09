@@ -495,7 +495,7 @@ MonoBehaviour:
   uninterruptable: 1
   _specialSubtitlesLabelList: {fileID: 0}
   subtitleText: 
-  subtitleDuration: 3
+  subtitleDuration: 45
   subtitleDelay: 0
   subtitleType: 0
   nextSound: {fileID: 0}
