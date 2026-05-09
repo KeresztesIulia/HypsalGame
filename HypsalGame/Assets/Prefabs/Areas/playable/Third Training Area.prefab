@@ -2602,7 +2602,7 @@ MonoBehaviour:
   _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
   _representedLabelName: Fire Extinguisher
   _representingModel: {fileID: 4249714162938098525}
-  _prompt: Which label best describes how this object makes you feel?
+  _prompt: What do you associate most with this object?
   _possibleAssociations:
   - Death
   - Love
@@ -2678,7 +2678,7 @@ MonoBehaviour:
   _partOfList: {fileID: 11400000, guid: b0404a773d4ec0947a301ae2c8d2f3bb, type: 2}
   _representedLabelName: Fuel Tank
   _representingModel: {fileID: 924633790643179772}
-  _prompt: Which label best describes how this object makes you feel?
+  _prompt: What do you associate most with this object?
   _possibleAssociations:
   - Death
   - Love
