@@ -6797,7 +6797,7 @@ MonoBehaviour:
   hideChildrenOnGameStart: 1
   keepFinalVersionActive: 1
   usePlayerDistanceTrigger: 1
-  playerTriggerDistance: 10
+  playerTriggerDistance: 18
   triggerCenterMode: 1
   customTriggerCenterOffset: {x: 0, y: 0, z: 0}
   playerTag: Player
