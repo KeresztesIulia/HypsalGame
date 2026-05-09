@@ -61,6 +61,17 @@ public class script_EndGameLogger : MonoBehaviour, interface_PersistentData
         Instance.QuitApplication();
     }
 
+    public static IEnumerator LogAtEnd_static()
+    {
+        if (Instance == null) yield break;
+        if (submitted) yield break;
+
+        Instance.GatherAllOutputs();
+        yield return Instance.StartCoroutine(Instance.SubmitForm());
+
+    }
+
+
     void Mail()
     {
         email = Uri.EscapeDataString(email);
@@ -104,6 +115,9 @@ public class script_EndGameLogger : MonoBehaviour, interface_PersistentData
         WWWForm form = new WWWForm();
 
         // Add fields
+#if UNITY_EDITOR
+        data_StartTime = string.Join(" -- ", "INTERNAL TEST", data_StartTime);
+#endif
         form.AddField(entry_PlayStart, data_StartTime);
         form.AddField(entry_FinalLabelingOutput, data_FinalLabelingOutput);
         form.AddField(entry_ContinuousLabelingOutput, data_ContinuousLabelingOutput);

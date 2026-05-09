@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Diagnostics;
 using System.IO;
 using UnityEditor;
@@ -17,6 +18,13 @@ public class script_EndGame : MonoBehaviour
 
     public void Close()
     {
+
+        StartCoroutine(CloseCoroutine());   
+    }
+
+    IEnumerator CloseCoroutine()
+    {
+        yield return StartCoroutine(script_EndGameLogger.LogAtEnd_static());
 #if UNITY_EDITOR
         EditorApplication.ExitPlaymode();
 #else
