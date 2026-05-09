@@ -619,7 +619,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 350
+  MaxDistance: 10000
   Length: 0
 --- !u!114 &-2807603288199802006
 MonoBehaviour:
@@ -690,7 +690,7 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/banks/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639137837514039457
+  lastModified: 639139351733052261
   FileSizes: []
   Exists: 1
 --- !u!114 &-1706960760305134854
@@ -899,7 +899,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 4235524573815359642}
   cacheVersion: 131858
-  cacheTime: 639137837514050137
+  cacheTime: 639139351733062280
   SerializableEventsDict:
   - key: event:/VOICE/Intro/Intro_Part03
     index: 0
@@ -1203,7 +1203,7 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/banks/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639137837514050137
+  lastModified: 639139351733062280
   FileSizes:
   - Name: 
     Value: 2766

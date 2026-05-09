@@ -7,6 +7,11 @@ public class SunRotationZone : MonoBehaviour
     [SerializeField] private float desiredRotationY;
     [SerializeField] private float desiredRotationZ;
 
+    [Header("Desired Sun Emission At Full Proximity")]
+    [SerializeField] private bool controlSunEmission = false;
+    [SerializeField] private Color desiredEmissionFilter = Color.white;
+    [SerializeField, Min(1000f)] private float desiredEmissionTemperature = 6500f;
+
     [Header("Distance Settings")]
     [SerializeField] private float startTransitionDistance = 15f;
     [SerializeField] private float fullProximityDistance = 2f;
@@ -22,6 +27,9 @@ public class SunRotationZone : MonoBehaviour
     private bool isLocked;
 
     public Quaternion DesiredRotation => desiredRotation;
+    public bool ControlSunEmission => controlSunEmission;
+    public Color DesiredEmissionFilter => desiredEmissionFilter;
+    public float DesiredEmissionTemperature => desiredEmissionTemperature;
     public bool LockAtFullProximity => lockAtFullProximity;
     public int Priority => priority;
     public bool IsLocked => isLocked;

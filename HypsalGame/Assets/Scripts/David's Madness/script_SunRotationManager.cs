@@ -32,9 +32,14 @@ public class SunRotationManager : MonoBehaviour
 
     private Transform playerTransform;
     private Transform sunTransform;
+    private Light sunLight;
 
     private Quaternion gameStartRotation;
     private Quaternion editorSceneRotation;
+
+    private Color gameStartEmissionFilter;
+    private float gameStartEmissionTemperature;
+    private bool gameStartUseColorTemperature;
 
     private SunRotationZone lockedZone;
 
@@ -100,7 +105,16 @@ public class SunRotationManager : MonoBehaviour
             return;
         }
 
-        sunTransform = sunObject.transform;
+        ResolveSunReferences(sunObject);
+
+        if (sunTransform == null)
+        {
+            Debug.LogError("[SunRotationManager] Sun object was found, but no valid transform could be resolved.", this);
+            enabled = false;
+            return;
+        }
+
+        CacheGameStartEmission();
 
         if (forceGameStartRotationOnPlay)
         {
@@ -118,6 +132,11 @@ public class SunRotationManager : MonoBehaviour
             Debug.Log($"[SunRotationManager] Player found: {playerObject.name}", this);
             Debug.Log($"[SunRotationManager] Sun found: {sunObject.name}", this);
             Debug.Log($"[SunRotationManager] Registered zones: {zones.Count}", this);
+
+            if (sunLight == null)
+            {
+                Debug.LogWarning("[SunRotationManager] No Light component found on the Sun object or its children. Emission filter and temperature will not be controlled.", this);
+            }
         }
     }
 
@@ -132,12 +151,23 @@ public class SunRotationManager : MonoBehaviour
         Vector3 playerPosition = playerTransform.position;
 
         Quaternion baseRotation = gameStartRotation;
+        Color baseEmissionFilter = gameStartEmissionFilter;
+        float baseEmissionTemperature = gameStartEmissionTemperature;
+        bool baseUsesColorTemperature = gameStartUseColorTemperature;
+
         int minimumPriority = int.MinValue;
 
         if (lockedZone != null)
         {
             baseRotation = lockedZone.DesiredRotation;
             minimumPriority = lockedZone.Priority;
+
+            if (lockedZone.ControlSunEmission)
+            {
+                baseEmissionFilter = lockedZone.DesiredEmissionFilter;
+                baseEmissionTemperature = lockedZone.DesiredEmissionTemperature;
+                baseUsesColorTemperature = true;
+            }
         }
 
         SunRotationZone bestZone = null;
@@ -188,10 +218,23 @@ public class SunRotationManager : MonoBehaviour
         if (bestZone == null)
         {
             sunTransform.rotation = baseRotation;
+            ApplySunEmission(baseEmissionFilter, baseEmissionTemperature, baseUsesColorTemperature);
             return;
         }
 
         sunTransform.rotation = Quaternion.Slerp(baseRotation, bestZone.DesiredRotation, bestInfluence);
+
+        if (bestZone.ControlSunEmission)
+        {
+            Color blendedFilter = Color.Lerp(baseEmissionFilter, bestZone.DesiredEmissionFilter, bestInfluence);
+            float blendedTemperature = Mathf.Lerp(baseEmissionTemperature, bestZone.DesiredEmissionTemperature, bestInfluence);
+
+            ApplySunEmission(blendedFilter, blendedTemperature, true);
+        }
+        else
+        {
+            ApplySunEmission(baseEmissionFilter, baseEmissionTemperature, baseUsesColorTemperature);
+        }
 
         if (bestZone.LockAtFullProximity && bestZone.IsPlayerAtFullProximity(playerPosition))
         {
@@ -217,6 +260,11 @@ public class SunRotationManager : MonoBehaviour
         lockedZone = zone;
         lockedZone.SetLocked(true);
         sunTransform.rotation = lockedZone.DesiredRotation;
+
+        if (lockedZone.ControlSunEmission)
+        {
+            ApplySunEmission(lockedZone.DesiredEmissionFilter, lockedZone.DesiredEmissionTemperature, true);
+        }
 
         if (debugLogs)
         {
@@ -270,6 +318,8 @@ public class SunRotationManager : MonoBehaviour
             sunTransform.rotation = gameStartRotation;
         }
 
+        ApplySunEmission(gameStartEmissionFilter, gameStartEmissionTemperature, gameStartUseColorTemperature);
+
         if (debugLogs)
         {
             Debug.Log("[SunRotationManager] All locks cleared.", this);
@@ -284,11 +334,61 @@ public class SunRotationManager : MonoBehaviour
 
     private void TryFindSunInEditor()
     {
-        GameObject sunObject = GameObject.FindWithTag(sunTag);
-        if (sunObject != null)
+        if (string.IsNullOrWhiteSpace(sunTag))
+            return;
+
+        try
         {
-            sunTransform = sunObject.transform;
+            GameObject sunObject = GameObject.FindWithTag(sunTag);
+            if (sunObject != null)
+            {
+                ResolveSunReferences(sunObject);
+            }
         }
+        catch (UnityException)
+        {
+            sunTransform = null;
+            sunLight = null;
+        }
+    }
+
+    private void ResolveSunReferences(GameObject sunObject)
+    {
+        if (sunObject == null)
+        {
+            sunTransform = null;
+            sunLight = null;
+            return;
+        }
+
+        sunTransform = sunObject.transform;
+
+        sunLight = sunObject.GetComponent<Light>();
+
+        if (sunLight == null)
+        {
+            sunLight = sunObject.GetComponentInChildren<Light>(true);
+        }
+    }
+
+    private void CacheGameStartEmission()
+    {
+        if (sunLight == null)
+            return;
+
+        gameStartEmissionFilter = sunLight.color;
+        gameStartEmissionTemperature = sunLight.colorTemperature;
+        gameStartUseColorTemperature = sunLight.useColorTemperature;
+    }
+
+    private void ApplySunEmission(Color emissionFilter, float emissionTemperature, bool useColorTemperature)
+    {
+        if (sunLight == null)
+            return;
+
+        sunLight.color = emissionFilter;
+        sunLight.colorTemperature = emissionTemperature;
+        sunLight.useColorTemperature = useColorTemperature;
     }
 
     private void ApplyEditorSceneRotation()

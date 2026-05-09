@@ -544,7 +544,7 @@ Transform:
   m_GameObject: {fileID: 5403785355245553447}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -532.53, y: -550.18, z: 42.2}
+  m_LocalPosition: {x: -517.36, y: -550.18, z: 42.2}
   m_LocalScale: {x: 5.89, y: 5.89, z: 5.89}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1822,6 +1822,10 @@ PrefabInstance:
     - target: {fileID: 2166157126424841644, guid: d099229b9b621a046b594802aac3895a, type: 3}
       propertyPath: m_Name
       value: Lai Pixel 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166157126424841644, guid: d099229b9b621a046b594802aac3895a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4444375248493175051, guid: d099229b9b621a046b594802aac3895a, type: 3}
       propertyPath: m_LocalScale.x
