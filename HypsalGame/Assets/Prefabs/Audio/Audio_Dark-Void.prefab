@@ -1823,6 +1823,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lai Pixel 8
       objectReference: {fileID: 0}
+    - target: {fileID: 2166157126424841644, guid: d099229b9b621a046b594802aac3895a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4444375248493175051, guid: d099229b9b621a046b594802aac3895a, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.3582344
