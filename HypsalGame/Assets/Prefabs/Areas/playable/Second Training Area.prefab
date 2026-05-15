@@ -186670,6 +186670,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7429632674404437233}
     m_Modifications:
+    - target: {fileID: 1915486514075047357, guid: 56833051b158585489a0fbf1c3ac64c2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ba0580be609c3e643a5789cd4c208dff, type: 2}
     - target: {fileID: 4405133741599901261, guid: 56833051b158585489a0fbf1c3ac64c2, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.6481183
@@ -186725,7 +186729,7 @@ PrefabInstance:
     - target: {fileID: 7690086160301774746, guid: 56833051b158585489a0fbf1c3ac64c2, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 45cd4e7be2f559645a674d0cc6c5e428, type: 2}
+      objectReference: {fileID: 2100000, guid: ba0580be609c3e643a5789cd4c208dff, type: 2}
     - target: {fileID: 7859597006823311159, guid: 56833051b158585489a0fbf1c3ac64c2, type: 3}
       propertyPath: m_Name
       value: Potion_Green
@@ -186986,7 +186990,7 @@ PrefabInstance:
     - target: {fileID: 8580921182399065940, guid: 8de024a33a46b884a822c19d7de97553, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: e2e12e3f3e147574ca588226601dbd77, type: 2}
+      objectReference: {fileID: 2100000, guid: b6861a3ac638663448a620045565cb5f, type: 2}
     - target: {fileID: 8601614153650410788, guid: 8de024a33a46b884a822c19d7de97553, type: 3}
       propertyPath: m_Name
       value: Door_3_clean_full
@@ -187815,19 +187819,19 @@ PrefabInstance:
     - target: {fileID: 2300000, guid: fdafa5e0f89acf348ab4deaa50b83d37, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 09da1a97e9fb0a645916f8983afc914f, type: 2}
+      objectReference: {fileID: 2100000, guid: f98c1ece9cb576e40a1091a9287dab46, type: 2}
     - target: {fileID: 2300002, guid: fdafa5e0f89acf348ab4deaa50b83d37, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 521a29e0dfc8edf44b8648e20bdcb5cc, type: 2}
+      objectReference: {fileID: 2100000, guid: f98c1ece9cb576e40a1091a9287dab46, type: 2}
     - target: {fileID: 2300004, guid: fdafa5e0f89acf348ab4deaa50b83d37, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: ef1e9d49983b19645b53ca1850952e2b, type: 2}
+      objectReference: {fileID: 2100000, guid: f98c1ece9cb576e40a1091a9287dab46, type: 2}
     - target: {fileID: 2300006, guid: fdafa5e0f89acf348ab4deaa50b83d37, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 1257c706f35a82e4eb8ab75e87986eef, type: 2}
+      objectReference: {fileID: 2100000, guid: f98c1ece9cb576e40a1091a9287dab46, type: 2}
     m_RemovedComponents:
     - {fileID: 6400000, guid: fdafa5e0f89acf348ab4deaa50b83d37, type: 3}
     - {fileID: 6400002, guid: fdafa5e0f89acf348ab4deaa50b83d37, type: 3}
