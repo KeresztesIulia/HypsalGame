@@ -2086,7 +2086,7 @@ Transform:
   m_GameObject: {fileID: 2914243758414747214}
   serializedVersion: 2
   m_LocalRotation: {x: 0.70710677, y: 0.7071068, z: 0.0000005373723, w: 0.0000005373722}
-  m_LocalPosition: {x: -702.08, y: -493.8, z: -65}
+  m_LocalPosition: {x: -702.08, y: -489.36, z: -65}
   m_LocalScale: {x: 1, y: 29.051077, z: 58.48474}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2386,7 +2386,7 @@ Transform:
   m_GameObject: {fileID: 3425647308509385884}
   serializedVersion: 2
   m_LocalRotation: {x: 0.70710677, y: 0.7071068, z: 0.0000005373723, w: 0.0000005373722}
-  m_LocalPosition: {x: -757.02, y: -493.8, z: -65}
+  m_LocalPosition: {x: -757.02, y: -489.36, z: -65}
   m_LocalScale: {x: 1, y: 29.051077, z: 58.48474}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2681,7 +2681,7 @@ Transform:
   m_GameObject: {fileID: 3817177568566328507}
   serializedVersion: 2
   m_LocalRotation: {x: 0.70710677, y: 0.7071068, z: 0.0000005373723, w: 0.0000005373722}
-  m_LocalPosition: {x: -728, y: -493.8, z: -83.26}
+  m_LocalPosition: {x: -728, y: -489.36, z: -83.26}
   m_LocalScale: {x: 1, y: 29.051077, z: 22.062199}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4854,8 +4854,8 @@ MonoBehaviour:
   controlSunEmission: 0
   desiredEmissionFilter: {r: 1, g: 1, b: 1, a: 1}
   desiredEmissionTemperature: 6500
-  startTransitionDistance: 34
-  fullProximityDistance: 20
+  startTransitionDistance: 45
+  fullProximityDistance: 25
   distanceResponseCurve:
     serializedVersion: 2
     m_Curve:
@@ -6420,7 +6420,7 @@ Transform:
   m_GameObject: {fileID: 8463858464596674307}
   serializedVersion: 2
   m_LocalRotation: {x: 0.70710677, y: 0.7071068, z: 0.0000005373723, w: 0.0000005373722}
-  m_LocalPosition: {x: -728, y: -493.8, z: -43.71}
+  m_LocalPosition: {x: -728, y: -489.36, z: -43.71}
   m_LocalScale: {x: 1, y: 29.051077, z: 22.062199}
   m_ConstrainProportionsScale: 0
   m_Children: []

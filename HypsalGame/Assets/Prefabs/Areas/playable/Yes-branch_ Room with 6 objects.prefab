@@ -1060,8 +1060,8 @@ MonoBehaviour:
   controlSunEmission: 0
   desiredEmissionFilter: {r: 1, g: 1, b: 1, a: 1}
   desiredEmissionTemperature: 6500
-  startTransitionDistance: 35.3
-  fullProximityDistance: 17
+  startTransitionDistance: 70.7
+  fullProximityDistance: 24
   distanceResponseCurve:
     serializedVersion: 2
     m_Curve:
