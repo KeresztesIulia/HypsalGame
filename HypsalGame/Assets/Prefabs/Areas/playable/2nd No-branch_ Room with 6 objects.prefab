@@ -4849,7 +4849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SunRotationZone
   desiredRotationX: 40.6
-  desiredRotationY: 270
+  desiredRotationY: 0
   desiredRotationZ: 0
   controlSunEmission: 0
   desiredEmissionFilter: {r: 1, g: 1, b: 1, a: 1}
@@ -4881,7 +4881,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   lockAtFullProximity: 1
-  priority: 5
+  priority: 6
 --- !u!1 &6623925822719341494
 GameObject:
   m_ObjectHideFlags: 0
