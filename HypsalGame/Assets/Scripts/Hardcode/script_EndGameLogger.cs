@@ -117,6 +117,8 @@ public class script_EndGameLogger : MonoBehaviour, interface_PersistentData
         // Add fields
 #if UNITY_EDITOR
         data_StartTime = string.Join(" -- ", "INTERNAL TEST", data_StartTime);
+#else
+        data_StartTime = string.Join(" -- ", "EXAM TEST", data_StartTime);
 #endif
         form.AddField(entry_PlayStart, data_StartTime);
         form.AddField(entry_FinalLabelingOutput, data_FinalLabelingOutput);
