@@ -11852,7 +11852,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 755419039397824109}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7350bcf7331a3c4e83d51b825af8c24, type: 3}
   m_Name: 
@@ -21745,7 +21745,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1373102609483785740}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7350bcf7331a3c4e83d51b825af8c24, type: 3}
   m_Name: 
@@ -77217,6 +77217,9 @@ MonoBehaviour:
   desiredRotationX: 11.688
   desiredRotationY: 0
   desiredRotationZ: 0
+  controlSunEmission: 0
+  desiredEmissionFilter: {r: 1, g: 1, b: 1, a: 1}
+  desiredEmissionTemperature: 6500
   startTransitionDistance: 146.3
   fullProximityDistance: 2.47
   distanceResponseCurve:
@@ -78605,6 +78608,9 @@ MonoBehaviour:
   desiredRotationX: 11.688
   desiredRotationY: 0
   desiredRotationZ: 0
+  controlSunEmission: 0
+  desiredEmissionFilter: {r: 1, g: 1, b: 1, a: 1}
+  desiredEmissionTemperature: 6500
   startTransitionDistance: 130
   fullProximityDistance: 2.47
   distanceResponseCurve:
@@ -84222,6 +84228,9 @@ MonoBehaviour:
   desiredRotationX: 11.7
   desiredRotationY: 0
   desiredRotationZ: 0
+  controlSunEmission: 0
+  desiredEmissionFilter: {r: 1, g: 1, b: 1, a: 1}
+  desiredEmissionTemperature: 6500
   startTransitionDistance: 57.8
   fullProximityDistance: 2
   distanceResponseCurve:
@@ -89926,7 +89935,7 @@ Transform:
   m_GameObject: {fileID: 5720874309248264562}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.70710635, z: -0, w: 0.7071073}
-  m_LocalPosition: {x: -974.85, y: -517.33, z: 19.7}
+  m_LocalPosition: {x: -974.6, y: -517.33, z: 19.7}
   m_LocalScale: {x: 1, y: 11.236979, z: 21.545094}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -152328,7 +152337,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6036330593660257539}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7350bcf7331a3c4e83d51b825af8c24, type: 3}
   m_Name: 

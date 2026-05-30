@@ -5017,7 +5017,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   lockAtFullProximity: 1
-  priority: 3
+  priority: 9
 --- !u!1 &6509255598390567805
 GameObject:
   m_ObjectHideFlags: 0
@@ -7505,7 +7505,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   lockAtFullProximity: 1
-  priority: 2
+  priority: 8
 --- !u!1 &9102216181747475438
 GameObject:
   m_ObjectHideFlags: 0
